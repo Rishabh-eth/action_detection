@@ -1,0 +1,6 @@
+--2020-10-05 14:18:10--  https://s3.amazonaws.com/ava-dataset/test/8oL0i5WorkE
+Resolving s3.amazonaws.com (s3.amazonaws.com)... 52.217.83.190
+Connecting to s3.amazonaws.com (s3.amazonaws.com)|52.217.83.190|:443... connected.
+HTTP request sent, awaiting response... 404 'wget-log'
+2020-10-05 15:56:00 ERROR 404: Not Found.
+

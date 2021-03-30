@@ -1,0 +1,9 @@
+#/bin/bash
+
+awk -F"," '{print $1 "," $2}' /srv/beegfs02/scratch/da_action/data/kinetics700/ava-kinetics/ava_kinetics_v1_0/kinetics_train_v1.0.csv > /srv/beegfs02/scratch/da_action/data/kinetics700/videos/video_analysis/video_total/train_helper.csv
+sort /srv/beegfs02/scratch/da_action/data/kinetics700/videos/video_analysis/video_total/train_helper.csv | uniq > /srv/beegfs02/scratch/da_action/data/kinetics700/videos/video_analysis/video_total/train.csv
+
+rm /srv/beegfs02/scratch/da_action/data/kinetics700/videos/video_analysis/video_total/train_helper.csv
+
+#356983
+# approximately 139866 train videos to extract the frames

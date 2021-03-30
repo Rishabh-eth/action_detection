@@ -1,0 +1,1 @@
+same as joint_v4 ;  with weights iitialised with models trained jointly with Main and tgt trained on kinetics dataset : /srv/beegfs-benderdata/scratch/da_action/data/output_rishi/joint_training/kinetics/new_training/model1/checkpoints/

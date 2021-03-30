@@ -1,0 +1,1 @@
+Number of frames = 64, inter-clip spacing of 10 frames, otw same as v2

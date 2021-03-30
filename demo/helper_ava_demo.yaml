@@ -1,0 +1,7 @@
+DEMO:
+	ENABLE: True
+	OUTPUT_FILE: /home/sieberl/SA2020/pyslowfast/luca_demo/output.mp4
+	LABEL_FILE_PATH: /home/sieberl/SA2020/pyslowfast/luca_demo/ava_classnames.json
+	INPUT_VIDEO: /scratch/sieberl/ava/HVAmkvLrthQ
+	PREDS_BOXES: /scratch/sieberl/ava/annotations/ava_train_v2.1.csv
+	

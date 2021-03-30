@@ -1,0 +1,40 @@
+#!/bin/bash
+IN_DATA_DIR="/srv/beegfs02/scratch/da_action/data/ava/videos"
+OUT_DATA_DIR="/srv/beegfs02/scratch/da_action/data/ava/videos_15min_copy"
+
+if [[ ! -d "${OUT_DATA_DIR}" ]]; then
+  echo "${OUT_DATA_DIR} doesn't exist. Creating it.";
+  mkdir -p ${OUT_DATA_DIR}
+fi
+
+for video in $(ls -A1 -U ${IN_DATA_DIR}/QCLQYnt3aMo.webm) # added .webm
+do
+  out_name="${OUT_DATA_DIR}/${video##*/}"
+  if [ ! -f "${out_name}" ]; then
+    ffmpeg -ss 900 -t 901 -i "${video}" "${out_name}"
+  fi
+done
+
+for video in $(ls -A1 -U ${IN_DATA_DIR}/uNT6HrrnqPU.webm) # added .webm
+do
+  out_name="${OUT_DATA_DIR}/${video##*/}"
+  if [ ! -f "${out_name}" ]; then
+    ffmpeg -ss 900 -t 901 -i "${video}" "${out_name}"
+  fi
+done
+
+for video in $(ls -A1 -U ${IN_DATA_DIR}/jE0S8gYWftE.webm) # added .webm
+do
+  out_name="${OUT_DATA_DIR}/${video##*/}"
+  if [ ! -f "${out_name}" ]; then
+    ffmpeg -ss 900 -t 901 -i "${video}" "${out_name}"
+  fi
+done
+
+for video in $(ls -A1 -U ${IN_DATA_DIR}/Gvp-cj3bmIY.webm) # added .webm
+do
+  out_name="${OUT_DATA_DIR}/${video##*/}"
+  if [ ! -f "${out_name}" ]; then
+    ffmpeg -ss 900 -t 901 -i "${video}" "${out_name}"
+  fi
+done

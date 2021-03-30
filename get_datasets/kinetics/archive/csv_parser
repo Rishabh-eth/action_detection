@@ -1,0 +1,54 @@
+#/bin/bash
+
+# This file is only made to extract the 30FPS frames for the kinetics700 dataset
+
+SOURCE_LIST="/srv/beegfs02/scratch/da_action/data/kinetics700/csv_steer/train.csv"
+FAILED_LIST="/srv/beegfs02/scratch/da_action/data/kinetics700/csv_steer/train_failed.csv"
+
+VIDEO_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/videos/train/"
+FRAME_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/frames"
+
+
+if [[ ! -d "${FRAME_DIR}" ]]; then
+  echo "${FRAME_DIR} doesn't exist. Creating it.";
+  mkdir -p ${FRAME_DIR}
+fi
+
+if [[ ! -f "${FAILED_LIST}" ]]; then
+  echo "${FAILED_LIST} doesn't exist. Creating it.";
+  touch ${FAILED_LIST}
+fi
+
+while IFS=, read -r col1
+do
+    FILENAME="$VIDEO_DIR$col1"
+    TOTAL_NAME="${FILENAME}.mp4"
+    if [[ -f "$TOTAL_NAME" ]]
+    then
+
+      video_name=${TOTAL_NAME##*/}
+
+      if [[ $video_name = *".webm" ]]; then
+          video_name=${video_name::-5}
+      else
+          video_name=${video_name::-4}
+      fi
+
+
+
+
+      out_video_dir=${FRAME_DIR}/${video_name}/
+
+      mkdir -p "${out_video_dir}"
+
+      out_name="${out_video_dir}/${video_name}_%06d.jpg"
+      echo "$TOTAL_NAME"
+      echo "$out_name"
+      ffmpeg -i "${TOTAL_NAME}" -r 30 -q:v 1 "${out_name}" </dev/null
+
+    else
+      # write to .csv file that to know that video was not extracted
+      echo "$col1" >> "$FAILED_LIST"
+    fi
+
+done < "$SOURCE_LIST"

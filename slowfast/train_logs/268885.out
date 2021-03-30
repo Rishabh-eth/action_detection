@@ -1,0 +1,49 @@
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/tools
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python38.zip
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/lib-dynload
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages
+/usr/itetnas04/data-scratch-01/risingh/data/detectron2_repo
+/usr/itetnas04/data-scratch-01/risingh/data/slowfast
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/sklearn-0.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pandas-1.1.3-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/wheel-0.35.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scikit_learn-0.23.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pytz-2020.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/threadpoolctl-2.1.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scipy-1.5.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/joblib-0.17.0-py3.8.egg
+/usr/itetnas04/data-scratch-01/risingh/data/conda_envs/sfast/lib/python3.8/site-packages
+========
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/tools
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python38.zip
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/lib-dynload
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages
+/usr/itetnas04/data-scratch-01/risingh/data/detectron2_repo
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/sklearn-0.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pandas-1.1.3-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/wheel-0.35.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scikit_learn-0.23.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pytz-2020.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/threadpoolctl-2.1.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scipy-1.5.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/joblib-0.17.0-py3.8.egg
+/usr/itetnas04/data-scratch-01/risingh/data/conda_envs/sfast/lib/python3.8/site-packages
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/
+Traceback (most recent call last):
+  File "tools/run_net.py", line 78, in <module>
+    main()
+  File "tools/run_net.py", line 40, in main
+    cfg = load_config(args)
+  File "/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/slowfast/utils/parser.py", line 78, in load_config
+    cfg.merge_from_file(args.cfg_file)
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/fvcore/common/config.py", line 105, in merge_from_file
+    loaded_cfg = CfgNode.load_yaml_with_base(
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/fvcore/common/config.py", line 49, in load_yaml_with_base
+    with PathManager.open(filename, "r") as f:
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/fvcore/common/file_io.py", line 647, in open
+    return self.__get_path_handler(path)._open(  # type: ignore
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/fvcore/common/file_io.py", line 375, in _open
+    return open(  # type: ignore
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/itetnas04/data-scratch-01/risingh/data/videorder/experiments/aux_10_500_100_v9/SLOWFAST_32x2_R101_50_50_train_ava.yaml'

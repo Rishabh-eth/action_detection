@@ -1,0 +1,35 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "tools/run_net.py", line 58, in <module>
+    main()
+  File "tools/run_net.py", line 30, in main
+    cfg = load_config(args)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/parser.py", line 77, in load_config
+    cfg.merge_from_file(args.cfg_file)
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/config.py", line 106, in merge_from_file
+    cfg_filename, allow_unsafe=allow_unsafe
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/config.py", line 49, in load_yaml_with_base
+    with PathManager.open(filename, "r") as f:
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/file_io.py", line 648, in open
+    path, mode, buffering=buffering, **kwargs
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/file_io.py", line 383, in _open
+    opener=opener,
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sieberl/SA2020/pyslowfast/experiments/da_10_500_100_v11/SLOWFAST_32x2_R101_50_50.yaml'

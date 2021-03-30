@@ -1,0 +1,63 @@
+#/bin/bash
+# This file is used to produce the frames for the videos in the three folders test, train and validate
+# The frames are all saved to the same folder which is called frames
+
+#IN_DATA_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/videos/train"
+#IN_DATA_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/videos/validate"
+#IN_DATA_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/videos/test"
+
+#OUT_DATA_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/frames"
+
+ORIG_IN_DATA_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/videos/video_analysis/video_total"
+
+OUT_DATA_DIR="/srv/beegfs02/scratch/da_action/data/kinetics700/videos/video_analysis/video_total/frames"
+
+
+if [[ ! -d "${OUT_DATA_DIR}" ]]; then
+  echo "${OUT_DATA_DIR} doesn't exist. Creating it.";
+  mkdir -p ${OUT_DATA_DIR}
+fi
+
+DIR="/dir_"
+
+for IT in {1..2..1}
+do
+    IN_DATA_DIR="$ORIG_IN_DATA_DIR$DIR$IT"
+    echo "$IN_DATA_DIR"
+
+    # iterate through particular folder to create the frames from them
+    for video in $(ls -A1 -U ${IN_DATA_DIR}/*)
+    do
+
+        echo "stringsafsdfasdasd"
+
+
+        video_name=${video##*/}
+
+        if [[ $video_name = *".webm" ]]; then
+            video_name=${video_name::-5}
+        else
+            video_name=${video_name::-4}
+        fi
+
+
+        out_video_dir=${OUT_DATA_DIR}/${video_name}/
+
+
+        mkdir -p "${out_video_dir}"
+
+        out_name="${out_video_dir}/${video_name}_%06d.jpg"
+
+        echo "$video"
+        echo "$out_name"
+        #ffmpeg -i "${video}" -r 30 -q:v 1 "${out_name}"
+
+
+
+    done
+done
+
+
+
+
+

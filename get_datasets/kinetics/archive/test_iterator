@@ -1,0 +1,17 @@
+#/bin/bash
+VAR=1
+
+for IT in {1..10..1}
+do
+	echo "$IT"
+	((VAR+=15))
+done
+
+
+VAR2="filename"
+echo $VAR2
+
+VAR3="$VAR2$VAR"
+
+echo "$VAR3"
+

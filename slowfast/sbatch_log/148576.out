@@ -1,0 +1,1968 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+[11/03 22:58:40][INFO] train_net.py: 378: Train with config:
+[11/03 22:58:40][INFO] train_net.py: 379: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/ava/annotations_5_100_10/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_100_10/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': False,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'HEAD_ACT': 'sigmoid',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 5,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 1,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs02/scratch/da_action/data/output',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.1,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 300,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': '',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'ENABLE': True,
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': False,
+           'BATCH_SIZE': 4,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': False,
+           'CHECKPOINT_FILE_PATH': '',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': True,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+[11/03 22:58:55][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_100_10/train.csv
+[11/03 22:58:55][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_5_100_10/ava_train_v2.2.csv
+[11/03 22:58:55][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[11/03 22:58:55][INFO] ava_helper.py: 114: Number of unique boxes: 497
+[11/03 22:58:55][INFO] ava_helper.py: 115: Number of annotations: 500
+[11/03 22:58:55][INFO] ava_helper.py: 162: 454 keyframes used.
+[11/03 22:58:55][INFO] ava_dataset.py:  90: === AVA dataset summary ===
+[11/03 22:58:55][INFO] ava_dataset.py:  91: Split: train
+[11/03 22:58:55][INFO] ava_dataset.py:  92: Number of videos: 42
+[11/03 22:58:55][INFO] ava_dataset.py:  96: Number of frames: 1135268
+[11/03 22:58:55][INFO] ava_dataset.py:  97: Number of key frames: 454
+[11/03 22:58:55][INFO] ava_dataset.py:  98: Number of boxes: 497.
+[11/03 22:58:58][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_100_10/val.csv
+[11/03 22:58:58][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_5_100_10/ava_val_predicted_boxes.csv
+[11/03 22:58:58][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[11/03 22:58:58][INFO] ava_helper.py: 114: Number of unique boxes: 153
+[11/03 22:58:58][INFO] ava_helper.py: 115: Number of annotations: 0
+[11/03 22:58:58][INFO] ava_helper.py: 162: 45 keyframes used.
+[11/03 22:58:58][INFO] ava_dataset.py:  90: === AVA dataset summary ===
+[11/03 22:58:58][INFO] ava_dataset.py:  91: Split: val
+[11/03 22:58:58][INFO] ava_dataset.py:  92: Number of videos: 10
+[11/03 22:58:58][INFO] ava_dataset.py:  96: Number of frames: 270301
+[11/03 22:58:58][INFO] ava_dataset.py:  97: Number of key frames: 45
+[11/03 22:58:58][INFO] ava_dataset.py:  98: Number of boxes: 153.
+[11/03 22:59:03][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_100_10/train.csv
+[11/03 22:59:04][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_100_10/val.csv
+[11/03 22:59:04][INFO] tensorboard_vis.py:  57: To see logged results in Tensorboard, please launch using the command             `tensorboard  --port=<port-number> --logdir /srv/beegfs02/scratch/da_action/data/output/runs-ava`
+[11/03 22:59:04][INFO] train_net.py: 418: Start epoch: 1
+[11/03 23:06:14][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:06:14][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:06:14][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:06:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:06:14][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:06:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1396551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.2691707317073171,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.108,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06661064425770308,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1302927518526334}
+[11/03 23:06:15][INFO] ava_eval_helper.py: 174: AVA eval done in 0.100211 seconds.
+[11/03 23:06:15][INFO] logging.py:  93: json_stats: {"RAM": "19.21/251.90G", "_type": "val_epoch", "cur_epoch": "1", "gpu_mem": "8.16G", "map": 0.13029, "mode": "val"}
+[11/03 23:13:40][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:13:40][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:13:40][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:13:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:13:40][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:13:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1396551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.2661064425770308,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.108,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.05753929539295393,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1278656242536263}
+[11/03 23:13:40][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080334 seconds.
+[11/03 23:13:40][INFO] logging.py:  93: json_stats: {"RAM": "18.93/251.90G", "_type": "val_epoch", "cur_epoch": "2", "gpu_mem": "8.16G", "map": 0.12787, "mode": "val"}
+[11/03 23:22:07][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:22:07][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:22:07][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:22:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:22:07][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:22:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1396551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.25353016688061614,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10657894736842104,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06652512536007682,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.12686332458145216}
+[11/03 23:22:07][INFO] ava_eval_helper.py: 174: AVA eval done in 0.111801 seconds.
+[11/03 23:22:07][INFO] logging.py:  93: json_stats: {"RAM": "15.24/251.90G", "_type": "val_epoch", "cur_epoch": "3", "gpu_mem": "8.16G", "map": 0.12686, "mode": "val"}
+[11/03 23:30:58][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:30:58][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:30:58][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:30:58][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:30:58][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:30:58][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13728813559322037,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.25353016688061614,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.108,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06618431073876618,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1266059648193913}
+[11/03 23:30:58][INFO] ava_eval_helper.py: 174: AVA eval done in 0.107961 seconds.
+[11/03 23:30:58][INFO] logging.py:  93: json_stats: {"RAM": "15.34/251.90G", "_type": "val_epoch", "cur_epoch": "4", "gpu_mem": "8.16G", "map": 0.12661, "mode": "val"}
+[11/03 23:40:52][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:40:52][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:40:52][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:40:52][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:40:52][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:40:52][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1396551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.25353016688061614,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10657894736842104,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06610072217705293,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.12677844394484739}
+[11/03 23:40:52][INFO] ava_eval_helper.py: 174: AVA eval done in 0.100155 seconds.
+[11/03 23:40:52][INFO] logging.py:  93: json_stats: {"RAM": "14.40/251.90G", "_type": "val_epoch", "cur_epoch": "5", "gpu_mem": "8.16G", "map": 0.12678, "mode": "val"}
+[11/03 23:50:26][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:50:26][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:50:26][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:50:26][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:50:26][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:50:26][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1396551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.2691707317073171,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.108,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06708613264427218,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.13038784952994723}
+[11/03 23:50:26][INFO] ava_eval_helper.py: 174: AVA eval done in 0.099521 seconds.
+[11/03 23:50:26][INFO] logging.py:  93: json_stats: {"RAM": "14.48/251.90G", "_type": "val_epoch", "cur_epoch": "6", "gpu_mem": "8.16G", "map": 0.13039, "mode": "val"}
+[11/03 23:58:42][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/03 23:58:42][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/03 23:58:42][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/03 23:58:42][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/03 23:58:42][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/03 23:58:42][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13728813559322037,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.25353016688061614,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10657894736842104,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.07363636363636364,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.127812164872595}
+[11/03 23:58:42][INFO] ava_eval_helper.py: 174: AVA eval done in 0.101094 seconds.
+[11/03 23:58:42][INFO] logging.py:  93: json_stats: {"RAM": "14.69/251.90G", "_type": "val_epoch", "cur_epoch": "7", "gpu_mem": "8.16G", "map": 0.12781, "mode": "val"}
+[11/04 00:09:37][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 00:09:37][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 00:09:37][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 00:09:37][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 00:09:37][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 00:09:37][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13728813559322037,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.4214285714285714,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.108,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0684931506849315,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.05051546391752577,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.15714506432484981}
+[11/04 00:09:38][INFO] ava_eval_helper.py: 174: AVA eval done in 0.105167 seconds.
+[11/04 00:09:38][INFO] logging.py:  93: json_stats: {"RAM": "14.61/251.90G", "_type": "val_epoch", "cur_epoch": "8", "gpu_mem": "8.16G", "map": 0.15715, "mode": "val"}
+[11/04 00:21:05][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 00:21:05][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 00:21:05][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 00:21:05][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 00:21:05][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 00:21:05][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13278688524590165,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.2641096374889478,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09759036144578315,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06836734693877551,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.049999999999999996,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.12257084622388163}
+[11/04 00:21:05][INFO] ava_eval_helper.py: 174: AVA eval done in 0.100495 seconds.
+[11/04 00:21:05][INFO] logging.py:  93: json_stats: {"RAM": "14.42/251.90G", "_type": "val_epoch", "cur_epoch": "9", "gpu_mem": "8.16G", "map": 0.12257, "mode": "val"}
+[11/04 00:32:28][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 00:32:28][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 00:32:28][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 00:32:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 00:32:28][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 00:32:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.075,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.11418439716312057,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.14127899484536083,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08949219216073148,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.03202614379084967,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09039634559201251}
+[11/04 00:32:28][INFO] ava_eval_helper.py: 174: AVA eval done in 0.078865 seconds.
+[11/04 00:32:28][INFO] logging.py:  93: json_stats: {"RAM": "14.53/251.90G", "_type": "val_epoch", "cur_epoch": "10", "gpu_mem": "8.16G", "map": 0.09040, "mode": "val"}
+[11/04 00:43:37][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 00:43:38][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 00:43:38][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 00:43:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 00:43:38][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 00:43:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.6118181818181818,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06666666666666667,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.6402985074626866,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.054444444444444434,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.2882510022552667}
+[11/04 00:43:38][INFO] ava_eval_helper.py: 174: AVA eval done in 0.137096 seconds.
+[11/04 00:43:38][INFO] logging.py:  93: json_stats: {"RAM": "14.54/251.90G", "_type": "val_epoch", "cur_epoch": "11", "gpu_mem": "8.16G", "map": 0.28825, "mode": "val"}
+[11/04 00:54:23][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 00:54:23][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 00:54:23][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 00:54:23][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 00:54:23][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 00:54:23][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.650952380952381,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07042253521126762,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.31662895927601814,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.054444444444444434,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.23209510615369303}
+[11/04 00:54:23][INFO] ava_eval_helper.py: 174: AVA eval done in 0.158119 seconds.
+[11/04 00:54:23][INFO] logging.py:  93: json_stats: {"RAM": "14.51/251.90G", "_type": "val_epoch", "cur_epoch": "12", "gpu_mem": "8.16G", "map": 0.23210, "mode": "val"}
+[11/04 01:04:37][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:04:37][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:04:37][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:04:37][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:04:37][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:04:37][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.18278670482060314,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.12658227848101267,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.1508407738095238,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08240310900071625,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.035784313725490194,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11567943596746919}
+[11/04 01:04:37][INFO] ava_eval_helper.py: 174: AVA eval done in 0.100422 seconds.
+[11/04 01:04:37][INFO] logging.py:  93: json_stats: {"RAM": "14.62/251.90G", "_type": "val_epoch", "cur_epoch": "13", "gpu_mem": "8.16G", "map": 0.11568, "mode": "val"}
+[11/04 01:13:47][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:13:47][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:13:47][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:13:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:13:47][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:13:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.6151515151515151,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.37458675424192667,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10735857561415373,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09141393158526226,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.033700980392156854,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.24444235139700293}
+[11/04 01:13:47][INFO] ava_eval_helper.py: 174: AVA eval done in 0.110945 seconds.
+[11/04 01:13:47][INFO] logging.py:  93: json_stats: {"RAM": "14.55/251.90G", "_type": "val_epoch", "cur_epoch": "14", "gpu_mem": "8.16G", "map": 0.24444, "mode": "val"}
+[11/04 01:22:40][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:22:40][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:22:40][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:22:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:22:40][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:22:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.3,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.20226873153031832,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.05491052557418628,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.054444444444444434,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.13593018248666053}
+[11/04 01:22:40][INFO] ava_eval_helper.py: 174: AVA eval done in 0.131019 seconds.
+[11/04 01:22:40][INFO] logging.py:  93: json_stats: {"RAM": "14.52/251.90G", "_type": "val_epoch", "cur_epoch": "15", "gpu_mem": "8.16G", "map": 0.13593, "mode": "val"}
+[11/04 01:31:07][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:31:07][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:31:07][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:31:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:31:07][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:31:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.21891891891891893,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.3176419082125604,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.13499999999999998,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08737704918032786,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.05764705882352941,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.16331698702706732}
+[11/04 01:31:07][INFO] ava_eval_helper.py: 174: AVA eval done in 0.129107 seconds.
+[11/04 01:31:07][INFO] logging.py:  93: json_stats: {"RAM": "14.44/251.90G", "_type": "val_epoch", "cur_epoch": "16", "gpu_mem": "8.16G", "map": 0.16332, "mode": "val"}
+[11/04 01:39:43][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:39:43][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:39:43][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:39:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:39:43][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:39:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.31153846153846154,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.09259259259259259,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06377952755905511,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06674550614947966,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.12916666666666668,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1327645509012511}
+[11/04 01:39:43][INFO] ava_eval_helper.py: 174: AVA eval done in 0.100272 seconds.
+[11/04 01:39:43][INFO] logging.py:  93: json_stats: {"RAM": "14.63/251.90G", "_type": "val_epoch", "cur_epoch": "17", "gpu_mem": "8.16G", "map": 0.13276, "mode": "val"}
+[11/04 01:48:28][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:48:28][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:48:28][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:48:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:48:28][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:48:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.5933333333333333,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.18083333333333335,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06141379310344828,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07246376811594205,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.0415448343079922,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.18991781243880984}
+[11/04 01:48:28][INFO] ava_eval_helper.py: 174: AVA eval done in 0.096074 seconds.
+[11/04 01:48:28][INFO] logging.py:  93: json_stats: {"RAM": "14.36/251.90G", "_type": "val_epoch", "cur_epoch": "18", "gpu_mem": "8.16G", "map": 0.18992, "mode": "val"}
+[11/04 01:57:04][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 01:57:04][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 01:57:04][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 01:57:04][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 01:57:04][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 01:57:04][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.46227661227661226,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.18207337296938733,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.054,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.1854828431372549,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.05862647073675705,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.18849185982400235}
+[11/04 01:57:04][INFO] ava_eval_helper.py: 174: AVA eval done in 0.131615 seconds.
+[11/04 01:57:04][INFO] logging.py:  93: json_stats: {"RAM": "14.59/251.90G", "_type": "val_epoch", "cur_epoch": "19", "gpu_mem": "8.16G", "map": 0.18849, "mode": "val"}
+[11/04 02:05:05][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:05:05][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:05:05][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:05:05][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:05:05][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:05:05][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.15,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08368571080070647,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0941860465116279,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07547894366076184,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.044805641554867555,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08963126850559275}
+[11/04 02:05:05][INFO] ava_eval_helper.py: 174: AVA eval done in 0.094990 seconds.
+[11/04 02:05:05][INFO] logging.py:  93: json_stats: {"RAM": "14.53/251.90G", "_type": "val_epoch", "cur_epoch": "20", "gpu_mem": "8.16G", "map": 0.08963, "mode": "val"}
+[11/04 02:13:20][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:13:20][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:13:20][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:13:20][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:13:20][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:13:20][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.6700000000000002,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07092946605141727,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06136363636363636,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.078125,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.032236842105263154,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.18253098890406338}
+[11/04 02:13:20][INFO] ava_eval_helper.py: 174: AVA eval done in 0.112476 seconds.
+[11/04 02:13:20][INFO] logging.py:  93: json_stats: {"RAM": "14.42/251.90G", "_type": "val_epoch", "cur_epoch": "21", "gpu_mem": "8.16G", "map": 0.18253, "mode": "val"}
+[11/04 02:22:13][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:22:13][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:22:13][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:22:13][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:22:13][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:22:13][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.12513784461152883,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07864077669902912,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07875874125874126,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.046258100205468625,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.07936453473182432}
+[11/04 02:22:13][INFO] ava_eval_helper.py: 174: AVA eval done in 0.102077 seconds.
+[11/04 02:22:13][INFO] logging.py:  93: json_stats: {"RAM": "14.51/251.90G", "_type": "val_epoch", "cur_epoch": "22", "gpu_mem": "8.16G", "map": 0.07936, "mode": "val"}
+[11/04 02:30:27][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:30:27][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:30:28][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:30:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:30:28][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:30:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.4409090909090909,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.21733266733266732,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.2805857832382624,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06622516556291391,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.054444444444444434,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.2118994302974758}
+[11/04 02:30:28][INFO] ava_eval_helper.py: 174: AVA eval done in 0.108756 seconds.
+[11/04 02:30:28][INFO] logging.py:  93: json_stats: {"RAM": "14.82/251.90G", "_type": "val_epoch", "cur_epoch": "23", "gpu_mem": "8.16G", "map": 0.21190, "mode": "val"}
+[11/04 02:38:22][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:38:22][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:38:22][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:38:22][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:38:22][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:38:22][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.35600000000000004,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08455458235419783,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.3238450074515648,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07246376811594205,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.049999999999999996,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.17737267158434095}
+[11/04 02:38:22][INFO] ava_eval_helper.py: 174: AVA eval done in 0.088025 seconds.
+[11/04 02:38:22][INFO] logging.py:  93: json_stats: {"RAM": "14.56/251.90G", "_type": "val_epoch", "cur_epoch": "24", "gpu_mem": "8.16G", "map": 0.17737, "mode": "val"}
+[11/04 02:46:19][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:46:19][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:46:19][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:46:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:46:19][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:46:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.17586466165413533,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07536148062463852,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.12356363636363636,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08721075672295185,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.035143288084464555,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09942876468996532}
+[11/04 02:46:19][INFO] ava_eval_helper.py: 174: AVA eval done in 0.096794 seconds.
+[11/04 02:46:19][INFO] logging.py:  93: json_stats: {"RAM": "14.61/251.90G", "_type": "val_epoch", "cur_epoch": "25", "gpu_mem": "8.16G", "map": 0.09943, "mode": "val"}
+[11/04 02:54:30][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 02:54:30][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 02:54:30][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 02:54:30][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 02:54:30][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 02:54:30][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.24950166112956812,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07867413632119516,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0761495948057213,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.04504504504504504,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10347952963717669}
+[11/04 02:54:30][INFO] ava_eval_helper.py: 174: AVA eval done in 0.093733 seconds.
+[11/04 02:54:30][INFO] logging.py:  93: json_stats: {"RAM": "14.55/251.90G", "_type": "val_epoch", "cur_epoch": "26", "gpu_mem": "8.16G", "map": 0.10348, "mode": "val"}
+[11/04 03:02:32][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:02:32][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:02:32][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:02:32][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:02:32][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:02:32][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.25179113539769277,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06944444444444446,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.1533492822966507,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07320834995346365,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.03690547862733293,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1169397381439169}
+[11/04 03:02:32][INFO] ava_eval_helper.py: 174: AVA eval done in 0.105330 seconds.
+[11/04 03:02:32][INFO] logging.py:  93: json_stats: {"RAM": "14.08/251.90G", "_type": "val_epoch", "cur_epoch": "27", "gpu_mem": "8.16G", "map": 0.11694, "mode": "val"}
+[11/04 03:10:57][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:10:57][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:10:57][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:10:57][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:10:57][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:10:57][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1424543501611171,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08095010361868327,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07934685931212193,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.067141312184571,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06932326621923937,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08784317829914652}
+[11/04 03:10:57][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084911 seconds.
+[11/04 03:10:57][INFO] logging.py:  93: json_stats: {"RAM": "14.16/251.90G", "_type": "val_epoch", "cur_epoch": "28", "gpu_mem": "8.16G", "map": 0.08784, "mode": "val"}
+[11/04 03:20:09][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:20:09][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:20:09][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:20:09][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:20:09][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:20:09][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.46109243697478985,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06711409395973154,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.1491683190662733,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0838585338106869,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.03245033112582781,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1587367429874619}
+[11/04 03:20:09][INFO] ava_eval_helper.py: 174: AVA eval done in 0.112467 seconds.
+[11/04 03:20:09][INFO] logging.py:  93: json_stats: {"RAM": "14.09/251.90G", "_type": "val_epoch", "cur_epoch": "29", "gpu_mem": "8.16G", "map": 0.15874, "mode": "val"}
+[11/04 03:29:00][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:29:00][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:29:00][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:29:00][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:29:00][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:29:00][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.2379973474801061,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07092198581560284,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10382352941176472,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07557883888698042,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1376711136431974,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1251985630475303}
+[11/04 03:29:00][INFO] ava_eval_helper.py: 174: AVA eval done in 0.165923 seconds.
+[11/04 03:29:00][INFO] logging.py:  93: json_stats: {"RAM": "14.14/251.90G", "_type": "val_epoch", "cur_epoch": "30", "gpu_mem": "8.16G", "map": 0.12520, "mode": "val"}
+[11/04 03:37:47][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:37:47][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:37:47][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:37:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:37:47][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:37:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.38932773109243696,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07726788882318156,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10782608695652175,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07959078035898809,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.03333333333333333,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.13746916411289234}
+[11/04 03:37:47][INFO] ava_eval_helper.py: 174: AVA eval done in 0.102106 seconds.
+[11/04 03:37:47][INFO] logging.py:  93: json_stats: {"RAM": "14.31/251.90G", "_type": "val_epoch", "cur_epoch": "31", "gpu_mem": "8.16G", "map": 0.13747, "mode": "val"}
+[11/04 03:46:19][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:46:19][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:46:19][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:46:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:46:19][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:46:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.4503508771929825,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.13828470380194516,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.16438866396761137,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07194244604316546,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.04555555555555556,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.17410444931225202}
+[11/04 03:46:19][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086775 seconds.
+[11/04 03:46:19][INFO] logging.py:  93: json_stats: {"RAM": "14.13/251.90G", "_type": "val_epoch", "cur_epoch": "32", "gpu_mem": "8.16G", "map": 0.17410, "mode": "val"}
+[11/04 03:54:56][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 03:54:56][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 03:54:56][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 03:54:56][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 03:54:56][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 03:54:56][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0972007722007722,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07246376811594205,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.15856950067476386,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07893178104575164,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.07270676691729323,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.0959745177909046}
+[11/04 03:54:56][INFO] ava_eval_helper.py: 174: AVA eval done in 0.095435 seconds.
+[11/04 03:54:56][INFO] logging.py:  93: json_stats: {"RAM": "14.31/251.90G", "_type": "val_epoch", "cur_epoch": "33", "gpu_mem": "8.16G", "map": 0.09597, "mode": "val"}
+[11/04 04:03:35][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:03:35][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:03:35][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:03:35][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:03:35][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:03:35][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.19756097560975608,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.13324566260612772,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.2922077922077922,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06711409395973154,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.04765166340508806,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.14755603755769914}
+[11/04 04:03:35][INFO] ava_eval_helper.py: 174: AVA eval done in 0.096682 seconds.
+[11/04 04:03:35][INFO] logging.py:  93: json_stats: {"RAM": "14.18/251.90G", "_type": "val_epoch", "cur_epoch": "34", "gpu_mem": "8.16G", "map": 0.14756, "mode": "val"}
+[11/04 04:11:40][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:11:40][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:11:40][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:11:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:11:40][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:11:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.09310344827586206,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07246376811594205,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.12431316341335903,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10541003633044953,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.043278656928383036,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08771381461279915}
+[11/04 04:11:40][INFO] ava_eval_helper.py: 174: AVA eval done in 0.104636 seconds.
+[11/04 04:11:40][INFO] logging.py:  93: json_stats: {"RAM": "13.96/251.90G", "_type": "val_epoch", "cur_epoch": "35", "gpu_mem": "8.16G", "map": 0.08771, "mode": "val"}
+[11/04 04:18:43][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:18:43][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:18:43][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:18:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:18:43][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:18:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1285714285714286,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.12421428307333138,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09983978638184246,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09000465983224605,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.12745098039215685,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11401622765020106}
+[11/04 04:18:43][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080071 seconds.
+[11/04 04:18:43][INFO] logging.py:  93: json_stats: {"RAM": "14.10/251.90G", "_type": "val_epoch", "cur_epoch": "36", "gpu_mem": "8.16G", "map": 0.11402, "mode": "val"}
+[11/04 04:26:02][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:26:02][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:26:02][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:26:02][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:26:02][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:26:02][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.10677238805970149,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.1052866797471114,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10480087288597925,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07872924648786717,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.09080459770114942,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09727875697636174}
+[11/04 04:26:02][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082262 seconds.
+[11/04 04:26:02][INFO] logging.py:  93: json_stats: {"RAM": "13.75/251.90G", "_type": "val_epoch", "cur_epoch": "37", "gpu_mem": "8.16G", "map": 0.09728, "mode": "val"}
+[11/04 04:32:43][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:32:43][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:32:43][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:32:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:32:43][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:32:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.14184615384615384,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07969627225075165,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07043478260869565,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06905535237718692,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1591410663841808,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10403472549339376}
+[11/04 04:32:43][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082829 seconds.
+[11/04 04:32:43][INFO] logging.py:  93: json_stats: {"RAM": "13.82/251.90G", "_type": "val_epoch", "cur_epoch": "38", "gpu_mem": "8.16G", "map": 0.10403, "mode": "val"}
+[11/04 04:39:11][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:39:11][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:39:11][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:39:11][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:39:11][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:39:11][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13499999999999998,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08299842395587076,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09905173615953144,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06888663967611336,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1375421963657258,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10469579923144827}
+[11/04 04:39:11][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081695 seconds.
+[11/04 04:39:11][INFO] logging.py:  93: json_stats: {"RAM": "13.93/251.90G", "_type": "val_epoch", "cur_epoch": "39", "gpu_mem": "8.16G", "map": 0.10470, "mode": "val"}
+[11/04 04:45:40][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:45:40][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:45:40][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:45:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:45:40][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:45:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.14517003065673015,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06756756756756757,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09380355965721819,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0754746342981637,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.03202614379084967,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08280838719410585}
+[11/04 04:45:40][INFO] ava_eval_helper.py: 174: AVA eval done in 0.090777 seconds.
+[11/04 04:45:40][INFO] logging.py:  93: json_stats: {"RAM": "14.06/251.90G", "_type": "val_epoch", "cur_epoch": "40", "gpu_mem": "8.16G", "map": 0.08281, "mode": "val"}
+[11/04 04:52:13][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:52:13][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:52:13][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:52:13][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:52:13][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:52:13][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.11571428571428571,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07074829931972788,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.16109837874543756,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07972883597883598,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.2345224898713271,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.13236245792592283}
+[11/04 04:52:13][INFO] ava_eval_helper.py: 174: AVA eval done in 0.079270 seconds.
+[11/04 04:52:13][INFO] logging.py:  93: json_stats: {"RAM": "13.85/251.90G", "_type": "val_epoch", "cur_epoch": "41", "gpu_mem": "8.16G", "map": 0.13236, "mode": "val"}
+[11/04 04:58:46][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 04:58:46][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 04:58:46][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 04:58:46][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 04:58:46][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 04:58:46][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.10282097649186256,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07135628779464397,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10253164556962024,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07931500371546307,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.08056812468577174,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08731840765147232}
+[11/04 04:58:46][INFO] ava_eval_helper.py: 174: AVA eval done in 0.158263 seconds.
+[11/04 04:58:46][INFO] logging.py:  93: json_stats: {"RAM": "13.88/251.90G", "_type": "val_epoch", "cur_epoch": "42", "gpu_mem": "8.16G", "map": 0.08732, "mode": "val"}
+[11/04 05:05:12][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:05:12][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:05:12][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:05:12][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:05:12][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:05:12][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.23823529411764707,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.14659436747672044,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0945170068027211,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07212530173359667,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.0925498469429966,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1288043634147364}
+[11/04 05:05:12][INFO] ava_eval_helper.py: 174: AVA eval done in 0.079871 seconds.
+[11/04 05:05:12][INFO] logging.py:  93: json_stats: {"RAM": "13.70/251.90G", "_type": "val_epoch", "cur_epoch": "43", "gpu_mem": "8.16G", "map": 0.12880, "mode": "val"}
+[11/04 05:12:01][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:12:01][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:12:01][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:12:01][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:12:01][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:12:01][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13278688524590165,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07246376811594205,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09204545454545454,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07575757575757575,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.03450704225352112,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08151214518367902}
+[11/04 05:12:01][INFO] ava_eval_helper.py: 174: AVA eval done in 0.343372 seconds.
+[11/04 05:12:01][INFO] logging.py:  93: json_stats: {"RAM": "13.95/251.90G", "_type": "val_epoch", "cur_epoch": "44", "gpu_mem": "8.16G", "map": 0.08151, "mode": "val"}
+[11/04 05:18:53][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:18:53][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:18:53][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:18:53][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:18:53][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:18:53][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.108,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.11809596489478662,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09976190476190476,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08782502054033153,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.07745098039215685,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09822677411783595}
+[11/04 05:18:53][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080810 seconds.
+[11/04 05:18:53][INFO] logging.py:  93: json_stats: {"RAM": "13.92/251.90G", "_type": "val_epoch", "cur_epoch": "45", "gpu_mem": "8.16G", "map": 0.09823, "mode": "val"}
+[11/04 05:25:51][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:25:51][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:25:51][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:25:51][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:25:51][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:25:51][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.12628571428571428,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07074829931972788,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09651600753295668,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0911658683829766,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.08478057889822595,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09389929368392028}
+[11/04 05:25:51][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080840 seconds.
+[11/04 05:25:51][INFO] logging.py:  93: json_stats: {"RAM": "13.97/251.90G", "_type": "val_epoch", "cur_epoch": "46", "gpu_mem": "8.16G", "map": 0.09390, "mode": "val"}
+[11/04 05:32:50][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:32:50][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:32:50][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:32:50][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:32:50][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:32:50][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.09878048780487804,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07295788939624556,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07356005857568051,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07972111668065027,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.27340038314176246,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11968398711984336}
+[11/04 05:32:50][INFO] ava_eval_helper.py: 174: AVA eval done in 0.078602 seconds.
+[11/04 05:32:50][INFO] logging.py:  93: json_stats: {"RAM": "14.31/251.90G", "_type": "val_epoch", "cur_epoch": "47", "gpu_mem": "8.16G", "map": 0.11968, "mode": "val"}
+[11/04 05:39:38][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:39:38][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:39:38][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:39:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:39:38][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:39:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06657633242999096,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06944444444444446,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06044776119402985,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.1033946251768034,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18954248366013074,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09788112938107987}
+[11/04 05:39:38][INFO] ava_eval_helper.py: 174: AVA eval done in 0.078860 seconds.
+[11/04 05:39:38][INFO] logging.py:  93: json_stats: {"RAM": "14.42/251.90G", "_type": "val_epoch", "cur_epoch": "48", "gpu_mem": "8.16G", "map": 0.09788, "mode": "val"}
+[11/04 05:46:28][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:46:28][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:46:28][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:46:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:46:28][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:46:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06926683716965047,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.05955882352941177,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09267946656578077,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1951048565121413,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.0969274389322676}
+[11/04 05:46:28][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081480 seconds.
+[11/04 05:46:28][INFO] logging.py:  93: json_stats: {"RAM": "14.38/251.90G", "_type": "val_epoch", "cur_epoch": "49", "gpu_mem": "8.16G", "map": 0.09693, "mode": "val"}
+[11/04 05:53:19][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 05:53:19][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 05:53:19][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 05:53:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 05:53:19][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 05:53:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.21193939393939396,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07349624060150374,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09609938672438673,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0735294117647059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15523342670401497,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.12205957194680106}
+[11/04 05:53:19][INFO] ava_eval_helper.py: 174: AVA eval done in 0.078726 seconds.
+[11/04 05:53:19][INFO] logging.py:  93: json_stats: {"RAM": "14.51/251.90G", "_type": "val_epoch", "cur_epoch": "50", "gpu_mem": "8.16G", "map": 0.12206, "mode": "val"}
+[11/04 06:00:06][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:00:06][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:00:06][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:00:06][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:00:06][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:00:06][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.14242424242424243,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.1029492064840717,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07105263157894737,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06666666666666667,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.16470072239422084,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1095586939096298}
+[11/04 06:00:06][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080183 seconds.
+[11/04 06:00:06][INFO] logging.py:  93: json_stats: {"RAM": "14.33/251.90G", "_type": "val_epoch", "cur_epoch": "51", "gpu_mem": "8.16G", "map": 0.10956, "mode": "val"}
+[11/04 06:06:47][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:06:47][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:06:47][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:06:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:06:47][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:06:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08709677419354839,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08517364059218707,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.1567104455244617,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07806837039495519,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.07843137254901959,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09709612065083438}
+[11/04 06:06:47][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083774 seconds.
+[11/04 06:06:47][INFO] logging.py:  93: json_stats: {"RAM": "14.51/251.90G", "_type": "val_epoch", "cur_epoch": "52", "gpu_mem": "8.16G", "map": 0.09710, "mode": "val"}
+[11/04 06:13:30][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:13:30][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:13:30][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:13:30][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:13:30][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:13:30][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07363636363636364,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06711409395973154,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0669976035604245,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09091256204658267,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.21527113237639553,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10278635111589958}
+[11/04 06:13:30][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084395 seconds.
+[11/04 06:13:30][INFO] logging.py:  93: json_stats: {"RAM": "14.30/251.90G", "_type": "val_epoch", "cur_epoch": "53", "gpu_mem": "8.16G", "map": 0.10279, "mode": "val"}
+[11/04 06:20:14][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:20:14][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:20:14][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:20:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:20:14][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:20:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1285714285714286,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06868137613719544,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.05586206896551724,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07407407407407407,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.14657316367842682,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09475242228532843}
+[11/04 06:20:14][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082132 seconds.
+[11/04 06:20:14][INFO] logging.py:  93: json_stats: {"RAM": "14.39/251.90G", "_type": "val_epoch", "cur_epoch": "54", "gpu_mem": "8.16G", "map": 0.09475, "mode": "val"}
+[11/04 06:26:57][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:26:57][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:26:57][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:26:57][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:26:57][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:26:57][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.17333333333333334,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0680161943319838,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.05704225352112676,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0978740157480315,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.11287581699346405,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10182832278558789}
+[11/04 06:26:58][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082467 seconds.
+[11/04 06:26:58][INFO] logging.py:  93: json_stats: {"RAM": "14.52/251.90G", "_type": "val_epoch", "cur_epoch": "55", "gpu_mem": "8.16G", "map": 0.10183, "mode": "val"}
+[11/04 06:33:54][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:33:54][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:33:54][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:33:54][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:33:54][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:33:54][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07043478260869565,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.11156462585034013,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06675195719313368,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.1148530005987023,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.05393642305407011,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08350815786098838}
+[11/04 06:33:54][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082464 seconds.
+[11/04 06:33:54][INFO] logging.py:  93: json_stats: {"RAM": "13.96/251.90G", "_type": "val_epoch", "cur_epoch": "56", "gpu_mem": "8.16G", "map": 0.08351, "mode": "val"}
+[11/04 06:40:19][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:40:19][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:40:19][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:40:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:40:19][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:40:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08947368421052633,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.1047945205479452,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08213464696223316,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07241477922672158,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.05964052287581699,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08169163076464865}
+[11/04 06:40:19][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086289 seconds.
+[11/04 06:40:19][INFO] logging.py:  93: json_stats: {"RAM": "12.08/251.90G", "_type": "val_epoch", "cur_epoch": "57", "gpu_mem": "8.16G", "map": 0.08169, "mode": "val"}
+[11/04 06:46:38][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:46:38][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:46:38][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:46:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:46:38][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:46:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08430950588288176,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06756756756756757,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06328125000000001,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0735294117647059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.24569377990430621,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10687630302389228}
+[11/04 06:46:38][INFO] ava_eval_helper.py: 174: AVA eval done in 0.087115 seconds.
+[11/04 06:46:38][INFO] logging.py:  93: json_stats: {"RAM": "12.02/251.90G", "_type": "val_epoch", "cur_epoch": "58", "gpu_mem": "8.16G", "map": 0.10688, "mode": "val"}
+[11/04 06:52:58][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:52:58][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:52:58][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:52:58][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:52:58][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:52:58][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08709677419354839,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0735294117647059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0642857142857143,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.06896551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15620915032679739,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09001731356242906}
+[11/04 06:52:58][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083034 seconds.
+[11/04 06:52:58][INFO] logging.py:  93: json_stats: {"RAM": "11.99/251.90G", "_type": "val_epoch", "cur_epoch": "59", "gpu_mem": "8.16G", "map": 0.09002, "mode": "val"}
+[11/04 06:59:08][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 06:59:08][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 06:59:08][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 06:59:08][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 06:59:08][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 06:59:08][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1112647209421403,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06944444444444446,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.084375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07244050913115661,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.16333333333333333,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10017160157021494}
+[11/04 06:59:08][INFO] ava_eval_helper.py: 174: AVA eval done in 0.091146 seconds.
+[11/04 06:59:08][INFO] logging.py:  93: json_stats: {"RAM": "11.89/251.90G", "_type": "val_epoch", "cur_epoch": "60", "gpu_mem": "8.16G", "map": 0.10017, "mode": "val"}
+[11/04 07:05:05][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:05:05][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:05:05][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:05:05][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:05:05][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:05:05][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07138395139325372,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06711409395973154,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06090225563909774,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07718052738336714,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.12745098039215685,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.0808063617535214}
+[11/04 07:05:05][INFO] ava_eval_helper.py: 174: AVA eval done in 0.088322 seconds.
+[11/04 07:05:05][INFO] logging.py:  93: json_stats: {"RAM": "12.00/251.90G", "_type": "val_epoch", "cur_epoch": "61", "gpu_mem": "8.16G", "map": 0.08081, "mode": "val"}
+[11/04 07:10:36][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:10:36][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:10:36][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:10:36][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:10:36][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:10:36][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0775368248772504,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07518796992481203,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06044776119402985,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0960235694954733,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06420915032679737,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.07468105516367259}
+[11/04 07:10:36][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082841 seconds.
+[11/04 07:10:36][INFO] logging.py:  93: json_stats: {"RAM": "12.11/251.90G", "_type": "val_epoch", "cur_epoch": "62", "gpu_mem": "8.16G", "map": 0.07468, "mode": "val"}
+[11/04 07:16:00][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:16:00][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:16:00][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:16:00][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:16:00][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:16:00][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.10728506787330318,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07333333333333335,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07788461538461539,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08120847832964252,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.22469798657718118,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11288189629961512}
+[11/04 07:16:00][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082444 seconds.
+[11/04 07:16:00][INFO] logging.py:  93: json_stats: {"RAM": "12.14/251.90G", "_type": "val_epoch", "cur_epoch": "63", "gpu_mem": "8.16G", "map": 0.11288, "mode": "val"}
+[11/04 07:21:36][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:21:36][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:21:36][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:21:36][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:21:36][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:21:36][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.11365589686455516,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06794258373205742,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06377952755905511,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07594333786960289,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.08987699132889697,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08223966747083351}
+[11/04 07:21:37][INFO] ava_eval_helper.py: 174: AVA eval done in 0.087749 seconds.
+[11/04 07:21:37][INFO] logging.py:  93: json_stats: {"RAM": "14.32/251.90G", "_type": "val_epoch", "cur_epoch": "64", "gpu_mem": "8.16G", "map": 0.08224, "mode": "val"}
+[11/04 07:27:13][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:27:13][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:27:13][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:27:13][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:27:13][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:27:13][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07363636363636364,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06896551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08683843263553409,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.23765597147950093,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.07049486461251166,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10751822992105793}
+[11/04 07:27:13][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086406 seconds.
+[11/04 07:27:13][INFO] logging.py:  93: json_stats: {"RAM": "14.05/251.90G", "_type": "val_epoch", "cur_epoch": "65", "gpu_mem": "8.16G", "map": 0.10752, "mode": "val"}
+[11/04 07:32:47][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:32:47][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:32:47][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:32:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:32:47][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:32:47][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07512704174228675,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0684931506849315,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.17842105263157892,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10358215358215357,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.04969298245614035,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09506327621941821}
+[11/04 07:32:47][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086754 seconds.
+[11/04 07:32:47][INFO] logging.py:  93: json_stats: {"RAM": "14.08/251.90G", "_type": "val_epoch", "cur_epoch": "66", "gpu_mem": "8.16G", "map": 0.09506, "mode": "val"}
+[11/04 07:38:18][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:38:18][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:38:18][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:38:18][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:38:18][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:38:18][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.09246740704973441,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06802721088435375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08804347826086958,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09145289694825298,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06747076023391813,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08149235067542576}
+[11/04 07:38:19][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082299 seconds.
+[11/04 07:38:19][INFO] logging.py:  93: json_stats: {"RAM": "14.07/251.90G", "_type": "val_epoch", "cur_epoch": "67", "gpu_mem": "8.16G", "map": 0.08149, "mode": "val"}
+[11/04 07:43:50][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:43:50][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:43:50][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:43:50][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:43:50][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:43:50][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1208955223880597,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06794258373205742,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09204545454545454,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07582720588235295,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.128,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09694215330958492}
+[11/04 07:43:50][INFO] ava_eval_helper.py: 174: AVA eval done in 0.085379 seconds.
+[11/04 07:43:50][INFO] logging.py:  93: json_stats: {"RAM": "14.28/251.90G", "_type": "val_epoch", "cur_epoch": "68", "gpu_mem": "8.16G", "map": 0.09694, "mode": "val"}
+[11/04 07:49:20][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:49:20][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:49:20][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:49:20][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:49:20][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:49:20][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.10682398847958377,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0665359477124183,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.075,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07542016806722689,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.09524853801169592,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08380572845418498}
+[11/04 07:49:20][INFO] ava_eval_helper.py: 174: AVA eval done in 0.087931 seconds.
+[11/04 07:49:20][INFO] logging.py:  93: json_stats: {"RAM": "14.18/251.90G", "_type": "val_epoch", "cur_epoch": "69", "gpu_mem": "8.16G", "map": 0.08381, "mode": "val"}
+[11/04 07:54:49][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 07:54:49][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 07:54:49][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 07:54:49][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 07:54:49][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 07:54:49][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1718870346598203,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08475249066002491,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08025797432964799,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.2542726163975812,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.11287581699346405,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.14080918660810768}
+[11/04 07:54:49][INFO] ava_eval_helper.py: 174: AVA eval done in 0.098905 seconds.
+[11/04 07:54:49][INFO] logging.py:  93: json_stats: {"RAM": "14.17/251.90G", "_type": "val_epoch", "cur_epoch": "70", "gpu_mem": "8.16G", "map": 0.14081, "mode": "val"}
+[11/04 08:00:14][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:00:14][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:00:14][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:00:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:00:14][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:00:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1788566624632198,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06756756756756757,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0648,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07407894736842104,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.06747076023391813,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.0905547875266253}
+[11/04 08:00:14][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083289 seconds.
+[11/04 08:00:14][INFO] logging.py:  93: json_stats: {"RAM": "14.30/251.90G", "_type": "val_epoch", "cur_epoch": "71", "gpu_mem": "8.16G", "map": 0.09055, "mode": "val"}
+[11/04 08:05:40][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:05:40][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:05:40][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:05:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:05:40][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:05:40][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0801980198019802,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08376158767463115,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09767123287671232,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08089087397392564,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.0939766081871345,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08729966450287677}
+[11/04 08:05:40][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081187 seconds.
+[11/04 08:05:40][INFO] logging.py:  93: json_stats: {"RAM": "14.27/251.90G", "_type": "val_epoch", "cur_epoch": "72", "gpu_mem": "8.16G", "map": 0.08730, "mode": "val"}
+[11/04 08:11:08][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:11:08][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:11:08][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:11:08][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:11:08][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:11:08][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07570093457943926,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08299319727891155,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10414035087719299,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07776542960005396,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.11317880794701987,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09075574405652351}
+[11/04 08:11:08][INFO] ava_eval_helper.py: 174: AVA eval done in 0.088177 seconds.
+[11/04 08:11:08][INFO] logging.py:  93: json_stats: {"RAM": "14.21/251.90G", "_type": "val_epoch", "cur_epoch": "73", "gpu_mem": "8.16G", "map": 0.09076, "mode": "val"}
+[11/04 08:16:39][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:16:39][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:16:39][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:16:39][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:16:39][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:16:39][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06864406779661018,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06711409395973154,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.19075187969924812,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.12693563627878393,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.0895424836601307,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10859763227890089}
+[11/04 08:16:39][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082465 seconds.
+[11/04 08:16:39][INFO] logging.py:  93: json_stats: {"RAM": "14.36/251.90G", "_type": "val_epoch", "cur_epoch": "74", "gpu_mem": "8.16G", "map": 0.10860, "mode": "val"}
+[11/04 08:22:07][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:22:07][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:22:07][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:22:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:22:07][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:22:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07657582499073044,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06872406933788008,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.11952850105559465,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09171532530537987,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.2507738095238095,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.12146350604267893}
+[11/04 08:22:07][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083476 seconds.
+[11/04 08:22:07][INFO] logging.py:  93: json_stats: {"RAM": "14.22/251.90G", "_type": "val_epoch", "cur_epoch": "75", "gpu_mem": "8.16G", "map": 0.12146, "mode": "val"}
+[11/04 08:27:37][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:27:37][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:27:37][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:27:37][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:27:37][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:27:37][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.13121983326020184,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0716710707276745,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07641509433962264,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0735294117647059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.23228149559418912,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1170233811372788}
+[11/04 08:27:37][INFO] ava_eval_helper.py: 174: AVA eval done in 0.085953 seconds.
+[11/04 08:27:37][INFO] logging.py:  93: json_stats: {"RAM": "14.16/251.90G", "_type": "val_epoch", "cur_epoch": "76", "gpu_mem": "8.16G", "map": 0.11702, "mode": "val"}
+[11/04 08:33:03][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:33:03][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:33:03][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:33:03][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:33:03][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:33:03][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06749999999999999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07194244604316546,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.11506410256410256,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.13747555395013022,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.11287581699346405,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10097158391017244}
+[11/04 08:33:03][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084584 seconds.
+[11/04 08:33:03][INFO] logging.py:  93: json_stats: {"RAM": "14.51/251.90G", "_type": "val_epoch", "cur_epoch": "77", "gpu_mem": "8.16G", "map": 0.10097, "mode": "val"}
+[11/04 08:38:22][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:38:22][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:38:22][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:38:22][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:38:22][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:38:22][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06136363636363636,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07804520037278657,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07941176470588235,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08829927007299271,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15693650793650793,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09281127589036117}
+[11/04 08:38:22][INFO] ava_eval_helper.py: 174: AVA eval done in 0.161428 seconds.
+[11/04 08:38:22][INFO] logging.py:  93: json_stats: {"RAM": "14.58/251.90G", "_type": "val_epoch", "cur_epoch": "78", "gpu_mem": "8.16G", "map": 0.09281, "mode": "val"}
+[11/04 08:43:50][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:43:50][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:43:50][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:43:50][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:43:50][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:43:50][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1305769230769231,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07881963596249311,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06749999999999999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07963963963963964,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1283783783783784,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09698291541148685}
+[11/04 08:43:50][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084190 seconds.
+[11/04 08:43:50][INFO] logging.py:  93: json_stats: {"RAM": "14.04/251.90G", "_type": "val_epoch", "cur_epoch": "79", "gpu_mem": "8.16G", "map": 0.09698, "mode": "val"}
+[11/04 08:49:14][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:49:14][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:49:14][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:49:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:49:14][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:49:14][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.162,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.12064333017975404,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06749999999999999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09002405103001149,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.04932742989668985,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09789896222129109}
+[11/04 08:49:14][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082756 seconds.
+[11/04 08:49:14][INFO] logging.py:  93: json_stats: {"RAM": "14.12/251.90G", "_type": "val_epoch", "cur_epoch": "80", "gpu_mem": "8.16G", "map": 0.09790, "mode": "val"}
+[11/04 08:54:33][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:54:33][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:54:33][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:54:33][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:54:33][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:54:33][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06923076923076923,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.09434192672998643,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07363636363636364,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08376803551609323,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.13102631578947369,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09040068218053725}
+[11/04 08:54:33][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082979 seconds.
+[11/04 08:54:33][INFO] logging.py:  93: json_stats: {"RAM": "14.01/251.90G", "_type": "val_epoch", "cur_epoch": "81", "gpu_mem": "8.16G", "map": 0.09040, "mode": "val"}
+[11/04 08:59:59][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 08:59:59][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 08:59:59][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 08:59:59][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 08:59:59][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 08:59:59][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06864406779661018,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07648032723022985,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.1317921146953405,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08633308439133681,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.09120813397129188,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09089154561696185}
+[11/04 08:59:59][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084710 seconds.
+[11/04 08:59:59][INFO] logging.py:  93: json_stats: {"RAM": "14.13/251.90G", "_type": "val_epoch", "cur_epoch": "82", "gpu_mem": "8.16G", "map": 0.09089, "mode": "val"}
+[11/04 09:05:23][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:05:23][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:05:23][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:05:23][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:05:23][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:05:23][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0680672268907563,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08581081081081082,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07570093457943926,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07824728260869565,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.10620915032679738,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.0828070810432999}
+[11/04 09:05:23][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084968 seconds.
+[11/04 09:05:23][INFO] logging.py:  93: json_stats: {"RAM": "14.31/251.90G", "_type": "val_epoch", "cur_epoch": "83", "gpu_mem": "8.16G", "map": 0.08281, "mode": "val"}
+[11/04 09:10:43][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:10:43][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:10:43][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:10:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:10:43][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:10:43][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08977889358703313,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.09647654538142648,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09204545454545454,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0735294117647059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.11287581699346405,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09294122445441683}
+[11/04 09:10:43][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081637 seconds.
+[11/04 09:10:43][INFO] logging.py:  93: json_stats: {"RAM": "14.18/251.90G", "_type": "val_epoch", "cur_epoch": "84", "gpu_mem": "8.16G", "map": 0.09294, "mode": "val"}
+[11/04 09:16:10][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:16:10][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:16:10][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:16:10][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:16:10][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:16:10][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08181818181818182,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06666666666666667,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06881456611570248,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.11117371175118759,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15620915032679739,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09693645533570719}
+[11/04 09:16:10][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083640 seconds.
+[11/04 09:16:10][INFO] logging.py:  93: json_stats: {"RAM": "14.38/251.90G", "_type": "val_epoch", "cur_epoch": "85", "gpu_mem": "8.16G", "map": 0.09694, "mode": "val"}
+[11/04 09:21:33][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:21:33][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:21:33][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:21:33][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:21:33][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:21:33][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0801980198019802,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.10523362766740252,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08181818181818182,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0874972898749729,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1355263157894737,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09805468699040223}
+[11/04 09:21:33][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084766 seconds.
+[11/04 09:21:33][INFO] logging.py:  93: json_stats: {"RAM": "14.62/251.90G", "_type": "val_epoch", "cur_epoch": "86", "gpu_mem": "8.16G", "map": 0.09805, "mode": "val"}
+[11/04 09:26:54][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:26:54][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:26:54][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:26:54][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:26:54][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:26:54][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.225,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07660687374243424,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.062307692307692314,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07939876215738285,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18954248366013074,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.126571162373528}
+[11/04 09:26:54][INFO] ava_eval_helper.py: 174: AVA eval done in 0.092065 seconds.
+[11/04 09:26:54][INFO] logging.py:  93: json_stats: {"RAM": "14.32/251.90G", "_type": "val_epoch", "cur_epoch": "87", "gpu_mem": "8.16G", "map": 0.12657, "mode": "val"}
+[11/04 09:32:17][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:32:17][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:32:17][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:32:17][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:32:17][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:32:17][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06694214876033058,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.10264568764568766,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.06864406779661018,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0895689805910124,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.14954350161117078,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09546887728096232}
+[11/04 09:32:17][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081656 seconds.
+[11/04 09:32:17][INFO] logging.py:  93: json_stats: {"RAM": "14.46/251.90G", "_type": "val_epoch", "cur_epoch": "88", "gpu_mem": "8.16G", "map": 0.09547, "mode": "val"}
+[11/04 09:37:38][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:37:38][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:37:38][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:37:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:37:38][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:37:38][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.10212121212121211,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0944927536231884,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09055489964580873,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08603428126217375,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15853094274146906,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1063468178787704}
+[11/04 09:37:38][INFO] ava_eval_helper.py: 174: AVA eval done in 0.096595 seconds.
+[11/04 09:37:38][INFO] logging.py:  93: json_stats: {"RAM": "14.38/251.90G", "_type": "val_epoch", "cur_epoch": "89", "gpu_mem": "8.16G", "map": 0.10635, "mode": "val"}
+[11/04 09:43:03][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:43:03][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:43:03][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:43:03][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:43:03][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:43:03][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.09999999999999999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07147377728139978,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0642857142857143,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.23647219193020724,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18954248366013074,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1323548334314904}
+[11/04 09:43:03][INFO] ava_eval_helper.py: 174: AVA eval done in 0.088361 seconds.
+[11/04 09:43:03][INFO] logging.py:  93: json_stats: {"RAM": "14.36/251.90G", "_type": "val_epoch", "cur_epoch": "90", "gpu_mem": "8.16G", "map": 0.13235, "mode": "val"}
+[11/04 09:48:28][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 09:48:28][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 09:48:28][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 09:48:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 09:48:28][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 09:48:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07641509433962264,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08935989619099499,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07747252747252747,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09160773930048628,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.16287581699346407,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09954621485941909}
+[11/04 09:48:28][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086801 seconds.
+[11/04 09:48:28][INFO] logging.py:  93: json_stats: {"RAM": "14.09/251.90G", "_type": "val_epoch", "cur_epoch": "91", "gpu_mem": "8.16G", "map": 0.09955, "mode": "val"}
+[11/04 10:00:27][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:00:27][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:00:27][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:00:27][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:00:27][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:00:27][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06923076923076923,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0809538336383974,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09001265822784811,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0902690820953217,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1539607843137255,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09688542550121239}
+[11/04 10:00:27][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081544 seconds.
+[11/04 10:00:27][INFO] logging.py:  93: json_stats: {"RAM": "14.21/251.90G", "_type": "val_epoch", "cur_epoch": "92", "gpu_mem": "8.16G", "map": 0.09689, "mode": "val"}
+[11/04 10:06:08][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:06:08][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:06:08][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:06:08][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:06:08][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:06:08][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06923076923076923,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08158212560386474,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08804347826086958,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0934235972687561,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1362402303578774,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09370404014442742}
+[11/04 10:06:08][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084110 seconds.
+[11/04 10:06:08][INFO] logging.py:  93: json_stats: {"RAM": "14.41/251.90G", "_type": "val_epoch", "cur_epoch": "93", "gpu_mem": "8.16G", "map": 0.09370, "mode": "val"}
+[11/04 10:11:39][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:11:39][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:11:39][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:11:39][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:11:39][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:11:39][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.2081144534115921,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08971262451115167,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0926913512019895,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07738490745135262,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.10287581699346406,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11415583071391}
+[11/04 10:11:39][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086330 seconds.
+[11/04 10:11:39][INFO] logging.py:  93: json_stats: {"RAM": "14.28/251.90G", "_type": "val_epoch", "cur_epoch": "94", "gpu_mem": "8.16G", "map": 0.11416, "mode": "val"}
+[11/04 10:17:07][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:17:07][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:17:07][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:17:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:17:07][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:17:07][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0680672268907563,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07840979247783604,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0941860465116279,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09462242562929063,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1355263157894737,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09416236145979691}
+[11/04 10:17:07][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086553 seconds.
+[11/04 10:17:07][INFO] logging.py:  93: json_stats: {"RAM": "14.14/251.90G", "_type": "val_epoch", "cur_epoch": "95", "gpu_mem": "8.16G", "map": 0.09416, "mode": "val"}
+[11/04 10:22:29][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:22:29][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:22:29][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:22:29][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:22:29][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:22:29][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08181818181818182,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.12128717227015821,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10124999999999999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.11576019971517168,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.12954248366013071,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10993160749272848}
+[11/04 10:22:29][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086147 seconds.
+[11/04 10:22:29][INFO] logging.py:  93: json_stats: {"RAM": "14.34/251.90G", "_type": "val_epoch", "cur_epoch": "96", "gpu_mem": "8.16G", "map": 0.10993, "mode": "val"}
+[11/04 10:27:46][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:27:46][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:27:46][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:27:46][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:27:46][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:27:46][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06749999999999999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06896551724137931,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.14464285714285716,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09585579618146915,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.0930263157894737,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09399809727103585}
+[11/04 10:27:46][INFO] ava_eval_helper.py: 174: AVA eval done in 0.085275 seconds.
+[11/04 10:27:46][INFO] logging.py:  93: json_stats: {"RAM": "14.56/251.90G", "_type": "val_epoch", "cur_epoch": "97", "gpu_mem": "8.16G", "map": 0.09400, "mode": "val"}
+[11/04 10:33:10][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:33:10][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:33:10][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:33:10][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:33:10][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:33:10][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0801980198019802,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.1906625663964216,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07168141592920353,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09336445737027399,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1386033017662719,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11490195225283024}
+[11/04 10:33:10][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083146 seconds.
+[11/04 10:33:10][INFO] logging.py:  93: json_stats: {"RAM": "14.32/251.90G", "_type": "val_epoch", "cur_epoch": "98", "gpu_mem": "8.16G", "map": 0.11490, "mode": "val"}
+[11/04 10:38:33][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:38:33][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:38:33][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:38:33][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:38:33][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:38:33][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.05905694554511491,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.11317796415376313,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09087481146304674,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09712770144554173,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1341374269005848,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09887496990161027}
+[11/04 10:38:33][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082197 seconds.
+[11/04 10:38:33][INFO] logging.py:  93: json_stats: {"RAM": "14.34/251.90G", "_type": "val_epoch", "cur_epoch": "99", "gpu_mem": "8.16G", "map": 0.09887, "mode": "val"}
+[11/04 10:44:01][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:44:01][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:44:01][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:44:01][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:44:01][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:44:01][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.11254272043745728,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0846106097532432,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07987471412946205,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09655559494269172,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.14866666666666667,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10445006118590419}
+[11/04 10:44:01][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081822 seconds.
+[11/04 10:44:01][INFO] logging.py:  93: json_stats: {"RAM": "14.57/251.90G", "_type": "val_epoch", "cur_epoch": "100", "gpu_mem": "8.16G", "map": 0.10445, "mode": "val"}
+[11/04 10:49:32][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:49:32][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:49:32][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:49:32][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:49:32][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:49:32][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07641509433962264,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.11422081461255491,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.14608944701476098,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09683116122975649,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.09787581699346405,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10628646683803182}
+[11/04 10:49:32][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082872 seconds.
+[11/04 10:49:32][INFO] logging.py:  93: json_stats: {"RAM": "14.45/251.90G", "_type": "val_epoch", "cur_epoch": "101", "gpu_mem": "8.16G", "map": 0.10629, "mode": "val"}
+[11/04 10:54:59][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 10:54:59][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 10:54:59][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 10:54:59][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 10:54:59][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 10:54:59][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.05625,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.10287820309255685,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0873271310032688,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.07645010276318795,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.08731203007518798,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08204349338684032}
+[11/04 10:54:59][INFO] ava_eval_helper.py: 174: AVA eval done in 0.088838 seconds.
+[11/04 10:54:59][INFO] logging.py:  93: json_stats: {"RAM": "14.55/251.90G", "_type": "val_epoch", "cur_epoch": "102", "gpu_mem": "8.16G", "map": 0.08204, "mode": "val"}
+[11/04 11:00:36][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:00:36][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:00:36][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:00:36][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:00:36][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:00:36][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08265306122448982,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.100108644307983,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09448373983739837,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10582232893157265,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.10008771929824561,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09663109871993789}
+[11/04 11:00:36][INFO] ava_eval_helper.py: 174: AVA eval done in 0.108694 seconds.
+[11/04 11:00:36][INFO] logging.py:  93: json_stats: {"RAM": "14.36/251.90G", "_type": "val_epoch", "cur_epoch": "103", "gpu_mem": "8.16G", "map": 0.09663, "mode": "val"}
+[11/04 11:05:57][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:05:57][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:05:57][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:05:57][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:05:57][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:05:57][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08161860465116279,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06769747221332574,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0653225806451613,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0865546218487395,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.16106811145510835,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09245227816269955}
+[11/04 11:05:57][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084028 seconds.
+[11/04 11:05:57][INFO] logging.py:  93: json_stats: {"RAM": "14.19/251.90G", "_type": "val_epoch", "cur_epoch": "104", "gpu_mem": "8.16G", "map": 0.09245, "mode": "val"}
+[11/04 11:11:35][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:11:35][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:11:35][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:11:35][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:11:35][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:11:35][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0627906976744186,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06962917768286897,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08526315789473686,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08894385026737966,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.13730593607305935,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.08878656391849268}
+[11/04 11:11:35][INFO] ava_eval_helper.py: 174: AVA eval done in 0.195606 seconds.
+[11/04 11:11:35][INFO] logging.py:  93: json_stats: {"RAM": "14.64/251.90G", "_type": "val_epoch", "cur_epoch": "105", "gpu_mem": "8.16G", "map": 0.08879, "mode": "val"}
+[11/04 11:17:22][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:17:22][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:17:22][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:17:22][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:17:22][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:17:22][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07714285714285715,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07641311374480529,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0724074074074074,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08609941310873169,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.19114219114219114,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10064099650919853}
+[11/04 11:17:22][INFO] ava_eval_helper.py: 174: AVA eval done in 0.086146 seconds.
+[11/04 11:17:22][INFO] logging.py:  93: json_stats: {"RAM": "14.27/251.90G", "_type": "val_epoch", "cur_epoch": "106", "gpu_mem": "8.16G", "map": 0.10064, "mode": "val"}
+[11/04 11:23:16][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:23:16][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:23:16][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:23:16][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:23:16][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:23:16][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06252240292067707,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.0835399166918908,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09259056732740943,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10007215007215008,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.1567644276253548,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09909789292749645}
+[11/04 11:23:16][INFO] ava_eval_helper.py: 174: AVA eval done in 0.101003 seconds.
+[11/04 11:23:16][INFO] logging.py:  93: json_stats: {"RAM": "14.31/251.90G", "_type": "val_epoch", "cur_epoch": "107", "gpu_mem": "8.16G", "map": 0.09910, "mode": "val"}
+[11/04 11:29:19][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:29:19][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:29:19][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:29:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:29:19][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:29:19][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08205378442854044,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07325823946599917,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09010356731875721,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08753594771241831,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.20175438596491227,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10694118497812548}
+[11/04 11:29:19][INFO] ava_eval_helper.py: 174: AVA eval done in 0.085799 seconds.
+[11/04 11:29:19][INFO] logging.py:  93: json_stats: {"RAM": "14.36/251.90G", "_type": "val_epoch", "cur_epoch": "108", "gpu_mem": "8.16G", "map": 0.10694, "mode": "val"}
+[11/04 11:34:42][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:34:42][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:34:42][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:34:42][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:34:42][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:34:42][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0642857142857143,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.072992700729927,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.09759036144578315,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08350305216426193,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18954248366013074,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10158286245716341}
+[11/04 11:34:42][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083895 seconds.
+[11/04 11:34:42][INFO] logging.py:  93: json_stats: {"RAM": "14.41/251.90G", "_type": "val_epoch", "cur_epoch": "109", "gpu_mem": "8.16G", "map": 0.10158, "mode": "val"}
+[11/04 11:40:04][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:40:04][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:40:04][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:40:04][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:40:04][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:40:04][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06377952755905511,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06836800878112059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08704878048780489,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10355073573352659,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15620915032679739,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.0957912405776609}
+[11/04 11:40:04][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081717 seconds.
+[11/04 11:40:04][INFO] logging.py:  93: json_stats: {"RAM": "14.02/251.90G", "_type": "val_epoch", "cur_epoch": "110", "gpu_mem": "8.16G", "map": 0.09579, "mode": "val"}
+[11/04 11:45:30][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:45:30][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:45:30][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:45:30][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:45:30][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:45:30][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0674515515637011,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07120450589874504,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.11911764705882354,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09539641943734017,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.17427686864219372,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10548939852016073}
+[11/04 11:45:30][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083285 seconds.
+[11/04 11:45:30][INFO] logging.py:  93: json_stats: {"RAM": "13.77/251.90G", "_type": "val_epoch", "cur_epoch": "111", "gpu_mem": "8.16G", "map": 0.10549, "mode": "val"}
+[11/04 11:50:56][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:50:56][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:50:56][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:50:56][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:50:56][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:50:56][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.1502814573324182,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.11074122251640382,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.12274581803345574,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.0917279411764706,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15798122065727702,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1266955319432051}
+[11/04 11:50:56][INFO] ava_eval_helper.py: 174: AVA eval done in 0.083765 seconds.
+[11/04 11:50:56][INFO] logging.py:  93: json_stats: {"RAM": "13.65/251.90G", "_type": "val_epoch", "cur_epoch": "112", "gpu_mem": "8.16G", "map": 0.12670, "mode": "val"}
+[11/04 11:56:28][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 11:56:28][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 11:56:28][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 11:56:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 11:56:28][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 11:56:28][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06294964028776978,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.09283269911738282,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07408748955140708,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08599371787549971,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15620915032679739,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09441453943177135}
+[11/04 11:56:28][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082439 seconds.
+[11/04 11:56:28][INFO] logging.py:  93: json_stats: {"RAM": "13.76/251.90G", "_type": "val_epoch", "cur_epoch": "113", "gpu_mem": "8.16G", "map": 0.09441, "mode": "val"}
+[11/04 12:03:11][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:03:11][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:03:11][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:03:11][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:03:11][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:03:11][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.06485765765765766,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07453416149068323,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08265306122448982,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09347606442095904,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.17287581699346408,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.09767935235745077}
+[11/04 12:03:11][INFO] ava_eval_helper.py: 174: AVA eval done in 0.157990 seconds.
+[11/04 12:03:11][INFO] logging.py:  93: json_stats: {"RAM": "13.80/251.90G", "_type": "val_epoch", "cur_epoch": "114", "gpu_mem": "8.16G", "map": 0.09768, "mode": "val"}
+[11/04 12:09:48][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:09:48][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:09:48][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:09:48][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:09:48][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:09:48][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08038140020898642,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.07199940582293524,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0963671663049376,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08449579831932774,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.17413793103448277,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10147634033813395}
+[11/04 12:09:48][INFO] ava_eval_helper.py: 174: AVA eval done in 0.082671 seconds.
+[11/04 12:09:48][INFO] logging.py:  93: json_stats: {"RAM": "13.78/251.90G", "_type": "val_epoch", "cur_epoch": "115", "gpu_mem": "8.16G", "map": 0.10148, "mode": "val"}
+[11/04 12:16:18][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:16:18][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:16:18][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:16:18][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:16:18][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:16:18][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.14416972936852657,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.09876177086902671,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.11677715451300358,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09888215233042819,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18969298245614036,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.1296567579074251}
+[11/04 12:16:18][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080039 seconds.
+[11/04 12:16:18][INFO] logging.py:  93: json_stats: {"RAM": "13.81/251.90G", "_type": "val_epoch", "cur_epoch": "116", "gpu_mem": "8.16G", "map": 0.12966, "mode": "val"}
+[11/04 12:22:42][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:22:42][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:22:42][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:22:42][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:22:42][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:22:42][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.07864077669902912,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.18051152753238156,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07641509433962264,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09287996008065288,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18954248366013074,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.12359796846236337}
+[11/04 12:22:42][INFO] ava_eval_helper.py: 174: AVA eval done in 0.085273 seconds.
+[11/04 12:22:42][INFO] logging.py:  93: json_stats: {"RAM": "13.88/251.90G", "_type": "val_epoch", "cur_epoch": "117", "gpu_mem": "8.16G", "map": 0.12360, "mode": "val"}
+[11/04 12:28:49][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:28:49][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:28:49][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:28:49][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:28:49][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:28:49][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.089010989010989,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06886886886886887,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.07168141592920353,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10041839071357395,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18954248366013074,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10390442963655322}
+[11/04 12:28:49][INFO] ava_eval_helper.py: 174: AVA eval done in 0.084877 seconds.
+[11/04 12:28:49][INFO] logging.py:  93: json_stats: {"RAM": "13.97/251.90G", "_type": "val_epoch", "cur_epoch": "118", "gpu_mem": "8.16G", "map": 0.10390, "mode": "val"}
+[11/04 12:35:15][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:35:15][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:35:15][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:35:15][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:35:15][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:35:15][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.0793040293040293,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.097154374016459,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.0780882910193255,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09494002998500752,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.16159959246051958,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10221726335706818}
+[11/04 12:35:15][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080116 seconds.
+[11/04 12:35:15][INFO] logging.py:  93: json_stats: {"RAM": "13.92/251.90G", "_type": "val_epoch", "cur_epoch": "119", "gpu_mem": "8.16G", "map": 0.10222, "mode": "val"}
+[11/04 12:41:32][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:41:32][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:41:32][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:41:32][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:41:32][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:41:32][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.10527516802857052,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.1597121044423203,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.1492081447963801,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.08547953204967702,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.18854304635761587,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.13764359913491275}
+[11/04 12:41:32][INFO] ava_eval_helper.py: 174: AVA eval done in 0.081765 seconds.
+[11/04 12:41:32][INFO] logging.py:  93: json_stats: {"RAM": "13.73/251.90G", "_type": "val_epoch", "cur_epoch": "120", "gpu_mem": "8.16G", "map": 0.13764, "mode": "val"}
+[11/04 12:47:49][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:47:49][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:47:49][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:47:49][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:47:49][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:47:49][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.09801813683996405,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.08097959183673469,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.08567986230636834,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.09539641943734017,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.22302631578947368,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.11662006524197618}
+[11/04 12:47:49][INFO] ava_eval_helper.py: 174: AVA eval done in 0.080412 seconds.
+[11/04 12:47:49][INFO] logging.py:  93: json_stats: {"RAM": "13.95/251.90G", "_type": "val_epoch", "cur_epoch": "121", "gpu_mem": "8.16G", "map": 0.11662, "mode": "val"}
+[11/04 12:54:17][INFO] ava_eval_helper.py: 164: Evaluating with 48 unique GT frames.
+[11/04 12:54:17][INFO] ava_eval_helper.py: 166: Evaluating with 45 unique detection frames
+[11/04 12:54:17][INFO] ava_eval_helper.py: 312: AVA results wrote to detections_latest.csv
+[11/04 12:54:17][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+[11/04 12:54:17][INFO] ava_eval_helper.py: 312: AVA results wrote to groundtruth_latest.csv
+[11/04 12:54:17][INFO] ava_eval_helper.py: 313: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.08196309525194588,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crawl': 0.06974358974358975,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/crouch/kneel': 0.10835164835164836,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/dance': 0.10246888320545611,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/fall down': 0.15763888888888888,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.10403322108830579}
+[11/04 12:54:17][INFO] ava_eval_helper.py: 174: AVA eval done in 0.079049 seconds.
+[11/04 12:54:17][INFO] logging.py:  93: json_stats: {"RAM": "13.82/251.90G", "_type": "val_epoch", "cur_epoch": "122", "gpu_mem": "8.16G", "map": 0.10403, "mode": "val"}
+slurmstepd: error: *** JOB 148576 ON biwirender05 CANCELLED AT 2020-11-04T12:57:39 ***

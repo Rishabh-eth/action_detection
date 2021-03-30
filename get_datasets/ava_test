@@ -1,0 +1,16 @@
+#!/bin/bash
+DATA_DIR="/srv/beegfs02/scratch/da_action/data/ava/viedeos_test"
+
+if [[ ! -d "${DATA_DIR}" ]]; then
+  echo "${DATA_DIR} doesn't exist. Creating it.";
+  mkdir -p ${DATA_DIR}
+fi
+
+#wget https://s3.amazonaws.com/ava-dataset/annotations/ava_file_names_trainval_v2.1.txt
+wget http://research.google.com/ava/download/ava_test_v2.2.txt
+#for line in $(cat ava_file_names_trainval_v2.1.txt)
+for line in $(cat ava_test_v2.2.txt)
+do
+  #wget https://s3.amazonaws.com/ava-dataset/trainval/$line -P ${DATA_DIR}
+  wget https://s3.amazonaws.com/ava-dataset/test/$line -P ${DATA_DIR}
+done

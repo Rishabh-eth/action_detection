@@ -1,0 +1,1043 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+[12/27 23:59:37][INFO] train_net.py: 439: Train with config:
+[12/27 23:59:37][INFO] train_net.py: 440: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/ava/annotations_10_5000_200/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_5000_200/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes_gt.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/annotations_10_5_2/',
+        'AUX': False,
+        'AUX_TEST': False,
+        'CLASSES': 0,
+        'DATASET': 'da',
+        'DETECTION_SCORE_THRESH': 0.8,
+        'ENABLE': False,
+        'EXCLUSION_FILE': 'kinetics_val_excluded_timestamps_v2.1.csv',
+        'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/frames/',
+        'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/frame_lists_10_5_2/',
+        'FULL_TEST_ON_VAL': True,
+        'F_CONFUSION': -1,
+        'GROUNDTRUTH_FILE': 'kinetics_val_v2.1.csv',
+        'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+        'LR_FACTOR': 10.0,
+        'TEST_GT_BOX_LISTS': [],
+        'TEST_LISTS': ['val.csv'],
+        'TEST_PREDICT_BOX_LISTS': ['kinetics_val_predicted_boxes.csv'],
+        'TRAIN_GT_BOX_LISTS': [],
+        'TRAIN_LISTS': ['train.csv'],
+        'TRAIN_PREDICT_BOX_LISTS': ['kinetics_train_predicted_boxes.csv'],
+        'WEIGHT_AUX': 0.5,
+        'WEIGHT_MAIN': 0.5},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': False,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'FREEZE_TO': 152,
+           'HEAD_ACT': 'sigmoid',
+           'LAST_PRE_TRAIN': '',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 10,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 1,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs02/scratch/da_action/data/output/ex_10_5000_200_v1',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.1,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 15,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': 'tensorboard',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'DETECTIONS_PATH': '',
+          'ENABLE': True,
+          'GT_PATH': '',
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': False,
+           'BATCH_SIZE': 8,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': True,
+           'CHECKPOINT_FILE_PATH': '/srv/beegfs02/scratch/da_action/data/output/aux_10_5000_200_v2/checkpoints/checkpoint_epoch_00005.pyth',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': True,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+0 frozen s1.pathway0_stem.conv.weight
+1 frozen s1.pathway0_stem.bn.weight
+2 frozen s1.pathway0_stem.bn.bias
+3 frozen s1.pathway1_stem.conv.weight
+4 frozen s1.pathway1_stem.bn.weight
+5 frozen s1.pathway1_stem.bn.bias
+6 frozen s1_fuse.conv_f2s.weight
+7 frozen s1_fuse.bn.weight
+8 frozen s1_fuse.bn.bias
+9 frozen s2.pathway0_res0.branch1.weight
+10 frozen s2.pathway0_res0.branch1_bn.weight
+11 frozen s2.pathway0_res0.branch1_bn.bias
+12 frozen s2.pathway0_res0.branch2.a.weight
+13 frozen s2.pathway0_res0.branch2.a_bn.weight
+14 frozen s2.pathway0_res0.branch2.a_bn.bias
+15 frozen s2.pathway0_res0.branch2.b.weight
+16 frozen s2.pathway0_res0.branch2.b_bn.weight
+17 frozen s2.pathway0_res0.branch2.b_bn.bias
+18 frozen s2.pathway0_res0.branch2.c.weight
+19 frozen s2.pathway0_res0.branch2.c_bn.weight
+20 frozen s2.pathway0_res0.branch2.c_bn.bias
+21 frozen s2.pathway0_res1.branch2.a.weight
+22 frozen s2.pathway0_res1.branch2.a_bn.weight
+23 frozen s2.pathway0_res1.branch2.a_bn.bias
+24 frozen s2.pathway0_res1.branch2.b.weight
+25 frozen s2.pathway0_res1.branch2.b_bn.weight
+26 frozen s2.pathway0_res1.branch2.b_bn.bias
+27 frozen s2.pathway0_res1.branch2.c.weight
+28 frozen s2.pathway0_res1.branch2.c_bn.weight
+29 frozen s2.pathway0_res1.branch2.c_bn.bias
+30 frozen s2.pathway0_res2.branch2.a.weight
+31 frozen s2.pathway0_res2.branch2.a_bn.weight
+32 frozen s2.pathway0_res2.branch2.a_bn.bias
+33 frozen s2.pathway0_res2.branch2.b.weight
+34 frozen s2.pathway0_res2.branch2.b_bn.weight
+35 frozen s2.pathway0_res2.branch2.b_bn.bias
+36 frozen s2.pathway0_res2.branch2.c.weight
+37 frozen s2.pathway0_res2.branch2.c_bn.weight
+38 frozen s2.pathway0_res2.branch2.c_bn.bias
+39 frozen s2.pathway1_res0.branch1.weight
+40 frozen s2.pathway1_res0.branch1_bn.weight
+41 frozen s2.pathway1_res0.branch1_bn.bias
+42 frozen s2.pathway1_res0.branch2.a.weight
+43 frozen s2.pathway1_res0.branch2.a_bn.weight
+44 frozen s2.pathway1_res0.branch2.a_bn.bias
+45 frozen s2.pathway1_res0.branch2.b.weight
+46 frozen s2.pathway1_res0.branch2.b_bn.weight
+47 frozen s2.pathway1_res0.branch2.b_bn.bias
+48 frozen s2.pathway1_res0.branch2.c.weight
+49 frozen s2.pathway1_res0.branch2.c_bn.weight
+50 frozen s2.pathway1_res0.branch2.c_bn.bias
+51 frozen s2.pathway1_res1.branch2.a.weight
+52 frozen s2.pathway1_res1.branch2.a_bn.weight
+53 frozen s2.pathway1_res1.branch2.a_bn.bias
+54 frozen s2.pathway1_res1.branch2.b.weight
+55 frozen s2.pathway1_res1.branch2.b_bn.weight
+56 frozen s2.pathway1_res1.branch2.b_bn.bias
+57 frozen s2.pathway1_res1.branch2.c.weight
+58 frozen s2.pathway1_res1.branch2.c_bn.weight
+59 frozen s2.pathway1_res1.branch2.c_bn.bias
+60 frozen s2.pathway1_res2.branch2.a.weight
+61 frozen s2.pathway1_res2.branch2.a_bn.weight
+62 frozen s2.pathway1_res2.branch2.a_bn.bias
+63 frozen s2.pathway1_res2.branch2.b.weight
+64 frozen s2.pathway1_res2.branch2.b_bn.weight
+65 frozen s2.pathway1_res2.branch2.b_bn.bias
+66 frozen s2.pathway1_res2.branch2.c.weight
+67 frozen s2.pathway1_res2.branch2.c_bn.weight
+68 frozen s2.pathway1_res2.branch2.c_bn.bias
+69 frozen s2_fuse.conv_f2s.weight
+70 frozen s2_fuse.bn.weight
+71 frozen s2_fuse.bn.bias
+72 frozen s3.pathway0_res0.branch1.weight
+73 frozen s3.pathway0_res0.branch1_bn.weight
+74 frozen s3.pathway0_res0.branch1_bn.bias
+75 frozen s3.pathway0_res0.branch2.a.weight
+76 frozen s3.pathway0_res0.branch2.a_bn.weight
+77 frozen s3.pathway0_res0.branch2.a_bn.bias
+78 frozen s3.pathway0_res0.branch2.b.weight
+79 frozen s3.pathway0_res0.branch2.b_bn.weight
+80 frozen s3.pathway0_res0.branch2.b_bn.bias
+81 frozen s3.pathway0_res0.branch2.c.weight
+82 frozen s3.pathway0_res0.branch2.c_bn.weight
+83 frozen s3.pathway0_res0.branch2.c_bn.bias
+84 frozen s3.pathway0_res1.branch2.a.weight
+85 frozen s3.pathway0_res1.branch2.a_bn.weight
+86 frozen s3.pathway0_res1.branch2.a_bn.bias
+87 frozen s3.pathway0_res1.branch2.b.weight
+88 frozen s3.pathway0_res1.branch2.b_bn.weight
+89 frozen s3.pathway0_res1.branch2.b_bn.bias
+90 frozen s3.pathway0_res1.branch2.c.weight
+91 frozen s3.pathway0_res1.branch2.c_bn.weight
+92 frozen s3.pathway0_res1.branch2.c_bn.bias
+93 frozen s3.pathway0_res2.branch2.a.weight
+94 frozen s3.pathway0_res2.branch2.a_bn.weight
+95 frozen s3.pathway0_res2.branch2.a_bn.bias
+96 frozen s3.pathway0_res2.branch2.b.weight
+97 frozen s3.pathway0_res2.branch2.b_bn.weight
+98 frozen s3.pathway0_res2.branch2.b_bn.bias
+99 frozen s3.pathway0_res2.branch2.c.weight
+100 frozen s3.pathway0_res2.branch2.c_bn.weight
+101 frozen s3.pathway0_res2.branch2.c_bn.bias
+102 frozen s3.pathway0_res3.branch2.a.weight
+103 frozen s3.pathway0_res3.branch2.a_bn.weight
+104 frozen s3.pathway0_res3.branch2.a_bn.bias
+105 frozen s3.pathway0_res3.branch2.b.weight
+106 frozen s3.pathway0_res3.branch2.b_bn.weight
+107 frozen s3.pathway0_res3.branch2.b_bn.bias
+108 frozen s3.pathway0_res3.branch2.c.weight
+109 frozen s3.pathway0_res3.branch2.c_bn.weight
+110 frozen s3.pathway0_res3.branch2.c_bn.bias
+111 frozen s3.pathway1_res0.branch1.weight
+112 frozen s3.pathway1_res0.branch1_bn.weight
+113 frozen s3.pathway1_res0.branch1_bn.bias
+114 frozen s3.pathway1_res0.branch2.a.weight
+115 frozen s3.pathway1_res0.branch2.a_bn.weight
+116 frozen s3.pathway1_res0.branch2.a_bn.bias
+117 frozen s3.pathway1_res0.branch2.b.weight
+118 frozen s3.pathway1_res0.branch2.b_bn.weight
+119 frozen s3.pathway1_res0.branch2.b_bn.bias
+120 frozen s3.pathway1_res0.branch2.c.weight
+121 frozen s3.pathway1_res0.branch2.c_bn.weight
+122 frozen s3.pathway1_res0.branch2.c_bn.bias
+123 frozen s3.pathway1_res1.branch2.a.weight
+124 frozen s3.pathway1_res1.branch2.a_bn.weight
+125 frozen s3.pathway1_res1.branch2.a_bn.bias
+126 frozen s3.pathway1_res1.branch2.b.weight
+127 frozen s3.pathway1_res1.branch2.b_bn.weight
+128 frozen s3.pathway1_res1.branch2.b_bn.bias
+129 frozen s3.pathway1_res1.branch2.c.weight
+130 frozen s3.pathway1_res1.branch2.c_bn.weight
+131 frozen s3.pathway1_res1.branch2.c_bn.bias
+132 frozen s3.pathway1_res2.branch2.a.weight
+133 frozen s3.pathway1_res2.branch2.a_bn.weight
+134 frozen s3.pathway1_res2.branch2.a_bn.bias
+135 frozen s3.pathway1_res2.branch2.b.weight
+136 frozen s3.pathway1_res2.branch2.b_bn.weight
+137 frozen s3.pathway1_res2.branch2.b_bn.bias
+138 frozen s3.pathway1_res2.branch2.c.weight
+139 frozen s3.pathway1_res2.branch2.c_bn.weight
+140 frozen s3.pathway1_res2.branch2.c_bn.bias
+141 frozen s3.pathway1_res3.branch2.a.weight
+142 frozen s3.pathway1_res3.branch2.a_bn.weight
+143 frozen s3.pathway1_res3.branch2.a_bn.bias
+144 frozen s3.pathway1_res3.branch2.b.weight
+145 frozen s3.pathway1_res3.branch2.b_bn.weight
+146 frozen s3.pathway1_res3.branch2.b_bn.bias
+147 frozen s3.pathway1_res3.branch2.c.weight
+148 frozen s3.pathway1_res3.branch2.c_bn.weight
+149 frozen s3.pathway1_res3.branch2.c_bn.bias
+150 frozen s3_fuse.conv_f2s.weight
+151 frozen s3_fuse.bn.weight
+152 frozen s3_fuse.bn.bias
+153 unfrozen s4.pathway0_res0.branch1.weight
+154 unfrozen s4.pathway0_res0.branch1_bn.weight
+155 unfrozen s4.pathway0_res0.branch1_bn.bias
+156 unfrozen s4.pathway0_res0.branch2.a.weight
+157 unfrozen s4.pathway0_res0.branch2.a_bn.weight
+158 unfrozen s4.pathway0_res0.branch2.a_bn.bias
+159 unfrozen s4.pathway0_res0.branch2.b.weight
+160 unfrozen s4.pathway0_res0.branch2.b_bn.weight
+161 unfrozen s4.pathway0_res0.branch2.b_bn.bias
+162 unfrozen s4.pathway0_res0.branch2.c.weight
+163 unfrozen s4.pathway0_res0.branch2.c_bn.weight
+164 unfrozen s4.pathway0_res0.branch2.c_bn.bias
+165 unfrozen s4.pathway0_res1.branch2.a.weight
+166 unfrozen s4.pathway0_res1.branch2.a_bn.weight
+167 unfrozen s4.pathway0_res1.branch2.a_bn.bias
+168 unfrozen s4.pathway0_res1.branch2.b.weight
+169 unfrozen s4.pathway0_res1.branch2.b_bn.weight
+170 unfrozen s4.pathway0_res1.branch2.b_bn.bias
+171 unfrozen s4.pathway0_res1.branch2.c.weight
+172 unfrozen s4.pathway0_res1.branch2.c_bn.weight
+173 unfrozen s4.pathway0_res1.branch2.c_bn.bias
+174 unfrozen s4.pathway0_res2.branch2.a.weight
+175 unfrozen s4.pathway0_res2.branch2.a_bn.weight
+176 unfrozen s4.pathway0_res2.branch2.a_bn.bias
+177 unfrozen s4.pathway0_res2.branch2.b.weight
+178 unfrozen s4.pathway0_res2.branch2.b_bn.weight
+179 unfrozen s4.pathway0_res2.branch2.b_bn.bias
+180 unfrozen s4.pathway0_res2.branch2.c.weight
+181 unfrozen s4.pathway0_res2.branch2.c_bn.weight
+182 unfrozen s4.pathway0_res2.branch2.c_bn.bias
+183 unfrozen s4.pathway0_res3.branch2.a.weight
+184 unfrozen s4.pathway0_res3.branch2.a_bn.weight
+185 unfrozen s4.pathway0_res3.branch2.a_bn.bias
+186 unfrozen s4.pathway0_res3.branch2.b.weight
+187 unfrozen s4.pathway0_res3.branch2.b_bn.weight
+188 unfrozen s4.pathway0_res3.branch2.b_bn.bias
+189 unfrozen s4.pathway0_res3.branch2.c.weight
+190 unfrozen s4.pathway0_res3.branch2.c_bn.weight
+191 unfrozen s4.pathway0_res3.branch2.c_bn.bias
+192 unfrozen s4.pathway0_res4.branch2.a.weight
+193 unfrozen s4.pathway0_res4.branch2.a_bn.weight
+194 unfrozen s4.pathway0_res4.branch2.a_bn.bias
+195 unfrozen s4.pathway0_res4.branch2.b.weight
+196 unfrozen s4.pathway0_res4.branch2.b_bn.weight
+197 unfrozen s4.pathway0_res4.branch2.b_bn.bias
+198 unfrozen s4.pathway0_res4.branch2.c.weight
+199 unfrozen s4.pathway0_res4.branch2.c_bn.weight
+200 unfrozen s4.pathway0_res4.branch2.c_bn.bias
+201 unfrozen s4.pathway0_res5.branch2.a.weight
+202 unfrozen s4.pathway0_res5.branch2.a_bn.weight
+203 unfrozen s4.pathway0_res5.branch2.a_bn.bias
+204 unfrozen s4.pathway0_res5.branch2.b.weight
+205 unfrozen s4.pathway0_res5.branch2.b_bn.weight
+206 unfrozen s4.pathway0_res5.branch2.b_bn.bias
+207 unfrozen s4.pathway0_res5.branch2.c.weight
+208 unfrozen s4.pathway0_res5.branch2.c_bn.weight
+209 unfrozen s4.pathway0_res5.branch2.c_bn.bias
+210 unfrozen s4.pathway0_res6.branch2.a.weight
+211 unfrozen s4.pathway0_res6.branch2.a_bn.weight
+212 unfrozen s4.pathway0_res6.branch2.a_bn.bias
+213 unfrozen s4.pathway0_res6.branch2.b.weight
+214 unfrozen s4.pathway0_res6.branch2.b_bn.weight
+215 unfrozen s4.pathway0_res6.branch2.b_bn.bias
+216 unfrozen s4.pathway0_res6.branch2.c.weight
+217 unfrozen s4.pathway0_res6.branch2.c_bn.weight
+218 unfrozen s4.pathway0_res6.branch2.c_bn.bias
+219 unfrozen s4.pathway0_nonlocal6.conv_theta.weight
+220 unfrozen s4.pathway0_nonlocal6.conv_theta.bias
+221 unfrozen s4.pathway0_nonlocal6.conv_phi.weight
+222 unfrozen s4.pathway0_nonlocal6.conv_phi.bias
+223 unfrozen s4.pathway0_nonlocal6.conv_g.weight
+224 unfrozen s4.pathway0_nonlocal6.conv_g.bias
+225 unfrozen s4.pathway0_nonlocal6.conv_out.weight
+226 unfrozen s4.pathway0_nonlocal6.conv_out.bias
+227 unfrozen s4.pathway0_nonlocal6.bn.weight
+228 unfrozen s4.pathway0_nonlocal6.bn.bias
+229 unfrozen s4.pathway0_res7.branch2.a.weight
+230 unfrozen s4.pathway0_res7.branch2.a_bn.weight
+231 unfrozen s4.pathway0_res7.branch2.a_bn.bias
+232 unfrozen s4.pathway0_res7.branch2.b.weight
+233 unfrozen s4.pathway0_res7.branch2.b_bn.weight
+234 unfrozen s4.pathway0_res7.branch2.b_bn.bias
+235 unfrozen s4.pathway0_res7.branch2.c.weight
+236 unfrozen s4.pathway0_res7.branch2.c_bn.weight
+237 unfrozen s4.pathway0_res7.branch2.c_bn.bias
+238 unfrozen s4.pathway0_res8.branch2.a.weight
+239 unfrozen s4.pathway0_res8.branch2.a_bn.weight
+240 unfrozen s4.pathway0_res8.branch2.a_bn.bias
+241 unfrozen s4.pathway0_res8.branch2.b.weight
+242 unfrozen s4.pathway0_res8.branch2.b_bn.weight
+243 unfrozen s4.pathway0_res8.branch2.b_bn.bias
+244 unfrozen s4.pathway0_res8.branch2.c.weight
+245 unfrozen s4.pathway0_res8.branch2.c_bn.weight
+246 unfrozen s4.pathway0_res8.branch2.c_bn.bias
+247 unfrozen s4.pathway0_res9.branch2.a.weight
+248 unfrozen s4.pathway0_res9.branch2.a_bn.weight
+249 unfrozen s4.pathway0_res9.branch2.a_bn.bias
+250 unfrozen s4.pathway0_res9.branch2.b.weight
+251 unfrozen s4.pathway0_res9.branch2.b_bn.weight
+252 unfrozen s4.pathway0_res9.branch2.b_bn.bias
+253 unfrozen s4.pathway0_res9.branch2.c.weight
+254 unfrozen s4.pathway0_res9.branch2.c_bn.weight
+255 unfrozen s4.pathway0_res9.branch2.c_bn.bias
+256 unfrozen s4.pathway0_res10.branch2.a.weight
+257 unfrozen s4.pathway0_res10.branch2.a_bn.weight
+258 unfrozen s4.pathway0_res10.branch2.a_bn.bias
+259 unfrozen s4.pathway0_res10.branch2.b.weight
+260 unfrozen s4.pathway0_res10.branch2.b_bn.weight
+261 unfrozen s4.pathway0_res10.branch2.b_bn.bias
+262 unfrozen s4.pathway0_res10.branch2.c.weight
+263 unfrozen s4.pathway0_res10.branch2.c_bn.weight
+264 unfrozen s4.pathway0_res10.branch2.c_bn.bias
+265 unfrozen s4.pathway0_res11.branch2.a.weight
+266 unfrozen s4.pathway0_res11.branch2.a_bn.weight
+267 unfrozen s4.pathway0_res11.branch2.a_bn.bias
+268 unfrozen s4.pathway0_res11.branch2.b.weight
+269 unfrozen s4.pathway0_res11.branch2.b_bn.weight
+270 unfrozen s4.pathway0_res11.branch2.b_bn.bias
+271 unfrozen s4.pathway0_res11.branch2.c.weight
+272 unfrozen s4.pathway0_res11.branch2.c_bn.weight
+273 unfrozen s4.pathway0_res11.branch2.c_bn.bias
+274 unfrozen s4.pathway0_res12.branch2.a.weight
+275 unfrozen s4.pathway0_res12.branch2.a_bn.weight
+276 unfrozen s4.pathway0_res12.branch2.a_bn.bias
+277 unfrozen s4.pathway0_res12.branch2.b.weight
+278 unfrozen s4.pathway0_res12.branch2.b_bn.weight
+279 unfrozen s4.pathway0_res12.branch2.b_bn.bias
+280 unfrozen s4.pathway0_res12.branch2.c.weight
+281 unfrozen s4.pathway0_res12.branch2.c_bn.weight
+282 unfrozen s4.pathway0_res12.branch2.c_bn.bias
+283 unfrozen s4.pathway0_res13.branch2.a.weight
+284 unfrozen s4.pathway0_res13.branch2.a_bn.weight
+285 unfrozen s4.pathway0_res13.branch2.a_bn.bias
+286 unfrozen s4.pathway0_res13.branch2.b.weight
+287 unfrozen s4.pathway0_res13.branch2.b_bn.weight
+288 unfrozen s4.pathway0_res13.branch2.b_bn.bias
+289 unfrozen s4.pathway0_res13.branch2.c.weight
+290 unfrozen s4.pathway0_res13.branch2.c_bn.weight
+291 unfrozen s4.pathway0_res13.branch2.c_bn.bias
+292 unfrozen s4.pathway0_nonlocal13.conv_theta.weight
+293 unfrozen s4.pathway0_nonlocal13.conv_theta.bias
+294 unfrozen s4.pathway0_nonlocal13.conv_phi.weight
+295 unfrozen s4.pathway0_nonlocal13.conv_phi.bias
+296 unfrozen s4.pathway0_nonlocal13.conv_g.weight
+297 unfrozen s4.pathway0_nonlocal13.conv_g.bias
+298 unfrozen s4.pathway0_nonlocal13.conv_out.weight
+299 unfrozen s4.pathway0_nonlocal13.conv_out.bias
+300 unfrozen s4.pathway0_nonlocal13.bn.weight
+301 unfrozen s4.pathway0_nonlocal13.bn.bias
+302 unfrozen s4.pathway0_res14.branch2.a.weight
+303 unfrozen s4.pathway0_res14.branch2.a_bn.weight
+304 unfrozen s4.pathway0_res14.branch2.a_bn.bias
+305 unfrozen s4.pathway0_res14.branch2.b.weight
+306 unfrozen s4.pathway0_res14.branch2.b_bn.weight
+307 unfrozen s4.pathway0_res14.branch2.b_bn.bias
+308 unfrozen s4.pathway0_res14.branch2.c.weight
+309 unfrozen s4.pathway0_res14.branch2.c_bn.weight
+310 unfrozen s4.pathway0_res14.branch2.c_bn.bias
+311 unfrozen s4.pathway0_res15.branch2.a.weight
+312 unfrozen s4.pathway0_res15.branch2.a_bn.weight
+313 unfrozen s4.pathway0_res15.branch2.a_bn.bias
+314 unfrozen s4.pathway0_res15.branch2.b.weight
+315 unfrozen s4.pathway0_res15.branch2.b_bn.weight
+316 unfrozen s4.pathway0_res15.branch2.b_bn.bias
+317 unfrozen s4.pathway0_res15.branch2.c.weight
+318 unfrozen s4.pathway0_res15.branch2.c_bn.weight
+319 unfrozen s4.pathway0_res15.branch2.c_bn.bias
+320 unfrozen s4.pathway0_res16.branch2.a.weight
+321 unfrozen s4.pathway0_res16.branch2.a_bn.weight
+322 unfrozen s4.pathway0_res16.branch2.a_bn.bias
+323 unfrozen s4.pathway0_res16.branch2.b.weight
+324 unfrozen s4.pathway0_res16.branch2.b_bn.weight
+325 unfrozen s4.pathway0_res16.branch2.b_bn.bias
+326 unfrozen s4.pathway0_res16.branch2.c.weight
+327 unfrozen s4.pathway0_res16.branch2.c_bn.weight
+328 unfrozen s4.pathway0_res16.branch2.c_bn.bias
+329 unfrozen s4.pathway0_res17.branch2.a.weight
+330 unfrozen s4.pathway0_res17.branch2.a_bn.weight
+331 unfrozen s4.pathway0_res17.branch2.a_bn.bias
+332 unfrozen s4.pathway0_res17.branch2.b.weight
+333 unfrozen s4.pathway0_res17.branch2.b_bn.weight
+334 unfrozen s4.pathway0_res17.branch2.b_bn.bias
+335 unfrozen s4.pathway0_res17.branch2.c.weight
+336 unfrozen s4.pathway0_res17.branch2.c_bn.weight
+337 unfrozen s4.pathway0_res17.branch2.c_bn.bias
+338 unfrozen s4.pathway0_res18.branch2.a.weight
+339 unfrozen s4.pathway0_res18.branch2.a_bn.weight
+340 unfrozen s4.pathway0_res18.branch2.a_bn.bias
+341 unfrozen s4.pathway0_res18.branch2.b.weight
+342 unfrozen s4.pathway0_res18.branch2.b_bn.weight
+343 unfrozen s4.pathway0_res18.branch2.b_bn.bias
+344 unfrozen s4.pathway0_res18.branch2.c.weight
+345 unfrozen s4.pathway0_res18.branch2.c_bn.weight
+346 unfrozen s4.pathway0_res18.branch2.c_bn.bias
+347 unfrozen s4.pathway0_res19.branch2.a.weight
+348 unfrozen s4.pathway0_res19.branch2.a_bn.weight
+349 unfrozen s4.pathway0_res19.branch2.a_bn.bias
+350 unfrozen s4.pathway0_res19.branch2.b.weight
+351 unfrozen s4.pathway0_res19.branch2.b_bn.weight
+352 unfrozen s4.pathway0_res19.branch2.b_bn.bias
+353 unfrozen s4.pathway0_res19.branch2.c.weight
+354 unfrozen s4.pathway0_res19.branch2.c_bn.weight
+355 unfrozen s4.pathway0_res19.branch2.c_bn.bias
+356 unfrozen s4.pathway0_res20.branch2.a.weight
+357 unfrozen s4.pathway0_res20.branch2.a_bn.weight
+358 unfrozen s4.pathway0_res20.branch2.a_bn.bias
+359 unfrozen s4.pathway0_res20.branch2.b.weight
+360 unfrozen s4.pathway0_res20.branch2.b_bn.weight
+361 unfrozen s4.pathway0_res20.branch2.b_bn.bias
+362 unfrozen s4.pathway0_res20.branch2.c.weight
+363 unfrozen s4.pathway0_res20.branch2.c_bn.weight
+364 unfrozen s4.pathway0_res20.branch2.c_bn.bias
+365 unfrozen s4.pathway0_nonlocal20.conv_theta.weight
+366 unfrozen s4.pathway0_nonlocal20.conv_theta.bias
+367 unfrozen s4.pathway0_nonlocal20.conv_phi.weight
+368 unfrozen s4.pathway0_nonlocal20.conv_phi.bias
+369 unfrozen s4.pathway0_nonlocal20.conv_g.weight
+370 unfrozen s4.pathway0_nonlocal20.conv_g.bias
+371 unfrozen s4.pathway0_nonlocal20.conv_out.weight
+372 unfrozen s4.pathway0_nonlocal20.conv_out.bias
+373 unfrozen s4.pathway0_nonlocal20.bn.weight
+374 unfrozen s4.pathway0_nonlocal20.bn.bias
+375 unfrozen s4.pathway0_res21.branch2.a.weight
+376 unfrozen s4.pathway0_res21.branch2.a_bn.weight
+377 unfrozen s4.pathway0_res21.branch2.a_bn.bias
+378 unfrozen s4.pathway0_res21.branch2.b.weight
+379 unfrozen s4.pathway0_res21.branch2.b_bn.weight
+380 unfrozen s4.pathway0_res21.branch2.b_bn.bias
+381 unfrozen s4.pathway0_res21.branch2.c.weight
+382 unfrozen s4.pathway0_res21.branch2.c_bn.weight
+383 unfrozen s4.pathway0_res21.branch2.c_bn.bias
+384 unfrozen s4.pathway0_res22.branch2.a.weight
+385 unfrozen s4.pathway0_res22.branch2.a_bn.weight
+386 unfrozen s4.pathway0_res22.branch2.a_bn.bias
+387 unfrozen s4.pathway0_res22.branch2.b.weight
+388 unfrozen s4.pathway0_res22.branch2.b_bn.weight
+389 unfrozen s4.pathway0_res22.branch2.b_bn.bias
+390 unfrozen s4.pathway0_res22.branch2.c.weight
+391 unfrozen s4.pathway0_res22.branch2.c_bn.weight
+392 unfrozen s4.pathway0_res22.branch2.c_bn.bias
+393 unfrozen s4.pathway1_res0.branch1.weight
+394 unfrozen s4.pathway1_res0.branch1_bn.weight
+395 unfrozen s4.pathway1_res0.branch1_bn.bias
+396 unfrozen s4.pathway1_res0.branch2.a.weight
+397 unfrozen s4.pathway1_res0.branch2.a_bn.weight
+398 unfrozen s4.pathway1_res0.branch2.a_bn.bias
+399 unfrozen s4.pathway1_res0.branch2.b.weight
+400 unfrozen s4.pathway1_res0.branch2.b_bn.weight
+401 unfrozen s4.pathway1_res0.branch2.b_bn.bias
+402 unfrozen s4.pathway1_res0.branch2.c.weight
+403 unfrozen s4.pathway1_res0.branch2.c_bn.weight
+404 unfrozen s4.pathway1_res0.branch2.c_bn.bias
+405 unfrozen s4.pathway1_res1.branch2.a.weight
+406 unfrozen s4.pathway1_res1.branch2.a_bn.weight
+407 unfrozen s4.pathway1_res1.branch2.a_bn.bias
+408 unfrozen s4.pathway1_res1.branch2.b.weight
+409 unfrozen s4.pathway1_res1.branch2.b_bn.weight
+410 unfrozen s4.pathway1_res1.branch2.b_bn.bias
+411 unfrozen s4.pathway1_res1.branch2.c.weight
+412 unfrozen s4.pathway1_res1.branch2.c_bn.weight
+413 unfrozen s4.pathway1_res1.branch2.c_bn.bias
+414 unfrozen s4.pathway1_res2.branch2.a.weight
+415 unfrozen s4.pathway1_res2.branch2.a_bn.weight
+416 unfrozen s4.pathway1_res2.branch2.a_bn.bias
+417 unfrozen s4.pathway1_res2.branch2.b.weight
+418 unfrozen s4.pathway1_res2.branch2.b_bn.weight
+419 unfrozen s4.pathway1_res2.branch2.b_bn.bias
+420 unfrozen s4.pathway1_res2.branch2.c.weight
+421 unfrozen s4.pathway1_res2.branch2.c_bn.weight
+422 unfrozen s4.pathway1_res2.branch2.c_bn.bias
+423 unfrozen s4.pathway1_res3.branch2.a.weight
+424 unfrozen s4.pathway1_res3.branch2.a_bn.weight
+425 unfrozen s4.pathway1_res3.branch2.a_bn.bias
+426 unfrozen s4.pathway1_res3.branch2.b.weight
+427 unfrozen s4.pathway1_res3.branch2.b_bn.weight
+428 unfrozen s4.pathway1_res3.branch2.b_bn.bias
+429 unfrozen s4.pathway1_res3.branch2.c.weight
+430 unfrozen s4.pathway1_res3.branch2.c_bn.weight
+431 unfrozen s4.pathway1_res3.branch2.c_bn.bias
+432 unfrozen s4.pathway1_res4.branch2.a.weight
+433 unfrozen s4.pathway1_res4.branch2.a_bn.weight
+434 unfrozen s4.pathway1_res4.branch2.a_bn.bias
+435 unfrozen s4.pathway1_res4.branch2.b.weight
+436 unfrozen s4.pathway1_res4.branch2.b_bn.weight
+437 unfrozen s4.pathway1_res4.branch2.b_bn.bias
+438 unfrozen s4.pathway1_res4.branch2.c.weight
+439 unfrozen s4.pathway1_res4.branch2.c_bn.weight
+440 unfrozen s4.pathway1_res4.branch2.c_bn.bias
+441 unfrozen s4.pathway1_res5.branch2.a.weight
+442 unfrozen s4.pathway1_res5.branch2.a_bn.weight
+443 unfrozen s4.pathway1_res5.branch2.a_bn.bias
+444 unfrozen s4.pathway1_res5.branch2.b.weight
+445 unfrozen s4.pathway1_res5.branch2.b_bn.weight
+446 unfrozen s4.pathway1_res5.branch2.b_bn.bias
+447 unfrozen s4.pathway1_res5.branch2.c.weight
+448 unfrozen s4.pathway1_res5.branch2.c_bn.weight
+449 unfrozen s4.pathway1_res5.branch2.c_bn.bias
+450 unfrozen s4.pathway1_res6.branch2.a.weight
+451 unfrozen s4.pathway1_res6.branch2.a_bn.weight
+452 unfrozen s4.pathway1_res6.branch2.a_bn.bias
+453 unfrozen s4.pathway1_res6.branch2.b.weight
+454 unfrozen s4.pathway1_res6.branch2.b_bn.weight
+455 unfrozen s4.pathway1_res6.branch2.b_bn.bias
+456 unfrozen s4.pathway1_res6.branch2.c.weight
+457 unfrozen s4.pathway1_res6.branch2.c_bn.weight
+458 unfrozen s4.pathway1_res6.branch2.c_bn.bias
+459 unfrozen s4.pathway1_res7.branch2.a.weight
+460 unfrozen s4.pathway1_res7.branch2.a_bn.weight
+461 unfrozen s4.pathway1_res7.branch2.a_bn.bias
+462 unfrozen s4.pathway1_res7.branch2.b.weight
+463 unfrozen s4.pathway1_res7.branch2.b_bn.weight
+464 unfrozen s4.pathway1_res7.branch2.b_bn.bias
+465 unfrozen s4.pathway1_res7.branch2.c.weight
+466 unfrozen s4.pathway1_res7.branch2.c_bn.weight
+467 unfrozen s4.pathway1_res7.branch2.c_bn.bias
+468 unfrozen s4.pathway1_res8.branch2.a.weight
+469 unfrozen s4.pathway1_res8.branch2.a_bn.weight
+470 unfrozen s4.pathway1_res8.branch2.a_bn.bias
+471 unfrozen s4.pathway1_res8.branch2.b.weight
+472 unfrozen s4.pathway1_res8.branch2.b_bn.weight
+473 unfrozen s4.pathway1_res8.branch2.b_bn.bias
+474 unfrozen s4.pathway1_res8.branch2.c.weight
+475 unfrozen s4.pathway1_res8.branch2.c_bn.weight
+476 unfrozen s4.pathway1_res8.branch2.c_bn.bias
+477 unfrozen s4.pathway1_res9.branch2.a.weight
+478 unfrozen s4.pathway1_res9.branch2.a_bn.weight
+479 unfrozen s4.pathway1_res9.branch2.a_bn.bias
+480 unfrozen s4.pathway1_res9.branch2.b.weight
+481 unfrozen s4.pathway1_res9.branch2.b_bn.weight
+482 unfrozen s4.pathway1_res9.branch2.b_bn.bias
+483 unfrozen s4.pathway1_res9.branch2.c.weight
+484 unfrozen s4.pathway1_res9.branch2.c_bn.weight
+485 unfrozen s4.pathway1_res9.branch2.c_bn.bias
+486 unfrozen s4.pathway1_res10.branch2.a.weight
+487 unfrozen s4.pathway1_res10.branch2.a_bn.weight
+488 unfrozen s4.pathway1_res10.branch2.a_bn.bias
+489 unfrozen s4.pathway1_res10.branch2.b.weight
+490 unfrozen s4.pathway1_res10.branch2.b_bn.weight
+491 unfrozen s4.pathway1_res10.branch2.b_bn.bias
+492 unfrozen s4.pathway1_res10.branch2.c.weight
+493 unfrozen s4.pathway1_res10.branch2.c_bn.weight
+494 unfrozen s4.pathway1_res10.branch2.c_bn.bias
+495 unfrozen s4.pathway1_res11.branch2.a.weight
+496 unfrozen s4.pathway1_res11.branch2.a_bn.weight
+497 unfrozen s4.pathway1_res11.branch2.a_bn.bias
+498 unfrozen s4.pathway1_res11.branch2.b.weight
+499 unfrozen s4.pathway1_res11.branch2.b_bn.weight
+500 unfrozen s4.pathway1_res11.branch2.b_bn.bias
+501 unfrozen s4.pathway1_res11.branch2.c.weight
+502 unfrozen s4.pathway1_res11.branch2.c_bn.weight
+503 unfrozen s4.pathway1_res11.branch2.c_bn.bias
+504 unfrozen s4.pathway1_res12.branch2.a.weight
+505 unfrozen s4.pathway1_res12.branch2.a_bn.weight
+506 unfrozen s4.pathway1_res12.branch2.a_bn.bias
+507 unfrozen s4.pathway1_res12.branch2.b.weight
+508 unfrozen s4.pathway1_res12.branch2.b_bn.weight
+509 unfrozen s4.pathway1_res12.branch2.b_bn.bias
+510 unfrozen s4.pathway1_res12.branch2.c.weight
+511 unfrozen s4.pathway1_res12.branch2.c_bn.weight
+512 unfrozen s4.pathway1_res12.branch2.c_bn.bias
+513 unfrozen s4.pathway1_res13.branch2.a.weight
+514 unfrozen s4.pathway1_res13.branch2.a_bn.weight
+515 unfrozen s4.pathway1_res13.branch2.a_bn.bias
+516 unfrozen s4.pathway1_res13.branch2.b.weight
+517 unfrozen s4.pathway1_res13.branch2.b_bn.weight
+518 unfrozen s4.pathway1_res13.branch2.b_bn.bias
+519 unfrozen s4.pathway1_res13.branch2.c.weight
+520 unfrozen s4.pathway1_res13.branch2.c_bn.weight
+521 unfrozen s4.pathway1_res13.branch2.c_bn.bias
+522 unfrozen s4.pathway1_res14.branch2.a.weight
+523 unfrozen s4.pathway1_res14.branch2.a_bn.weight
+524 unfrozen s4.pathway1_res14.branch2.a_bn.bias
+525 unfrozen s4.pathway1_res14.branch2.b.weight
+526 unfrozen s4.pathway1_res14.branch2.b_bn.weight
+527 unfrozen s4.pathway1_res14.branch2.b_bn.bias
+528 unfrozen s4.pathway1_res14.branch2.c.weight
+529 unfrozen s4.pathway1_res14.branch2.c_bn.weight
+530 unfrozen s4.pathway1_res14.branch2.c_bn.bias
+531 unfrozen s4.pathway1_res15.branch2.a.weight
+532 unfrozen s4.pathway1_res15.branch2.a_bn.weight
+533 unfrozen s4.pathway1_res15.branch2.a_bn.bias
+534 unfrozen s4.pathway1_res15.branch2.b.weight
+535 unfrozen s4.pathway1_res15.branch2.b_bn.weight
+536 unfrozen s4.pathway1_res15.branch2.b_bn.bias
+537 unfrozen s4.pathway1_res15.branch2.c.weight
+538 unfrozen s4.pathway1_res15.branch2.c_bn.weight
+539 unfrozen s4.pathway1_res15.branch2.c_bn.bias
+540 unfrozen s4.pathway1_res16.branch2.a.weight
+541 unfrozen s4.pathway1_res16.branch2.a_bn.weight
+542 unfrozen s4.pathway1_res16.branch2.a_bn.bias
+543 unfrozen s4.pathway1_res16.branch2.b.weight
+544 unfrozen s4.pathway1_res16.branch2.b_bn.weight
+545 unfrozen s4.pathway1_res16.branch2.b_bn.bias
+546 unfrozen s4.pathway1_res16.branch2.c.weight
+547 unfrozen s4.pathway1_res16.branch2.c_bn.weight
+548 unfrozen s4.pathway1_res16.branch2.c_bn.bias
+549 unfrozen s4.pathway1_res17.branch2.a.weight
+550 unfrozen s4.pathway1_res17.branch2.a_bn.weight
+551 unfrozen s4.pathway1_res17.branch2.a_bn.bias
+552 unfrozen s4.pathway1_res17.branch2.b.weight
+553 unfrozen s4.pathway1_res17.branch2.b_bn.weight
+554 unfrozen s4.pathway1_res17.branch2.b_bn.bias
+555 unfrozen s4.pathway1_res17.branch2.c.weight
+556 unfrozen s4.pathway1_res17.branch2.c_bn.weight
+557 unfrozen s4.pathway1_res17.branch2.c_bn.bias
+558 unfrozen s4.pathway1_res18.branch2.a.weight
+559 unfrozen s4.pathway1_res18.branch2.a_bn.weight
+560 unfrozen s4.pathway1_res18.branch2.a_bn.bias
+561 unfrozen s4.pathway1_res18.branch2.b.weight
+562 unfrozen s4.pathway1_res18.branch2.b_bn.weight
+563 unfrozen s4.pathway1_res18.branch2.b_bn.bias
+564 unfrozen s4.pathway1_res18.branch2.c.weight
+565 unfrozen s4.pathway1_res18.branch2.c_bn.weight
+566 unfrozen s4.pathway1_res18.branch2.c_bn.bias
+567 unfrozen s4.pathway1_res19.branch2.a.weight
+568 unfrozen s4.pathway1_res19.branch2.a_bn.weight
+569 unfrozen s4.pathway1_res19.branch2.a_bn.bias
+570 unfrozen s4.pathway1_res19.branch2.b.weight
+571 unfrozen s4.pathway1_res19.branch2.b_bn.weight
+572 unfrozen s4.pathway1_res19.branch2.b_bn.bias
+573 unfrozen s4.pathway1_res19.branch2.c.weight
+574 unfrozen s4.pathway1_res19.branch2.c_bn.weight
+575 unfrozen s4.pathway1_res19.branch2.c_bn.bias
+576 unfrozen s4.pathway1_res20.branch2.a.weight
+577 unfrozen s4.pathway1_res20.branch2.a_bn.weight
+578 unfrozen s4.pathway1_res20.branch2.a_bn.bias
+579 unfrozen s4.pathway1_res20.branch2.b.weight
+580 unfrozen s4.pathway1_res20.branch2.b_bn.weight
+581 unfrozen s4.pathway1_res20.branch2.b_bn.bias
+582 unfrozen s4.pathway1_res20.branch2.c.weight
+583 unfrozen s4.pathway1_res20.branch2.c_bn.weight
+584 unfrozen s4.pathway1_res20.branch2.c_bn.bias
+585 unfrozen s4.pathway1_res21.branch2.a.weight
+586 unfrozen s4.pathway1_res21.branch2.a_bn.weight
+587 unfrozen s4.pathway1_res21.branch2.a_bn.bias
+588 unfrozen s4.pathway1_res21.branch2.b.weight
+589 unfrozen s4.pathway1_res21.branch2.b_bn.weight
+590 unfrozen s4.pathway1_res21.branch2.b_bn.bias
+591 unfrozen s4.pathway1_res21.branch2.c.weight
+592 unfrozen s4.pathway1_res21.branch2.c_bn.weight
+593 unfrozen s4.pathway1_res21.branch2.c_bn.bias
+594 unfrozen s4.pathway1_res22.branch2.a.weight
+595 unfrozen s4.pathway1_res22.branch2.a_bn.weight
+596 unfrozen s4.pathway1_res22.branch2.a_bn.bias
+597 unfrozen s4.pathway1_res22.branch2.b.weight
+598 unfrozen s4.pathway1_res22.branch2.b_bn.weight
+599 unfrozen s4.pathway1_res22.branch2.b_bn.bias
+600 unfrozen s4.pathway1_res22.branch2.c.weight
+601 unfrozen s4.pathway1_res22.branch2.c_bn.weight
+602 unfrozen s4.pathway1_res22.branch2.c_bn.bias
+603 unfrozen s4_fuse.conv_f2s.weight
+604 unfrozen s4_fuse.bn.weight
+605 unfrozen s4_fuse.bn.bias
+606 unfrozen s5.pathway0_res0.branch1.weight
+607 unfrozen s5.pathway0_res0.branch1_bn.weight
+608 unfrozen s5.pathway0_res0.branch1_bn.bias
+609 unfrozen s5.pathway0_res0.branch2.a.weight
+610 unfrozen s5.pathway0_res0.branch2.a_bn.weight
+611 unfrozen s5.pathway0_res0.branch2.a_bn.bias
+612 unfrozen s5.pathway0_res0.branch2.b.weight
+613 unfrozen s5.pathway0_res0.branch2.b_bn.weight
+614 unfrozen s5.pathway0_res0.branch2.b_bn.bias
+615 unfrozen s5.pathway0_res0.branch2.c.weight
+616 unfrozen s5.pathway0_res0.branch2.c_bn.weight
+617 unfrozen s5.pathway0_res0.branch2.c_bn.bias
+618 unfrozen s5.pathway0_res1.branch2.a.weight
+619 unfrozen s5.pathway0_res1.branch2.a_bn.weight
+620 unfrozen s5.pathway0_res1.branch2.a_bn.bias
+621 unfrozen s5.pathway0_res1.branch2.b.weight
+622 unfrozen s5.pathway0_res1.branch2.b_bn.weight
+623 unfrozen s5.pathway0_res1.branch2.b_bn.bias
+624 unfrozen s5.pathway0_res1.branch2.c.weight
+625 unfrozen s5.pathway0_res1.branch2.c_bn.weight
+626 unfrozen s5.pathway0_res1.branch2.c_bn.bias
+627 unfrozen s5.pathway0_res2.branch2.a.weight
+628 unfrozen s5.pathway0_res2.branch2.a_bn.weight
+629 unfrozen s5.pathway0_res2.branch2.a_bn.bias
+630 unfrozen s5.pathway0_res2.branch2.b.weight
+631 unfrozen s5.pathway0_res2.branch2.b_bn.weight
+632 unfrozen s5.pathway0_res2.branch2.b_bn.bias
+633 unfrozen s5.pathway0_res2.branch2.c.weight
+634 unfrozen s5.pathway0_res2.branch2.c_bn.weight
+635 unfrozen s5.pathway0_res2.branch2.c_bn.bias
+636 unfrozen s5.pathway1_res0.branch1.weight
+637 unfrozen s5.pathway1_res0.branch1_bn.weight
+638 unfrozen s5.pathway1_res0.branch1_bn.bias
+639 unfrozen s5.pathway1_res0.branch2.a.weight
+640 unfrozen s5.pathway1_res0.branch2.a_bn.weight
+641 unfrozen s5.pathway1_res0.branch2.a_bn.bias
+642 unfrozen s5.pathway1_res0.branch2.b.weight
+643 unfrozen s5.pathway1_res0.branch2.b_bn.weight
+644 unfrozen s5.pathway1_res0.branch2.b_bn.bias
+645 unfrozen s5.pathway1_res0.branch2.c.weight
+646 unfrozen s5.pathway1_res0.branch2.c_bn.weight
+647 unfrozen s5.pathway1_res0.branch2.c_bn.bias
+648 unfrozen s5.pathway1_res1.branch2.a.weight
+649 unfrozen s5.pathway1_res1.branch2.a_bn.weight
+650 unfrozen s5.pathway1_res1.branch2.a_bn.bias
+651 unfrozen s5.pathway1_res1.branch2.b.weight
+652 unfrozen s5.pathway1_res1.branch2.b_bn.weight
+653 unfrozen s5.pathway1_res1.branch2.b_bn.bias
+654 unfrozen s5.pathway1_res1.branch2.c.weight
+655 unfrozen s5.pathway1_res1.branch2.c_bn.weight
+656 unfrozen s5.pathway1_res1.branch2.c_bn.bias
+657 unfrozen s5.pathway1_res2.branch2.a.weight
+658 unfrozen s5.pathway1_res2.branch2.a_bn.weight
+659 unfrozen s5.pathway1_res2.branch2.a_bn.bias
+660 unfrozen s5.pathway1_res2.branch2.b.weight
+661 unfrozen s5.pathway1_res2.branch2.b_bn.weight
+662 unfrozen s5.pathway1_res2.branch2.b_bn.bias
+663 unfrozen s5.pathway1_res2.branch2.c.weight
+664 unfrozen s5.pathway1_res2.branch2.c_bn.weight
+665 unfrozen s5.pathway1_res2.branch2.c_bn.bias
+666 unfrozen head.projection.weight
+667 unfrozen head.projection.bias
+[12/27 23:59:49][INFO] checkpoint.py: 534: Load from given checkpoint file.
+[12/27 23:59:49][INFO] checkpoint.py: 215: Loading network weights from /srv/beegfs02/scratch/da_action/data/output/aux_10_5000_200_v2/checkpoints/checkpoint_epoch_00005.pyth.
+[12/28 00:00:54][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_5000_200/train.csv
+[12/28 00:00:55][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_10_5000_200/ava_train_v2.2.csv
+[12/28 00:00:55][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[12/28 00:00:55][INFO] ava_helper.py: 114: Number of unique boxes: 35623
+[12/28 00:00:55][INFO] ava_helper.py: 115: Number of annotations: 49808
+[12/28 00:00:55][INFO] ava_helper.py: 162: 25605 keyframes used.
+[12/28 00:00:55][INFO] ava_dataset.py:  94: === AVA dataset summary ===
+[12/28 00:00:55][INFO] ava_dataset.py:  95: Split: train
+[12/28 00:00:55][INFO] ava_dataset.py:  96: Number of videos: 218
+[12/28 00:00:55][INFO] ava_dataset.py: 100: Number of frames: 5892593
+[12/28 00:00:55][INFO] ava_dataset.py: 101: Number of key frames: 25605
+[12/28 00:00:55][INFO] ava_dataset.py: 102: Number of boxes: 35623.
+[12/28 00:00:58][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_5000_200/val.csv
+[12/28 00:00:58][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_10_5000_200/ava_val_predicted_boxes_gt.csv
+[12/28 00:00:58][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[12/28 00:00:58][INFO] ava_helper.py: 114: Number of unique boxes: 1637
+[12/28 00:00:58][INFO] ava_helper.py: 115: Number of annotations: 0
+[12/28 00:00:58][INFO] ava_helper.py: 162: 1356 keyframes used.
+[12/28 00:00:58][INFO] ava_dataset.py:  94: === AVA dataset summary ===
+[12/28 00:00:58][INFO] ava_dataset.py:  95: Split: val
+[12/28 00:00:58][INFO] ava_dataset.py:  96: Number of videos: 7
+[12/28 00:00:58][INFO] ava_dataset.py: 100: Number of frames: 189212
+[12/28 00:00:58][INFO] ava_dataset.py: 101: Number of key frames: 1356
+[12/28 00:00:58][INFO] ava_dataset.py: 102: Number of boxes: 1637.
+[12/28 00:01:25][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_5000_200/train.csv
+[12/28 00:01:26][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_5000_200/val.csv
+[12/28 00:01:26][INFO] tensorboard_vis.py:  57: To see logged results in Tensorboard, please launch using the command             `tensorboard  --port=<port-number> --logdir /srv/beegfs02/scratch/da_action/data/output/ex_10_5000_200_v1/tensorboard`
+[12/28 00:01:26][INFO] train_net.py: 498: Start epoch: 1
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+[12/28 07:20:04][INFO] ava_eval_helper.py: 165: Evaluating with 1356 unique GT frames.
+[12/28 07:20:04][INFO] ava_eval_helper.py: 167: Evaluating with 1356 unique detection frames
+[12/28 07:20:04][INFO] ava_eval_helper.py: 322: AVA results wrote to detections_latest.csv
+[12/28 07:20:04][INFO] ava_eval_helper.py: 323: 	took 0 seconds.
+[12/28 07:20:04][INFO] ava_eval_helper.py: 322: AVA results wrote to groundtruth_latest.csv
+[12/28 07:20:04][INFO] ava_eval_helper.py: 323: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.3111087199370962,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.2512213991122806,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/lie/sleep': 0.7500275922419853,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.1783126078870229,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/ride (e.g., a bike, a car, a horse)': 0.5032889086427916,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.2405787824896566,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.3210049479633663,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/touch (an object)': 0.3647308525070347,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/walk': 0.5336633330065679,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.17282950280102094,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.3626766646588823}
+[12/28 07:20:06][INFO] ava_eval_helper.py: 182: AVA eval done in 2.252395 seconds.
+[12/28 07:20:06][INFO] logging.py:  97: json_stats: {
+  "RAM": "12.58/251.81G",
+  "_type": "val_epoch",
+  "cur_epoch": "1",
+  "gpu_mem": "8.34G",
+  "map": 0.36268,
+  "mode": "val"
+}
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+in log_iter_stats
+[12/28 15:25:14][INFO] ava_eval_helper.py: 165: Evaluating with 1356 unique GT frames.
+[12/28 15:25:14][INFO] ava_eval_helper.py: 167: Evaluating with 1356 unique detection frames
+[12/28 15:25:15][INFO] ava_eval_helper.py: 322: AVA results wrote to detections_latest.csv
+[12/28 15:25:15][INFO] ava_eval_helper.py: 323: 	took 0 seconds.
+[12/28 15:25:15][INFO] ava_eval_helper.py: 322: AVA results wrote to groundtruth_latest.csv
+[12/28 15:25:15][INFO] ava_eval_helper.py: 323: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/bend/bow (at the waist)': 0.4633448006103169,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.27836018862079603,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/lie/sleep': 0.7165561155130019,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.20938842644578326,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/ride (e.g., a bike, a car, a horse)': 0.5671188219523977,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.47785414429942363,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.39347286016507743,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/touch (an object)': 0.3089365053383203,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/walk': 0.5060871519284649,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.15862183059968044,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.4079740845473262}
+[12/28 15:25:16][INFO] ava_eval_helper.py: 182: AVA eval done in 2.213957 seconds.
+[12/28 15:25:16][INFO] logging.py:  97: json_stats: {
+  "RAM": "18.25/251.81G",
+  "_type": "val_epoch",
+  "cur_epoch": "2",
+  "gpu_mem": "8.34G",
+  "map": 0.40797,
+  "mode": "val"
+}
+slurmstepd: error: *** JOB 224973 ON biwirender11 CANCELLED AT 2020-12-28T16:04:38 ***

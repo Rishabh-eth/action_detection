@@ -1,0 +1,115 @@
+
+TRAIN:
+  ENABLE: False
+  DATASET: ava
+  BATCH_SIZE: 16
+  EVAL_PERIOD: 1
+  CHECKPOINT_PERIOD: 1
+  AUTO_RESUME: True
+  #CHECKPOINT_FILE_PATH: ./SLOWFAST_32x2_R101_50_50.pkl  #path to pretrain model
+  CHECKPOINT_FILE_PATH: /srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl  #path to pretrain model
+  #CHECKPOINT_TYPE: pytorch
+  CHECKPOINT_TYPE: pytorch
+DATA:
+  NUM_FRAMES: 32
+  SAMPLING_RATE: 2
+  TRAIN_JITTER_SCALES: [256, 320]
+  TRAIN_CROP_SIZE: 224
+  TEST_CROP_SIZE: 256
+  INPUT_CHANNEL_NUM: [3, 3]
+DETECTION:
+  ENABLE: True
+  ALIGNED: False
+AVA:
+  BGR: False
+  DETECTION_SCORE_THRESH: 0.8
+  TEST_PREDICT_BOX_LISTS: ["person_box_67091280_iou90/ava_detection_val_boxes_and_labels.csv"]
+SLOWFAST:
+  ALPHA: 4
+  BETA_INV: 8
+  FUSION_CONV_CHANNEL_RATIO: 2
+  FUSION_KERNEL_SZ: 5
+RESNET:
+  ZERO_INIT_FINAL_BN: True
+  WIDTH_PER_GROUP: 64
+  NUM_GROUPS: 1
+  DEPTH: 101
+  TRANS_FUNC: bottleneck_transform
+  STRIDE_1X1: False
+  NUM_BLOCK_TEMP_KERNEL: [[3, 3], [4, 4], [6, 6], [3, 3]]
+  SPATIAL_DILATIONS: [[1, 1], [1, 1], [1, 1], [2, 2]]
+  SPATIAL_STRIDES: [[1, 1], [2, 2], [2, 2], [1, 1]]
+NONLOCAL:
+  LOCATION: [[[], []], [[], []], [[6, 13, 20], []], [[], []]]
+  GROUP: [[1, 1], [1, 1], [1, 1], [1, 1]]
+  INSTANTIATION: dot_product
+  POOL: [[[2, 2, 2], [2, 2, 2]], [[2, 2, 2], [2, 2, 2]], [[2, 2, 2], [2, 2, 2]], [[2, 2, 2], [2, 2, 2]]]
+BN:
+  USE_PRECISE_STATS: False
+  NUM_BATCHES_PRECISE: 200
+SOLVER:
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 1e-7
+  OPTIMIZING_METHOD: sgd
+MODEL:
+  NUM_CLASSES: 80
+  ARCH: slowfast
+  MODEL_NAME: SlowFast
+  LOSS_FUNC: bce
+  DROPOUT_RATE: 0.5
+  HEAD_ACT: sigmoid
+TEST:
+  ENABLE: False
+  DATASET: ava
+  BATCH_SIZE: 1
+DATA_LOADER:
+  NUM_WORKERS: 1 # 2
+  PIN_MEMORY: True
+NUM_GPUS: 1
+NUM_SHARDS: 1
+RNG_SEED: 0
+OUTPUT_DIR: .
+TENSORBOARD:
+  MODEL_VIS:
+    TOPK_PREDS: 2
+DEMO:
+  ENABLE: True
+  #LABEL_FILE_PATH:  # Add local label file path here.
+  #OUTPUT_FILE: /home/sieberl/SA2020/pyslowfast/luca_demo/sports_output2.mp4
+  OUTPUT_FILE: /home/sieberl/armasuisse/CADU7141_53_61_result_jumping_005thr.mp4
+  LABEL_FILE_PATH: /home/sieberl/SA2020/pyslowfast/luca_demo/ava_classnames.json
+  WEBCAM: -1
+  DETECTRON2_CFG: "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"
+  DETECTRON2_WEIGHTS: detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl
+  #INPUT_VIDEO: /srv/beegfs02/scratch/da_action/data/ava/frames/HVAmkvLrthQ
+  #INPUT_VIDEO: /home/sieberl/SA2020/pyslowfast/luca_demo/sports.mp4
+  INPUT_VIDEO: /home/sieberl/armasuisse/CADU7141_53_61.mp4
+  BUFFER_SIZE: 32 # cannot be larger than 32
+  CLIP_VIS_SIZE: 80
+  COMMON_CLASS_THRES: 0.7
+  UNCOMMON_CLASS_THRES: 0.05 #0.4
+  NUM_VIS_INSTANCES: 1 #2
+TENSORBOARD:
+  MODEL_VIS:
+    COLORMAP: viridis # copper, brg, viridis
+
+  #PREDS_BOXES: /srv/beegfs02/scratch/da_action/data/ava/annotations/ava_train_v2.1.csv
+
+  #TENSORBOARD.MODEL_VIS.COLORMAP,
+  #DEMO.VIS_MODE, {"thres", "top-k"}
+  #DEMO.COMMON_CLASS_THRES,
+  #,
+  #_C.DEMO.COMMON_CLASS_NAMES = [
+  #  "watch (a person)",
+  #  "talk to (e.g., self, a person, a group)",
+  #  "listen to (a person)",
+  #  "touch (an object)",
+  #  "carry/hold (an object)",
+  #  "walk",
+  #  "sit",
+  #  "lie/sleep",
+  #  "bend/bow (at the waist)",
+#]
+  #DEMO.CLIP_VIS_SIZE = 10
+
+

@@ -1,0 +1,2904 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+[12/24 11:20:01][INFO] train_aux.py: 324: Train with config:
+[12/24 11:20:01][INFO] train_aux.py: 325: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/ava/annotations_10_500_100/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_500_100/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/annotations_10_500_100/',
+        'AUX': True,
+        'AUX_TEST': False,
+        'CLASSES': 4,
+        'DATASET': 'da',
+        'DETECTION_SCORE_THRESH': 0.8,
+        'ENABLE': True,
+        'EXCLUSION_FILE': 'kinetics_val_excluded_timestamps_v2.1.csv',
+        'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/frames/',
+        'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/frame_lists_10_500_100/',
+        'FULL_TEST_ON_VAL': True,
+        'GROUNDTRUTH_FILE': 'kinetics_val_v2.1.csv',
+        'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+        'LR_FACTOR': 10.0,
+        'TEST_GT_BOX_LISTS': [],
+        'TEST_LISTS': ['val.csv'],
+        'TEST_PREDICT_BOX_LISTS': ['kinetics_val_predicted_boxes_gt.csv'],
+        'TRAIN_GT_BOX_LISTS': ['kinetics_train_v2.1.csv'],
+        'TRAIN_LISTS': ['train.csv'],
+        'TRAIN_PREDICT_BOX_LISTS': [],
+        'WEIGHT_AUX': 1.0,
+        'WEIGHT_MAIN': 0.0},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': False,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'FREEZE_TO': 392,
+           'HEAD_ACT': 'sigmoid',
+           'LAST_PRE_TRAIN': '',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 10,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 1,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs02/scratch/da_action/data/output/aux_10_500_100_v10',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.001,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 15,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': 'tensorboard',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'DETECTIONS_PATH': '',
+          'ENABLE': False,
+          'GT_PATH': '',
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': True,
+           'BATCH_SIZE': 8,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': False,
+           'CHECKPOINT_FILE_PATH': '/srv/beegfs02/scratch/da_action/data/output/aux_10_500_100_v10/checkpoints/checkpoint_epoch_00010.pyth',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': False,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+0 frozen s1.pathway0_stem.conv.weight
+1 frozen s1.pathway0_stem.bn.weight
+2 frozen s1.pathway0_stem.bn.bias
+3 frozen s1.pathway1_stem.conv.weight
+4 frozen s1.pathway1_stem.bn.weight
+5 frozen s1.pathway1_stem.bn.bias
+6 frozen s1_fuse.conv_f2s.weight
+7 frozen s1_fuse.bn.weight
+8 frozen s1_fuse.bn.bias
+9 frozen s2.pathway0_res0.branch1.weight
+10 frozen s2.pathway0_res0.branch1_bn.weight
+11 frozen s2.pathway0_res0.branch1_bn.bias
+12 frozen s2.pathway0_res0.branch2.a.weight
+13 frozen s2.pathway0_res0.branch2.a_bn.weight
+14 frozen s2.pathway0_res0.branch2.a_bn.bias
+15 frozen s2.pathway0_res0.branch2.b.weight
+16 frozen s2.pathway0_res0.branch2.b_bn.weight
+17 frozen s2.pathway0_res0.branch2.b_bn.bias
+18 frozen s2.pathway0_res0.branch2.c.weight
+19 frozen s2.pathway0_res0.branch2.c_bn.weight
+20 frozen s2.pathway0_res0.branch2.c_bn.bias
+21 frozen s2.pathway0_res1.branch2.a.weight
+22 frozen s2.pathway0_res1.branch2.a_bn.weight
+23 frozen s2.pathway0_res1.branch2.a_bn.bias
+24 frozen s2.pathway0_res1.branch2.b.weight
+25 frozen s2.pathway0_res1.branch2.b_bn.weight
+26 frozen s2.pathway0_res1.branch2.b_bn.bias
+27 frozen s2.pathway0_res1.branch2.c.weight
+28 frozen s2.pathway0_res1.branch2.c_bn.weight
+29 frozen s2.pathway0_res1.branch2.c_bn.bias
+30 frozen s2.pathway0_res2.branch2.a.weight
+31 frozen s2.pathway0_res2.branch2.a_bn.weight
+32 frozen s2.pathway0_res2.branch2.a_bn.bias
+33 frozen s2.pathway0_res2.branch2.b.weight
+34 frozen s2.pathway0_res2.branch2.b_bn.weight
+35 frozen s2.pathway0_res2.branch2.b_bn.bias
+36 frozen s2.pathway0_res2.branch2.c.weight
+37 frozen s2.pathway0_res2.branch2.c_bn.weight
+38 frozen s2.pathway0_res2.branch2.c_bn.bias
+39 frozen s2.pathway1_res0.branch1.weight
+40 frozen s2.pathway1_res0.branch1_bn.weight
+41 frozen s2.pathway1_res0.branch1_bn.bias
+42 frozen s2.pathway1_res0.branch2.a.weight
+43 frozen s2.pathway1_res0.branch2.a_bn.weight
+44 frozen s2.pathway1_res0.branch2.a_bn.bias
+45 frozen s2.pathway1_res0.branch2.b.weight
+46 frozen s2.pathway1_res0.branch2.b_bn.weight
+47 frozen s2.pathway1_res0.branch2.b_bn.bias
+48 frozen s2.pathway1_res0.branch2.c.weight
+49 frozen s2.pathway1_res0.branch2.c_bn.weight
+50 frozen s2.pathway1_res0.branch2.c_bn.bias
+51 frozen s2.pathway1_res1.branch2.a.weight
+52 frozen s2.pathway1_res1.branch2.a_bn.weight
+53 frozen s2.pathway1_res1.branch2.a_bn.bias
+54 frozen s2.pathway1_res1.branch2.b.weight
+55 frozen s2.pathway1_res1.branch2.b_bn.weight
+56 frozen s2.pathway1_res1.branch2.b_bn.bias
+57 frozen s2.pathway1_res1.branch2.c.weight
+58 frozen s2.pathway1_res1.branch2.c_bn.weight
+59 frozen s2.pathway1_res1.branch2.c_bn.bias
+60 frozen s2.pathway1_res2.branch2.a.weight
+61 frozen s2.pathway1_res2.branch2.a_bn.weight
+62 frozen s2.pathway1_res2.branch2.a_bn.bias
+63 frozen s2.pathway1_res2.branch2.b.weight
+64 frozen s2.pathway1_res2.branch2.b_bn.weight
+65 frozen s2.pathway1_res2.branch2.b_bn.bias
+66 frozen s2.pathway1_res2.branch2.c.weight
+67 frozen s2.pathway1_res2.branch2.c_bn.weight
+68 frozen s2.pathway1_res2.branch2.c_bn.bias
+69 frozen s2_fuse.conv_f2s.weight
+70 frozen s2_fuse.bn.weight
+71 frozen s2_fuse.bn.bias
+72 frozen s3.pathway0_res0.branch1.weight
+73 frozen s3.pathway0_res0.branch1_bn.weight
+74 frozen s3.pathway0_res0.branch1_bn.bias
+75 frozen s3.pathway0_res0.branch2.a.weight
+76 frozen s3.pathway0_res0.branch2.a_bn.weight
+77 frozen s3.pathway0_res0.branch2.a_bn.bias
+78 frozen s3.pathway0_res0.branch2.b.weight
+79 frozen s3.pathway0_res0.branch2.b_bn.weight
+80 frozen s3.pathway0_res0.branch2.b_bn.bias
+81 frozen s3.pathway0_res0.branch2.c.weight
+82 frozen s3.pathway0_res0.branch2.c_bn.weight
+83 frozen s3.pathway0_res0.branch2.c_bn.bias
+84 frozen s3.pathway0_res1.branch2.a.weight
+85 frozen s3.pathway0_res1.branch2.a_bn.weight
+86 frozen s3.pathway0_res1.branch2.a_bn.bias
+87 frozen s3.pathway0_res1.branch2.b.weight
+88 frozen s3.pathway0_res1.branch2.b_bn.weight
+89 frozen s3.pathway0_res1.branch2.b_bn.bias
+90 frozen s3.pathway0_res1.branch2.c.weight
+91 frozen s3.pathway0_res1.branch2.c_bn.weight
+92 frozen s3.pathway0_res1.branch2.c_bn.bias
+93 frozen s3.pathway0_res2.branch2.a.weight
+94 frozen s3.pathway0_res2.branch2.a_bn.weight
+95 frozen s3.pathway0_res2.branch2.a_bn.bias
+96 frozen s3.pathway0_res2.branch2.b.weight
+97 frozen s3.pathway0_res2.branch2.b_bn.weight
+98 frozen s3.pathway0_res2.branch2.b_bn.bias
+99 frozen s3.pathway0_res2.branch2.c.weight
+100 frozen s3.pathway0_res2.branch2.c_bn.weight
+101 frozen s3.pathway0_res2.branch2.c_bn.bias
+102 frozen s3.pathway0_res3.branch2.a.weight
+103 frozen s3.pathway0_res3.branch2.a_bn.weight
+104 frozen s3.pathway0_res3.branch2.a_bn.bias
+105 frozen s3.pathway0_res3.branch2.b.weight
+106 frozen s3.pathway0_res3.branch2.b_bn.weight
+107 frozen s3.pathway0_res3.branch2.b_bn.bias
+108 frozen s3.pathway0_res3.branch2.c.weight
+109 frozen s3.pathway0_res3.branch2.c_bn.weight
+110 frozen s3.pathway0_res3.branch2.c_bn.bias
+111 frozen s3.pathway1_res0.branch1.weight
+112 frozen s3.pathway1_res0.branch1_bn.weight
+113 frozen s3.pathway1_res0.branch1_bn.bias
+114 frozen s3.pathway1_res0.branch2.a.weight
+115 frozen s3.pathway1_res0.branch2.a_bn.weight
+116 frozen s3.pathway1_res0.branch2.a_bn.bias
+117 frozen s3.pathway1_res0.branch2.b.weight
+118 frozen s3.pathway1_res0.branch2.b_bn.weight
+119 frozen s3.pathway1_res0.branch2.b_bn.bias
+120 frozen s3.pathway1_res0.branch2.c.weight
+121 frozen s3.pathway1_res0.branch2.c_bn.weight
+122 frozen s3.pathway1_res0.branch2.c_bn.bias
+123 frozen s3.pathway1_res1.branch2.a.weight
+124 frozen s3.pathway1_res1.branch2.a_bn.weight
+125 frozen s3.pathway1_res1.branch2.a_bn.bias
+126 frozen s3.pathway1_res1.branch2.b.weight
+127 frozen s3.pathway1_res1.branch2.b_bn.weight
+128 frozen s3.pathway1_res1.branch2.b_bn.bias
+129 frozen s3.pathway1_res1.branch2.c.weight
+130 frozen s3.pathway1_res1.branch2.c_bn.weight
+131 frozen s3.pathway1_res1.branch2.c_bn.bias
+132 frozen s3.pathway1_res2.branch2.a.weight
+133 frozen s3.pathway1_res2.branch2.a_bn.weight
+134 frozen s3.pathway1_res2.branch2.a_bn.bias
+135 frozen s3.pathway1_res2.branch2.b.weight
+136 frozen s3.pathway1_res2.branch2.b_bn.weight
+137 frozen s3.pathway1_res2.branch2.b_bn.bias
+138 frozen s3.pathway1_res2.branch2.c.weight
+139 frozen s3.pathway1_res2.branch2.c_bn.weight
+140 frozen s3.pathway1_res2.branch2.c_bn.bias
+141 frozen s3.pathway1_res3.branch2.a.weight
+142 frozen s3.pathway1_res3.branch2.a_bn.weight
+143 frozen s3.pathway1_res3.branch2.a_bn.bias
+144 frozen s3.pathway1_res3.branch2.b.weight
+145 frozen s3.pathway1_res3.branch2.b_bn.weight
+146 frozen s3.pathway1_res3.branch2.b_bn.bias
+147 frozen s3.pathway1_res3.branch2.c.weight
+148 frozen s3.pathway1_res3.branch2.c_bn.weight
+149 frozen s3.pathway1_res3.branch2.c_bn.bias
+150 frozen s3_fuse.conv_f2s.weight
+151 frozen s3_fuse.bn.weight
+152 frozen s3_fuse.bn.bias
+153 frozen s4.pathway0_res0.branch1.weight
+154 frozen s4.pathway0_res0.branch1_bn.weight
+155 frozen s4.pathway0_res0.branch1_bn.bias
+156 frozen s4.pathway0_res0.branch2.a.weight
+157 frozen s4.pathway0_res0.branch2.a_bn.weight
+158 frozen s4.pathway0_res0.branch2.a_bn.bias
+159 frozen s4.pathway0_res0.branch2.b.weight
+160 frozen s4.pathway0_res0.branch2.b_bn.weight
+161 frozen s4.pathway0_res0.branch2.b_bn.bias
+162 frozen s4.pathway0_res0.branch2.c.weight
+163 frozen s4.pathway0_res0.branch2.c_bn.weight
+164 frozen s4.pathway0_res0.branch2.c_bn.bias
+165 frozen s4.pathway0_res1.branch2.a.weight
+166 frozen s4.pathway0_res1.branch2.a_bn.weight
+167 frozen s4.pathway0_res1.branch2.a_bn.bias
+168 frozen s4.pathway0_res1.branch2.b.weight
+169 frozen s4.pathway0_res1.branch2.b_bn.weight
+170 frozen s4.pathway0_res1.branch2.b_bn.bias
+171 frozen s4.pathway0_res1.branch2.c.weight
+172 frozen s4.pathway0_res1.branch2.c_bn.weight
+173 frozen s4.pathway0_res1.branch2.c_bn.bias
+174 frozen s4.pathway0_res2.branch2.a.weight
+175 frozen s4.pathway0_res2.branch2.a_bn.weight
+176 frozen s4.pathway0_res2.branch2.a_bn.bias
+177 frozen s4.pathway0_res2.branch2.b.weight
+178 frozen s4.pathway0_res2.branch2.b_bn.weight
+179 frozen s4.pathway0_res2.branch2.b_bn.bias
+180 frozen s4.pathway0_res2.branch2.c.weight
+181 frozen s4.pathway0_res2.branch2.c_bn.weight
+182 frozen s4.pathway0_res2.branch2.c_bn.bias
+183 frozen s4.pathway0_res3.branch2.a.weight
+184 frozen s4.pathway0_res3.branch2.a_bn.weight
+185 frozen s4.pathway0_res3.branch2.a_bn.bias
+186 frozen s4.pathway0_res3.branch2.b.weight
+187 frozen s4.pathway0_res3.branch2.b_bn.weight
+188 frozen s4.pathway0_res3.branch2.b_bn.bias
+189 frozen s4.pathway0_res3.branch2.c.weight
+190 frozen s4.pathway0_res3.branch2.c_bn.weight
+191 frozen s4.pathway0_res3.branch2.c_bn.bias
+192 frozen s4.pathway0_res4.branch2.a.weight
+193 frozen s4.pathway0_res4.branch2.a_bn.weight
+194 frozen s4.pathway0_res4.branch2.a_bn.bias
+195 frozen s4.pathway0_res4.branch2.b.weight
+196 frozen s4.pathway0_res4.branch2.b_bn.weight
+197 frozen s4.pathway0_res4.branch2.b_bn.bias
+198 frozen s4.pathway0_res4.branch2.c.weight
+199 frozen s4.pathway0_res4.branch2.c_bn.weight
+200 frozen s4.pathway0_res4.branch2.c_bn.bias
+201 frozen s4.pathway0_res5.branch2.a.weight
+202 frozen s4.pathway0_res5.branch2.a_bn.weight
+203 frozen s4.pathway0_res5.branch2.a_bn.bias
+204 frozen s4.pathway0_res5.branch2.b.weight
+205 frozen s4.pathway0_res5.branch2.b_bn.weight
+206 frozen s4.pathway0_res5.branch2.b_bn.bias
+207 frozen s4.pathway0_res5.branch2.c.weight
+208 frozen s4.pathway0_res5.branch2.c_bn.weight
+209 frozen s4.pathway0_res5.branch2.c_bn.bias
+210 frozen s4.pathway0_res6.branch2.a.weight
+211 frozen s4.pathway0_res6.branch2.a_bn.weight
+212 frozen s4.pathway0_res6.branch2.a_bn.bias
+213 frozen s4.pathway0_res6.branch2.b.weight
+214 frozen s4.pathway0_res6.branch2.b_bn.weight
+215 frozen s4.pathway0_res6.branch2.b_bn.bias
+216 frozen s4.pathway0_res6.branch2.c.weight
+217 frozen s4.pathway0_res6.branch2.c_bn.weight
+218 frozen s4.pathway0_res6.branch2.c_bn.bias
+219 frozen s4.pathway0_nonlocal6.conv_theta.weight
+220 frozen s4.pathway0_nonlocal6.conv_theta.bias
+221 frozen s4.pathway0_nonlocal6.conv_phi.weight
+222 frozen s4.pathway0_nonlocal6.conv_phi.bias
+223 frozen s4.pathway0_nonlocal6.conv_g.weight
+224 frozen s4.pathway0_nonlocal6.conv_g.bias
+225 frozen s4.pathway0_nonlocal6.conv_out.weight
+226 frozen s4.pathway0_nonlocal6.conv_out.bias
+227 frozen s4.pathway0_nonlocal6.bn.weight
+228 frozen s4.pathway0_nonlocal6.bn.bias
+229 frozen s4.pathway0_res7.branch2.a.weight
+230 frozen s4.pathway0_res7.branch2.a_bn.weight
+231 frozen s4.pathway0_res7.branch2.a_bn.bias
+232 frozen s4.pathway0_res7.branch2.b.weight
+233 frozen s4.pathway0_res7.branch2.b_bn.weight
+234 frozen s4.pathway0_res7.branch2.b_bn.bias
+235 frozen s4.pathway0_res7.branch2.c.weight
+236 frozen s4.pathway0_res7.branch2.c_bn.weight
+237 frozen s4.pathway0_res7.branch2.c_bn.bias
+238 frozen s4.pathway0_res8.branch2.a.weight
+239 frozen s4.pathway0_res8.branch2.a_bn.weight
+240 frozen s4.pathway0_res8.branch2.a_bn.bias
+241 frozen s4.pathway0_res8.branch2.b.weight
+242 frozen s4.pathway0_res8.branch2.b_bn.weight
+243 frozen s4.pathway0_res8.branch2.b_bn.bias
+244 frozen s4.pathway0_res8.branch2.c.weight
+245 frozen s4.pathway0_res8.branch2.c_bn.weight
+246 frozen s4.pathway0_res8.branch2.c_bn.bias
+247 frozen s4.pathway0_res9.branch2.a.weight
+248 frozen s4.pathway0_res9.branch2.a_bn.weight
+249 frozen s4.pathway0_res9.branch2.a_bn.bias
+250 frozen s4.pathway0_res9.branch2.b.weight
+251 frozen s4.pathway0_res9.branch2.b_bn.weight
+252 frozen s4.pathway0_res9.branch2.b_bn.bias
+253 frozen s4.pathway0_res9.branch2.c.weight
+254 frozen s4.pathway0_res9.branch2.c_bn.weight
+255 frozen s4.pathway0_res9.branch2.c_bn.bias
+256 frozen s4.pathway0_res10.branch2.a.weight
+257 frozen s4.pathway0_res10.branch2.a_bn.weight
+258 frozen s4.pathway0_res10.branch2.a_bn.bias
+259 frozen s4.pathway0_res10.branch2.b.weight
+260 frozen s4.pathway0_res10.branch2.b_bn.weight
+261 frozen s4.pathway0_res10.branch2.b_bn.bias
+262 frozen s4.pathway0_res10.branch2.c.weight
+263 frozen s4.pathway0_res10.branch2.c_bn.weight
+264 frozen s4.pathway0_res10.branch2.c_bn.bias
+265 frozen s4.pathway0_res11.branch2.a.weight
+266 frozen s4.pathway0_res11.branch2.a_bn.weight
+267 frozen s4.pathway0_res11.branch2.a_bn.bias
+268 frozen s4.pathway0_res11.branch2.b.weight
+269 frozen s4.pathway0_res11.branch2.b_bn.weight
+270 frozen s4.pathway0_res11.branch2.b_bn.bias
+271 frozen s4.pathway0_res11.branch2.c.weight
+272 frozen s4.pathway0_res11.branch2.c_bn.weight
+273 frozen s4.pathway0_res11.branch2.c_bn.bias
+274 frozen s4.pathway0_res12.branch2.a.weight
+275 frozen s4.pathway0_res12.branch2.a_bn.weight
+276 frozen s4.pathway0_res12.branch2.a_bn.bias
+277 frozen s4.pathway0_res12.branch2.b.weight
+278 frozen s4.pathway0_res12.branch2.b_bn.weight
+279 frozen s4.pathway0_res12.branch2.b_bn.bias
+280 frozen s4.pathway0_res12.branch2.c.weight
+281 frozen s4.pathway0_res12.branch2.c_bn.weight
+282 frozen s4.pathway0_res12.branch2.c_bn.bias
+283 frozen s4.pathway0_res13.branch2.a.weight
+284 frozen s4.pathway0_res13.branch2.a_bn.weight
+285 frozen s4.pathway0_res13.branch2.a_bn.bias
+286 frozen s4.pathway0_res13.branch2.b.weight
+287 frozen s4.pathway0_res13.branch2.b_bn.weight
+288 frozen s4.pathway0_res13.branch2.b_bn.bias
+289 frozen s4.pathway0_res13.branch2.c.weight
+290 frozen s4.pathway0_res13.branch2.c_bn.weight
+291 frozen s4.pathway0_res13.branch2.c_bn.bias
+292 frozen s4.pathway0_nonlocal13.conv_theta.weight
+293 frozen s4.pathway0_nonlocal13.conv_theta.bias
+294 frozen s4.pathway0_nonlocal13.conv_phi.weight
+295 frozen s4.pathway0_nonlocal13.conv_phi.bias
+296 frozen s4.pathway0_nonlocal13.conv_g.weight
+297 frozen s4.pathway0_nonlocal13.conv_g.bias
+298 frozen s4.pathway0_nonlocal13.conv_out.weight
+299 frozen s4.pathway0_nonlocal13.conv_out.bias
+300 frozen s4.pathway0_nonlocal13.bn.weight
+301 frozen s4.pathway0_nonlocal13.bn.bias
+302 frozen s4.pathway0_res14.branch2.a.weight
+303 frozen s4.pathway0_res14.branch2.a_bn.weight
+304 frozen s4.pathway0_res14.branch2.a_bn.bias
+305 frozen s4.pathway0_res14.branch2.b.weight
+306 frozen s4.pathway0_res14.branch2.b_bn.weight
+307 frozen s4.pathway0_res14.branch2.b_bn.bias
+308 frozen s4.pathway0_res14.branch2.c.weight
+309 frozen s4.pathway0_res14.branch2.c_bn.weight
+310 frozen s4.pathway0_res14.branch2.c_bn.bias
+311 frozen s4.pathway0_res15.branch2.a.weight
+312 frozen s4.pathway0_res15.branch2.a_bn.weight
+313 frozen s4.pathway0_res15.branch2.a_bn.bias
+314 frozen s4.pathway0_res15.branch2.b.weight
+315 frozen s4.pathway0_res15.branch2.b_bn.weight
+316 frozen s4.pathway0_res15.branch2.b_bn.bias
+317 frozen s4.pathway0_res15.branch2.c.weight
+318 frozen s4.pathway0_res15.branch2.c_bn.weight
+319 frozen s4.pathway0_res15.branch2.c_bn.bias
+320 frozen s4.pathway0_res16.branch2.a.weight
+321 frozen s4.pathway0_res16.branch2.a_bn.weight
+322 frozen s4.pathway0_res16.branch2.a_bn.bias
+323 frozen s4.pathway0_res16.branch2.b.weight
+324 frozen s4.pathway0_res16.branch2.b_bn.weight
+325 frozen s4.pathway0_res16.branch2.b_bn.bias
+326 frozen s4.pathway0_res16.branch2.c.weight
+327 frozen s4.pathway0_res16.branch2.c_bn.weight
+328 frozen s4.pathway0_res16.branch2.c_bn.bias
+329 frozen s4.pathway0_res17.branch2.a.weight
+330 frozen s4.pathway0_res17.branch2.a_bn.weight
+331 frozen s4.pathway0_res17.branch2.a_bn.bias
+332 frozen s4.pathway0_res17.branch2.b.weight
+333 frozen s4.pathway0_res17.branch2.b_bn.weight
+334 frozen s4.pathway0_res17.branch2.b_bn.bias
+335 frozen s4.pathway0_res17.branch2.c.weight
+336 frozen s4.pathway0_res17.branch2.c_bn.weight
+337 frozen s4.pathway0_res17.branch2.c_bn.bias
+338 frozen s4.pathway0_res18.branch2.a.weight
+339 frozen s4.pathway0_res18.branch2.a_bn.weight
+340 frozen s4.pathway0_res18.branch2.a_bn.bias
+341 frozen s4.pathway0_res18.branch2.b.weight
+342 frozen s4.pathway0_res18.branch2.b_bn.weight
+343 frozen s4.pathway0_res18.branch2.b_bn.bias
+344 frozen s4.pathway0_res18.branch2.c.weight
+345 frozen s4.pathway0_res18.branch2.c_bn.weight
+346 frozen s4.pathway0_res18.branch2.c_bn.bias
+347 frozen s4.pathway0_res19.branch2.a.weight
+348 frozen s4.pathway0_res19.branch2.a_bn.weight
+349 frozen s4.pathway0_res19.branch2.a_bn.bias
+350 frozen s4.pathway0_res19.branch2.b.weight
+351 frozen s4.pathway0_res19.branch2.b_bn.weight
+352 frozen s4.pathway0_res19.branch2.b_bn.bias
+353 frozen s4.pathway0_res19.branch2.c.weight
+354 frozen s4.pathway0_res19.branch2.c_bn.weight
+355 frozen s4.pathway0_res19.branch2.c_bn.bias
+356 frozen s4.pathway0_res20.branch2.a.weight
+357 frozen s4.pathway0_res20.branch2.a_bn.weight
+358 frozen s4.pathway0_res20.branch2.a_bn.bias
+359 frozen s4.pathway0_res20.branch2.b.weight
+360 frozen s4.pathway0_res20.branch2.b_bn.weight
+361 frozen s4.pathway0_res20.branch2.b_bn.bias
+362 frozen s4.pathway0_res20.branch2.c.weight
+363 frozen s4.pathway0_res20.branch2.c_bn.weight
+364 frozen s4.pathway0_res20.branch2.c_bn.bias
+365 frozen s4.pathway0_nonlocal20.conv_theta.weight
+366 frozen s4.pathway0_nonlocal20.conv_theta.bias
+367 frozen s4.pathway0_nonlocal20.conv_phi.weight
+368 frozen s4.pathway0_nonlocal20.conv_phi.bias
+369 frozen s4.pathway0_nonlocal20.conv_g.weight
+370 frozen s4.pathway0_nonlocal20.conv_g.bias
+371 frozen s4.pathway0_nonlocal20.conv_out.weight
+372 frozen s4.pathway0_nonlocal20.conv_out.bias
+373 frozen s4.pathway0_nonlocal20.bn.weight
+374 frozen s4.pathway0_nonlocal20.bn.bias
+375 frozen s4.pathway0_res21.branch2.a.weight
+376 frozen s4.pathway0_res21.branch2.a_bn.weight
+377 frozen s4.pathway0_res21.branch2.a_bn.bias
+378 frozen s4.pathway0_res21.branch2.b.weight
+379 frozen s4.pathway0_res21.branch2.b_bn.weight
+380 frozen s4.pathway0_res21.branch2.b_bn.bias
+381 frozen s4.pathway0_res21.branch2.c.weight
+382 frozen s4.pathway0_res21.branch2.c_bn.weight
+383 frozen s4.pathway0_res21.branch2.c_bn.bias
+384 frozen s4.pathway0_res22.branch2.a.weight
+385 frozen s4.pathway0_res22.branch2.a_bn.weight
+386 frozen s4.pathway0_res22.branch2.a_bn.bias
+387 frozen s4.pathway0_res22.branch2.b.weight
+388 frozen s4.pathway0_res22.branch2.b_bn.weight
+389 frozen s4.pathway0_res22.branch2.b_bn.bias
+390 frozen s4.pathway0_res22.branch2.c.weight
+391 frozen s4.pathway0_res22.branch2.c_bn.weight
+392 frozen s4.pathway0_res22.branch2.c_bn.bias
+393 unfrozen s4.pathway1_res0.branch1.weight
+394 unfrozen s4.pathway1_res0.branch1_bn.weight
+395 unfrozen s4.pathway1_res0.branch1_bn.bias
+396 unfrozen s4.pathway1_res0.branch2.a.weight
+397 unfrozen s4.pathway1_res0.branch2.a_bn.weight
+398 unfrozen s4.pathway1_res0.branch2.a_bn.bias
+399 unfrozen s4.pathway1_res0.branch2.b.weight
+400 unfrozen s4.pathway1_res0.branch2.b_bn.weight
+401 unfrozen s4.pathway1_res0.branch2.b_bn.bias
+402 unfrozen s4.pathway1_res0.branch2.c.weight
+403 unfrozen s4.pathway1_res0.branch2.c_bn.weight
+404 unfrozen s4.pathway1_res0.branch2.c_bn.bias
+405 unfrozen s4.pathway1_res1.branch2.a.weight
+406 unfrozen s4.pathway1_res1.branch2.a_bn.weight
+407 unfrozen s4.pathway1_res1.branch2.a_bn.bias
+408 unfrozen s4.pathway1_res1.branch2.b.weight
+409 unfrozen s4.pathway1_res1.branch2.b_bn.weight
+410 unfrozen s4.pathway1_res1.branch2.b_bn.bias
+411 unfrozen s4.pathway1_res1.branch2.c.weight
+412 unfrozen s4.pathway1_res1.branch2.c_bn.weight
+413 unfrozen s4.pathway1_res1.branch2.c_bn.bias
+414 unfrozen s4.pathway1_res2.branch2.a.weight
+415 unfrozen s4.pathway1_res2.branch2.a_bn.weight
+416 unfrozen s4.pathway1_res2.branch2.a_bn.bias
+417 unfrozen s4.pathway1_res2.branch2.b.weight
+418 unfrozen s4.pathway1_res2.branch2.b_bn.weight
+419 unfrozen s4.pathway1_res2.branch2.b_bn.bias
+420 unfrozen s4.pathway1_res2.branch2.c.weight
+421 unfrozen s4.pathway1_res2.branch2.c_bn.weight
+422 unfrozen s4.pathway1_res2.branch2.c_bn.bias
+423 unfrozen s4.pathway1_res3.branch2.a.weight
+424 unfrozen s4.pathway1_res3.branch2.a_bn.weight
+425 unfrozen s4.pathway1_res3.branch2.a_bn.bias
+426 unfrozen s4.pathway1_res3.branch2.b.weight
+427 unfrozen s4.pathway1_res3.branch2.b_bn.weight
+428 unfrozen s4.pathway1_res3.branch2.b_bn.bias
+429 unfrozen s4.pathway1_res3.branch2.c.weight
+430 unfrozen s4.pathway1_res3.branch2.c_bn.weight
+431 unfrozen s4.pathway1_res3.branch2.c_bn.bias
+432 unfrozen s4.pathway1_res4.branch2.a.weight
+433 unfrozen s4.pathway1_res4.branch2.a_bn.weight
+434 unfrozen s4.pathway1_res4.branch2.a_bn.bias
+435 unfrozen s4.pathway1_res4.branch2.b.weight
+436 unfrozen s4.pathway1_res4.branch2.b_bn.weight
+437 unfrozen s4.pathway1_res4.branch2.b_bn.bias
+438 unfrozen s4.pathway1_res4.branch2.c.weight
+439 unfrozen s4.pathway1_res4.branch2.c_bn.weight
+440 unfrozen s4.pathway1_res4.branch2.c_bn.bias
+441 unfrozen s4.pathway1_res5.branch2.a.weight
+442 unfrozen s4.pathway1_res5.branch2.a_bn.weight
+443 unfrozen s4.pathway1_res5.branch2.a_bn.bias
+444 unfrozen s4.pathway1_res5.branch2.b.weight
+445 unfrozen s4.pathway1_res5.branch2.b_bn.weight
+446 unfrozen s4.pathway1_res5.branch2.b_bn.bias
+447 unfrozen s4.pathway1_res5.branch2.c.weight
+448 unfrozen s4.pathway1_res5.branch2.c_bn.weight
+449 unfrozen s4.pathway1_res5.branch2.c_bn.bias
+450 unfrozen s4.pathway1_res6.branch2.a.weight
+451 unfrozen s4.pathway1_res6.branch2.a_bn.weight
+452 unfrozen s4.pathway1_res6.branch2.a_bn.bias
+453 unfrozen s4.pathway1_res6.branch2.b.weight
+454 unfrozen s4.pathway1_res6.branch2.b_bn.weight
+455 unfrozen s4.pathway1_res6.branch2.b_bn.bias
+456 unfrozen s4.pathway1_res6.branch2.c.weight
+457 unfrozen s4.pathway1_res6.branch2.c_bn.weight
+458 unfrozen s4.pathway1_res6.branch2.c_bn.bias
+459 unfrozen s4.pathway1_res7.branch2.a.weight
+460 unfrozen s4.pathway1_res7.branch2.a_bn.weight
+461 unfrozen s4.pathway1_res7.branch2.a_bn.bias
+462 unfrozen s4.pathway1_res7.branch2.b.weight
+463 unfrozen s4.pathway1_res7.branch2.b_bn.weight
+464 unfrozen s4.pathway1_res7.branch2.b_bn.bias
+465 unfrozen s4.pathway1_res7.branch2.c.weight
+466 unfrozen s4.pathway1_res7.branch2.c_bn.weight
+467 unfrozen s4.pathway1_res7.branch2.c_bn.bias
+468 unfrozen s4.pathway1_res8.branch2.a.weight
+469 unfrozen s4.pathway1_res8.branch2.a_bn.weight
+470 unfrozen s4.pathway1_res8.branch2.a_bn.bias
+471 unfrozen s4.pathway1_res8.branch2.b.weight
+472 unfrozen s4.pathway1_res8.branch2.b_bn.weight
+473 unfrozen s4.pathway1_res8.branch2.b_bn.bias
+474 unfrozen s4.pathway1_res8.branch2.c.weight
+475 unfrozen s4.pathway1_res8.branch2.c_bn.weight
+476 unfrozen s4.pathway1_res8.branch2.c_bn.bias
+477 unfrozen s4.pathway1_res9.branch2.a.weight
+478 unfrozen s4.pathway1_res9.branch2.a_bn.weight
+479 unfrozen s4.pathway1_res9.branch2.a_bn.bias
+480 unfrozen s4.pathway1_res9.branch2.b.weight
+481 unfrozen s4.pathway1_res9.branch2.b_bn.weight
+482 unfrozen s4.pathway1_res9.branch2.b_bn.bias
+483 unfrozen s4.pathway1_res9.branch2.c.weight
+484 unfrozen s4.pathway1_res9.branch2.c_bn.weight
+485 unfrozen s4.pathway1_res9.branch2.c_bn.bias
+486 unfrozen s4.pathway1_res10.branch2.a.weight
+487 unfrozen s4.pathway1_res10.branch2.a_bn.weight
+488 unfrozen s4.pathway1_res10.branch2.a_bn.bias
+489 unfrozen s4.pathway1_res10.branch2.b.weight
+490 unfrozen s4.pathway1_res10.branch2.b_bn.weight
+491 unfrozen s4.pathway1_res10.branch2.b_bn.bias
+492 unfrozen s4.pathway1_res10.branch2.c.weight
+493 unfrozen s4.pathway1_res10.branch2.c_bn.weight
+494 unfrozen s4.pathway1_res10.branch2.c_bn.bias
+495 unfrozen s4.pathway1_res11.branch2.a.weight
+496 unfrozen s4.pathway1_res11.branch2.a_bn.weight
+497 unfrozen s4.pathway1_res11.branch2.a_bn.bias
+498 unfrozen s4.pathway1_res11.branch2.b.weight
+499 unfrozen s4.pathway1_res11.branch2.b_bn.weight
+500 unfrozen s4.pathway1_res11.branch2.b_bn.bias
+501 unfrozen s4.pathway1_res11.branch2.c.weight
+502 unfrozen s4.pathway1_res11.branch2.c_bn.weight
+503 unfrozen s4.pathway1_res11.branch2.c_bn.bias
+504 unfrozen s4.pathway1_res12.branch2.a.weight
+505 unfrozen s4.pathway1_res12.branch2.a_bn.weight
+506 unfrozen s4.pathway1_res12.branch2.a_bn.bias
+507 unfrozen s4.pathway1_res12.branch2.b.weight
+508 unfrozen s4.pathway1_res12.branch2.b_bn.weight
+509 unfrozen s4.pathway1_res12.branch2.b_bn.bias
+510 unfrozen s4.pathway1_res12.branch2.c.weight
+511 unfrozen s4.pathway1_res12.branch2.c_bn.weight
+512 unfrozen s4.pathway1_res12.branch2.c_bn.bias
+513 unfrozen s4.pathway1_res13.branch2.a.weight
+514 unfrozen s4.pathway1_res13.branch2.a_bn.weight
+515 unfrozen s4.pathway1_res13.branch2.a_bn.bias
+516 unfrozen s4.pathway1_res13.branch2.b.weight
+517 unfrozen s4.pathway1_res13.branch2.b_bn.weight
+518 unfrozen s4.pathway1_res13.branch2.b_bn.bias
+519 unfrozen s4.pathway1_res13.branch2.c.weight
+520 unfrozen s4.pathway1_res13.branch2.c_bn.weight
+521 unfrozen s4.pathway1_res13.branch2.c_bn.bias
+522 unfrozen s4.pathway1_res14.branch2.a.weight
+523 unfrozen s4.pathway1_res14.branch2.a_bn.weight
+524 unfrozen s4.pathway1_res14.branch2.a_bn.bias
+525 unfrozen s4.pathway1_res14.branch2.b.weight
+526 unfrozen s4.pathway1_res14.branch2.b_bn.weight
+527 unfrozen s4.pathway1_res14.branch2.b_bn.bias
+528 unfrozen s4.pathway1_res14.branch2.c.weight
+529 unfrozen s4.pathway1_res14.branch2.c_bn.weight
+530 unfrozen s4.pathway1_res14.branch2.c_bn.bias
+531 unfrozen s4.pathway1_res15.branch2.a.weight
+532 unfrozen s4.pathway1_res15.branch2.a_bn.weight
+533 unfrozen s4.pathway1_res15.branch2.a_bn.bias
+534 unfrozen s4.pathway1_res15.branch2.b.weight
+535 unfrozen s4.pathway1_res15.branch2.b_bn.weight
+536 unfrozen s4.pathway1_res15.branch2.b_bn.bias
+537 unfrozen s4.pathway1_res15.branch2.c.weight
+538 unfrozen s4.pathway1_res15.branch2.c_bn.weight
+539 unfrozen s4.pathway1_res15.branch2.c_bn.bias
+540 unfrozen s4.pathway1_res16.branch2.a.weight
+541 unfrozen s4.pathway1_res16.branch2.a_bn.weight
+542 unfrozen s4.pathway1_res16.branch2.a_bn.bias
+543 unfrozen s4.pathway1_res16.branch2.b.weight
+544 unfrozen s4.pathway1_res16.branch2.b_bn.weight
+545 unfrozen s4.pathway1_res16.branch2.b_bn.bias
+546 unfrozen s4.pathway1_res16.branch2.c.weight
+547 unfrozen s4.pathway1_res16.branch2.c_bn.weight
+548 unfrozen s4.pathway1_res16.branch2.c_bn.bias
+549 unfrozen s4.pathway1_res17.branch2.a.weight
+550 unfrozen s4.pathway1_res17.branch2.a_bn.weight
+551 unfrozen s4.pathway1_res17.branch2.a_bn.bias
+552 unfrozen s4.pathway1_res17.branch2.b.weight
+553 unfrozen s4.pathway1_res17.branch2.b_bn.weight
+554 unfrozen s4.pathway1_res17.branch2.b_bn.bias
+555 unfrozen s4.pathway1_res17.branch2.c.weight
+556 unfrozen s4.pathway1_res17.branch2.c_bn.weight
+557 unfrozen s4.pathway1_res17.branch2.c_bn.bias
+558 unfrozen s4.pathway1_res18.branch2.a.weight
+559 unfrozen s4.pathway1_res18.branch2.a_bn.weight
+560 unfrozen s4.pathway1_res18.branch2.a_bn.bias
+561 unfrozen s4.pathway1_res18.branch2.b.weight
+562 unfrozen s4.pathway1_res18.branch2.b_bn.weight
+563 unfrozen s4.pathway1_res18.branch2.b_bn.bias
+564 unfrozen s4.pathway1_res18.branch2.c.weight
+565 unfrozen s4.pathway1_res18.branch2.c_bn.weight
+566 unfrozen s4.pathway1_res18.branch2.c_bn.bias
+567 unfrozen s4.pathway1_res19.branch2.a.weight
+568 unfrozen s4.pathway1_res19.branch2.a_bn.weight
+569 unfrozen s4.pathway1_res19.branch2.a_bn.bias
+570 unfrozen s4.pathway1_res19.branch2.b.weight
+571 unfrozen s4.pathway1_res19.branch2.b_bn.weight
+572 unfrozen s4.pathway1_res19.branch2.b_bn.bias
+573 unfrozen s4.pathway1_res19.branch2.c.weight
+574 unfrozen s4.pathway1_res19.branch2.c_bn.weight
+575 unfrozen s4.pathway1_res19.branch2.c_bn.bias
+576 unfrozen s4.pathway1_res20.branch2.a.weight
+577 unfrozen s4.pathway1_res20.branch2.a_bn.weight
+578 unfrozen s4.pathway1_res20.branch2.a_bn.bias
+579 unfrozen s4.pathway1_res20.branch2.b.weight
+580 unfrozen s4.pathway1_res20.branch2.b_bn.weight
+581 unfrozen s4.pathway1_res20.branch2.b_bn.bias
+582 unfrozen s4.pathway1_res20.branch2.c.weight
+583 unfrozen s4.pathway1_res20.branch2.c_bn.weight
+584 unfrozen s4.pathway1_res20.branch2.c_bn.bias
+585 unfrozen s4.pathway1_res21.branch2.a.weight
+586 unfrozen s4.pathway1_res21.branch2.a_bn.weight
+587 unfrozen s4.pathway1_res21.branch2.a_bn.bias
+588 unfrozen s4.pathway1_res21.branch2.b.weight
+589 unfrozen s4.pathway1_res21.branch2.b_bn.weight
+590 unfrozen s4.pathway1_res21.branch2.b_bn.bias
+591 unfrozen s4.pathway1_res21.branch2.c.weight
+592 unfrozen s4.pathway1_res21.branch2.c_bn.weight
+593 unfrozen s4.pathway1_res21.branch2.c_bn.bias
+594 unfrozen s4.pathway1_res22.branch2.a.weight
+595 unfrozen s4.pathway1_res22.branch2.a_bn.weight
+596 unfrozen s4.pathway1_res22.branch2.a_bn.bias
+597 unfrozen s4.pathway1_res22.branch2.b.weight
+598 unfrozen s4.pathway1_res22.branch2.b_bn.weight
+599 unfrozen s4.pathway1_res22.branch2.b_bn.bias
+600 unfrozen s4.pathway1_res22.branch2.c.weight
+601 unfrozen s4.pathway1_res22.branch2.c_bn.weight
+602 unfrozen s4.pathway1_res22.branch2.c_bn.bias
+603 unfrozen s4_fuse.conv_f2s.weight
+604 unfrozen s4_fuse.bn.weight
+605 unfrozen s4_fuse.bn.bias
+606 unfrozen s5.pathway0_res0.branch1.weight
+607 unfrozen s5.pathway0_res0.branch1_bn.weight
+608 unfrozen s5.pathway0_res0.branch1_bn.bias
+609 unfrozen s5.pathway0_res0.branch2.a.weight
+610 unfrozen s5.pathway0_res0.branch2.a_bn.weight
+611 unfrozen s5.pathway0_res0.branch2.a_bn.bias
+612 unfrozen s5.pathway0_res0.branch2.b.weight
+613 unfrozen s5.pathway0_res0.branch2.b_bn.weight
+614 unfrozen s5.pathway0_res0.branch2.b_bn.bias
+615 unfrozen s5.pathway0_res0.branch2.c.weight
+616 unfrozen s5.pathway0_res0.branch2.c_bn.weight
+617 unfrozen s5.pathway0_res0.branch2.c_bn.bias
+618 unfrozen s5.pathway0_res1.branch2.a.weight
+619 unfrozen s5.pathway0_res1.branch2.a_bn.weight
+620 unfrozen s5.pathway0_res1.branch2.a_bn.bias
+621 unfrozen s5.pathway0_res1.branch2.b.weight
+622 unfrozen s5.pathway0_res1.branch2.b_bn.weight
+623 unfrozen s5.pathway0_res1.branch2.b_bn.bias
+624 unfrozen s5.pathway0_res1.branch2.c.weight
+625 unfrozen s5.pathway0_res1.branch2.c_bn.weight
+626 unfrozen s5.pathway0_res1.branch2.c_bn.bias
+627 unfrozen s5.pathway0_res2.branch2.a.weight
+628 unfrozen s5.pathway0_res2.branch2.a_bn.weight
+629 unfrozen s5.pathway0_res2.branch2.a_bn.bias
+630 unfrozen s5.pathway0_res2.branch2.b.weight
+631 unfrozen s5.pathway0_res2.branch2.b_bn.weight
+632 unfrozen s5.pathway0_res2.branch2.b_bn.bias
+633 unfrozen s5.pathway0_res2.branch2.c.weight
+634 unfrozen s5.pathway0_res2.branch2.c_bn.weight
+635 unfrozen s5.pathway0_res2.branch2.c_bn.bias
+636 unfrozen s5.pathway1_res0.branch1.weight
+637 unfrozen s5.pathway1_res0.branch1_bn.weight
+638 unfrozen s5.pathway1_res0.branch1_bn.bias
+639 unfrozen s5.pathway1_res0.branch2.a.weight
+640 unfrozen s5.pathway1_res0.branch2.a_bn.weight
+641 unfrozen s5.pathway1_res0.branch2.a_bn.bias
+642 unfrozen s5.pathway1_res0.branch2.b.weight
+643 unfrozen s5.pathway1_res0.branch2.b_bn.weight
+644 unfrozen s5.pathway1_res0.branch2.b_bn.bias
+645 unfrozen s5.pathway1_res0.branch2.c.weight
+646 unfrozen s5.pathway1_res0.branch2.c_bn.weight
+647 unfrozen s5.pathway1_res0.branch2.c_bn.bias
+648 unfrozen s5.pathway1_res1.branch2.a.weight
+649 unfrozen s5.pathway1_res1.branch2.a_bn.weight
+650 unfrozen s5.pathway1_res1.branch2.a_bn.bias
+651 unfrozen s5.pathway1_res1.branch2.b.weight
+652 unfrozen s5.pathway1_res1.branch2.b_bn.weight
+653 unfrozen s5.pathway1_res1.branch2.b_bn.bias
+654 unfrozen s5.pathway1_res1.branch2.c.weight
+655 unfrozen s5.pathway1_res1.branch2.c_bn.weight
+656 unfrozen s5.pathway1_res1.branch2.c_bn.bias
+657 unfrozen s5.pathway1_res2.branch2.a.weight
+658 unfrozen s5.pathway1_res2.branch2.a_bn.weight
+659 unfrozen s5.pathway1_res2.branch2.a_bn.bias
+660 unfrozen s5.pathway1_res2.branch2.b.weight
+661 unfrozen s5.pathway1_res2.branch2.b_bn.weight
+662 unfrozen s5.pathway1_res2.branch2.b_bn.bias
+663 unfrozen s5.pathway1_res2.branch2.c.weight
+664 unfrozen s5.pathway1_res2.branch2.c_bn.weight
+665 unfrozen s5.pathway1_res2.branch2.c_bn.bias
+666 unfrozen head.projection.weight
+667 unfrozen head.projection.bias
+668 unfrozen head.projection2.weight
+669 unfrozen head.projection2.bias
+[12/24 11:20:10][INFO] checkpoint.py: 528: Load from last checkpoint, /srv/beegfs02/scratch/da_action/data/output/aux_10_500_100_v10/checkpoints/checkpoint_epoch_00010.pyth.
+[12/24 11:20:10][INFO] checkpoint.py: 215: Loading network weights from /srv/beegfs02/scratch/da_action/data/output/aux_10_500_100_v10/checkpoints/checkpoint_epoch_00010.pyth.
+[12/24 11:20:20][INFO] da_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/kinetics700/frame_lists_10_500_100/train.csv
+[12/24 11:20:22][INFO] da_helper.py: 122: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/kinetics700/annotations_10_500_100/kinetics_train_v2.1.csv
+[12/24 11:20:22][INFO] da_helper.py: 124: Detection threshold: 0.8
+[12/24 11:20:22][INFO] da_helper.py: 125: Number of unique boxes: 4121
+[12/24 11:20:22][INFO] da_helper.py: 126: Number of annotations: 5000
+[12/24 11:20:23][INFO] da_helper.py: 173: 3140 keyframes used.
+[12/24 11:20:23][INFO] ava_dataset.py: 503: === DA dataset summary ===
+[12/24 11:20:23][INFO] ava_dataset.py: 504: Split: da_train
+[12/24 11:20:23][INFO] ava_dataset.py: 505: Number of videos: 3140
+[12/24 11:20:23][INFO] ava_dataset.py: 509: Number of frames: 565200
+[12/24 11:20:23][INFO] ava_dataset.py: 510: Number of key frames: 3140
+[12/24 11:20:23][INFO] ava_dataset.py: 511: Number of boxes: 4121.
+[12/24 11:20:31][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_500_100/train.csv
+[12/24 11:20:31][INFO] tensorboard_vis.py:  57: To see logged results in Tensorboard, please launch using the command             `tensorboard  --port=<port-number> --logdir /srv/beegfs02/scratch/da_action/data/output/aux_10_500_100_v10/tensorboard`
+[12/24 11:20:31][INFO] train_aux.py: 378: Start epoch: 11
+cur_iter:.. 0
+cur_iter:.. 1
+cur_iter:.. 2
+cur_iter:.. 3
+cur_iter:.. 4
+cur_iter:.. 5
+cur_iter:.. 6
+cur_iter:.. 7
+cur_iter:.. 8
+cur_iter:.. 9
+cur_iter:.. 10
+cur_iter:.. 11
+cur_iter:.. 12
+cur_iter:.. 13
+cur_iter:.. 14
+cur_iter:.. 15
+cur_iter:.. 16
+cur_iter:.. 17
+cur_iter:.. 18
+cur_iter:.. 19
+cur_iter:.. 20
+cur_iter:.. 21
+cur_iter:.. 22
+cur_iter:.. 23
+cur_iter:.. 24
+cur_iter:.. 25
+cur_iter:.. 26
+cur_iter:.. 27
+cur_iter:.. 28
+cur_iter:.. 29
+cur_iter:.. 30
+cur_iter:.. 31
+cur_iter:.. 32
+cur_iter:.. 33
+cur_iter:.. 34
+cur_iter:.. 35
+cur_iter:.. 36
+cur_iter:.. 37
+cur_iter:.. 38
+cur_iter:.. 39
+cur_iter:.. 40
+cur_iter:.. 41
+cur_iter:.. 42
+cur_iter:.. 43
+cur_iter:.. 44
+cur_iter:.. 45
+cur_iter:.. 46
+cur_iter:.. 47
+cur_iter:.. 48
+cur_iter:.. 49
+cur_iter:.. 50
+cur_iter:.. 51
+cur_iter:.. 52
+cur_iter:.. 53
+cur_iter:.. 54
+cur_iter:.. 55
+cur_iter:.. 56
+cur_iter:.. 57
+cur_iter:.. 58
+cur_iter:.. 59
+cur_iter:.. 60
+cur_iter:.. 61
+cur_iter:.. 62
+cur_iter:.. 63
+cur_iter:.. 64
+cur_iter:.. 65
+cur_iter:.. 66
+cur_iter:.. 67
+cur_iter:.. 68
+cur_iter:.. 69
+cur_iter:.. 70
+cur_iter:.. 71
+cur_iter:.. 72
+cur_iter:.. 73
+cur_iter:.. 74
+cur_iter:.. 75
+cur_iter:.. 76
+cur_iter:.. 77
+cur_iter:.. 78
+cur_iter:.. 79
+cur_iter:.. 80
+cur_iter:.. 81
+cur_iter:.. 82
+cur_iter:.. 83
+cur_iter:.. 84
+cur_iter:.. 85
+cur_iter:.. 86
+cur_iter:.. 87
+cur_iter:.. 88
+cur_iter:.. 89
+cur_iter:.. 90
+cur_iter:.. 91
+cur_iter:.. 92
+cur_iter:.. 93
+cur_iter:.. 94
+cur_iter:.. 95
+cur_iter:.. 96
+cur_iter:.. 97
+cur_iter:.. 98
+cur_iter:.. 99
+cur_iter:.. 100
+cur_iter:.. 101
+cur_iter:.. 102
+cur_iter:.. 103
+cur_iter:.. 104
+cur_iter:.. 105
+cur_iter:.. 106
+cur_iter:.. 107
+cur_iter:.. 108
+cur_iter:.. 109
+cur_iter:.. 110
+cur_iter:.. 111
+cur_iter:.. 112
+cur_iter:.. 113
+cur_iter:.. 114
+cur_iter:.. 115
+cur_iter:.. 116
+cur_iter:.. 117
+cur_iter:.. 118
+cur_iter:.. 119
+cur_iter:.. 120
+cur_iter:.. 121
+cur_iter:.. 122
+cur_iter:.. 123
+cur_iter:.. 124
+cur_iter:.. 125
+cur_iter:.. 126
+cur_iter:.. 127
+cur_iter:.. 128
+cur_iter:.. 129
+cur_iter:.. 130
+cur_iter:.. 131
+cur_iter:.. 132
+cur_iter:.. 133
+cur_iter:.. 134
+cur_iter:.. 135
+cur_iter:.. 136
+cur_iter:.. 137
+cur_iter:.. 138
+cur_iter:.. 139
+cur_iter:.. 140
+cur_iter:.. 141
+cur_iter:.. 142
+cur_iter:.. 143
+cur_iter:.. 144
+cur_iter:.. 145
+cur_iter:.. 146
+cur_iter:.. 147
+cur_iter:.. 148
+cur_iter:.. 149
+cur_iter:.. 150
+cur_iter:.. 151
+cur_iter:.. 152
+cur_iter:.. 153
+cur_iter:.. 154
+cur_iter:.. 155
+cur_iter:.. 156
+cur_iter:.. 157
+cur_iter:.. 158
+cur_iter:.. 159
+cur_iter:.. 160
+cur_iter:.. 161
+cur_iter:.. 162
+cur_iter:.. 163
+cur_iter:.. 164
+cur_iter:.. 165
+cur_iter:.. 166
+cur_iter:.. 167
+cur_iter:.. 168
+cur_iter:.. 169
+cur_iter:.. 170
+cur_iter:.. 171
+cur_iter:.. 172
+cur_iter:.. 173
+cur_iter:.. 174
+cur_iter:.. 175
+cur_iter:.. 176
+cur_iter:.. 177
+cur_iter:.. 178
+cur_iter:.. 179
+cur_iter:.. 180
+cur_iter:.. 181
+cur_iter:.. 182
+cur_iter:.. 183
+cur_iter:.. 184
+cur_iter:.. 185
+cur_iter:.. 186
+cur_iter:.. 187
+cur_iter:.. 188
+cur_iter:.. 189
+cur_iter:.. 190
+cur_iter:.. 191
+cur_iter:.. 192
+cur_iter:.. 193
+cur_iter:.. 194
+cur_iter:.. 195
+cur_iter:.. 196
+cur_iter:.. 197
+cur_iter:.. 198
+cur_iter:.. 199
+cur_iter:.. 200
+cur_iter:.. 201
+cur_iter:.. 202
+cur_iter:.. 203
+cur_iter:.. 204
+cur_iter:.. 205
+cur_iter:.. 206
+cur_iter:.. 207
+cur_iter:.. 208
+cur_iter:.. 209
+cur_iter:.. 210
+cur_iter:.. 211
+cur_iter:.. 212
+cur_iter:.. 213
+cur_iter:.. 214
+cur_iter:.. 215
+cur_iter:.. 216
+cur_iter:.. 217
+cur_iter:.. 218
+cur_iter:.. 219
+cur_iter:.. 220
+cur_iter:.. 221
+cur_iter:.. 222
+cur_iter:.. 223
+cur_iter:.. 224
+cur_iter:.. 225
+cur_iter:.. 226
+cur_iter:.. 227
+cur_iter:.. 228
+cur_iter:.. 229
+cur_iter:.. 230
+cur_iter:.. 231
+cur_iter:.. 232
+cur_iter:.. 233
+cur_iter:.. 234
+cur_iter:.. 235
+cur_iter:.. 236
+cur_iter:.. 237
+cur_iter:.. 238
+cur_iter:.. 239
+cur_iter:.. 240
+cur_iter:.. 241
+cur_iter:.. 242
+cur_iter:.. 243
+cur_iter:.. 244
+cur_iter:.. 245
+cur_iter:.. 246
+cur_iter:.. 247
+cur_iter:.. 248
+cur_iter:.. 249
+cur_iter:.. 250
+cur_iter:.. 251
+cur_iter:.. 252
+cur_iter:.. 253
+cur_iter:.. 254
+cur_iter:.. 255
+cur_iter:.. 256
+cur_iter:.. 257
+cur_iter:.. 258
+cur_iter:.. 259
+cur_iter:.. 260
+cur_iter:.. 261
+cur_iter:.. 262
+cur_iter:.. 263
+cur_iter:.. 264
+cur_iter:.. 265
+cur_iter:.. 266
+cur_iter:.. 267
+cur_iter:.. 268
+cur_iter:.. 269
+cur_iter:.. 270
+cur_iter:.. 271
+cur_iter:.. 272
+cur_iter:.. 273
+cur_iter:.. 274
+cur_iter:.. 275
+cur_iter:.. 276
+cur_iter:.. 277
+cur_iter:.. 278
+cur_iter:.. 279
+cur_iter:.. 280
+cur_iter:.. 281
+cur_iter:.. 282
+cur_iter:.. 283
+cur_iter:.. 284
+cur_iter:.. 285
+cur_iter:.. 286
+cur_iter:.. 287
+cur_iter:.. 288
+cur_iter:.. 289
+cur_iter:.. 290
+cur_iter:.. 291
+cur_iter:.. 292
+cur_iter:.. 293
+cur_iter:.. 294
+cur_iter:.. 295
+cur_iter:.. 296
+cur_iter:.. 297
+cur_iter:.. 298
+cur_iter:.. 299
+cur_iter:.. 300
+cur_iter:.. 301
+cur_iter:.. 302
+cur_iter:.. 303
+cur_iter:.. 304
+cur_iter:.. 305
+cur_iter:.. 306
+cur_iter:.. 307
+cur_iter:.. 308
+cur_iter:.. 309
+cur_iter:.. 310
+cur_iter:.. 311
+cur_iter:.. 312
+cur_iter:.. 313
+cur_iter:.. 314
+cur_iter:.. 315
+cur_iter:.. 316
+cur_iter:.. 317
+cur_iter:.. 318
+cur_iter:.. 319
+cur_iter:.. 320
+cur_iter:.. 321
+cur_iter:.. 322
+cur_iter:.. 323
+cur_iter:.. 324
+cur_iter:.. 325
+cur_iter:.. 326
+cur_iter:.. 327
+cur_iter:.. 328
+cur_iter:.. 329
+cur_iter:.. 330
+cur_iter:.. 331
+cur_iter:.. 332
+cur_iter:.. 333
+cur_iter:.. 334
+cur_iter:.. 335
+cur_iter:.. 336
+cur_iter:.. 337
+cur_iter:.. 338
+cur_iter:.. 339
+cur_iter:.. 340
+cur_iter:.. 341
+cur_iter:.. 342
+cur_iter:.. 343
+cur_iter:.. 344
+cur_iter:.. 345
+cur_iter:.. 346
+cur_iter:.. 347
+cur_iter:.. 348
+cur_iter:.. 349
+cur_iter:.. 350
+cur_iter:.. 351
+cur_iter:.. 352
+cur_iter:.. 353
+cur_iter:.. 354
+cur_iter:.. 355
+cur_iter:.. 356
+cur_iter:.. 357
+cur_iter:.. 358
+cur_iter:.. 359
+cur_iter:.. 360
+cur_iter:.. 361
+cur_iter:.. 362
+cur_iter:.. 363
+cur_iter:.. 364
+cur_iter:.. 365
+cur_iter:.. 366
+cur_iter:.. 367
+cur_iter:.. 368
+cur_iter:.. 369
+cur_iter:.. 370
+cur_iter:.. 371
+cur_iter:.. 372
+cur_iter:.. 373
+cur_iter:.. 374
+cur_iter:.. 375
+cur_iter:.. 376
+cur_iter:.. 377
+cur_iter:.. 378
+cur_iter:.. 379
+cur_iter:.. 380
+cur_iter:.. 381
+cur_iter:.. 382
+cur_iter:.. 383
+cur_iter:.. 384
+cur_iter:.. 385
+cur_iter:.. 386
+cur_iter:.. 387
+cur_iter:.. 388
+cur_iter:.. 389
+cur_iter:.. 390
+cur_iter:.. 391
+cur_iter:.. 0
+cur_iter:.. 1
+cur_iter:.. 2
+cur_iter:.. 3
+cur_iter:.. 4
+cur_iter:.. 5
+cur_iter:.. 6
+cur_iter:.. 7
+cur_iter:.. 8
+cur_iter:.. 9
+cur_iter:.. 10
+cur_iter:.. 11
+cur_iter:.. 12
+cur_iter:.. 13
+cur_iter:.. 14
+cur_iter:.. 15
+cur_iter:.. 16
+cur_iter:.. 17
+cur_iter:.. 18
+cur_iter:.. 19
+cur_iter:.. 20
+cur_iter:.. 21
+cur_iter:.. 22
+cur_iter:.. 23
+cur_iter:.. 24
+cur_iter:.. 25
+cur_iter:.. 26
+cur_iter:.. 27
+cur_iter:.. 28
+cur_iter:.. 29
+cur_iter:.. 30
+cur_iter:.. 31
+cur_iter:.. 32
+cur_iter:.. 33
+cur_iter:.. 34
+cur_iter:.. 35
+cur_iter:.. 36
+cur_iter:.. 37
+cur_iter:.. 38
+cur_iter:.. 39
+cur_iter:.. 40
+cur_iter:.. 41
+cur_iter:.. 42
+cur_iter:.. 43
+cur_iter:.. 44
+cur_iter:.. 45
+cur_iter:.. 46
+cur_iter:.. 47
+cur_iter:.. 48
+cur_iter:.. 49
+cur_iter:.. 50
+cur_iter:.. 51
+cur_iter:.. 52
+cur_iter:.. 53
+cur_iter:.. 54
+cur_iter:.. 55
+cur_iter:.. 56
+cur_iter:.. 57
+cur_iter:.. 58
+cur_iter:.. 59
+cur_iter:.. 60
+cur_iter:.. 61
+cur_iter:.. 62
+cur_iter:.. 63
+cur_iter:.. 64
+cur_iter:.. 65
+cur_iter:.. 66
+cur_iter:.. 67
+cur_iter:.. 68
+cur_iter:.. 69
+cur_iter:.. 70
+cur_iter:.. 71
+cur_iter:.. 72
+cur_iter:.. 73
+cur_iter:.. 74
+cur_iter:.. 75
+cur_iter:.. 76
+cur_iter:.. 77
+cur_iter:.. 78
+cur_iter:.. 79
+cur_iter:.. 80
+cur_iter:.. 81
+cur_iter:.. 82
+cur_iter:.. 83
+cur_iter:.. 84
+cur_iter:.. 85
+cur_iter:.. 86
+cur_iter:.. 87
+cur_iter:.. 88
+cur_iter:.. 89
+cur_iter:.. 90
+cur_iter:.. 91
+cur_iter:.. 92
+cur_iter:.. 93
+cur_iter:.. 94
+cur_iter:.. 95
+cur_iter:.. 96
+cur_iter:.. 97
+cur_iter:.. 98
+cur_iter:.. 99
+cur_iter:.. 100
+cur_iter:.. 101
+cur_iter:.. 102
+cur_iter:.. 103
+cur_iter:.. 104
+cur_iter:.. 105
+cur_iter:.. 106
+cur_iter:.. 107
+cur_iter:.. 108
+cur_iter:.. 109
+cur_iter:.. 110
+cur_iter:.. 111
+cur_iter:.. 112
+cur_iter:.. 113
+cur_iter:.. 114
+cur_iter:.. 115
+cur_iter:.. 116
+cur_iter:.. 117
+cur_iter:.. 118
+cur_iter:.. 119
+cur_iter:.. 120
+cur_iter:.. 121
+cur_iter:.. 122
+cur_iter:.. 123
+cur_iter:.. 124
+cur_iter:.. 125
+cur_iter:.. 126
+cur_iter:.. 127
+cur_iter:.. 128
+cur_iter:.. 129
+cur_iter:.. 130
+cur_iter:.. 131
+cur_iter:.. 132
+cur_iter:.. 133
+cur_iter:.. 134
+cur_iter:.. 135
+cur_iter:.. 136
+cur_iter:.. 137
+cur_iter:.. 138
+cur_iter:.. 139
+cur_iter:.. 140
+cur_iter:.. 141
+cur_iter:.. 142
+cur_iter:.. 143
+cur_iter:.. 144
+cur_iter:.. 145
+cur_iter:.. 146
+cur_iter:.. 147
+cur_iter:.. 148
+cur_iter:.. 149
+cur_iter:.. 150
+cur_iter:.. 151
+cur_iter:.. 152
+cur_iter:.. 153
+cur_iter:.. 154
+cur_iter:.. 155
+cur_iter:.. 156
+cur_iter:.. 157
+cur_iter:.. 158
+cur_iter:.. 159
+cur_iter:.. 160
+cur_iter:.. 161
+cur_iter:.. 162
+cur_iter:.. 163
+cur_iter:.. 164
+cur_iter:.. 165
+cur_iter:.. 166
+cur_iter:.. 167
+cur_iter:.. 168
+cur_iter:.. 169
+cur_iter:.. 170
+cur_iter:.. 171
+cur_iter:.. 172
+cur_iter:.. 173
+cur_iter:.. 174
+cur_iter:.. 175
+cur_iter:.. 176
+cur_iter:.. 177
+cur_iter:.. 178
+cur_iter:.. 179
+cur_iter:.. 180
+cur_iter:.. 181
+cur_iter:.. 182
+cur_iter:.. 183
+cur_iter:.. 184
+cur_iter:.. 185
+cur_iter:.. 186
+cur_iter:.. 187
+cur_iter:.. 188
+cur_iter:.. 189
+cur_iter:.. 190
+cur_iter:.. 191
+cur_iter:.. 192
+cur_iter:.. 193
+cur_iter:.. 194
+cur_iter:.. 195
+cur_iter:.. 196
+cur_iter:.. 197
+cur_iter:.. 198
+cur_iter:.. 199
+cur_iter:.. 200
+cur_iter:.. 201
+cur_iter:.. 202
+cur_iter:.. 203
+cur_iter:.. 204
+cur_iter:.. 205
+cur_iter:.. 206
+cur_iter:.. 207
+cur_iter:.. 208
+cur_iter:.. 209
+cur_iter:.. 210
+cur_iter:.. 211
+cur_iter:.. 212
+cur_iter:.. 213
+cur_iter:.. 214
+cur_iter:.. 215
+cur_iter:.. 216
+cur_iter:.. 217
+cur_iter:.. 218
+cur_iter:.. 219
+cur_iter:.. 220
+cur_iter:.. 221
+cur_iter:.. 222
+cur_iter:.. 223
+cur_iter:.. 224
+cur_iter:.. 225
+cur_iter:.. 226
+cur_iter:.. 227
+cur_iter:.. 228
+cur_iter:.. 229
+cur_iter:.. 230
+cur_iter:.. 231
+cur_iter:.. 232
+cur_iter:.. 233
+cur_iter:.. 234
+cur_iter:.. 235
+cur_iter:.. 236
+cur_iter:.. 237
+cur_iter:.. 238
+cur_iter:.. 239
+cur_iter:.. 240
+cur_iter:.. 241
+cur_iter:.. 242
+cur_iter:.. 243
+cur_iter:.. 244
+cur_iter:.. 245
+cur_iter:.. 246
+cur_iter:.. 247
+cur_iter:.. 248
+cur_iter:.. 249
+cur_iter:.. 250
+cur_iter:.. 251
+cur_iter:.. 252
+cur_iter:.. 253
+cur_iter:.. 254
+cur_iter:.. 255
+cur_iter:.. 256
+cur_iter:.. 257
+cur_iter:.. 258
+cur_iter:.. 259
+cur_iter:.. 260
+cur_iter:.. 261
+cur_iter:.. 262
+cur_iter:.. 263
+cur_iter:.. 264
+cur_iter:.. 265
+cur_iter:.. 266
+cur_iter:.. 267
+cur_iter:.. 268
+cur_iter:.. 269
+cur_iter:.. 270
+cur_iter:.. 271
+cur_iter:.. 272
+cur_iter:.. 273
+cur_iter:.. 274
+cur_iter:.. 275
+cur_iter:.. 276
+cur_iter:.. 277
+cur_iter:.. 278
+cur_iter:.. 279
+cur_iter:.. 280
+cur_iter:.. 281
+cur_iter:.. 282
+cur_iter:.. 283
+cur_iter:.. 284
+cur_iter:.. 285
+cur_iter:.. 286
+cur_iter:.. 287
+cur_iter:.. 288
+cur_iter:.. 289
+cur_iter:.. 290
+cur_iter:.. 291
+cur_iter:.. 292
+cur_iter:.. 293
+cur_iter:.. 294
+cur_iter:.. 295
+cur_iter:.. 296
+cur_iter:.. 297
+cur_iter:.. 298
+cur_iter:.. 299
+cur_iter:.. 300
+cur_iter:.. 301
+cur_iter:.. 302
+cur_iter:.. 303
+cur_iter:.. 304
+cur_iter:.. 305
+cur_iter:.. 306
+cur_iter:.. 307
+cur_iter:.. 308
+cur_iter:.. 309
+cur_iter:.. 310
+cur_iter:.. 311
+cur_iter:.. 312
+cur_iter:.. 313
+cur_iter:.. 314
+cur_iter:.. 315
+cur_iter:.. 316
+cur_iter:.. 317
+cur_iter:.. 318
+cur_iter:.. 319
+cur_iter:.. 320
+cur_iter:.. 321
+cur_iter:.. 322
+cur_iter:.. 323
+cur_iter:.. 324
+cur_iter:.. 325
+cur_iter:.. 326
+cur_iter:.. 327
+cur_iter:.. 328
+cur_iter:.. 329
+cur_iter:.. 330
+cur_iter:.. 331
+cur_iter:.. 332
+cur_iter:.. 333
+cur_iter:.. 334
+cur_iter:.. 335
+cur_iter:.. 336
+cur_iter:.. 337
+cur_iter:.. 338
+cur_iter:.. 339
+cur_iter:.. 340
+cur_iter:.. 341
+cur_iter:.. 342
+cur_iter:.. 343
+cur_iter:.. 344
+cur_iter:.. 345
+cur_iter:.. 346
+cur_iter:.. 347
+cur_iter:.. 348
+cur_iter:.. 349
+cur_iter:.. 350
+cur_iter:.. 351
+cur_iter:.. 352
+cur_iter:.. 353
+cur_iter:.. 354
+cur_iter:.. 355
+cur_iter:.. 356
+cur_iter:.. 357
+cur_iter:.. 358
+cur_iter:.. 359
+cur_iter:.. 360
+cur_iter:.. 361
+cur_iter:.. 362
+cur_iter:.. 363
+cur_iter:.. 364
+cur_iter:.. 365
+cur_iter:.. 366
+cur_iter:.. 367
+cur_iter:.. 368
+cur_iter:.. 369
+cur_iter:.. 370
+cur_iter:.. 371
+cur_iter:.. 372
+cur_iter:.. 373
+cur_iter:.. 374
+cur_iter:.. 375
+cur_iter:.. 376
+cur_iter:.. 377
+cur_iter:.. 378
+cur_iter:.. 379
+cur_iter:.. 380
+cur_iter:.. 381
+cur_iter:.. 382
+cur_iter:.. 383
+cur_iter:.. 384
+cur_iter:.. 385
+cur_iter:.. 386
+cur_iter:.. 387
+cur_iter:.. 388
+cur_iter:.. 389
+cur_iter:.. 390
+cur_iter:.. 391
+cur_iter:.. 0
+cur_iter:.. 1
+cur_iter:.. 2
+cur_iter:.. 3
+cur_iter:.. 4
+cur_iter:.. 5
+cur_iter:.. 6
+cur_iter:.. 7
+cur_iter:.. 8
+cur_iter:.. 9
+cur_iter:.. 10
+cur_iter:.. 11
+cur_iter:.. 12
+cur_iter:.. 13
+cur_iter:.. 14
+cur_iter:.. 15
+cur_iter:.. 16
+cur_iter:.. 17
+cur_iter:.. 18
+cur_iter:.. 19
+cur_iter:.. 20
+cur_iter:.. 21
+cur_iter:.. 22
+cur_iter:.. 23
+cur_iter:.. 24
+cur_iter:.. 25
+cur_iter:.. 26
+cur_iter:.. 27
+cur_iter:.. 28
+cur_iter:.. 29
+cur_iter:.. 30
+cur_iter:.. 31
+cur_iter:.. 32
+cur_iter:.. 33
+cur_iter:.. 34
+cur_iter:.. 35
+cur_iter:.. 36
+cur_iter:.. 37
+cur_iter:.. 38
+cur_iter:.. 39
+cur_iter:.. 40
+cur_iter:.. 41
+cur_iter:.. 42
+cur_iter:.. 43
+cur_iter:.. 44
+cur_iter:.. 45
+cur_iter:.. 46
+cur_iter:.. 47
+cur_iter:.. 48
+cur_iter:.. 49
+cur_iter:.. 50
+cur_iter:.. 51
+cur_iter:.. 52
+cur_iter:.. 53
+cur_iter:.. 54
+cur_iter:.. 55
+cur_iter:.. 56
+cur_iter:.. 57
+cur_iter:.. 58
+cur_iter:.. 59
+cur_iter:.. 60
+cur_iter:.. 61
+cur_iter:.. 62
+cur_iter:.. 63
+cur_iter:.. 64
+cur_iter:.. 65
+cur_iter:.. 66
+cur_iter:.. 67
+cur_iter:.. 68
+cur_iter:.. 69
+cur_iter:.. 70
+cur_iter:.. 71
+cur_iter:.. 72
+cur_iter:.. 73
+cur_iter:.. 74
+cur_iter:.. 75
+cur_iter:.. 76
+cur_iter:.. 77
+cur_iter:.. 78
+cur_iter:.. 79
+cur_iter:.. 80
+cur_iter:.. 81
+cur_iter:.. 82
+cur_iter:.. 83
+cur_iter:.. 84
+cur_iter:.. 85
+cur_iter:.. 86
+cur_iter:.. 87
+cur_iter:.. 88
+cur_iter:.. 89
+cur_iter:.. 90
+cur_iter:.. 91
+cur_iter:.. 92
+cur_iter:.. 93
+cur_iter:.. 94
+cur_iter:.. 95
+cur_iter:.. 96
+cur_iter:.. 97
+cur_iter:.. 98
+cur_iter:.. 99
+cur_iter:.. 100
+cur_iter:.. 101
+cur_iter:.. 102
+cur_iter:.. 103
+cur_iter:.. 104
+cur_iter:.. 105
+cur_iter:.. 106
+cur_iter:.. 107
+cur_iter:.. 108
+cur_iter:.. 109
+cur_iter:.. 110
+cur_iter:.. 111
+cur_iter:.. 112
+cur_iter:.. 113
+cur_iter:.. 114
+cur_iter:.. 115
+cur_iter:.. 116
+cur_iter:.. 117
+cur_iter:.. 118
+cur_iter:.. 119
+cur_iter:.. 120
+cur_iter:.. 121
+cur_iter:.. 122
+cur_iter:.. 123
+cur_iter:.. 124
+cur_iter:.. 125
+cur_iter:.. 126
+cur_iter:.. 127
+cur_iter:.. 128
+cur_iter:.. 129
+cur_iter:.. 130
+cur_iter:.. 131
+cur_iter:.. 132
+cur_iter:.. 133
+cur_iter:.. 134
+cur_iter:.. 135
+cur_iter:.. 136
+cur_iter:.. 137
+cur_iter:.. 138
+cur_iter:.. 139
+cur_iter:.. 140
+cur_iter:.. 141
+cur_iter:.. 142
+cur_iter:.. 143
+cur_iter:.. 144
+cur_iter:.. 145
+cur_iter:.. 146
+cur_iter:.. 147
+cur_iter:.. 148
+cur_iter:.. 149
+cur_iter:.. 150
+cur_iter:.. 151
+cur_iter:.. 152
+cur_iter:.. 153
+cur_iter:.. 154
+cur_iter:.. 155
+cur_iter:.. 156
+cur_iter:.. 157
+cur_iter:.. 158
+cur_iter:.. 159
+cur_iter:.. 160
+cur_iter:.. 161
+cur_iter:.. 162
+cur_iter:.. 163
+cur_iter:.. 164
+cur_iter:.. 165
+cur_iter:.. 166
+cur_iter:.. 167
+cur_iter:.. 168
+cur_iter:.. 169
+cur_iter:.. 170
+cur_iter:.. 171
+cur_iter:.. 172
+cur_iter:.. 173
+cur_iter:.. 174
+cur_iter:.. 175
+cur_iter:.. 176
+cur_iter:.. 177
+cur_iter:.. 178
+cur_iter:.. 179
+cur_iter:.. 180
+cur_iter:.. 181
+cur_iter:.. 182
+cur_iter:.. 183
+cur_iter:.. 184
+cur_iter:.. 185
+cur_iter:.. 186
+cur_iter:.. 187
+cur_iter:.. 188
+cur_iter:.. 189
+cur_iter:.. 190
+cur_iter:.. 191
+cur_iter:.. 192
+cur_iter:.. 193
+cur_iter:.. 194
+cur_iter:.. 195
+cur_iter:.. 196
+cur_iter:.. 197
+cur_iter:.. 198
+cur_iter:.. 199
+cur_iter:.. 200
+cur_iter:.. 201
+cur_iter:.. 202
+cur_iter:.. 203
+cur_iter:.. 204
+cur_iter:.. 205
+cur_iter:.. 206
+cur_iter:.. 207
+cur_iter:.. 208
+cur_iter:.. 209
+cur_iter:.. 210
+cur_iter:.. 211
+cur_iter:.. 212
+cur_iter:.. 213
+cur_iter:.. 214
+cur_iter:.. 215
+cur_iter:.. 216
+cur_iter:.. 217
+cur_iter:.. 218
+cur_iter:.. 219
+cur_iter:.. 220
+cur_iter:.. 221
+cur_iter:.. 222
+cur_iter:.. 223
+cur_iter:.. 224
+cur_iter:.. 225
+cur_iter:.. 226
+cur_iter:.. 227
+cur_iter:.. 228
+cur_iter:.. 229
+cur_iter:.. 230
+cur_iter:.. 231
+cur_iter:.. 232
+cur_iter:.. 233
+cur_iter:.. 234
+cur_iter:.. 235
+cur_iter:.. 236
+cur_iter:.. 237
+cur_iter:.. 238
+cur_iter:.. 239
+cur_iter:.. 240
+cur_iter:.. 241
+cur_iter:.. 242
+cur_iter:.. 243
+cur_iter:.. 244
+cur_iter:.. 245
+cur_iter:.. 246
+cur_iter:.. 247
+cur_iter:.. 248
+cur_iter:.. 249
+cur_iter:.. 250
+cur_iter:.. 251
+cur_iter:.. 252
+cur_iter:.. 253
+cur_iter:.. 254
+cur_iter:.. 255
+cur_iter:.. 256
+cur_iter:.. 257
+cur_iter:.. 258
+cur_iter:.. 259
+cur_iter:.. 260
+cur_iter:.. 261
+cur_iter:.. 262
+cur_iter:.. 263
+cur_iter:.. 264
+cur_iter:.. 265
+cur_iter:.. 266
+cur_iter:.. 267
+cur_iter:.. 268
+cur_iter:.. 269
+cur_iter:.. 270
+cur_iter:.. 271
+cur_iter:.. 272
+cur_iter:.. 273
+cur_iter:.. 274
+cur_iter:.. 275
+cur_iter:.. 276
+cur_iter:.. 277
+cur_iter:.. 278
+cur_iter:.. 279
+cur_iter:.. 280
+cur_iter:.. 281
+cur_iter:.. 282
+cur_iter:.. 283
+cur_iter:.. 284
+cur_iter:.. 285
+cur_iter:.. 286
+cur_iter:.. 287
+cur_iter:.. 288
+cur_iter:.. 289
+cur_iter:.. 290
+cur_iter:.. 291
+cur_iter:.. 292
+cur_iter:.. 293
+cur_iter:.. 294
+cur_iter:.. 295
+cur_iter:.. 296
+cur_iter:.. 297
+cur_iter:.. 298
+cur_iter:.. 299
+cur_iter:.. 300
+cur_iter:.. 301
+cur_iter:.. 302
+cur_iter:.. 303
+cur_iter:.. 304
+cur_iter:.. 305
+cur_iter:.. 306
+cur_iter:.. 307
+cur_iter:.. 308
+cur_iter:.. 309
+cur_iter:.. 310
+cur_iter:.. 311
+cur_iter:.. 312
+cur_iter:.. 313
+cur_iter:.. 314
+cur_iter:.. 315
+cur_iter:.. 316
+cur_iter:.. 317
+cur_iter:.. 318
+cur_iter:.. 319
+cur_iter:.. 320
+cur_iter:.. 321
+cur_iter:.. 322
+cur_iter:.. 323
+cur_iter:.. 324
+cur_iter:.. 325
+cur_iter:.. 326
+cur_iter:.. 327
+cur_iter:.. 328
+cur_iter:.. 329
+cur_iter:.. 330
+cur_iter:.. 331
+cur_iter:.. 332
+cur_iter:.. 333
+cur_iter:.. 334
+cur_iter:.. 335
+cur_iter:.. 336
+cur_iter:.. 337
+cur_iter:.. 338
+cur_iter:.. 339
+cur_iter:.. 340
+cur_iter:.. 341
+cur_iter:.. 342
+cur_iter:.. 343
+cur_iter:.. 344
+cur_iter:.. 345
+cur_iter:.. 346
+cur_iter:.. 347
+cur_iter:.. 348
+cur_iter:.. 349
+cur_iter:.. 350
+cur_iter:.. 351
+cur_iter:.. 352
+cur_iter:.. 353
+cur_iter:.. 354
+cur_iter:.. 355
+cur_iter:.. 356
+cur_iter:.. 357
+cur_iter:.. 358
+cur_iter:.. 359
+cur_iter:.. 360
+cur_iter:.. 361
+cur_iter:.. 362
+cur_iter:.. 363
+cur_iter:.. 364
+cur_iter:.. 365
+cur_iter:.. 366
+cur_iter:.. 367
+cur_iter:.. 368
+cur_iter:.. 369
+cur_iter:.. 370
+cur_iter:.. 371
+cur_iter:.. 372
+cur_iter:.. 373
+cur_iter:.. 374
+cur_iter:.. 375
+cur_iter:.. 376
+cur_iter:.. 377
+cur_iter:.. 378
+cur_iter:.. 379
+cur_iter:.. 380
+cur_iter:.. 381
+cur_iter:.. 382
+cur_iter:.. 383
+cur_iter:.. 384
+cur_iter:.. 385
+cur_iter:.. 386
+cur_iter:.. 387
+cur_iter:.. 388
+cur_iter:.. 389
+cur_iter:.. 390
+cur_iter:.. 391
+cur_iter:.. 0
+cur_iter:.. 1
+cur_iter:.. 2
+cur_iter:.. 3
+cur_iter:.. 4
+cur_iter:.. 5
+cur_iter:.. 6
+cur_iter:.. 7
+cur_iter:.. 8
+cur_iter:.. 9
+cur_iter:.. 10
+cur_iter:.. 11
+cur_iter:.. 12
+cur_iter:.. 13
+cur_iter:.. 14
+cur_iter:.. 15
+cur_iter:.. 16
+cur_iter:.. 17
+cur_iter:.. 18
+cur_iter:.. 19
+cur_iter:.. 20
+cur_iter:.. 21
+cur_iter:.. 22
+cur_iter:.. 23
+cur_iter:.. 24
+cur_iter:.. 25
+cur_iter:.. 26
+cur_iter:.. 27
+cur_iter:.. 28
+cur_iter:.. 29
+cur_iter:.. 30
+cur_iter:.. 31
+cur_iter:.. 32
+cur_iter:.. 33
+cur_iter:.. 34
+cur_iter:.. 35
+cur_iter:.. 36
+cur_iter:.. 37
+cur_iter:.. 38
+cur_iter:.. 39
+cur_iter:.. 40
+cur_iter:.. 41
+cur_iter:.. 42
+cur_iter:.. 43
+cur_iter:.. 44
+cur_iter:.. 45
+cur_iter:.. 46
+cur_iter:.. 47
+cur_iter:.. 48
+cur_iter:.. 49
+cur_iter:.. 50
+cur_iter:.. 51
+cur_iter:.. 52
+cur_iter:.. 53
+cur_iter:.. 54
+cur_iter:.. 55
+cur_iter:.. 56
+cur_iter:.. 57
+cur_iter:.. 58
+cur_iter:.. 59
+cur_iter:.. 60
+cur_iter:.. 61
+cur_iter:.. 62
+cur_iter:.. 63
+cur_iter:.. 64
+cur_iter:.. 65
+cur_iter:.. 66
+cur_iter:.. 67
+cur_iter:.. 68
+cur_iter:.. 69
+cur_iter:.. 70
+cur_iter:.. 71
+cur_iter:.. 72
+cur_iter:.. 73
+cur_iter:.. 74
+cur_iter:.. 75
+cur_iter:.. 76
+cur_iter:.. 77
+cur_iter:.. 78
+cur_iter:.. 79
+cur_iter:.. 80
+cur_iter:.. 81
+cur_iter:.. 82
+cur_iter:.. 83
+cur_iter:.. 84
+cur_iter:.. 85
+cur_iter:.. 86
+cur_iter:.. 87
+cur_iter:.. 88
+cur_iter:.. 89
+cur_iter:.. 90
+cur_iter:.. 91
+cur_iter:.. 92
+cur_iter:.. 93
+cur_iter:.. 94
+cur_iter:.. 95
+cur_iter:.. 96
+cur_iter:.. 97
+cur_iter:.. 98
+cur_iter:.. 99
+cur_iter:.. 100
+cur_iter:.. 101
+cur_iter:.. 102
+cur_iter:.. 103
+cur_iter:.. 104
+cur_iter:.. 105
+cur_iter:.. 106
+cur_iter:.. 107
+cur_iter:.. 108
+cur_iter:.. 109
+cur_iter:.. 110
+cur_iter:.. 111
+cur_iter:.. 112
+cur_iter:.. 113
+cur_iter:.. 114
+cur_iter:.. 115
+cur_iter:.. 116
+cur_iter:.. 117
+cur_iter:.. 118
+cur_iter:.. 119
+cur_iter:.. 120
+cur_iter:.. 121
+cur_iter:.. 122
+cur_iter:.. 123
+cur_iter:.. 124
+cur_iter:.. 125
+cur_iter:.. 126
+cur_iter:.. 127
+cur_iter:.. 128
+cur_iter:.. 129
+cur_iter:.. 130
+cur_iter:.. 131
+cur_iter:.. 132
+cur_iter:.. 133
+cur_iter:.. 134
+cur_iter:.. 135
+cur_iter:.. 136
+cur_iter:.. 137
+cur_iter:.. 138
+cur_iter:.. 139
+cur_iter:.. 140
+cur_iter:.. 141
+cur_iter:.. 142
+cur_iter:.. 143
+cur_iter:.. 144
+cur_iter:.. 145
+cur_iter:.. 146
+cur_iter:.. 147
+cur_iter:.. 148
+cur_iter:.. 149
+cur_iter:.. 150
+cur_iter:.. 151
+cur_iter:.. 152
+cur_iter:.. 153
+cur_iter:.. 154
+cur_iter:.. 155
+cur_iter:.. 156
+cur_iter:.. 157
+cur_iter:.. 158
+cur_iter:.. 159
+cur_iter:.. 160
+cur_iter:.. 161
+cur_iter:.. 162
+cur_iter:.. 163
+cur_iter:.. 164
+cur_iter:.. 165
+cur_iter:.. 166
+cur_iter:.. 167
+cur_iter:.. 168
+cur_iter:.. 169
+cur_iter:.. 170
+cur_iter:.. 171
+cur_iter:.. 172
+cur_iter:.. 173
+cur_iter:.. 174
+cur_iter:.. 175
+cur_iter:.. 176
+cur_iter:.. 177
+cur_iter:.. 178
+cur_iter:.. 179
+cur_iter:.. 180
+cur_iter:.. 181
+cur_iter:.. 182
+cur_iter:.. 183
+cur_iter:.. 184
+cur_iter:.. 185
+cur_iter:.. 186
+cur_iter:.. 187
+cur_iter:.. 188
+cur_iter:.. 189
+cur_iter:.. 190
+cur_iter:.. 191
+cur_iter:.. 192
+cur_iter:.. 193
+cur_iter:.. 194
+cur_iter:.. 195
+cur_iter:.. 196
+cur_iter:.. 197
+cur_iter:.. 198
+cur_iter:.. 199
+cur_iter:.. 200
+cur_iter:.. 201
+cur_iter:.. 202
+cur_iter:.. 203
+cur_iter:.. 204
+cur_iter:.. 205
+cur_iter:.. 206
+cur_iter:.. 207
+cur_iter:.. 208
+cur_iter:.. 209
+cur_iter:.. 210
+cur_iter:.. 211
+cur_iter:.. 212
+cur_iter:.. 213
+cur_iter:.. 214
+cur_iter:.. 215
+cur_iter:.. 216
+cur_iter:.. 217
+cur_iter:.. 218
+cur_iter:.. 219
+cur_iter:.. 220
+cur_iter:.. 221
+cur_iter:.. 222
+cur_iter:.. 223
+cur_iter:.. 224
+cur_iter:.. 225
+cur_iter:.. 226
+cur_iter:.. 227
+cur_iter:.. 228
+cur_iter:.. 229
+cur_iter:.. 230
+cur_iter:.. 231
+cur_iter:.. 232
+cur_iter:.. 233
+cur_iter:.. 234
+cur_iter:.. 235
+cur_iter:.. 236
+cur_iter:.. 237
+cur_iter:.. 238
+cur_iter:.. 239
+cur_iter:.. 240
+cur_iter:.. 241
+cur_iter:.. 242
+cur_iter:.. 243
+cur_iter:.. 244
+cur_iter:.. 245
+cur_iter:.. 246
+cur_iter:.. 247
+cur_iter:.. 248
+cur_iter:.. 249
+cur_iter:.. 250
+cur_iter:.. 251
+cur_iter:.. 252
+cur_iter:.. 253
+cur_iter:.. 254
+cur_iter:.. 255
+cur_iter:.. 256
+cur_iter:.. 257
+cur_iter:.. 258
+cur_iter:.. 259
+cur_iter:.. 260
+cur_iter:.. 261
+cur_iter:.. 262
+cur_iter:.. 263
+cur_iter:.. 264
+cur_iter:.. 265
+cur_iter:.. 266
+cur_iter:.. 267
+cur_iter:.. 268
+cur_iter:.. 269
+cur_iter:.. 270
+cur_iter:.. 271
+cur_iter:.. 272
+cur_iter:.. 273
+cur_iter:.. 274
+cur_iter:.. 275
+cur_iter:.. 276
+cur_iter:.. 277
+cur_iter:.. 278
+cur_iter:.. 279
+cur_iter:.. 280
+cur_iter:.. 281
+cur_iter:.. 282
+cur_iter:.. 283
+cur_iter:.. 284
+cur_iter:.. 285
+cur_iter:.. 286
+cur_iter:.. 287
+cur_iter:.. 288
+cur_iter:.. 289
+cur_iter:.. 290
+cur_iter:.. 291
+cur_iter:.. 292
+cur_iter:.. 293
+cur_iter:.. 294
+cur_iter:.. 295
+cur_iter:.. 296
+cur_iter:.. 297
+cur_iter:.. 298
+cur_iter:.. 299
+cur_iter:.. 300
+cur_iter:.. 301
+cur_iter:.. 302
+cur_iter:.. 303
+cur_iter:.. 304
+cur_iter:.. 305
+cur_iter:.. 306
+cur_iter:.. 307
+cur_iter:.. 308
+cur_iter:.. 309
+cur_iter:.. 310
+cur_iter:.. 311
+cur_iter:.. 312
+cur_iter:.. 313
+cur_iter:.. 314
+cur_iter:.. 315
+cur_iter:.. 316
+cur_iter:.. 317
+cur_iter:.. 318
+cur_iter:.. 319
+cur_iter:.. 320
+cur_iter:.. 321
+cur_iter:.. 322
+cur_iter:.. 323
+cur_iter:.. 324
+cur_iter:.. 325
+cur_iter:.. 326
+cur_iter:.. 327
+cur_iter:.. 328
+cur_iter:.. 329
+cur_iter:.. 330
+cur_iter:.. 331
+cur_iter:.. 332
+cur_iter:.. 333
+cur_iter:.. 334
+cur_iter:.. 335
+cur_iter:.. 336
+cur_iter:.. 337
+cur_iter:.. 338
+cur_iter:.. 339
+cur_iter:.. 340
+cur_iter:.. 341
+cur_iter:.. 342
+cur_iter:.. 343
+cur_iter:.. 344
+cur_iter:.. 345
+cur_iter:.. 346
+cur_iter:.. 347
+cur_iter:.. 348
+cur_iter:.. 349
+cur_iter:.. 350
+cur_iter:.. 351
+cur_iter:.. 352
+cur_iter:.. 353
+cur_iter:.. 354
+cur_iter:.. 355
+cur_iter:.. 356
+cur_iter:.. 357
+cur_iter:.. 358
+cur_iter:.. 359
+cur_iter:.. 360
+cur_iter:.. 361
+cur_iter:.. 362
+cur_iter:.. 363
+cur_iter:.. 364
+cur_iter:.. 365
+cur_iter:.. 366
+cur_iter:.. 367
+cur_iter:.. 368
+cur_iter:.. 369
+cur_iter:.. 370
+cur_iter:.. 371
+cur_iter:.. 372
+cur_iter:.. 373
+cur_iter:.. 374
+cur_iter:.. 375
+cur_iter:.. 376
+cur_iter:.. 377
+cur_iter:.. 378
+cur_iter:.. 379
+cur_iter:.. 380
+cur_iter:.. 381
+cur_iter:.. 382
+cur_iter:.. 383
+cur_iter:.. 384
+cur_iter:.. 385
+cur_iter:.. 386
+cur_iter:.. 387
+cur_iter:.. 388
+cur_iter:.. 389
+cur_iter:.. 390
+cur_iter:.. 391
+cur_iter:.. 0
+cur_iter:.. 1
+cur_iter:.. 2
+cur_iter:.. 3
+cur_iter:.. 4
+cur_iter:.. 5
+cur_iter:.. 6
+cur_iter:.. 7
+cur_iter:.. 8
+cur_iter:.. 9
+cur_iter:.. 10
+cur_iter:.. 11
+cur_iter:.. 12
+cur_iter:.. 13
+cur_iter:.. 14
+cur_iter:.. 15
+cur_iter:.. 16
+cur_iter:.. 17
+cur_iter:.. 18
+cur_iter:.. 19
+cur_iter:.. 20
+cur_iter:.. 21
+cur_iter:.. 22
+cur_iter:.. 23
+cur_iter:.. 24
+cur_iter:.. 25
+cur_iter:.. 26
+cur_iter:.. 27
+cur_iter:.. 28
+cur_iter:.. 29
+cur_iter:.. 30
+cur_iter:.. 31
+cur_iter:.. 32
+cur_iter:.. 33
+cur_iter:.. 34
+cur_iter:.. 35
+cur_iter:.. 36
+cur_iter:.. 37
+cur_iter:.. 38
+cur_iter:.. 39
+cur_iter:.. 40
+cur_iter:.. 41
+cur_iter:.. 42
+cur_iter:.. 43
+cur_iter:.. 44
+cur_iter:.. 45
+cur_iter:.. 46
+cur_iter:.. 47
+cur_iter:.. 48
+cur_iter:.. 49
+cur_iter:.. 50
+cur_iter:.. 51
+cur_iter:.. 52
+cur_iter:.. 53
+cur_iter:.. 54
+cur_iter:.. 55
+cur_iter:.. 56
+cur_iter:.. 57
+cur_iter:.. 58
+cur_iter:.. 59
+cur_iter:.. 60
+cur_iter:.. 61
+cur_iter:.. 62
+cur_iter:.. 63
+cur_iter:.. 64
+cur_iter:.. 65
+cur_iter:.. 66
+cur_iter:.. 67
+cur_iter:.. 68
+cur_iter:.. 69
+cur_iter:.. 70
+cur_iter:.. 71
+cur_iter:.. 72
+cur_iter:.. 73
+cur_iter:.. 74
+cur_iter:.. 75
+cur_iter:.. 76
+cur_iter:.. 77
+cur_iter:.. 78
+cur_iter:.. 79
+cur_iter:.. 80
+cur_iter:.. 81
+cur_iter:.. 82
+cur_iter:.. 83
+cur_iter:.. 84
+cur_iter:.. 85
+cur_iter:.. 86
+cur_iter:.. 87
+cur_iter:.. 88
+cur_iter:.. 89
+cur_iter:.. 90
+cur_iter:.. 91
+cur_iter:.. 92
+cur_iter:.. 93
+cur_iter:.. 94
+cur_iter:.. 95
+cur_iter:.. 96
+cur_iter:.. 97
+cur_iter:.. 98
+cur_iter:.. 99
+cur_iter:.. 100
+cur_iter:.. 101
+cur_iter:.. 102
+cur_iter:.. 103
+cur_iter:.. 104
+cur_iter:.. 105
+cur_iter:.. 106
+cur_iter:.. 107
+cur_iter:.. 108
+cur_iter:.. 109
+cur_iter:.. 110
+cur_iter:.. 111
+cur_iter:.. 112
+cur_iter:.. 113
+cur_iter:.. 114
+cur_iter:.. 115
+cur_iter:.. 116
+cur_iter:.. 117
+cur_iter:.. 118
+cur_iter:.. 119
+cur_iter:.. 120
+cur_iter:.. 121
+cur_iter:.. 122
+cur_iter:.. 123
+cur_iter:.. 124
+cur_iter:.. 125
+cur_iter:.. 126
+cur_iter:.. 127
+cur_iter:.. 128
+cur_iter:.. 129
+cur_iter:.. 130
+cur_iter:.. 131
+cur_iter:.. 132
+cur_iter:.. 133
+cur_iter:.. 134
+cur_iter:.. 135
+cur_iter:.. 136
+cur_iter:.. 137
+cur_iter:.. 138
+cur_iter:.. 139
+cur_iter:.. 140
+cur_iter:.. 141
+cur_iter:.. 142
+cur_iter:.. 143
+cur_iter:.. 144
+cur_iter:.. 145
+cur_iter:.. 146
+cur_iter:.. 147
+cur_iter:.. 148
+cur_iter:.. 149
+cur_iter:.. 150
+cur_iter:.. 151
+cur_iter:.. 152
+cur_iter:.. 153
+cur_iter:.. 154
+cur_iter:.. 155
+cur_iter:.. 156
+cur_iter:.. 157
+cur_iter:.. 158
+cur_iter:.. 159
+cur_iter:.. 160
+cur_iter:.. 161
+cur_iter:.. 162
+cur_iter:.. 163
+cur_iter:.. 164
+cur_iter:.. 165
+cur_iter:.. 166
+cur_iter:.. 167
+cur_iter:.. 168
+cur_iter:.. 169
+cur_iter:.. 170
+cur_iter:.. 171
+cur_iter:.. 172
+cur_iter:.. 173
+cur_iter:.. 174
+cur_iter:.. 175
+cur_iter:.. 176
+cur_iter:.. 177
+cur_iter:.. 178
+cur_iter:.. 179
+cur_iter:.. 180
+cur_iter:.. 181
+cur_iter:.. 182
+cur_iter:.. 183
+cur_iter:.. 184
+cur_iter:.. 185
+cur_iter:.. 186
+cur_iter:.. 187
+cur_iter:.. 188
+cur_iter:.. 189
+cur_iter:.. 190
+cur_iter:.. 191
+cur_iter:.. 192
+cur_iter:.. 193
+cur_iter:.. 194
+cur_iter:.. 195
+cur_iter:.. 196
+cur_iter:.. 197
+cur_iter:.. 198
+cur_iter:.. 199
+cur_iter:.. 200
+cur_iter:.. 201
+cur_iter:.. 202
+cur_iter:.. 203
+cur_iter:.. 204
+cur_iter:.. 205
+cur_iter:.. 206
+cur_iter:.. 207
+cur_iter:.. 208
+cur_iter:.. 209
+cur_iter:.. 210
+cur_iter:.. 211
+cur_iter:.. 212
+cur_iter:.. 213
+cur_iter:.. 214
+cur_iter:.. 215
+cur_iter:.. 216
+cur_iter:.. 217
+cur_iter:.. 218
+cur_iter:.. 219
+cur_iter:.. 220
+cur_iter:.. 221
+cur_iter:.. 222
+cur_iter:.. 223
+cur_iter:.. 224
+cur_iter:.. 225
+cur_iter:.. 226
+cur_iter:.. 227
+cur_iter:.. 228
+cur_iter:.. 229
+cur_iter:.. 230
+cur_iter:.. 231
+cur_iter:.. 232
+cur_iter:.. 233
+cur_iter:.. 234
+cur_iter:.. 235
+cur_iter:.. 236
+cur_iter:.. 237
+cur_iter:.. 238
+cur_iter:.. 239
+cur_iter:.. 240
+cur_iter:.. 241
+cur_iter:.. 242
+cur_iter:.. 243
+cur_iter:.. 244
+cur_iter:.. 245
+cur_iter:.. 246
+cur_iter:.. 247
+cur_iter:.. 248
+cur_iter:.. 249
+cur_iter:.. 250
+cur_iter:.. 251
+cur_iter:.. 252
+cur_iter:.. 253
+cur_iter:.. 254
+cur_iter:.. 255
+cur_iter:.. 256
+cur_iter:.. 257
+cur_iter:.. 258
+cur_iter:.. 259
+cur_iter:.. 260
+cur_iter:.. 261
+cur_iter:.. 262
+cur_iter:.. 263
+cur_iter:.. 264
+cur_iter:.. 265
+cur_iter:.. 266
+cur_iter:.. 267
+cur_iter:.. 268
+cur_iter:.. 269
+cur_iter:.. 270
+cur_iter:.. 271
+cur_iter:.. 272
+cur_iter:.. 273
+cur_iter:.. 274
+cur_iter:.. 275
+cur_iter:.. 276
+cur_iter:.. 277
+cur_iter:.. 278
+cur_iter:.. 279
+cur_iter:.. 280
+cur_iter:.. 281
+cur_iter:.. 282
+cur_iter:.. 283
+cur_iter:.. 284
+cur_iter:.. 285
+cur_iter:.. 286
+cur_iter:.. 287
+cur_iter:.. 288
+cur_iter:.. 289
+cur_iter:.. 290
+cur_iter:.. 291
+cur_iter:.. 292
+cur_iter:.. 293
+cur_iter:.. 294
+cur_iter:.. 295
+cur_iter:.. 296
+cur_iter:.. 297
+cur_iter:.. 298
+cur_iter:.. 299
+cur_iter:.. 300
+cur_iter:.. 301
+cur_iter:.. 302
+cur_iter:.. 303
+cur_iter:.. 304
+cur_iter:.. 305
+cur_iter:.. 306
+cur_iter:.. 307
+cur_iter:.. 308
+cur_iter:.. 309
+cur_iter:.. 310
+cur_iter:.. 311
+cur_iter:.. 312
+cur_iter:.. 313
+cur_iter:.. 314
+cur_iter:.. 315
+cur_iter:.. 316
+cur_iter:.. 317
+cur_iter:.. 318
+cur_iter:.. 319
+cur_iter:.. 320
+cur_iter:.. 321
+cur_iter:.. 322
+cur_iter:.. 323
+cur_iter:.. 324
+cur_iter:.. 325
+cur_iter:.. 326
+cur_iter:.. 327
+cur_iter:.. 328
+cur_iter:.. 329
+cur_iter:.. 330
+cur_iter:.. 331
+cur_iter:.. 332
+cur_iter:.. 333
+cur_iter:.. 334
+cur_iter:.. 335
+cur_iter:.. 336
+cur_iter:.. 337
+cur_iter:.. 338
+cur_iter:.. 339
+cur_iter:.. 340
+cur_iter:.. 341
+cur_iter:.. 342
+cur_iter:.. 343
+cur_iter:.. 344
+cur_iter:.. 345
+cur_iter:.. 346
+cur_iter:.. 347
+cur_iter:.. 348
+cur_iter:.. 349
+cur_iter:.. 350
+cur_iter:.. 351
+cur_iter:.. 352
+cur_iter:.. 353
+cur_iter:.. 354
+cur_iter:.. 355
+cur_iter:.. 356
+cur_iter:.. 357
+cur_iter:.. 358
+cur_iter:.. 359
+cur_iter:.. 360
+cur_iter:.. 361
+cur_iter:.. 362
+cur_iter:.. 363
+cur_iter:.. 364
+cur_iter:.. 365
+cur_iter:.. 366
+cur_iter:.. 367
+cur_iter:.. 368
+cur_iter:.. 369
+cur_iter:.. 370
+cur_iter:.. 371
+cur_iter:.. 372
+cur_iter:.. 373
+cur_iter:.. 374
+cur_iter:.. 375
+cur_iter:.. 376
+cur_iter:.. 377
+cur_iter:.. 378
+cur_iter:.. 379
+cur_iter:.. 380
+cur_iter:.. 381
+cur_iter:.. 382
+cur_iter:.. 383
+cur_iter:.. 384
+cur_iter:.. 385
+cur_iter:.. 386
+cur_iter:.. 387
+cur_iter:.. 388
+cur_iter:.. 389
+cur_iter:.. 390
+cur_iter:.. 391

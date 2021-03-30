@@ -1,0 +1,3561 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+[12/22 19:33:10][INFO] train_aux.py: 324: Train with config:
+[12/22 19:33:10][INFO] train_aux.py: 325: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/ava/annotations_10_500_100/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frame_lists_10_500_100/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/annotations_10_500_100/',
+        'AUX': True,
+        'AUX_TEST': False,
+        'CLASSES': 4,
+        'DATASET': 'da',
+        'DETECTION_SCORE_THRESH': 0.8,
+        'ENABLE': True,
+        'EXCLUSION_FILE': 'kinetics_val_excluded_timestamps_v2.1.csv',
+        'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/frames/',
+        'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/kinetics700/frame_lists_10_500_100/',
+        'FULL_TEST_ON_VAL': True,
+        'GROUNDTRUTH_FILE': 'kinetics_val_v2.1.csv',
+        'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+        'LR_FACTOR': 10.0,
+        'TEST_GT_BOX_LISTS': [],
+        'TEST_LISTS': ['val.csv'],
+        'TEST_PREDICT_BOX_LISTS': ['kinetics_val_predicted_boxes_gt.csv'],
+        'TRAIN_GT_BOX_LISTS': ['kinetics_train_v2.1.csv'],
+        'TRAIN_LISTS': ['train.csv'],
+        'TRAIN_PREDICT_BOX_LISTS': [],
+        'WEIGHT_AUX': 1.0,
+        'WEIGHT_MAIN': 0.0},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': False,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'FREEZE_TO': 605,
+           'HEAD_ACT': 'sigmoid',
+           'LAST_PRE_TRAIN': 's4_fuse.bn.num_batches_tracked',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 10,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 1,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs02/scratch/da_action/data/output/aux_10_500_100_v7',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.1,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 15,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': 'tensorboard',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'DETECTIONS_PATH': '',
+          'ENABLE': False,
+          'GT_PATH': '',
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': False,
+           'BATCH_SIZE': 4,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': False,
+           'CHECKPOINT_FILE_PATH': '/srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': False,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+0 frozen s1.pathway0_stem.conv.weight
+1 frozen s1.pathway0_stem.bn.weight
+2 frozen s1.pathway0_stem.bn.bias
+3 frozen s1.pathway1_stem.conv.weight
+4 frozen s1.pathway1_stem.bn.weight
+5 frozen s1.pathway1_stem.bn.bias
+6 frozen s1_fuse.conv_f2s.weight
+7 frozen s1_fuse.bn.weight
+8 frozen s1_fuse.bn.bias
+9 frozen s2.pathway0_res0.branch1.weight
+10 frozen s2.pathway0_res0.branch1_bn.weight
+11 frozen s2.pathway0_res0.branch1_bn.bias
+12 frozen s2.pathway0_res0.branch2.a.weight
+13 frozen s2.pathway0_res0.branch2.a_bn.weight
+14 frozen s2.pathway0_res0.branch2.a_bn.bias
+15 frozen s2.pathway0_res0.branch2.b.weight
+16 frozen s2.pathway0_res0.branch2.b_bn.weight
+17 frozen s2.pathway0_res0.branch2.b_bn.bias
+18 frozen s2.pathway0_res0.branch2.c.weight
+19 frozen s2.pathway0_res0.branch2.c_bn.weight
+20 frozen s2.pathway0_res0.branch2.c_bn.bias
+21 frozen s2.pathway0_res1.branch2.a.weight
+22 frozen s2.pathway0_res1.branch2.a_bn.weight
+23 frozen s2.pathway0_res1.branch2.a_bn.bias
+24 frozen s2.pathway0_res1.branch2.b.weight
+25 frozen s2.pathway0_res1.branch2.b_bn.weight
+26 frozen s2.pathway0_res1.branch2.b_bn.bias
+27 frozen s2.pathway0_res1.branch2.c.weight
+28 frozen s2.pathway0_res1.branch2.c_bn.weight
+29 frozen s2.pathway0_res1.branch2.c_bn.bias
+30 frozen s2.pathway0_res2.branch2.a.weight
+31 frozen s2.pathway0_res2.branch2.a_bn.weight
+32 frozen s2.pathway0_res2.branch2.a_bn.bias
+33 frozen s2.pathway0_res2.branch2.b.weight
+34 frozen s2.pathway0_res2.branch2.b_bn.weight
+35 frozen s2.pathway0_res2.branch2.b_bn.bias
+36 frozen s2.pathway0_res2.branch2.c.weight
+37 frozen s2.pathway0_res2.branch2.c_bn.weight
+38 frozen s2.pathway0_res2.branch2.c_bn.bias
+39 frozen s2.pathway1_res0.branch1.weight
+40 frozen s2.pathway1_res0.branch1_bn.weight
+41 frozen s2.pathway1_res0.branch1_bn.bias
+42 frozen s2.pathway1_res0.branch2.a.weight
+43 frozen s2.pathway1_res0.branch2.a_bn.weight
+44 frozen s2.pathway1_res0.branch2.a_bn.bias
+45 frozen s2.pathway1_res0.branch2.b.weight
+46 frozen s2.pathway1_res0.branch2.b_bn.weight
+47 frozen s2.pathway1_res0.branch2.b_bn.bias
+48 frozen s2.pathway1_res0.branch2.c.weight
+49 frozen s2.pathway1_res0.branch2.c_bn.weight
+50 frozen s2.pathway1_res0.branch2.c_bn.bias
+51 frozen s2.pathway1_res1.branch2.a.weight
+52 frozen s2.pathway1_res1.branch2.a_bn.weight
+53 frozen s2.pathway1_res1.branch2.a_bn.bias
+54 frozen s2.pathway1_res1.branch2.b.weight
+55 frozen s2.pathway1_res1.branch2.b_bn.weight
+56 frozen s2.pathway1_res1.branch2.b_bn.bias
+57 frozen s2.pathway1_res1.branch2.c.weight
+58 frozen s2.pathway1_res1.branch2.c_bn.weight
+59 frozen s2.pathway1_res1.branch2.c_bn.bias
+60 frozen s2.pathway1_res2.branch2.a.weight
+61 frozen s2.pathway1_res2.branch2.a_bn.weight
+62 frozen s2.pathway1_res2.branch2.a_bn.bias
+63 frozen s2.pathway1_res2.branch2.b.weight
+64 frozen s2.pathway1_res2.branch2.b_bn.weight
+65 frozen s2.pathway1_res2.branch2.b_bn.bias
+66 frozen s2.pathway1_res2.branch2.c.weight
+67 frozen s2.pathway1_res2.branch2.c_bn.weight
+68 frozen s2.pathway1_res2.branch2.c_bn.bias
+69 frozen s2_fuse.conv_f2s.weight
+70 frozen s2_fuse.bn.weight
+71 frozen s2_fuse.bn.bias
+72 frozen s3.pathway0_res0.branch1.weight
+73 frozen s3.pathway0_res0.branch1_bn.weight
+74 frozen s3.pathway0_res0.branch1_bn.bias
+75 frozen s3.pathway0_res0.branch2.a.weight
+76 frozen s3.pathway0_res0.branch2.a_bn.weight
+77 frozen s3.pathway0_res0.branch2.a_bn.bias
+78 frozen s3.pathway0_res0.branch2.b.weight
+79 frozen s3.pathway0_res0.branch2.b_bn.weight
+80 frozen s3.pathway0_res0.branch2.b_bn.bias
+81 frozen s3.pathway0_res0.branch2.c.weight
+82 frozen s3.pathway0_res0.branch2.c_bn.weight
+83 frozen s3.pathway0_res0.branch2.c_bn.bias
+84 frozen s3.pathway0_res1.branch2.a.weight
+85 frozen s3.pathway0_res1.branch2.a_bn.weight
+86 frozen s3.pathway0_res1.branch2.a_bn.bias
+87 frozen s3.pathway0_res1.branch2.b.weight
+88 frozen s3.pathway0_res1.branch2.b_bn.weight
+89 frozen s3.pathway0_res1.branch2.b_bn.bias
+90 frozen s3.pathway0_res1.branch2.c.weight
+91 frozen s3.pathway0_res1.branch2.c_bn.weight
+92 frozen s3.pathway0_res1.branch2.c_bn.bias
+93 frozen s3.pathway0_res2.branch2.a.weight
+94 frozen s3.pathway0_res2.branch2.a_bn.weight
+95 frozen s3.pathway0_res2.branch2.a_bn.bias
+96 frozen s3.pathway0_res2.branch2.b.weight
+97 frozen s3.pathway0_res2.branch2.b_bn.weight
+98 frozen s3.pathway0_res2.branch2.b_bn.bias
+99 frozen s3.pathway0_res2.branch2.c.weight
+100 frozen s3.pathway0_res2.branch2.c_bn.weight
+101 frozen s3.pathway0_res2.branch2.c_bn.bias
+102 frozen s3.pathway0_res3.branch2.a.weight
+103 frozen s3.pathway0_res3.branch2.a_bn.weight
+104 frozen s3.pathway0_res3.branch2.a_bn.bias
+105 frozen s3.pathway0_res3.branch2.b.weight
+106 frozen s3.pathway0_res3.branch2.b_bn.weight
+107 frozen s3.pathway0_res3.branch2.b_bn.bias
+108 frozen s3.pathway0_res3.branch2.c.weight
+109 frozen s3.pathway0_res3.branch2.c_bn.weight
+110 frozen s3.pathway0_res3.branch2.c_bn.bias
+111 frozen s3.pathway1_res0.branch1.weight
+112 frozen s3.pathway1_res0.branch1_bn.weight
+113 frozen s3.pathway1_res0.branch1_bn.bias
+114 frozen s3.pathway1_res0.branch2.a.weight
+115 frozen s3.pathway1_res0.branch2.a_bn.weight
+116 frozen s3.pathway1_res0.branch2.a_bn.bias
+117 frozen s3.pathway1_res0.branch2.b.weight
+118 frozen s3.pathway1_res0.branch2.b_bn.weight
+119 frozen s3.pathway1_res0.branch2.b_bn.bias
+120 frozen s3.pathway1_res0.branch2.c.weight
+121 frozen s3.pathway1_res0.branch2.c_bn.weight
+122 frozen s3.pathway1_res0.branch2.c_bn.bias
+123 frozen s3.pathway1_res1.branch2.a.weight
+124 frozen s3.pathway1_res1.branch2.a_bn.weight
+125 frozen s3.pathway1_res1.branch2.a_bn.bias
+126 frozen s3.pathway1_res1.branch2.b.weight
+127 frozen s3.pathway1_res1.branch2.b_bn.weight
+128 frozen s3.pathway1_res1.branch2.b_bn.bias
+129 frozen s3.pathway1_res1.branch2.c.weight
+130 frozen s3.pathway1_res1.branch2.c_bn.weight
+131 frozen s3.pathway1_res1.branch2.c_bn.bias
+132 frozen s3.pathway1_res2.branch2.a.weight
+133 frozen s3.pathway1_res2.branch2.a_bn.weight
+134 frozen s3.pathway1_res2.branch2.a_bn.bias
+135 frozen s3.pathway1_res2.branch2.b.weight
+136 frozen s3.pathway1_res2.branch2.b_bn.weight
+137 frozen s3.pathway1_res2.branch2.b_bn.bias
+138 frozen s3.pathway1_res2.branch2.c.weight
+139 frozen s3.pathway1_res2.branch2.c_bn.weight
+140 frozen s3.pathway1_res2.branch2.c_bn.bias
+141 frozen s3.pathway1_res3.branch2.a.weight
+142 frozen s3.pathway1_res3.branch2.a_bn.weight
+143 frozen s3.pathway1_res3.branch2.a_bn.bias
+144 frozen s3.pathway1_res3.branch2.b.weight
+145 frozen s3.pathway1_res3.branch2.b_bn.weight
+146 frozen s3.pathway1_res3.branch2.b_bn.bias
+147 frozen s3.pathway1_res3.branch2.c.weight
+148 frozen s3.pathway1_res3.branch2.c_bn.weight
+149 frozen s3.pathway1_res3.branch2.c_bn.bias
+150 frozen s3_fuse.conv_f2s.weight
+151 frozen s3_fuse.bn.weight
+152 frozen s3_fuse.bn.bias
+153 frozen s4.pathway0_res0.branch1.weight
+154 frozen s4.pathway0_res0.branch1_bn.weight
+155 frozen s4.pathway0_res0.branch1_bn.bias
+156 frozen s4.pathway0_res0.branch2.a.weight
+157 frozen s4.pathway0_res0.branch2.a_bn.weight
+158 frozen s4.pathway0_res0.branch2.a_bn.bias
+159 frozen s4.pathway0_res0.branch2.b.weight
+160 frozen s4.pathway0_res0.branch2.b_bn.weight
+161 frozen s4.pathway0_res0.branch2.b_bn.bias
+162 frozen s4.pathway0_res0.branch2.c.weight
+163 frozen s4.pathway0_res0.branch2.c_bn.weight
+164 frozen s4.pathway0_res0.branch2.c_bn.bias
+165 frozen s4.pathway0_res1.branch2.a.weight
+166 frozen s4.pathway0_res1.branch2.a_bn.weight
+167 frozen s4.pathway0_res1.branch2.a_bn.bias
+168 frozen s4.pathway0_res1.branch2.b.weight
+169 frozen s4.pathway0_res1.branch2.b_bn.weight
+170 frozen s4.pathway0_res1.branch2.b_bn.bias
+171 frozen s4.pathway0_res1.branch2.c.weight
+172 frozen s4.pathway0_res1.branch2.c_bn.weight
+173 frozen s4.pathway0_res1.branch2.c_bn.bias
+174 frozen s4.pathway0_res2.branch2.a.weight
+175 frozen s4.pathway0_res2.branch2.a_bn.weight
+176 frozen s4.pathway0_res2.branch2.a_bn.bias
+177 frozen s4.pathway0_res2.branch2.b.weight
+178 frozen s4.pathway0_res2.branch2.b_bn.weight
+179 frozen s4.pathway0_res2.branch2.b_bn.bias
+180 frozen s4.pathway0_res2.branch2.c.weight
+181 frozen s4.pathway0_res2.branch2.c_bn.weight
+182 frozen s4.pathway0_res2.branch2.c_bn.bias
+183 frozen s4.pathway0_res3.branch2.a.weight
+184 frozen s4.pathway0_res3.branch2.a_bn.weight
+185 frozen s4.pathway0_res3.branch2.a_bn.bias
+186 frozen s4.pathway0_res3.branch2.b.weight
+187 frozen s4.pathway0_res3.branch2.b_bn.weight
+188 frozen s4.pathway0_res3.branch2.b_bn.bias
+189 frozen s4.pathway0_res3.branch2.c.weight
+190 frozen s4.pathway0_res3.branch2.c_bn.weight
+191 frozen s4.pathway0_res3.branch2.c_bn.bias
+192 frozen s4.pathway0_res4.branch2.a.weight
+193 frozen s4.pathway0_res4.branch2.a_bn.weight
+194 frozen s4.pathway0_res4.branch2.a_bn.bias
+195 frozen s4.pathway0_res4.branch2.b.weight
+196 frozen s4.pathway0_res4.branch2.b_bn.weight
+197 frozen s4.pathway0_res4.branch2.b_bn.bias
+198 frozen s4.pathway0_res4.branch2.c.weight
+199 frozen s4.pathway0_res4.branch2.c_bn.weight
+200 frozen s4.pathway0_res4.branch2.c_bn.bias
+201 frozen s4.pathway0_res5.branch2.a.weight
+202 frozen s4.pathway0_res5.branch2.a_bn.weight
+203 frozen s4.pathway0_res5.branch2.a_bn.bias
+204 frozen s4.pathway0_res5.branch2.b.weight
+205 frozen s4.pathway0_res5.branch2.b_bn.weight
+206 frozen s4.pathway0_res5.branch2.b_bn.bias
+207 frozen s4.pathway0_res5.branch2.c.weight
+208 frozen s4.pathway0_res5.branch2.c_bn.weight
+209 frozen s4.pathway0_res5.branch2.c_bn.bias
+210 frozen s4.pathway0_res6.branch2.a.weight
+211 frozen s4.pathway0_res6.branch2.a_bn.weight
+212 frozen s4.pathway0_res6.branch2.a_bn.bias
+213 frozen s4.pathway0_res6.branch2.b.weight
+214 frozen s4.pathway0_res6.branch2.b_bn.weight
+215 frozen s4.pathway0_res6.branch2.b_bn.bias
+216 frozen s4.pathway0_res6.branch2.c.weight
+217 frozen s4.pathway0_res6.branch2.c_bn.weight
+218 frozen s4.pathway0_res6.branch2.c_bn.bias
+219 frozen s4.pathway0_nonlocal6.conv_theta.weight
+220 frozen s4.pathway0_nonlocal6.conv_theta.bias
+221 frozen s4.pathway0_nonlocal6.conv_phi.weight
+222 frozen s4.pathway0_nonlocal6.conv_phi.bias
+223 frozen s4.pathway0_nonlocal6.conv_g.weight
+224 frozen s4.pathway0_nonlocal6.conv_g.bias
+225 frozen s4.pathway0_nonlocal6.conv_out.weight
+226 frozen s4.pathway0_nonlocal6.conv_out.bias
+227 frozen s4.pathway0_nonlocal6.bn.weight
+228 frozen s4.pathway0_nonlocal6.bn.bias
+229 frozen s4.pathway0_res7.branch2.a.weight
+230 frozen s4.pathway0_res7.branch2.a_bn.weight
+231 frozen s4.pathway0_res7.branch2.a_bn.bias
+232 frozen s4.pathway0_res7.branch2.b.weight
+233 frozen s4.pathway0_res7.branch2.b_bn.weight
+234 frozen s4.pathway0_res7.branch2.b_bn.bias
+235 frozen s4.pathway0_res7.branch2.c.weight
+236 frozen s4.pathway0_res7.branch2.c_bn.weight
+237 frozen s4.pathway0_res7.branch2.c_bn.bias
+238 frozen s4.pathway0_res8.branch2.a.weight
+239 frozen s4.pathway0_res8.branch2.a_bn.weight
+240 frozen s4.pathway0_res8.branch2.a_bn.bias
+241 frozen s4.pathway0_res8.branch2.b.weight
+242 frozen s4.pathway0_res8.branch2.b_bn.weight
+243 frozen s4.pathway0_res8.branch2.b_bn.bias
+244 frozen s4.pathway0_res8.branch2.c.weight
+245 frozen s4.pathway0_res8.branch2.c_bn.weight
+246 frozen s4.pathway0_res8.branch2.c_bn.bias
+247 frozen s4.pathway0_res9.branch2.a.weight
+248 frozen s4.pathway0_res9.branch2.a_bn.weight
+249 frozen s4.pathway0_res9.branch2.a_bn.bias
+250 frozen s4.pathway0_res9.branch2.b.weight
+251 frozen s4.pathway0_res9.branch2.b_bn.weight
+252 frozen s4.pathway0_res9.branch2.b_bn.bias
+253 frozen s4.pathway0_res9.branch2.c.weight
+254 frozen s4.pathway0_res9.branch2.c_bn.weight
+255 frozen s4.pathway0_res9.branch2.c_bn.bias
+256 frozen s4.pathway0_res10.branch2.a.weight
+257 frozen s4.pathway0_res10.branch2.a_bn.weight
+258 frozen s4.pathway0_res10.branch2.a_bn.bias
+259 frozen s4.pathway0_res10.branch2.b.weight
+260 frozen s4.pathway0_res10.branch2.b_bn.weight
+261 frozen s4.pathway0_res10.branch2.b_bn.bias
+262 frozen s4.pathway0_res10.branch2.c.weight
+263 frozen s4.pathway0_res10.branch2.c_bn.weight
+264 frozen s4.pathway0_res10.branch2.c_bn.bias
+265 frozen s4.pathway0_res11.branch2.a.weight
+266 frozen s4.pathway0_res11.branch2.a_bn.weight
+267 frozen s4.pathway0_res11.branch2.a_bn.bias
+268 frozen s4.pathway0_res11.branch2.b.weight
+269 frozen s4.pathway0_res11.branch2.b_bn.weight
+270 frozen s4.pathway0_res11.branch2.b_bn.bias
+271 frozen s4.pathway0_res11.branch2.c.weight
+272 frozen s4.pathway0_res11.branch2.c_bn.weight
+273 frozen s4.pathway0_res11.branch2.c_bn.bias
+274 frozen s4.pathway0_res12.branch2.a.weight
+275 frozen s4.pathway0_res12.branch2.a_bn.weight
+276 frozen s4.pathway0_res12.branch2.a_bn.bias
+277 frozen s4.pathway0_res12.branch2.b.weight
+278 frozen s4.pathway0_res12.branch2.b_bn.weight
+279 frozen s4.pathway0_res12.branch2.b_bn.bias
+280 frozen s4.pathway0_res12.branch2.c.weight
+281 frozen s4.pathway0_res12.branch2.c_bn.weight
+282 frozen s4.pathway0_res12.branch2.c_bn.bias
+283 frozen s4.pathway0_res13.branch2.a.weight
+284 frozen s4.pathway0_res13.branch2.a_bn.weight
+285 frozen s4.pathway0_res13.branch2.a_bn.bias
+286 frozen s4.pathway0_res13.branch2.b.weight
+287 frozen s4.pathway0_res13.branch2.b_bn.weight
+288 frozen s4.pathway0_res13.branch2.b_bn.bias
+289 frozen s4.pathway0_res13.branch2.c.weight
+290 frozen s4.pathway0_res13.branch2.c_bn.weight
+291 frozen s4.pathway0_res13.branch2.c_bn.bias
+292 frozen s4.pathway0_nonlocal13.conv_theta.weight
+293 frozen s4.pathway0_nonlocal13.conv_theta.bias
+294 frozen s4.pathway0_nonlocal13.conv_phi.weight
+295 frozen s4.pathway0_nonlocal13.conv_phi.bias
+296 frozen s4.pathway0_nonlocal13.conv_g.weight
+297 frozen s4.pathway0_nonlocal13.conv_g.bias
+298 frozen s4.pathway0_nonlocal13.conv_out.weight
+299 frozen s4.pathway0_nonlocal13.conv_out.bias
+300 frozen s4.pathway0_nonlocal13.bn.weight
+301 frozen s4.pathway0_nonlocal13.bn.bias
+302 frozen s4.pathway0_res14.branch2.a.weight
+303 frozen s4.pathway0_res14.branch2.a_bn.weight
+304 frozen s4.pathway0_res14.branch2.a_bn.bias
+305 frozen s4.pathway0_res14.branch2.b.weight
+306 frozen s4.pathway0_res14.branch2.b_bn.weight
+307 frozen s4.pathway0_res14.branch2.b_bn.bias
+308 frozen s4.pathway0_res14.branch2.c.weight
+309 frozen s4.pathway0_res14.branch2.c_bn.weight
+310 frozen s4.pathway0_res14.branch2.c_bn.bias
+311 frozen s4.pathway0_res15.branch2.a.weight
+312 frozen s4.pathway0_res15.branch2.a_bn.weight
+313 frozen s4.pathway0_res15.branch2.a_bn.bias
+314 frozen s4.pathway0_res15.branch2.b.weight
+315 frozen s4.pathway0_res15.branch2.b_bn.weight
+316 frozen s4.pathway0_res15.branch2.b_bn.bias
+317 frozen s4.pathway0_res15.branch2.c.weight
+318 frozen s4.pathway0_res15.branch2.c_bn.weight
+319 frozen s4.pathway0_res15.branch2.c_bn.bias
+320 frozen s4.pathway0_res16.branch2.a.weight
+321 frozen s4.pathway0_res16.branch2.a_bn.weight
+322 frozen s4.pathway0_res16.branch2.a_bn.bias
+323 frozen s4.pathway0_res16.branch2.b.weight
+324 frozen s4.pathway0_res16.branch2.b_bn.weight
+325 frozen s4.pathway0_res16.branch2.b_bn.bias
+326 frozen s4.pathway0_res16.branch2.c.weight
+327 frozen s4.pathway0_res16.branch2.c_bn.weight
+328 frozen s4.pathway0_res16.branch2.c_bn.bias
+329 frozen s4.pathway0_res17.branch2.a.weight
+330 frozen s4.pathway0_res17.branch2.a_bn.weight
+331 frozen s4.pathway0_res17.branch2.a_bn.bias
+332 frozen s4.pathway0_res17.branch2.b.weight
+333 frozen s4.pathway0_res17.branch2.b_bn.weight
+334 frozen s4.pathway0_res17.branch2.b_bn.bias
+335 frozen s4.pathway0_res17.branch2.c.weight
+336 frozen s4.pathway0_res17.branch2.c_bn.weight
+337 frozen s4.pathway0_res17.branch2.c_bn.bias
+338 frozen s4.pathway0_res18.branch2.a.weight
+339 frozen s4.pathway0_res18.branch2.a_bn.weight
+340 frozen s4.pathway0_res18.branch2.a_bn.bias
+341 frozen s4.pathway0_res18.branch2.b.weight
+342 frozen s4.pathway0_res18.branch2.b_bn.weight
+343 frozen s4.pathway0_res18.branch2.b_bn.bias
+344 frozen s4.pathway0_res18.branch2.c.weight
+345 frozen s4.pathway0_res18.branch2.c_bn.weight
+346 frozen s4.pathway0_res18.branch2.c_bn.bias
+347 frozen s4.pathway0_res19.branch2.a.weight
+348 frozen s4.pathway0_res19.branch2.a_bn.weight
+349 frozen s4.pathway0_res19.branch2.a_bn.bias
+350 frozen s4.pathway0_res19.branch2.b.weight
+351 frozen s4.pathway0_res19.branch2.b_bn.weight
+352 frozen s4.pathway0_res19.branch2.b_bn.bias
+353 frozen s4.pathway0_res19.branch2.c.weight
+354 frozen s4.pathway0_res19.branch2.c_bn.weight
+355 frozen s4.pathway0_res19.branch2.c_bn.bias
+356 frozen s4.pathway0_res20.branch2.a.weight
+357 frozen s4.pathway0_res20.branch2.a_bn.weight
+358 frozen s4.pathway0_res20.branch2.a_bn.bias
+359 frozen s4.pathway0_res20.branch2.b.weight
+360 frozen s4.pathway0_res20.branch2.b_bn.weight
+361 frozen s4.pathway0_res20.branch2.b_bn.bias
+362 frozen s4.pathway0_res20.branch2.c.weight
+363 frozen s4.pathway0_res20.branch2.c_bn.weight
+364 frozen s4.pathway0_res20.branch2.c_bn.bias
+365 frozen s4.pathway0_nonlocal20.conv_theta.weight
+366 frozen s4.pathway0_nonlocal20.conv_theta.bias
+367 frozen s4.pathway0_nonlocal20.conv_phi.weight
+368 frozen s4.pathway0_nonlocal20.conv_phi.bias
+369 frozen s4.pathway0_nonlocal20.conv_g.weight
+370 frozen s4.pathway0_nonlocal20.conv_g.bias
+371 frozen s4.pathway0_nonlocal20.conv_out.weight
+372 frozen s4.pathway0_nonlocal20.conv_out.bias
+373 frozen s4.pathway0_nonlocal20.bn.weight
+374 frozen s4.pathway0_nonlocal20.bn.bias
+375 frozen s4.pathway0_res21.branch2.a.weight
+376 frozen s4.pathway0_res21.branch2.a_bn.weight
+377 frozen s4.pathway0_res21.branch2.a_bn.bias
+378 frozen s4.pathway0_res21.branch2.b.weight
+379 frozen s4.pathway0_res21.branch2.b_bn.weight
+380 frozen s4.pathway0_res21.branch2.b_bn.bias
+381 frozen s4.pathway0_res21.branch2.c.weight
+382 frozen s4.pathway0_res21.branch2.c_bn.weight
+383 frozen s4.pathway0_res21.branch2.c_bn.bias
+384 frozen s4.pathway0_res22.branch2.a.weight
+385 frozen s4.pathway0_res22.branch2.a_bn.weight
+386 frozen s4.pathway0_res22.branch2.a_bn.bias
+387 frozen s4.pathway0_res22.branch2.b.weight
+388 frozen s4.pathway0_res22.branch2.b_bn.weight
+389 frozen s4.pathway0_res22.branch2.b_bn.bias
+390 frozen s4.pathway0_res22.branch2.c.weight
+391 frozen s4.pathway0_res22.branch2.c_bn.weight
+392 frozen s4.pathway0_res22.branch2.c_bn.bias
+393 frozen s4.pathway1_res0.branch1.weight
+394 frozen s4.pathway1_res0.branch1_bn.weight
+395 frozen s4.pathway1_res0.branch1_bn.bias
+396 frozen s4.pathway1_res0.branch2.a.weight
+397 frozen s4.pathway1_res0.branch2.a_bn.weight
+398 frozen s4.pathway1_res0.branch2.a_bn.bias
+399 frozen s4.pathway1_res0.branch2.b.weight
+400 frozen s4.pathway1_res0.branch2.b_bn.weight
+401 frozen s4.pathway1_res0.branch2.b_bn.bias
+402 frozen s4.pathway1_res0.branch2.c.weight
+403 frozen s4.pathway1_res0.branch2.c_bn.weight
+404 frozen s4.pathway1_res0.branch2.c_bn.bias
+405 frozen s4.pathway1_res1.branch2.a.weight
+406 frozen s4.pathway1_res1.branch2.a_bn.weight
+407 frozen s4.pathway1_res1.branch2.a_bn.bias
+408 frozen s4.pathway1_res1.branch2.b.weight
+409 frozen s4.pathway1_res1.branch2.b_bn.weight
+410 frozen s4.pathway1_res1.branch2.b_bn.bias
+411 frozen s4.pathway1_res1.branch2.c.weight
+412 frozen s4.pathway1_res1.branch2.c_bn.weight
+413 frozen s4.pathway1_res1.branch2.c_bn.bias
+414 frozen s4.pathway1_res2.branch2.a.weight
+415 frozen s4.pathway1_res2.branch2.a_bn.weight
+416 frozen s4.pathway1_res2.branch2.a_bn.bias
+417 frozen s4.pathway1_res2.branch2.b.weight
+418 frozen s4.pathway1_res2.branch2.b_bn.weight
+419 frozen s4.pathway1_res2.branch2.b_bn.bias
+420 frozen s4.pathway1_res2.branch2.c.weight
+421 frozen s4.pathway1_res2.branch2.c_bn.weight
+422 frozen s4.pathway1_res2.branch2.c_bn.bias
+423 frozen s4.pathway1_res3.branch2.a.weight
+424 frozen s4.pathway1_res3.branch2.a_bn.weight
+425 frozen s4.pathway1_res3.branch2.a_bn.bias
+426 frozen s4.pathway1_res3.branch2.b.weight
+427 frozen s4.pathway1_res3.branch2.b_bn.weight
+428 frozen s4.pathway1_res3.branch2.b_bn.bias
+429 frozen s4.pathway1_res3.branch2.c.weight
+430 frozen s4.pathway1_res3.branch2.c_bn.weight
+431 frozen s4.pathway1_res3.branch2.c_bn.bias
+432 frozen s4.pathway1_res4.branch2.a.weight
+433 frozen s4.pathway1_res4.branch2.a_bn.weight
+434 frozen s4.pathway1_res4.branch2.a_bn.bias
+435 frozen s4.pathway1_res4.branch2.b.weight
+436 frozen s4.pathway1_res4.branch2.b_bn.weight
+437 frozen s4.pathway1_res4.branch2.b_bn.bias
+438 frozen s4.pathway1_res4.branch2.c.weight
+439 frozen s4.pathway1_res4.branch2.c_bn.weight
+440 frozen s4.pathway1_res4.branch2.c_bn.bias
+441 frozen s4.pathway1_res5.branch2.a.weight
+442 frozen s4.pathway1_res5.branch2.a_bn.weight
+443 frozen s4.pathway1_res5.branch2.a_bn.bias
+444 frozen s4.pathway1_res5.branch2.b.weight
+445 frozen s4.pathway1_res5.branch2.b_bn.weight
+446 frozen s4.pathway1_res5.branch2.b_bn.bias
+447 frozen s4.pathway1_res5.branch2.c.weight
+448 frozen s4.pathway1_res5.branch2.c_bn.weight
+449 frozen s4.pathway1_res5.branch2.c_bn.bias
+450 frozen s4.pathway1_res6.branch2.a.weight
+451 frozen s4.pathway1_res6.branch2.a_bn.weight
+452 frozen s4.pathway1_res6.branch2.a_bn.bias
+453 frozen s4.pathway1_res6.branch2.b.weight
+454 frozen s4.pathway1_res6.branch2.b_bn.weight
+455 frozen s4.pathway1_res6.branch2.b_bn.bias
+456 frozen s4.pathway1_res6.branch2.c.weight
+457 frozen s4.pathway1_res6.branch2.c_bn.weight
+458 frozen s4.pathway1_res6.branch2.c_bn.bias
+459 frozen s4.pathway1_res7.branch2.a.weight
+460 frozen s4.pathway1_res7.branch2.a_bn.weight
+461 frozen s4.pathway1_res7.branch2.a_bn.bias
+462 frozen s4.pathway1_res7.branch2.b.weight
+463 frozen s4.pathway1_res7.branch2.b_bn.weight
+464 frozen s4.pathway1_res7.branch2.b_bn.bias
+465 frozen s4.pathway1_res7.branch2.c.weight
+466 frozen s4.pathway1_res7.branch2.c_bn.weight
+467 frozen s4.pathway1_res7.branch2.c_bn.bias
+468 frozen s4.pathway1_res8.branch2.a.weight
+469 frozen s4.pathway1_res8.branch2.a_bn.weight
+470 frozen s4.pathway1_res8.branch2.a_bn.bias
+471 frozen s4.pathway1_res8.branch2.b.weight
+472 frozen s4.pathway1_res8.branch2.b_bn.weight
+473 frozen s4.pathway1_res8.branch2.b_bn.bias
+474 frozen s4.pathway1_res8.branch2.c.weight
+475 frozen s4.pathway1_res8.branch2.c_bn.weight
+476 frozen s4.pathway1_res8.branch2.c_bn.bias
+477 frozen s4.pathway1_res9.branch2.a.weight
+478 frozen s4.pathway1_res9.branch2.a_bn.weight
+479 frozen s4.pathway1_res9.branch2.a_bn.bias
+480 frozen s4.pathway1_res9.branch2.b.weight
+481 frozen s4.pathway1_res9.branch2.b_bn.weight
+482 frozen s4.pathway1_res9.branch2.b_bn.bias
+483 frozen s4.pathway1_res9.branch2.c.weight
+484 frozen s4.pathway1_res9.branch2.c_bn.weight
+485 frozen s4.pathway1_res9.branch2.c_bn.bias
+486 frozen s4.pathway1_res10.branch2.a.weight
+487 frozen s4.pathway1_res10.branch2.a_bn.weight
+488 frozen s4.pathway1_res10.branch2.a_bn.bias
+489 frozen s4.pathway1_res10.branch2.b.weight
+490 frozen s4.pathway1_res10.branch2.b_bn.weight
+491 frozen s4.pathway1_res10.branch2.b_bn.bias
+492 frozen s4.pathway1_res10.branch2.c.weight
+493 frozen s4.pathway1_res10.branch2.c_bn.weight
+494 frozen s4.pathway1_res10.branch2.c_bn.bias
+495 frozen s4.pathway1_res11.branch2.a.weight
+496 frozen s4.pathway1_res11.branch2.a_bn.weight
+497 frozen s4.pathway1_res11.branch2.a_bn.bias
+498 frozen s4.pathway1_res11.branch2.b.weight
+499 frozen s4.pathway1_res11.branch2.b_bn.weight
+500 frozen s4.pathway1_res11.branch2.b_bn.bias
+501 frozen s4.pathway1_res11.branch2.c.weight
+502 frozen s4.pathway1_res11.branch2.c_bn.weight
+503 frozen s4.pathway1_res11.branch2.c_bn.bias
+504 frozen s4.pathway1_res12.branch2.a.weight
+505 frozen s4.pathway1_res12.branch2.a_bn.weight
+506 frozen s4.pathway1_res12.branch2.a_bn.bias
+507 frozen s4.pathway1_res12.branch2.b.weight
+508 frozen s4.pathway1_res12.branch2.b_bn.weight
+509 frozen s4.pathway1_res12.branch2.b_bn.bias
+510 frozen s4.pathway1_res12.branch2.c.weight
+511 frozen s4.pathway1_res12.branch2.c_bn.weight
+512 frozen s4.pathway1_res12.branch2.c_bn.bias
+513 frozen s4.pathway1_res13.branch2.a.weight
+514 frozen s4.pathway1_res13.branch2.a_bn.weight
+515 frozen s4.pathway1_res13.branch2.a_bn.bias
+516 frozen s4.pathway1_res13.branch2.b.weight
+517 frozen s4.pathway1_res13.branch2.b_bn.weight
+518 frozen s4.pathway1_res13.branch2.b_bn.bias
+519 frozen s4.pathway1_res13.branch2.c.weight
+520 frozen s4.pathway1_res13.branch2.c_bn.weight
+521 frozen s4.pathway1_res13.branch2.c_bn.bias
+522 frozen s4.pathway1_res14.branch2.a.weight
+523 frozen s4.pathway1_res14.branch2.a_bn.weight
+524 frozen s4.pathway1_res14.branch2.a_bn.bias
+525 frozen s4.pathway1_res14.branch2.b.weight
+526 frozen s4.pathway1_res14.branch2.b_bn.weight
+527 frozen s4.pathway1_res14.branch2.b_bn.bias
+528 frozen s4.pathway1_res14.branch2.c.weight
+529 frozen s4.pathway1_res14.branch2.c_bn.weight
+530 frozen s4.pathway1_res14.branch2.c_bn.bias
+531 frozen s4.pathway1_res15.branch2.a.weight
+532 frozen s4.pathway1_res15.branch2.a_bn.weight
+533 frozen s4.pathway1_res15.branch2.a_bn.bias
+534 frozen s4.pathway1_res15.branch2.b.weight
+535 frozen s4.pathway1_res15.branch2.b_bn.weight
+536 frozen s4.pathway1_res15.branch2.b_bn.bias
+537 frozen s4.pathway1_res15.branch2.c.weight
+538 frozen s4.pathway1_res15.branch2.c_bn.weight
+539 frozen s4.pathway1_res15.branch2.c_bn.bias
+540 frozen s4.pathway1_res16.branch2.a.weight
+541 frozen s4.pathway1_res16.branch2.a_bn.weight
+542 frozen s4.pathway1_res16.branch2.a_bn.bias
+543 frozen s4.pathway1_res16.branch2.b.weight
+544 frozen s4.pathway1_res16.branch2.b_bn.weight
+545 frozen s4.pathway1_res16.branch2.b_bn.bias
+546 frozen s4.pathway1_res16.branch2.c.weight
+547 frozen s4.pathway1_res16.branch2.c_bn.weight
+548 frozen s4.pathway1_res16.branch2.c_bn.bias
+549 frozen s4.pathway1_res17.branch2.a.weight
+550 frozen s4.pathway1_res17.branch2.a_bn.weight
+551 frozen s4.pathway1_res17.branch2.a_bn.bias
+552 frozen s4.pathway1_res17.branch2.b.weight
+553 frozen s4.pathway1_res17.branch2.b_bn.weight
+554 frozen s4.pathway1_res17.branch2.b_bn.bias
+555 frozen s4.pathway1_res17.branch2.c.weight
+556 frozen s4.pathway1_res17.branch2.c_bn.weight
+557 frozen s4.pathway1_res17.branch2.c_bn.bias
+558 frozen s4.pathway1_res18.branch2.a.weight
+559 frozen s4.pathway1_res18.branch2.a_bn.weight
+560 frozen s4.pathway1_res18.branch2.a_bn.bias
+561 frozen s4.pathway1_res18.branch2.b.weight
+562 frozen s4.pathway1_res18.branch2.b_bn.weight
+563 frozen s4.pathway1_res18.branch2.b_bn.bias
+564 frozen s4.pathway1_res18.branch2.c.weight
+565 frozen s4.pathway1_res18.branch2.c_bn.weight
+566 frozen s4.pathway1_res18.branch2.c_bn.bias
+567 frozen s4.pathway1_res19.branch2.a.weight
+568 frozen s4.pathway1_res19.branch2.a_bn.weight
+569 frozen s4.pathway1_res19.branch2.a_bn.bias
+570 frozen s4.pathway1_res19.branch2.b.weight
+571 frozen s4.pathway1_res19.branch2.b_bn.weight
+572 frozen s4.pathway1_res19.branch2.b_bn.bias
+573 frozen s4.pathway1_res19.branch2.c.weight
+574 frozen s4.pathway1_res19.branch2.c_bn.weight
+575 frozen s4.pathway1_res19.branch2.c_bn.bias
+576 frozen s4.pathway1_res20.branch2.a.weight
+577 frozen s4.pathway1_res20.branch2.a_bn.weight
+578 frozen s4.pathway1_res20.branch2.a_bn.bias
+579 frozen s4.pathway1_res20.branch2.b.weight
+580 frozen s4.pathway1_res20.branch2.b_bn.weight
+581 frozen s4.pathway1_res20.branch2.b_bn.bias
+582 frozen s4.pathway1_res20.branch2.c.weight
+583 frozen s4.pathway1_res20.branch2.c_bn.weight
+584 frozen s4.pathway1_res20.branch2.c_bn.bias
+585 frozen s4.pathway1_res21.branch2.a.weight
+586 frozen s4.pathway1_res21.branch2.a_bn.weight
+587 frozen s4.pathway1_res21.branch2.a_bn.bias
+588 frozen s4.pathway1_res21.branch2.b.weight
+589 frozen s4.pathway1_res21.branch2.b_bn.weight
+590 frozen s4.pathway1_res21.branch2.b_bn.bias
+591 frozen s4.pathway1_res21.branch2.c.weight
+592 frozen s4.pathway1_res21.branch2.c_bn.weight
+593 frozen s4.pathway1_res21.branch2.c_bn.bias
+594 frozen s4.pathway1_res22.branch2.a.weight
+595 frozen s4.pathway1_res22.branch2.a_bn.weight
+596 frozen s4.pathway1_res22.branch2.a_bn.bias
+597 frozen s4.pathway1_res22.branch2.b.weight
+598 frozen s4.pathway1_res22.branch2.b_bn.weight
+599 frozen s4.pathway1_res22.branch2.b_bn.bias
+600 frozen s4.pathway1_res22.branch2.c.weight
+601 frozen s4.pathway1_res22.branch2.c_bn.weight
+602 frozen s4.pathway1_res22.branch2.c_bn.bias
+603 frozen s4_fuse.conv_f2s.weight
+604 frozen s4_fuse.bn.weight
+605 frozen s4_fuse.bn.bias
+606 unfrozen s5.pathway0_res0.branch1.weight
+607 unfrozen s5.pathway0_res0.branch1_bn.weight
+608 unfrozen s5.pathway0_res0.branch1_bn.bias
+609 unfrozen s5.pathway0_res0.branch2.a.weight
+610 unfrozen s5.pathway0_res0.branch2.a_bn.weight
+611 unfrozen s5.pathway0_res0.branch2.a_bn.bias
+612 unfrozen s5.pathway0_res0.branch2.b.weight
+613 unfrozen s5.pathway0_res0.branch2.b_bn.weight
+614 unfrozen s5.pathway0_res0.branch2.b_bn.bias
+615 unfrozen s5.pathway0_res0.branch2.c.weight
+616 unfrozen s5.pathway0_res0.branch2.c_bn.weight
+617 unfrozen s5.pathway0_res0.branch2.c_bn.bias
+618 unfrozen s5.pathway0_res1.branch2.a.weight
+619 unfrozen s5.pathway0_res1.branch2.a_bn.weight
+620 unfrozen s5.pathway0_res1.branch2.a_bn.bias
+621 unfrozen s5.pathway0_res1.branch2.b.weight
+622 unfrozen s5.pathway0_res1.branch2.b_bn.weight
+623 unfrozen s5.pathway0_res1.branch2.b_bn.bias
+624 unfrozen s5.pathway0_res1.branch2.c.weight
+625 unfrozen s5.pathway0_res1.branch2.c_bn.weight
+626 unfrozen s5.pathway0_res1.branch2.c_bn.bias
+627 unfrozen s5.pathway0_res2.branch2.a.weight
+628 unfrozen s5.pathway0_res2.branch2.a_bn.weight
+629 unfrozen s5.pathway0_res2.branch2.a_bn.bias
+630 unfrozen s5.pathway0_res2.branch2.b.weight
+631 unfrozen s5.pathway0_res2.branch2.b_bn.weight
+632 unfrozen s5.pathway0_res2.branch2.b_bn.bias
+633 unfrozen s5.pathway0_res2.branch2.c.weight
+634 unfrozen s5.pathway0_res2.branch2.c_bn.weight
+635 unfrozen s5.pathway0_res2.branch2.c_bn.bias
+636 unfrozen s5.pathway1_res0.branch1.weight
+637 unfrozen s5.pathway1_res0.branch1_bn.weight
+638 unfrozen s5.pathway1_res0.branch1_bn.bias
+639 unfrozen s5.pathway1_res0.branch2.a.weight
+640 unfrozen s5.pathway1_res0.branch2.a_bn.weight
+641 unfrozen s5.pathway1_res0.branch2.a_bn.bias
+642 unfrozen s5.pathway1_res0.branch2.b.weight
+643 unfrozen s5.pathway1_res0.branch2.b_bn.weight
+644 unfrozen s5.pathway1_res0.branch2.b_bn.bias
+645 unfrozen s5.pathway1_res0.branch2.c.weight
+646 unfrozen s5.pathway1_res0.branch2.c_bn.weight
+647 unfrozen s5.pathway1_res0.branch2.c_bn.bias
+648 unfrozen s5.pathway1_res1.branch2.a.weight
+649 unfrozen s5.pathway1_res1.branch2.a_bn.weight
+650 unfrozen s5.pathway1_res1.branch2.a_bn.bias
+651 unfrozen s5.pathway1_res1.branch2.b.weight
+652 unfrozen s5.pathway1_res1.branch2.b_bn.weight
+653 unfrozen s5.pathway1_res1.branch2.b_bn.bias
+654 unfrozen s5.pathway1_res1.branch2.c.weight
+655 unfrozen s5.pathway1_res1.branch2.c_bn.weight
+656 unfrozen s5.pathway1_res1.branch2.c_bn.bias
+657 unfrozen s5.pathway1_res2.branch2.a.weight
+658 unfrozen s5.pathway1_res2.branch2.a_bn.weight
+659 unfrozen s5.pathway1_res2.branch2.a_bn.bias
+660 unfrozen s5.pathway1_res2.branch2.b.weight
+661 unfrozen s5.pathway1_res2.branch2.b_bn.weight
+662 unfrozen s5.pathway1_res2.branch2.b_bn.bias
+663 unfrozen s5.pathway1_res2.branch2.c.weight
+664 unfrozen s5.pathway1_res2.branch2.c_bn.weight
+665 unfrozen s5.pathway1_res2.branch2.c_bn.bias
+666 unfrozen head.projection.weight
+667 unfrozen head.projection.bias
+668 unfrozen head.projection2.weight
+669 unfrozen head.projection2.bias
+[12/22 19:33:13][INFO] checkpoint.py: 534: Load from given checkpoint file.
+[12/22 19:33:13][INFO] checkpoint.py: 215: Loading network weights from /srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl.
+0 s1.pathway0_stem.conv.weight
+1 s1.pathway0_stem.bn.weight
+2 s1.pathway0_stem.bn.bias
+3 s1.pathway0_stem.bn.running_mean
+4 s1.pathway0_stem.bn.running_var
+5 s1.pathway0_stem.bn.num_batches_tracked
+6 s1.pathway1_stem.conv.weight
+7 s1.pathway1_stem.bn.weight
+8 s1.pathway1_stem.bn.bias
+9 s1.pathway1_stem.bn.running_mean
+10 s1.pathway1_stem.bn.running_var
+11 s1.pathway1_stem.bn.num_batches_tracked
+12 s1_fuse.conv_f2s.weight
+13 s1_fuse.bn.weight
+14 s1_fuse.bn.bias
+15 s1_fuse.bn.running_mean
+16 s1_fuse.bn.running_var
+17 s1_fuse.bn.num_batches_tracked
+18 s2.pathway0_res0.branch1.weight
+19 s2.pathway0_res0.branch1_bn.weight
+20 s2.pathway0_res0.branch1_bn.bias
+21 s2.pathway0_res0.branch1_bn.running_mean
+22 s2.pathway0_res0.branch1_bn.running_var
+23 s2.pathway0_res0.branch1_bn.num_batches_tracked
+24 s2.pathway0_res0.branch2.a.weight
+25 s2.pathway0_res0.branch2.a_bn.weight
+26 s2.pathway0_res0.branch2.a_bn.bias
+27 s2.pathway0_res0.branch2.a_bn.running_mean
+28 s2.pathway0_res0.branch2.a_bn.running_var
+29 s2.pathway0_res0.branch2.a_bn.num_batches_tracked
+30 s2.pathway0_res0.branch2.b.weight
+31 s2.pathway0_res0.branch2.b_bn.weight
+32 s2.pathway0_res0.branch2.b_bn.bias
+33 s2.pathway0_res0.branch2.b_bn.running_mean
+34 s2.pathway0_res0.branch2.b_bn.running_var
+35 s2.pathway0_res0.branch2.b_bn.num_batches_tracked
+36 s2.pathway0_res0.branch2.c.weight
+37 s2.pathway0_res0.branch2.c_bn.weight
+38 s2.pathway0_res0.branch2.c_bn.bias
+39 s2.pathway0_res0.branch2.c_bn.running_mean
+40 s2.pathway0_res0.branch2.c_bn.running_var
+41 s2.pathway0_res0.branch2.c_bn.num_batches_tracked
+42 s2.pathway0_res1.branch2.a.weight
+43 s2.pathway0_res1.branch2.a_bn.weight
+44 s2.pathway0_res1.branch2.a_bn.bias
+45 s2.pathway0_res1.branch2.a_bn.running_mean
+46 s2.pathway0_res1.branch2.a_bn.running_var
+47 s2.pathway0_res1.branch2.a_bn.num_batches_tracked
+48 s2.pathway0_res1.branch2.b.weight
+49 s2.pathway0_res1.branch2.b_bn.weight
+50 s2.pathway0_res1.branch2.b_bn.bias
+51 s2.pathway0_res1.branch2.b_bn.running_mean
+52 s2.pathway0_res1.branch2.b_bn.running_var
+53 s2.pathway0_res1.branch2.b_bn.num_batches_tracked
+54 s2.pathway0_res1.branch2.c.weight
+55 s2.pathway0_res1.branch2.c_bn.weight
+56 s2.pathway0_res1.branch2.c_bn.bias
+57 s2.pathway0_res1.branch2.c_bn.running_mean
+58 s2.pathway0_res1.branch2.c_bn.running_var
+59 s2.pathway0_res1.branch2.c_bn.num_batches_tracked
+60 s2.pathway0_res2.branch2.a.weight
+61 s2.pathway0_res2.branch2.a_bn.weight
+62 s2.pathway0_res2.branch2.a_bn.bias
+63 s2.pathway0_res2.branch2.a_bn.running_mean
+64 s2.pathway0_res2.branch2.a_bn.running_var
+65 s2.pathway0_res2.branch2.a_bn.num_batches_tracked
+66 s2.pathway0_res2.branch2.b.weight
+67 s2.pathway0_res2.branch2.b_bn.weight
+68 s2.pathway0_res2.branch2.b_bn.bias
+69 s2.pathway0_res2.branch2.b_bn.running_mean
+70 s2.pathway0_res2.branch2.b_bn.running_var
+71 s2.pathway0_res2.branch2.b_bn.num_batches_tracked
+72 s2.pathway0_res2.branch2.c.weight
+73 s2.pathway0_res2.branch2.c_bn.weight
+74 s2.pathway0_res2.branch2.c_bn.bias
+75 s2.pathway0_res2.branch2.c_bn.running_mean
+76 s2.pathway0_res2.branch2.c_bn.running_var
+77 s2.pathway0_res2.branch2.c_bn.num_batches_tracked
+78 s2.pathway1_res0.branch1.weight
+79 s2.pathway1_res0.branch1_bn.weight
+80 s2.pathway1_res0.branch1_bn.bias
+81 s2.pathway1_res0.branch1_bn.running_mean
+82 s2.pathway1_res0.branch1_bn.running_var
+83 s2.pathway1_res0.branch1_bn.num_batches_tracked
+84 s2.pathway1_res0.branch2.a.weight
+85 s2.pathway1_res0.branch2.a_bn.weight
+86 s2.pathway1_res0.branch2.a_bn.bias
+87 s2.pathway1_res0.branch2.a_bn.running_mean
+88 s2.pathway1_res0.branch2.a_bn.running_var
+89 s2.pathway1_res0.branch2.a_bn.num_batches_tracked
+90 s2.pathway1_res0.branch2.b.weight
+91 s2.pathway1_res0.branch2.b_bn.weight
+92 s2.pathway1_res0.branch2.b_bn.bias
+93 s2.pathway1_res0.branch2.b_bn.running_mean
+94 s2.pathway1_res0.branch2.b_bn.running_var
+95 s2.pathway1_res0.branch2.b_bn.num_batches_tracked
+96 s2.pathway1_res0.branch2.c.weight
+97 s2.pathway1_res0.branch2.c_bn.weight
+98 s2.pathway1_res0.branch2.c_bn.bias
+99 s2.pathway1_res0.branch2.c_bn.running_mean
+100 s2.pathway1_res0.branch2.c_bn.running_var
+101 s2.pathway1_res0.branch2.c_bn.num_batches_tracked
+102 s2.pathway1_res1.branch2.a.weight
+103 s2.pathway1_res1.branch2.a_bn.weight
+104 s2.pathway1_res1.branch2.a_bn.bias
+105 s2.pathway1_res1.branch2.a_bn.running_mean
+106 s2.pathway1_res1.branch2.a_bn.running_var
+107 s2.pathway1_res1.branch2.a_bn.num_batches_tracked
+108 s2.pathway1_res1.branch2.b.weight
+109 s2.pathway1_res1.branch2.b_bn.weight
+110 s2.pathway1_res1.branch2.b_bn.bias
+111 s2.pathway1_res1.branch2.b_bn.running_mean
+112 s2.pathway1_res1.branch2.b_bn.running_var
+113 s2.pathway1_res1.branch2.b_bn.num_batches_tracked
+114 s2.pathway1_res1.branch2.c.weight
+115 s2.pathway1_res1.branch2.c_bn.weight
+116 s2.pathway1_res1.branch2.c_bn.bias
+117 s2.pathway1_res1.branch2.c_bn.running_mean
+118 s2.pathway1_res1.branch2.c_bn.running_var
+119 s2.pathway1_res1.branch2.c_bn.num_batches_tracked
+120 s2.pathway1_res2.branch2.a.weight
+121 s2.pathway1_res2.branch2.a_bn.weight
+122 s2.pathway1_res2.branch2.a_bn.bias
+123 s2.pathway1_res2.branch2.a_bn.running_mean
+124 s2.pathway1_res2.branch2.a_bn.running_var
+125 s2.pathway1_res2.branch2.a_bn.num_batches_tracked
+126 s2.pathway1_res2.branch2.b.weight
+127 s2.pathway1_res2.branch2.b_bn.weight
+128 s2.pathway1_res2.branch2.b_bn.bias
+129 s2.pathway1_res2.branch2.b_bn.running_mean
+130 s2.pathway1_res2.branch2.b_bn.running_var
+131 s2.pathway1_res2.branch2.b_bn.num_batches_tracked
+132 s2.pathway1_res2.branch2.c.weight
+133 s2.pathway1_res2.branch2.c_bn.weight
+134 s2.pathway1_res2.branch2.c_bn.bias
+135 s2.pathway1_res2.branch2.c_bn.running_mean
+136 s2.pathway1_res2.branch2.c_bn.running_var
+137 s2.pathway1_res2.branch2.c_bn.num_batches_tracked
+138 s2_fuse.conv_f2s.weight
+139 s2_fuse.bn.weight
+140 s2_fuse.bn.bias
+141 s2_fuse.bn.running_mean
+142 s2_fuse.bn.running_var
+143 s2_fuse.bn.num_batches_tracked
+144 s3.pathway0_res0.branch1.weight
+145 s3.pathway0_res0.branch1_bn.weight
+146 s3.pathway0_res0.branch1_bn.bias
+147 s3.pathway0_res0.branch1_bn.running_mean
+148 s3.pathway0_res0.branch1_bn.running_var
+149 s3.pathway0_res0.branch1_bn.num_batches_tracked
+150 s3.pathway0_res0.branch2.a.weight
+151 s3.pathway0_res0.branch2.a_bn.weight
+152 s3.pathway0_res0.branch2.a_bn.bias
+153 s3.pathway0_res0.branch2.a_bn.running_mean
+154 s3.pathway0_res0.branch2.a_bn.running_var
+155 s3.pathway0_res0.branch2.a_bn.num_batches_tracked
+156 s3.pathway0_res0.branch2.b.weight
+157 s3.pathway0_res0.branch2.b_bn.weight
+158 s3.pathway0_res0.branch2.b_bn.bias
+159 s3.pathway0_res0.branch2.b_bn.running_mean
+160 s3.pathway0_res0.branch2.b_bn.running_var
+161 s3.pathway0_res0.branch2.b_bn.num_batches_tracked
+162 s3.pathway0_res0.branch2.c.weight
+163 s3.pathway0_res0.branch2.c_bn.weight
+164 s3.pathway0_res0.branch2.c_bn.bias
+165 s3.pathway0_res0.branch2.c_bn.running_mean
+166 s3.pathway0_res0.branch2.c_bn.running_var
+167 s3.pathway0_res0.branch2.c_bn.num_batches_tracked
+168 s3.pathway0_res1.branch2.a.weight
+169 s3.pathway0_res1.branch2.a_bn.weight
+170 s3.pathway0_res1.branch2.a_bn.bias
+171 s3.pathway0_res1.branch2.a_bn.running_mean
+172 s3.pathway0_res1.branch2.a_bn.running_var
+173 s3.pathway0_res1.branch2.a_bn.num_batches_tracked
+174 s3.pathway0_res1.branch2.b.weight
+175 s3.pathway0_res1.branch2.b_bn.weight
+176 s3.pathway0_res1.branch2.b_bn.bias
+177 s3.pathway0_res1.branch2.b_bn.running_mean
+178 s3.pathway0_res1.branch2.b_bn.running_var
+179 s3.pathway0_res1.branch2.b_bn.num_batches_tracked
+180 s3.pathway0_res1.branch2.c.weight
+181 s3.pathway0_res1.branch2.c_bn.weight
+182 s3.pathway0_res1.branch2.c_bn.bias
+183 s3.pathway0_res1.branch2.c_bn.running_mean
+184 s3.pathway0_res1.branch2.c_bn.running_var
+185 s3.pathway0_res1.branch2.c_bn.num_batches_tracked
+186 s3.pathway0_res2.branch2.a.weight
+187 s3.pathway0_res2.branch2.a_bn.weight
+188 s3.pathway0_res2.branch2.a_bn.bias
+189 s3.pathway0_res2.branch2.a_bn.running_mean
+190 s3.pathway0_res2.branch2.a_bn.running_var
+191 s3.pathway0_res2.branch2.a_bn.num_batches_tracked
+192 s3.pathway0_res2.branch2.b.weight
+193 s3.pathway0_res2.branch2.b_bn.weight
+194 s3.pathway0_res2.branch2.b_bn.bias
+195 s3.pathway0_res2.branch2.b_bn.running_mean
+196 s3.pathway0_res2.branch2.b_bn.running_var
+197 s3.pathway0_res2.branch2.b_bn.num_batches_tracked
+198 s3.pathway0_res2.branch2.c.weight
+199 s3.pathway0_res2.branch2.c_bn.weight
+200 s3.pathway0_res2.branch2.c_bn.bias
+201 s3.pathway0_res2.branch2.c_bn.running_mean
+202 s3.pathway0_res2.branch2.c_bn.running_var
+203 s3.pathway0_res2.branch2.c_bn.num_batches_tracked
+204 s3.pathway0_res3.branch2.a.weight
+205 s3.pathway0_res3.branch2.a_bn.weight
+206 s3.pathway0_res3.branch2.a_bn.bias
+207 s3.pathway0_res3.branch2.a_bn.running_mean
+208 s3.pathway0_res3.branch2.a_bn.running_var
+209 s3.pathway0_res3.branch2.a_bn.num_batches_tracked
+210 s3.pathway0_res3.branch2.b.weight
+211 s3.pathway0_res3.branch2.b_bn.weight
+212 s3.pathway0_res3.branch2.b_bn.bias
+213 s3.pathway0_res3.branch2.b_bn.running_mean
+214 s3.pathway0_res3.branch2.b_bn.running_var
+215 s3.pathway0_res3.branch2.b_bn.num_batches_tracked
+216 s3.pathway0_res3.branch2.c.weight
+217 s3.pathway0_res3.branch2.c_bn.weight
+218 s3.pathway0_res3.branch2.c_bn.bias
+219 s3.pathway0_res3.branch2.c_bn.running_mean
+220 s3.pathway0_res3.branch2.c_bn.running_var
+221 s3.pathway0_res3.branch2.c_bn.num_batches_tracked
+222 s3.pathway1_res0.branch1.weight
+223 s3.pathway1_res0.branch1_bn.weight
+224 s3.pathway1_res0.branch1_bn.bias
+225 s3.pathway1_res0.branch1_bn.running_mean
+226 s3.pathway1_res0.branch1_bn.running_var
+227 s3.pathway1_res0.branch1_bn.num_batches_tracked
+228 s3.pathway1_res0.branch2.a.weight
+229 s3.pathway1_res0.branch2.a_bn.weight
+230 s3.pathway1_res0.branch2.a_bn.bias
+231 s3.pathway1_res0.branch2.a_bn.running_mean
+232 s3.pathway1_res0.branch2.a_bn.running_var
+233 s3.pathway1_res0.branch2.a_bn.num_batches_tracked
+234 s3.pathway1_res0.branch2.b.weight
+235 s3.pathway1_res0.branch2.b_bn.weight
+236 s3.pathway1_res0.branch2.b_bn.bias
+237 s3.pathway1_res0.branch2.b_bn.running_mean
+238 s3.pathway1_res0.branch2.b_bn.running_var
+239 s3.pathway1_res0.branch2.b_bn.num_batches_tracked
+240 s3.pathway1_res0.branch2.c.weight
+241 s3.pathway1_res0.branch2.c_bn.weight
+242 s3.pathway1_res0.branch2.c_bn.bias
+243 s3.pathway1_res0.branch2.c_bn.running_mean
+244 s3.pathway1_res0.branch2.c_bn.running_var
+245 s3.pathway1_res0.branch2.c_bn.num_batches_tracked
+246 s3.pathway1_res1.branch2.a.weight
+247 s3.pathway1_res1.branch2.a_bn.weight
+248 s3.pathway1_res1.branch2.a_bn.bias
+249 s3.pathway1_res1.branch2.a_bn.running_mean
+250 s3.pathway1_res1.branch2.a_bn.running_var
+251 s3.pathway1_res1.branch2.a_bn.num_batches_tracked
+252 s3.pathway1_res1.branch2.b.weight
+253 s3.pathway1_res1.branch2.b_bn.weight
+254 s3.pathway1_res1.branch2.b_bn.bias
+255 s3.pathway1_res1.branch2.b_bn.running_mean
+256 s3.pathway1_res1.branch2.b_bn.running_var
+257 s3.pathway1_res1.branch2.b_bn.num_batches_tracked
+258 s3.pathway1_res1.branch2.c.weight
+259 s3.pathway1_res1.branch2.c_bn.weight
+260 s3.pathway1_res1.branch2.c_bn.bias
+261 s3.pathway1_res1.branch2.c_bn.running_mean
+262 s3.pathway1_res1.branch2.c_bn.running_var
+263 s3.pathway1_res1.branch2.c_bn.num_batches_tracked
+264 s3.pathway1_res2.branch2.a.weight
+265 s3.pathway1_res2.branch2.a_bn.weight
+266 s3.pathway1_res2.branch2.a_bn.bias
+267 s3.pathway1_res2.branch2.a_bn.running_mean
+268 s3.pathway1_res2.branch2.a_bn.running_var
+269 s3.pathway1_res2.branch2.a_bn.num_batches_tracked
+270 s3.pathway1_res2.branch2.b.weight
+271 s3.pathway1_res2.branch2.b_bn.weight
+272 s3.pathway1_res2.branch2.b_bn.bias
+273 s3.pathway1_res2.branch2.b_bn.running_mean
+274 s3.pathway1_res2.branch2.b_bn.running_var
+275 s3.pathway1_res2.branch2.b_bn.num_batches_tracked
+276 s3.pathway1_res2.branch2.c.weight
+277 s3.pathway1_res2.branch2.c_bn.weight
+278 s3.pathway1_res2.branch2.c_bn.bias
+279 s3.pathway1_res2.branch2.c_bn.running_mean
+280 s3.pathway1_res2.branch2.c_bn.running_var
+281 s3.pathway1_res2.branch2.c_bn.num_batches_tracked
+282 s3.pathway1_res3.branch2.a.weight
+283 s3.pathway1_res3.branch2.a_bn.weight
+284 s3.pathway1_res3.branch2.a_bn.bias
+285 s3.pathway1_res3.branch2.a_bn.running_mean
+286 s3.pathway1_res3.branch2.a_bn.running_var
+287 s3.pathway1_res3.branch2.a_bn.num_batches_tracked
+288 s3.pathway1_res3.branch2.b.weight
+289 s3.pathway1_res3.branch2.b_bn.weight
+290 s3.pathway1_res3.branch2.b_bn.bias
+291 s3.pathway1_res3.branch2.b_bn.running_mean
+292 s3.pathway1_res3.branch2.b_bn.running_var
+293 s3.pathway1_res3.branch2.b_bn.num_batches_tracked
+294 s3.pathway1_res3.branch2.c.weight
+295 s3.pathway1_res3.branch2.c_bn.weight
+296 s3.pathway1_res3.branch2.c_bn.bias
+297 s3.pathway1_res3.branch2.c_bn.running_mean
+298 s3.pathway1_res3.branch2.c_bn.running_var
+299 s3.pathway1_res3.branch2.c_bn.num_batches_tracked
+300 s3_fuse.conv_f2s.weight
+301 s3_fuse.bn.weight
+302 s3_fuse.bn.bias
+303 s3_fuse.bn.running_mean
+304 s3_fuse.bn.running_var
+305 s3_fuse.bn.num_batches_tracked
+306 s4.pathway0_res0.branch1.weight
+307 s4.pathway0_res0.branch1_bn.weight
+308 s4.pathway0_res0.branch1_bn.bias
+309 s4.pathway0_res0.branch1_bn.running_mean
+310 s4.pathway0_res0.branch1_bn.running_var
+311 s4.pathway0_res0.branch1_bn.num_batches_tracked
+312 s4.pathway0_res0.branch2.a.weight
+313 s4.pathway0_res0.branch2.a_bn.weight
+314 s4.pathway0_res0.branch2.a_bn.bias
+315 s4.pathway0_res0.branch2.a_bn.running_mean
+316 s4.pathway0_res0.branch2.a_bn.running_var
+317 s4.pathway0_res0.branch2.a_bn.num_batches_tracked
+318 s4.pathway0_res0.branch2.b.weight
+319 s4.pathway0_res0.branch2.b_bn.weight
+320 s4.pathway0_res0.branch2.b_bn.bias
+321 s4.pathway0_res0.branch2.b_bn.running_mean
+322 s4.pathway0_res0.branch2.b_bn.running_var
+323 s4.pathway0_res0.branch2.b_bn.num_batches_tracked
+324 s4.pathway0_res0.branch2.c.weight
+325 s4.pathway0_res0.branch2.c_bn.weight
+326 s4.pathway0_res0.branch2.c_bn.bias
+327 s4.pathway0_res0.branch2.c_bn.running_mean
+328 s4.pathway0_res0.branch2.c_bn.running_var
+329 s4.pathway0_res0.branch2.c_bn.num_batches_tracked
+330 s4.pathway0_res1.branch2.a.weight
+331 s4.pathway0_res1.branch2.a_bn.weight
+332 s4.pathway0_res1.branch2.a_bn.bias
+333 s4.pathway0_res1.branch2.a_bn.running_mean
+334 s4.pathway0_res1.branch2.a_bn.running_var
+335 s4.pathway0_res1.branch2.a_bn.num_batches_tracked
+336 s4.pathway0_res1.branch2.b.weight
+337 s4.pathway0_res1.branch2.b_bn.weight
+338 s4.pathway0_res1.branch2.b_bn.bias
+339 s4.pathway0_res1.branch2.b_bn.running_mean
+340 s4.pathway0_res1.branch2.b_bn.running_var
+341 s4.pathway0_res1.branch2.b_bn.num_batches_tracked
+342 s4.pathway0_res1.branch2.c.weight
+343 s4.pathway0_res1.branch2.c_bn.weight
+344 s4.pathway0_res1.branch2.c_bn.bias
+345 s4.pathway0_res1.branch2.c_bn.running_mean
+346 s4.pathway0_res1.branch2.c_bn.running_var
+347 s4.pathway0_res1.branch2.c_bn.num_batches_tracked
+348 s4.pathway0_res2.branch2.a.weight
+349 s4.pathway0_res2.branch2.a_bn.weight
+350 s4.pathway0_res2.branch2.a_bn.bias
+351 s4.pathway0_res2.branch2.a_bn.running_mean
+352 s4.pathway0_res2.branch2.a_bn.running_var
+353 s4.pathway0_res2.branch2.a_bn.num_batches_tracked
+354 s4.pathway0_res2.branch2.b.weight
+355 s4.pathway0_res2.branch2.b_bn.weight
+356 s4.pathway0_res2.branch2.b_bn.bias
+357 s4.pathway0_res2.branch2.b_bn.running_mean
+358 s4.pathway0_res2.branch2.b_bn.running_var
+359 s4.pathway0_res2.branch2.b_bn.num_batches_tracked
+360 s4.pathway0_res2.branch2.c.weight
+361 s4.pathway0_res2.branch2.c_bn.weight
+362 s4.pathway0_res2.branch2.c_bn.bias
+363 s4.pathway0_res2.branch2.c_bn.running_mean
+364 s4.pathway0_res2.branch2.c_bn.running_var
+365 s4.pathway0_res2.branch2.c_bn.num_batches_tracked
+366 s4.pathway0_res3.branch2.a.weight
+367 s4.pathway0_res3.branch2.a_bn.weight
+368 s4.pathway0_res3.branch2.a_bn.bias
+369 s4.pathway0_res3.branch2.a_bn.running_mean
+370 s4.pathway0_res3.branch2.a_bn.running_var
+371 s4.pathway0_res3.branch2.a_bn.num_batches_tracked
+372 s4.pathway0_res3.branch2.b.weight
+373 s4.pathway0_res3.branch2.b_bn.weight
+374 s4.pathway0_res3.branch2.b_bn.bias
+375 s4.pathway0_res3.branch2.b_bn.running_mean
+376 s4.pathway0_res3.branch2.b_bn.running_var
+377 s4.pathway0_res3.branch2.b_bn.num_batches_tracked
+378 s4.pathway0_res3.branch2.c.weight
+379 s4.pathway0_res3.branch2.c_bn.weight
+380 s4.pathway0_res3.branch2.c_bn.bias
+381 s4.pathway0_res3.branch2.c_bn.running_mean
+382 s4.pathway0_res3.branch2.c_bn.running_var
+383 s4.pathway0_res3.branch2.c_bn.num_batches_tracked
+384 s4.pathway0_res4.branch2.a.weight
+385 s4.pathway0_res4.branch2.a_bn.weight
+386 s4.pathway0_res4.branch2.a_bn.bias
+387 s4.pathway0_res4.branch2.a_bn.running_mean
+388 s4.pathway0_res4.branch2.a_bn.running_var
+389 s4.pathway0_res4.branch2.a_bn.num_batches_tracked
+390 s4.pathway0_res4.branch2.b.weight
+391 s4.pathway0_res4.branch2.b_bn.weight
+392 s4.pathway0_res4.branch2.b_bn.bias
+393 s4.pathway0_res4.branch2.b_bn.running_mean
+394 s4.pathway0_res4.branch2.b_bn.running_var
+395 s4.pathway0_res4.branch2.b_bn.num_batches_tracked
+396 s4.pathway0_res4.branch2.c.weight
+397 s4.pathway0_res4.branch2.c_bn.weight
+398 s4.pathway0_res4.branch2.c_bn.bias
+399 s4.pathway0_res4.branch2.c_bn.running_mean
+400 s4.pathway0_res4.branch2.c_bn.running_var
+401 s4.pathway0_res4.branch2.c_bn.num_batches_tracked
+402 s4.pathway0_res5.branch2.a.weight
+403 s4.pathway0_res5.branch2.a_bn.weight
+404 s4.pathway0_res5.branch2.a_bn.bias
+405 s4.pathway0_res5.branch2.a_bn.running_mean
+406 s4.pathway0_res5.branch2.a_bn.running_var
+407 s4.pathway0_res5.branch2.a_bn.num_batches_tracked
+408 s4.pathway0_res5.branch2.b.weight
+409 s4.pathway0_res5.branch2.b_bn.weight
+410 s4.pathway0_res5.branch2.b_bn.bias
+411 s4.pathway0_res5.branch2.b_bn.running_mean
+412 s4.pathway0_res5.branch2.b_bn.running_var
+413 s4.pathway0_res5.branch2.b_bn.num_batches_tracked
+414 s4.pathway0_res5.branch2.c.weight
+415 s4.pathway0_res5.branch2.c_bn.weight
+416 s4.pathway0_res5.branch2.c_bn.bias
+417 s4.pathway0_res5.branch2.c_bn.running_mean
+418 s4.pathway0_res5.branch2.c_bn.running_var
+419 s4.pathway0_res5.branch2.c_bn.num_batches_tracked
+420 s4.pathway0_res6.branch2.a.weight
+421 s4.pathway0_res6.branch2.a_bn.weight
+422 s4.pathway0_res6.branch2.a_bn.bias
+423 s4.pathway0_res6.branch2.a_bn.running_mean
+424 s4.pathway0_res6.branch2.a_bn.running_var
+425 s4.pathway0_res6.branch2.a_bn.num_batches_tracked
+426 s4.pathway0_res6.branch2.b.weight
+427 s4.pathway0_res6.branch2.b_bn.weight
+428 s4.pathway0_res6.branch2.b_bn.bias
+429 s4.pathway0_res6.branch2.b_bn.running_mean
+430 s4.pathway0_res6.branch2.b_bn.running_var
+431 s4.pathway0_res6.branch2.b_bn.num_batches_tracked
+432 s4.pathway0_res6.branch2.c.weight
+433 s4.pathway0_res6.branch2.c_bn.weight
+434 s4.pathway0_res6.branch2.c_bn.bias
+435 s4.pathway0_res6.branch2.c_bn.running_mean
+436 s4.pathway0_res6.branch2.c_bn.running_var
+437 s4.pathway0_res6.branch2.c_bn.num_batches_tracked
+438 s4.pathway0_nonlocal6.conv_theta.weight
+439 s4.pathway0_nonlocal6.conv_theta.bias
+440 s4.pathway0_nonlocal6.conv_phi.weight
+441 s4.pathway0_nonlocal6.conv_phi.bias
+442 s4.pathway0_nonlocal6.conv_g.weight
+443 s4.pathway0_nonlocal6.conv_g.bias
+444 s4.pathway0_nonlocal6.conv_out.weight
+445 s4.pathway0_nonlocal6.conv_out.bias
+446 s4.pathway0_nonlocal6.bn.weight
+447 s4.pathway0_nonlocal6.bn.bias
+448 s4.pathway0_nonlocal6.bn.running_mean
+449 s4.pathway0_nonlocal6.bn.running_var
+450 s4.pathway0_nonlocal6.bn.num_batches_tracked
+451 s4.pathway0_res7.branch2.a.weight
+452 s4.pathway0_res7.branch2.a_bn.weight
+453 s4.pathway0_res7.branch2.a_bn.bias
+454 s4.pathway0_res7.branch2.a_bn.running_mean
+455 s4.pathway0_res7.branch2.a_bn.running_var
+456 s4.pathway0_res7.branch2.a_bn.num_batches_tracked
+457 s4.pathway0_res7.branch2.b.weight
+458 s4.pathway0_res7.branch2.b_bn.weight
+459 s4.pathway0_res7.branch2.b_bn.bias
+460 s4.pathway0_res7.branch2.b_bn.running_mean
+461 s4.pathway0_res7.branch2.b_bn.running_var
+462 s4.pathway0_res7.branch2.b_bn.num_batches_tracked
+463 s4.pathway0_res7.branch2.c.weight
+464 s4.pathway0_res7.branch2.c_bn.weight
+465 s4.pathway0_res7.branch2.c_bn.bias
+466 s4.pathway0_res7.branch2.c_bn.running_mean
+467 s4.pathway0_res7.branch2.c_bn.running_var
+468 s4.pathway0_res7.branch2.c_bn.num_batches_tracked
+469 s4.pathway0_res8.branch2.a.weight
+470 s4.pathway0_res8.branch2.a_bn.weight
+471 s4.pathway0_res8.branch2.a_bn.bias
+472 s4.pathway0_res8.branch2.a_bn.running_mean
+473 s4.pathway0_res8.branch2.a_bn.running_var
+474 s4.pathway0_res8.branch2.a_bn.num_batches_tracked
+475 s4.pathway0_res8.branch2.b.weight
+476 s4.pathway0_res8.branch2.b_bn.weight
+477 s4.pathway0_res8.branch2.b_bn.bias
+478 s4.pathway0_res8.branch2.b_bn.running_mean
+479 s4.pathway0_res8.branch2.b_bn.running_var
+480 s4.pathway0_res8.branch2.b_bn.num_batches_tracked
+481 s4.pathway0_res8.branch2.c.weight
+482 s4.pathway0_res8.branch2.c_bn.weight
+483 s4.pathway0_res8.branch2.c_bn.bias
+484 s4.pathway0_res8.branch2.c_bn.running_mean
+485 s4.pathway0_res8.branch2.c_bn.running_var
+486 s4.pathway0_res8.branch2.c_bn.num_batches_tracked
+487 s4.pathway0_res9.branch2.a.weight
+488 s4.pathway0_res9.branch2.a_bn.weight
+489 s4.pathway0_res9.branch2.a_bn.bias
+490 s4.pathway0_res9.branch2.a_bn.running_mean
+491 s4.pathway0_res9.branch2.a_bn.running_var
+492 s4.pathway0_res9.branch2.a_bn.num_batches_tracked
+493 s4.pathway0_res9.branch2.b.weight
+494 s4.pathway0_res9.branch2.b_bn.weight
+495 s4.pathway0_res9.branch2.b_bn.bias
+496 s4.pathway0_res9.branch2.b_bn.running_mean
+497 s4.pathway0_res9.branch2.b_bn.running_var
+498 s4.pathway0_res9.branch2.b_bn.num_batches_tracked
+499 s4.pathway0_res9.branch2.c.weight
+500 s4.pathway0_res9.branch2.c_bn.weight
+501 s4.pathway0_res9.branch2.c_bn.bias
+502 s4.pathway0_res9.branch2.c_bn.running_mean
+503 s4.pathway0_res9.branch2.c_bn.running_var
+504 s4.pathway0_res9.branch2.c_bn.num_batches_tracked
+505 s4.pathway0_res10.branch2.a.weight
+506 s4.pathway0_res10.branch2.a_bn.weight
+507 s4.pathway0_res10.branch2.a_bn.bias
+508 s4.pathway0_res10.branch2.a_bn.running_mean
+509 s4.pathway0_res10.branch2.a_bn.running_var
+510 s4.pathway0_res10.branch2.a_bn.num_batches_tracked
+511 s4.pathway0_res10.branch2.b.weight
+512 s4.pathway0_res10.branch2.b_bn.weight
+513 s4.pathway0_res10.branch2.b_bn.bias
+514 s4.pathway0_res10.branch2.b_bn.running_mean
+515 s4.pathway0_res10.branch2.b_bn.running_var
+516 s4.pathway0_res10.branch2.b_bn.num_batches_tracked
+517 s4.pathway0_res10.branch2.c.weight
+518 s4.pathway0_res10.branch2.c_bn.weight
+519 s4.pathway0_res10.branch2.c_bn.bias
+520 s4.pathway0_res10.branch2.c_bn.running_mean
+521 s4.pathway0_res10.branch2.c_bn.running_var
+522 s4.pathway0_res10.branch2.c_bn.num_batches_tracked
+523 s4.pathway0_res11.branch2.a.weight
+524 s4.pathway0_res11.branch2.a_bn.weight
+525 s4.pathway0_res11.branch2.a_bn.bias
+526 s4.pathway0_res11.branch2.a_bn.running_mean
+527 s4.pathway0_res11.branch2.a_bn.running_var
+528 s4.pathway0_res11.branch2.a_bn.num_batches_tracked
+529 s4.pathway0_res11.branch2.b.weight
+530 s4.pathway0_res11.branch2.b_bn.weight
+531 s4.pathway0_res11.branch2.b_bn.bias
+532 s4.pathway0_res11.branch2.b_bn.running_mean
+533 s4.pathway0_res11.branch2.b_bn.running_var
+534 s4.pathway0_res11.branch2.b_bn.num_batches_tracked
+535 s4.pathway0_res11.branch2.c.weight
+536 s4.pathway0_res11.branch2.c_bn.weight
+537 s4.pathway0_res11.branch2.c_bn.bias
+538 s4.pathway0_res11.branch2.c_bn.running_mean
+539 s4.pathway0_res11.branch2.c_bn.running_var
+540 s4.pathway0_res11.branch2.c_bn.num_batches_tracked
+541 s4.pathway0_res12.branch2.a.weight
+542 s4.pathway0_res12.branch2.a_bn.weight
+543 s4.pathway0_res12.branch2.a_bn.bias
+544 s4.pathway0_res12.branch2.a_bn.running_mean
+545 s4.pathway0_res12.branch2.a_bn.running_var
+546 s4.pathway0_res12.branch2.a_bn.num_batches_tracked
+547 s4.pathway0_res12.branch2.b.weight
+548 s4.pathway0_res12.branch2.b_bn.weight
+549 s4.pathway0_res12.branch2.b_bn.bias
+550 s4.pathway0_res12.branch2.b_bn.running_mean
+551 s4.pathway0_res12.branch2.b_bn.running_var
+552 s4.pathway0_res12.branch2.b_bn.num_batches_tracked
+553 s4.pathway0_res12.branch2.c.weight
+554 s4.pathway0_res12.branch2.c_bn.weight
+555 s4.pathway0_res12.branch2.c_bn.bias
+556 s4.pathway0_res12.branch2.c_bn.running_mean
+557 s4.pathway0_res12.branch2.c_bn.running_var
+558 s4.pathway0_res12.branch2.c_bn.num_batches_tracked
+559 s4.pathway0_res13.branch2.a.weight
+560 s4.pathway0_res13.branch2.a_bn.weight
+561 s4.pathway0_res13.branch2.a_bn.bias
+562 s4.pathway0_res13.branch2.a_bn.running_mean
+563 s4.pathway0_res13.branch2.a_bn.running_var
+564 s4.pathway0_res13.branch2.a_bn.num_batches_tracked
+565 s4.pathway0_res13.branch2.b.weight
+566 s4.pathway0_res13.branch2.b_bn.weight
+567 s4.pathway0_res13.branch2.b_bn.bias
+568 s4.pathway0_res13.branch2.b_bn.running_mean
+569 s4.pathway0_res13.branch2.b_bn.running_var
+570 s4.pathway0_res13.branch2.b_bn.num_batches_tracked
+571 s4.pathway0_res13.branch2.c.weight
+572 s4.pathway0_res13.branch2.c_bn.weight
+573 s4.pathway0_res13.branch2.c_bn.bias
+574 s4.pathway0_res13.branch2.c_bn.running_mean
+575 s4.pathway0_res13.branch2.c_bn.running_var
+576 s4.pathway0_res13.branch2.c_bn.num_batches_tracked
+577 s4.pathway0_nonlocal13.conv_theta.weight
+578 s4.pathway0_nonlocal13.conv_theta.bias
+579 s4.pathway0_nonlocal13.conv_phi.weight
+580 s4.pathway0_nonlocal13.conv_phi.bias
+581 s4.pathway0_nonlocal13.conv_g.weight
+582 s4.pathway0_nonlocal13.conv_g.bias
+583 s4.pathway0_nonlocal13.conv_out.weight
+584 s4.pathway0_nonlocal13.conv_out.bias
+585 s4.pathway0_nonlocal13.bn.weight
+586 s4.pathway0_nonlocal13.bn.bias
+587 s4.pathway0_nonlocal13.bn.running_mean
+588 s4.pathway0_nonlocal13.bn.running_var
+589 s4.pathway0_nonlocal13.bn.num_batches_tracked
+590 s4.pathway0_res14.branch2.a.weight
+591 s4.pathway0_res14.branch2.a_bn.weight
+592 s4.pathway0_res14.branch2.a_bn.bias
+593 s4.pathway0_res14.branch2.a_bn.running_mean
+594 s4.pathway0_res14.branch2.a_bn.running_var
+595 s4.pathway0_res14.branch2.a_bn.num_batches_tracked
+596 s4.pathway0_res14.branch2.b.weight
+597 s4.pathway0_res14.branch2.b_bn.weight
+598 s4.pathway0_res14.branch2.b_bn.bias
+599 s4.pathway0_res14.branch2.b_bn.running_mean
+600 s4.pathway0_res14.branch2.b_bn.running_var
+601 s4.pathway0_res14.branch2.b_bn.num_batches_tracked
+602 s4.pathway0_res14.branch2.c.weight
+603 s4.pathway0_res14.branch2.c_bn.weight
+604 s4.pathway0_res14.branch2.c_bn.bias
+605 s4.pathway0_res14.branch2.c_bn.running_mean
+606 s4.pathway0_res14.branch2.c_bn.running_var
+607 s4.pathway0_res14.branch2.c_bn.num_batches_tracked
+608 s4.pathway0_res15.branch2.a.weight
+609 s4.pathway0_res15.branch2.a_bn.weight
+610 s4.pathway0_res15.branch2.a_bn.bias
+611 s4.pathway0_res15.branch2.a_bn.running_mean
+612 s4.pathway0_res15.branch2.a_bn.running_var
+613 s4.pathway0_res15.branch2.a_bn.num_batches_tracked
+614 s4.pathway0_res15.branch2.b.weight
+615 s4.pathway0_res15.branch2.b_bn.weight
+616 s4.pathway0_res15.branch2.b_bn.bias
+617 s4.pathway0_res15.branch2.b_bn.running_mean
+618 s4.pathway0_res15.branch2.b_bn.running_var
+619 s4.pathway0_res15.branch2.b_bn.num_batches_tracked
+620 s4.pathway0_res15.branch2.c.weight
+621 s4.pathway0_res15.branch2.c_bn.weight
+622 s4.pathway0_res15.branch2.c_bn.bias
+623 s4.pathway0_res15.branch2.c_bn.running_mean
+624 s4.pathway0_res15.branch2.c_bn.running_var
+625 s4.pathway0_res15.branch2.c_bn.num_batches_tracked
+626 s4.pathway0_res16.branch2.a.weight
+627 s4.pathway0_res16.branch2.a_bn.weight
+628 s4.pathway0_res16.branch2.a_bn.bias
+629 s4.pathway0_res16.branch2.a_bn.running_mean
+630 s4.pathway0_res16.branch2.a_bn.running_var
+631 s4.pathway0_res16.branch2.a_bn.num_batches_tracked
+632 s4.pathway0_res16.branch2.b.weight
+633 s4.pathway0_res16.branch2.b_bn.weight
+634 s4.pathway0_res16.branch2.b_bn.bias
+635 s4.pathway0_res16.branch2.b_bn.running_mean
+636 s4.pathway0_res16.branch2.b_bn.running_var
+637 s4.pathway0_res16.branch2.b_bn.num_batches_tracked
+638 s4.pathway0_res16.branch2.c.weight
+639 s4.pathway0_res16.branch2.c_bn.weight
+640 s4.pathway0_res16.branch2.c_bn.bias
+641 s4.pathway0_res16.branch2.c_bn.running_mean
+642 s4.pathway0_res16.branch2.c_bn.running_var
+643 s4.pathway0_res16.branch2.c_bn.num_batches_tracked
+644 s4.pathway0_res17.branch2.a.weight
+645 s4.pathway0_res17.branch2.a_bn.weight
+646 s4.pathway0_res17.branch2.a_bn.bias
+647 s4.pathway0_res17.branch2.a_bn.running_mean
+648 s4.pathway0_res17.branch2.a_bn.running_var
+649 s4.pathway0_res17.branch2.a_bn.num_batches_tracked
+650 s4.pathway0_res17.branch2.b.weight
+651 s4.pathway0_res17.branch2.b_bn.weight
+652 s4.pathway0_res17.branch2.b_bn.bias
+653 s4.pathway0_res17.branch2.b_bn.running_mean
+654 s4.pathway0_res17.branch2.b_bn.running_var
+655 s4.pathway0_res17.branch2.b_bn.num_batches_tracked
+656 s4.pathway0_res17.branch2.c.weight
+657 s4.pathway0_res17.branch2.c_bn.weight
+658 s4.pathway0_res17.branch2.c_bn.bias
+659 s4.pathway0_res17.branch2.c_bn.running_mean
+660 s4.pathway0_res17.branch2.c_bn.running_var
+661 s4.pathway0_res17.branch2.c_bn.num_batches_tracked
+662 s4.pathway0_res18.branch2.a.weight
+663 s4.pathway0_res18.branch2.a_bn.weight
+664 s4.pathway0_res18.branch2.a_bn.bias
+665 s4.pathway0_res18.branch2.a_bn.running_mean
+666 s4.pathway0_res18.branch2.a_bn.running_var
+667 s4.pathway0_res18.branch2.a_bn.num_batches_tracked
+668 s4.pathway0_res18.branch2.b.weight
+669 s4.pathway0_res18.branch2.b_bn.weight
+670 s4.pathway0_res18.branch2.b_bn.bias
+671 s4.pathway0_res18.branch2.b_bn.running_mean
+672 s4.pathway0_res18.branch2.b_bn.running_var
+673 s4.pathway0_res18.branch2.b_bn.num_batches_tracked
+674 s4.pathway0_res18.branch2.c.weight
+675 s4.pathway0_res18.branch2.c_bn.weight
+676 s4.pathway0_res18.branch2.c_bn.bias
+677 s4.pathway0_res18.branch2.c_bn.running_mean
+678 s4.pathway0_res18.branch2.c_bn.running_var
+679 s4.pathway0_res18.branch2.c_bn.num_batches_tracked
+680 s4.pathway0_res19.branch2.a.weight
+681 s4.pathway0_res19.branch2.a_bn.weight
+682 s4.pathway0_res19.branch2.a_bn.bias
+683 s4.pathway0_res19.branch2.a_bn.running_mean
+684 s4.pathway0_res19.branch2.a_bn.running_var
+685 s4.pathway0_res19.branch2.a_bn.num_batches_tracked
+686 s4.pathway0_res19.branch2.b.weight
+687 s4.pathway0_res19.branch2.b_bn.weight
+688 s4.pathway0_res19.branch2.b_bn.bias
+689 s4.pathway0_res19.branch2.b_bn.running_mean
+690 s4.pathway0_res19.branch2.b_bn.running_var
+691 s4.pathway0_res19.branch2.b_bn.num_batches_tracked
+692 s4.pathway0_res19.branch2.c.weight
+693 s4.pathway0_res19.branch2.c_bn.weight
+694 s4.pathway0_res19.branch2.c_bn.bias
+695 s4.pathway0_res19.branch2.c_bn.running_mean
+696 s4.pathway0_res19.branch2.c_bn.running_var
+697 s4.pathway0_res19.branch2.c_bn.num_batches_tracked
+698 s4.pathway0_res20.branch2.a.weight
+699 s4.pathway0_res20.branch2.a_bn.weight
+700 s4.pathway0_res20.branch2.a_bn.bias
+701 s4.pathway0_res20.branch2.a_bn.running_mean
+702 s4.pathway0_res20.branch2.a_bn.running_var
+703 s4.pathway0_res20.branch2.a_bn.num_batches_tracked
+704 s4.pathway0_res20.branch2.b.weight
+705 s4.pathway0_res20.branch2.b_bn.weight
+706 s4.pathway0_res20.branch2.b_bn.bias
+707 s4.pathway0_res20.branch2.b_bn.running_mean
+708 s4.pathway0_res20.branch2.b_bn.running_var
+709 s4.pathway0_res20.branch2.b_bn.num_batches_tracked
+710 s4.pathway0_res20.branch2.c.weight
+711 s4.pathway0_res20.branch2.c_bn.weight
+712 s4.pathway0_res20.branch2.c_bn.bias
+713 s4.pathway0_res20.branch2.c_bn.running_mean
+714 s4.pathway0_res20.branch2.c_bn.running_var
+715 s4.pathway0_res20.branch2.c_bn.num_batches_tracked
+716 s4.pathway0_nonlocal20.conv_theta.weight
+717 s4.pathway0_nonlocal20.conv_theta.bias
+718 s4.pathway0_nonlocal20.conv_phi.weight
+719 s4.pathway0_nonlocal20.conv_phi.bias
+720 s4.pathway0_nonlocal20.conv_g.weight
+721 s4.pathway0_nonlocal20.conv_g.bias
+722 s4.pathway0_nonlocal20.conv_out.weight
+723 s4.pathway0_nonlocal20.conv_out.bias
+724 s4.pathway0_nonlocal20.bn.weight
+725 s4.pathway0_nonlocal20.bn.bias
+726 s4.pathway0_nonlocal20.bn.running_mean
+727 s4.pathway0_nonlocal20.bn.running_var
+728 s4.pathway0_nonlocal20.bn.num_batches_tracked
+729 s4.pathway0_res21.branch2.a.weight
+730 s4.pathway0_res21.branch2.a_bn.weight
+731 s4.pathway0_res21.branch2.a_bn.bias
+732 s4.pathway0_res21.branch2.a_bn.running_mean
+733 s4.pathway0_res21.branch2.a_bn.running_var
+734 s4.pathway0_res21.branch2.a_bn.num_batches_tracked
+735 s4.pathway0_res21.branch2.b.weight
+736 s4.pathway0_res21.branch2.b_bn.weight
+737 s4.pathway0_res21.branch2.b_bn.bias
+738 s4.pathway0_res21.branch2.b_bn.running_mean
+739 s4.pathway0_res21.branch2.b_bn.running_var
+740 s4.pathway0_res21.branch2.b_bn.num_batches_tracked
+741 s4.pathway0_res21.branch2.c.weight
+742 s4.pathway0_res21.branch2.c_bn.weight
+743 s4.pathway0_res21.branch2.c_bn.bias
+744 s4.pathway0_res21.branch2.c_bn.running_mean
+745 s4.pathway0_res21.branch2.c_bn.running_var
+746 s4.pathway0_res21.branch2.c_bn.num_batches_tracked
+747 s4.pathway0_res22.branch2.a.weight
+748 s4.pathway0_res22.branch2.a_bn.weight
+749 s4.pathway0_res22.branch2.a_bn.bias
+750 s4.pathway0_res22.branch2.a_bn.running_mean
+751 s4.pathway0_res22.branch2.a_bn.running_var
+752 s4.pathway0_res22.branch2.a_bn.num_batches_tracked
+753 s4.pathway0_res22.branch2.b.weight
+754 s4.pathway0_res22.branch2.b_bn.weight
+755 s4.pathway0_res22.branch2.b_bn.bias
+756 s4.pathway0_res22.branch2.b_bn.running_mean
+757 s4.pathway0_res22.branch2.b_bn.running_var
+758 s4.pathway0_res22.branch2.b_bn.num_batches_tracked
+759 s4.pathway0_res22.branch2.c.weight
+760 s4.pathway0_res22.branch2.c_bn.weight
+761 s4.pathway0_res22.branch2.c_bn.bias
+762 s4.pathway0_res22.branch2.c_bn.running_mean
+763 s4.pathway0_res22.branch2.c_bn.running_var
+764 s4.pathway0_res22.branch2.c_bn.num_batches_tracked
+765 s4.pathway1_res0.branch1.weight
+766 s4.pathway1_res0.branch1_bn.weight
+767 s4.pathway1_res0.branch1_bn.bias
+768 s4.pathway1_res0.branch1_bn.running_mean
+769 s4.pathway1_res0.branch1_bn.running_var
+770 s4.pathway1_res0.branch1_bn.num_batches_tracked
+771 s4.pathway1_res0.branch2.a.weight
+772 s4.pathway1_res0.branch2.a_bn.weight
+773 s4.pathway1_res0.branch2.a_bn.bias
+774 s4.pathway1_res0.branch2.a_bn.running_mean
+775 s4.pathway1_res0.branch2.a_bn.running_var
+776 s4.pathway1_res0.branch2.a_bn.num_batches_tracked
+777 s4.pathway1_res0.branch2.b.weight
+778 s4.pathway1_res0.branch2.b_bn.weight
+779 s4.pathway1_res0.branch2.b_bn.bias
+780 s4.pathway1_res0.branch2.b_bn.running_mean
+781 s4.pathway1_res0.branch2.b_bn.running_var
+782 s4.pathway1_res0.branch2.b_bn.num_batches_tracked
+783 s4.pathway1_res0.branch2.c.weight
+784 s4.pathway1_res0.branch2.c_bn.weight
+785 s4.pathway1_res0.branch2.c_bn.bias
+786 s4.pathway1_res0.branch2.c_bn.running_mean
+787 s4.pathway1_res0.branch2.c_bn.running_var
+788 s4.pathway1_res0.branch2.c_bn.num_batches_tracked
+789 s4.pathway1_res1.branch2.a.weight
+790 s4.pathway1_res1.branch2.a_bn.weight
+791 s4.pathway1_res1.branch2.a_bn.bias
+792 s4.pathway1_res1.branch2.a_bn.running_mean
+793 s4.pathway1_res1.branch2.a_bn.running_var
+794 s4.pathway1_res1.branch2.a_bn.num_batches_tracked
+795 s4.pathway1_res1.branch2.b.weight
+796 s4.pathway1_res1.branch2.b_bn.weight
+797 s4.pathway1_res1.branch2.b_bn.bias
+798 s4.pathway1_res1.branch2.b_bn.running_mean
+799 s4.pathway1_res1.branch2.b_bn.running_var
+800 s4.pathway1_res1.branch2.b_bn.num_batches_tracked
+801 s4.pathway1_res1.branch2.c.weight
+802 s4.pathway1_res1.branch2.c_bn.weight
+803 s4.pathway1_res1.branch2.c_bn.bias
+804 s4.pathway1_res1.branch2.c_bn.running_mean
+805 s4.pathway1_res1.branch2.c_bn.running_var
+806 s4.pathway1_res1.branch2.c_bn.num_batches_tracked
+807 s4.pathway1_res2.branch2.a.weight
+808 s4.pathway1_res2.branch2.a_bn.weight
+809 s4.pathway1_res2.branch2.a_bn.bias
+810 s4.pathway1_res2.branch2.a_bn.running_mean
+811 s4.pathway1_res2.branch2.a_bn.running_var
+812 s4.pathway1_res2.branch2.a_bn.num_batches_tracked
+813 s4.pathway1_res2.branch2.b.weight
+814 s4.pathway1_res2.branch2.b_bn.weight
+815 s4.pathway1_res2.branch2.b_bn.bias
+816 s4.pathway1_res2.branch2.b_bn.running_mean
+817 s4.pathway1_res2.branch2.b_bn.running_var
+818 s4.pathway1_res2.branch2.b_bn.num_batches_tracked
+819 s4.pathway1_res2.branch2.c.weight
+820 s4.pathway1_res2.branch2.c_bn.weight
+821 s4.pathway1_res2.branch2.c_bn.bias
+822 s4.pathway1_res2.branch2.c_bn.running_mean
+823 s4.pathway1_res2.branch2.c_bn.running_var
+824 s4.pathway1_res2.branch2.c_bn.num_batches_tracked
+825 s4.pathway1_res3.branch2.a.weight
+826 s4.pathway1_res3.branch2.a_bn.weight
+827 s4.pathway1_res3.branch2.a_bn.bias
+828 s4.pathway1_res3.branch2.a_bn.running_mean
+829 s4.pathway1_res3.branch2.a_bn.running_var
+830 s4.pathway1_res3.branch2.a_bn.num_batches_tracked
+831 s4.pathway1_res3.branch2.b.weight
+832 s4.pathway1_res3.branch2.b_bn.weight
+833 s4.pathway1_res3.branch2.b_bn.bias
+834 s4.pathway1_res3.branch2.b_bn.running_mean
+835 s4.pathway1_res3.branch2.b_bn.running_var
+836 s4.pathway1_res3.branch2.b_bn.num_batches_tracked
+837 s4.pathway1_res3.branch2.c.weight
+838 s4.pathway1_res3.branch2.c_bn.weight
+839 s4.pathway1_res3.branch2.c_bn.bias
+840 s4.pathway1_res3.branch2.c_bn.running_mean
+841 s4.pathway1_res3.branch2.c_bn.running_var
+842 s4.pathway1_res3.branch2.c_bn.num_batches_tracked
+843 s4.pathway1_res4.branch2.a.weight
+844 s4.pathway1_res4.branch2.a_bn.weight
+845 s4.pathway1_res4.branch2.a_bn.bias
+846 s4.pathway1_res4.branch2.a_bn.running_mean
+847 s4.pathway1_res4.branch2.a_bn.running_var
+848 s4.pathway1_res4.branch2.a_bn.num_batches_tracked
+849 s4.pathway1_res4.branch2.b.weight
+850 s4.pathway1_res4.branch2.b_bn.weight
+851 s4.pathway1_res4.branch2.b_bn.bias
+852 s4.pathway1_res4.branch2.b_bn.running_mean
+853 s4.pathway1_res4.branch2.b_bn.running_var
+854 s4.pathway1_res4.branch2.b_bn.num_batches_tracked
+855 s4.pathway1_res4.branch2.c.weight
+856 s4.pathway1_res4.branch2.c_bn.weight
+857 s4.pathway1_res4.branch2.c_bn.bias
+858 s4.pathway1_res4.branch2.c_bn.running_mean
+859 s4.pathway1_res4.branch2.c_bn.running_var
+860 s4.pathway1_res4.branch2.c_bn.num_batches_tracked
+861 s4.pathway1_res5.branch2.a.weight
+862 s4.pathway1_res5.branch2.a_bn.weight
+863 s4.pathway1_res5.branch2.a_bn.bias
+864 s4.pathway1_res5.branch2.a_bn.running_mean
+865 s4.pathway1_res5.branch2.a_bn.running_var
+866 s4.pathway1_res5.branch2.a_bn.num_batches_tracked
+867 s4.pathway1_res5.branch2.b.weight
+868 s4.pathway1_res5.branch2.b_bn.weight
+869 s4.pathway1_res5.branch2.b_bn.bias
+870 s4.pathway1_res5.branch2.b_bn.running_mean
+871 s4.pathway1_res5.branch2.b_bn.running_var
+872 s4.pathway1_res5.branch2.b_bn.num_batches_tracked
+873 s4.pathway1_res5.branch2.c.weight
+874 s4.pathway1_res5.branch2.c_bn.weight
+875 s4.pathway1_res5.branch2.c_bn.bias
+876 s4.pathway1_res5.branch2.c_bn.running_mean
+877 s4.pathway1_res5.branch2.c_bn.running_var
+878 s4.pathway1_res5.branch2.c_bn.num_batches_tracked
+879 s4.pathway1_res6.branch2.a.weight
+880 s4.pathway1_res6.branch2.a_bn.weight
+881 s4.pathway1_res6.branch2.a_bn.bias
+882 s4.pathway1_res6.branch2.a_bn.running_mean
+883 s4.pathway1_res6.branch2.a_bn.running_var
+884 s4.pathway1_res6.branch2.a_bn.num_batches_tracked
+885 s4.pathway1_res6.branch2.b.weight
+886 s4.pathway1_res6.branch2.b_bn.weight
+887 s4.pathway1_res6.branch2.b_bn.bias
+888 s4.pathway1_res6.branch2.b_bn.running_mean
+889 s4.pathway1_res6.branch2.b_bn.running_var
+890 s4.pathway1_res6.branch2.b_bn.num_batches_tracked
+891 s4.pathway1_res6.branch2.c.weight
+892 s4.pathway1_res6.branch2.c_bn.weight
+893 s4.pathway1_res6.branch2.c_bn.bias
+894 s4.pathway1_res6.branch2.c_bn.running_mean
+895 s4.pathway1_res6.branch2.c_bn.running_var
+896 s4.pathway1_res6.branch2.c_bn.num_batches_tracked
+897 s4.pathway1_res7.branch2.a.weight
+898 s4.pathway1_res7.branch2.a_bn.weight
+899 s4.pathway1_res7.branch2.a_bn.bias
+900 s4.pathway1_res7.branch2.a_bn.running_mean
+901 s4.pathway1_res7.branch2.a_bn.running_var
+902 s4.pathway1_res7.branch2.a_bn.num_batches_tracked
+903 s4.pathway1_res7.branch2.b.weight
+904 s4.pathway1_res7.branch2.b_bn.weight
+905 s4.pathway1_res7.branch2.b_bn.bias
+906 s4.pathway1_res7.branch2.b_bn.running_mean
+907 s4.pathway1_res7.branch2.b_bn.running_var
+908 s4.pathway1_res7.branch2.b_bn.num_batches_tracked
+909 s4.pathway1_res7.branch2.c.weight
+910 s4.pathway1_res7.branch2.c_bn.weight
+911 s4.pathway1_res7.branch2.c_bn.bias
+912 s4.pathway1_res7.branch2.c_bn.running_mean
+913 s4.pathway1_res7.branch2.c_bn.running_var
+914 s4.pathway1_res7.branch2.c_bn.num_batches_tracked
+915 s4.pathway1_res8.branch2.a.weight
+916 s4.pathway1_res8.branch2.a_bn.weight
+917 s4.pathway1_res8.branch2.a_bn.bias
+918 s4.pathway1_res8.branch2.a_bn.running_mean
+919 s4.pathway1_res8.branch2.a_bn.running_var
+920 s4.pathway1_res8.branch2.a_bn.num_batches_tracked
+921 s4.pathway1_res8.branch2.b.weight
+922 s4.pathway1_res8.branch2.b_bn.weight
+923 s4.pathway1_res8.branch2.b_bn.bias
+924 s4.pathway1_res8.branch2.b_bn.running_mean
+925 s4.pathway1_res8.branch2.b_bn.running_var
+926 s4.pathway1_res8.branch2.b_bn.num_batches_tracked
+927 s4.pathway1_res8.branch2.c.weight
+928 s4.pathway1_res8.branch2.c_bn.weight
+929 s4.pathway1_res8.branch2.c_bn.bias
+930 s4.pathway1_res8.branch2.c_bn.running_mean
+931 s4.pathway1_res8.branch2.c_bn.running_var
+932 s4.pathway1_res8.branch2.c_bn.num_batches_tracked
+933 s4.pathway1_res9.branch2.a.weight
+934 s4.pathway1_res9.branch2.a_bn.weight
+935 s4.pathway1_res9.branch2.a_bn.bias
+936 s4.pathway1_res9.branch2.a_bn.running_mean
+937 s4.pathway1_res9.branch2.a_bn.running_var
+938 s4.pathway1_res9.branch2.a_bn.num_batches_tracked
+939 s4.pathway1_res9.branch2.b.weight
+940 s4.pathway1_res9.branch2.b_bn.weight
+941 s4.pathway1_res9.branch2.b_bn.bias
+942 s4.pathway1_res9.branch2.b_bn.running_mean
+943 s4.pathway1_res9.branch2.b_bn.running_var
+944 s4.pathway1_res9.branch2.b_bn.num_batches_tracked
+945 s4.pathway1_res9.branch2.c.weight
+946 s4.pathway1_res9.branch2.c_bn.weight
+947 s4.pathway1_res9.branch2.c_bn.bias
+948 s4.pathway1_res9.branch2.c_bn.running_mean
+949 s4.pathway1_res9.branch2.c_bn.running_var
+950 s4.pathway1_res9.branch2.c_bn.num_batches_tracked
+951 s4.pathway1_res10.branch2.a.weight
+952 s4.pathway1_res10.branch2.a_bn.weight
+953 s4.pathway1_res10.branch2.a_bn.bias
+954 s4.pathway1_res10.branch2.a_bn.running_mean
+955 s4.pathway1_res10.branch2.a_bn.running_var
+956 s4.pathway1_res10.branch2.a_bn.num_batches_tracked
+957 s4.pathway1_res10.branch2.b.weight
+958 s4.pathway1_res10.branch2.b_bn.weight
+959 s4.pathway1_res10.branch2.b_bn.bias
+960 s4.pathway1_res10.branch2.b_bn.running_mean
+961 s4.pathway1_res10.branch2.b_bn.running_var
+962 s4.pathway1_res10.branch2.b_bn.num_batches_tracked
+963 s4.pathway1_res10.branch2.c.weight
+964 s4.pathway1_res10.branch2.c_bn.weight
+965 s4.pathway1_res10.branch2.c_bn.bias
+966 s4.pathway1_res10.branch2.c_bn.running_mean
+967 s4.pathway1_res10.branch2.c_bn.running_var
+968 s4.pathway1_res10.branch2.c_bn.num_batches_tracked
+969 s4.pathway1_res11.branch2.a.weight
+970 s4.pathway1_res11.branch2.a_bn.weight
+971 s4.pathway1_res11.branch2.a_bn.bias
+972 s4.pathway1_res11.branch2.a_bn.running_mean
+973 s4.pathway1_res11.branch2.a_bn.running_var
+974 s4.pathway1_res11.branch2.a_bn.num_batches_tracked
+975 s4.pathway1_res11.branch2.b.weight
+976 s4.pathway1_res11.branch2.b_bn.weight
+977 s4.pathway1_res11.branch2.b_bn.bias
+978 s4.pathway1_res11.branch2.b_bn.running_mean
+979 s4.pathway1_res11.branch2.b_bn.running_var
+980 s4.pathway1_res11.branch2.b_bn.num_batches_tracked
+981 s4.pathway1_res11.branch2.c.weight
+982 s4.pathway1_res11.branch2.c_bn.weight
+983 s4.pathway1_res11.branch2.c_bn.bias
+984 s4.pathway1_res11.branch2.c_bn.running_mean
+985 s4.pathway1_res11.branch2.c_bn.running_var
+986 s4.pathway1_res11.branch2.c_bn.num_batches_tracked
+987 s4.pathway1_res12.branch2.a.weight
+988 s4.pathway1_res12.branch2.a_bn.weight
+989 s4.pathway1_res12.branch2.a_bn.bias
+990 s4.pathway1_res12.branch2.a_bn.running_mean
+991 s4.pathway1_res12.branch2.a_bn.running_var
+992 s4.pathway1_res12.branch2.a_bn.num_batches_tracked
+993 s4.pathway1_res12.branch2.b.weight
+994 s4.pathway1_res12.branch2.b_bn.weight
+995 s4.pathway1_res12.branch2.b_bn.bias
+996 s4.pathway1_res12.branch2.b_bn.running_mean
+997 s4.pathway1_res12.branch2.b_bn.running_var
+998 s4.pathway1_res12.branch2.b_bn.num_batches_tracked
+999 s4.pathway1_res12.branch2.c.weight
+1000 s4.pathway1_res12.branch2.c_bn.weight
+1001 s4.pathway1_res12.branch2.c_bn.bias
+1002 s4.pathway1_res12.branch2.c_bn.running_mean
+1003 s4.pathway1_res12.branch2.c_bn.running_var
+1004 s4.pathway1_res12.branch2.c_bn.num_batches_tracked
+1005 s4.pathway1_res13.branch2.a.weight
+1006 s4.pathway1_res13.branch2.a_bn.weight
+1007 s4.pathway1_res13.branch2.a_bn.bias
+1008 s4.pathway1_res13.branch2.a_bn.running_mean
+1009 s4.pathway1_res13.branch2.a_bn.running_var
+1010 s4.pathway1_res13.branch2.a_bn.num_batches_tracked
+1011 s4.pathway1_res13.branch2.b.weight
+1012 s4.pathway1_res13.branch2.b_bn.weight
+1013 s4.pathway1_res13.branch2.b_bn.bias
+1014 s4.pathway1_res13.branch2.b_bn.running_mean
+1015 s4.pathway1_res13.branch2.b_bn.running_var
+1016 s4.pathway1_res13.branch2.b_bn.num_batches_tracked
+1017 s4.pathway1_res13.branch2.c.weight
+1018 s4.pathway1_res13.branch2.c_bn.weight
+1019 s4.pathway1_res13.branch2.c_bn.bias
+1020 s4.pathway1_res13.branch2.c_bn.running_mean
+1021 s4.pathway1_res13.branch2.c_bn.running_var
+1022 s4.pathway1_res13.branch2.c_bn.num_batches_tracked
+1023 s4.pathway1_res14.branch2.a.weight
+1024 s4.pathway1_res14.branch2.a_bn.weight
+1025 s4.pathway1_res14.branch2.a_bn.bias
+1026 s4.pathway1_res14.branch2.a_bn.running_mean
+1027 s4.pathway1_res14.branch2.a_bn.running_var
+1028 s4.pathway1_res14.branch2.a_bn.num_batches_tracked
+1029 s4.pathway1_res14.branch2.b.weight
+1030 s4.pathway1_res14.branch2.b_bn.weight
+1031 s4.pathway1_res14.branch2.b_bn.bias
+1032 s4.pathway1_res14.branch2.b_bn.running_mean
+1033 s4.pathway1_res14.branch2.b_bn.running_var
+1034 s4.pathway1_res14.branch2.b_bn.num_batches_tracked
+1035 s4.pathway1_res14.branch2.c.weight
+1036 s4.pathway1_res14.branch2.c_bn.weight
+1037 s4.pathway1_res14.branch2.c_bn.bias
+1038 s4.pathway1_res14.branch2.c_bn.running_mean
+1039 s4.pathway1_res14.branch2.c_bn.running_var
+1040 s4.pathway1_res14.branch2.c_bn.num_batches_tracked
+1041 s4.pathway1_res15.branch2.a.weight
+1042 s4.pathway1_res15.branch2.a_bn.weight
+1043 s4.pathway1_res15.branch2.a_bn.bias
+1044 s4.pathway1_res15.branch2.a_bn.running_mean
+1045 s4.pathway1_res15.branch2.a_bn.running_var
+1046 s4.pathway1_res15.branch2.a_bn.num_batches_tracked
+1047 s4.pathway1_res15.branch2.b.weight
+1048 s4.pathway1_res15.branch2.b_bn.weight
+1049 s4.pathway1_res15.branch2.b_bn.bias
+1050 s4.pathway1_res15.branch2.b_bn.running_mean
+1051 s4.pathway1_res15.branch2.b_bn.running_var
+1052 s4.pathway1_res15.branch2.b_bn.num_batches_tracked
+1053 s4.pathway1_res15.branch2.c.weight
+1054 s4.pathway1_res15.branch2.c_bn.weight
+1055 s4.pathway1_res15.branch2.c_bn.bias
+1056 s4.pathway1_res15.branch2.c_bn.running_mean
+1057 s4.pathway1_res15.branch2.c_bn.running_var
+1058 s4.pathway1_res15.branch2.c_bn.num_batches_tracked
+1059 s4.pathway1_res16.branch2.a.weight
+1060 s4.pathway1_res16.branch2.a_bn.weight
+1061 s4.pathway1_res16.branch2.a_bn.bias
+1062 s4.pathway1_res16.branch2.a_bn.running_mean
+1063 s4.pathway1_res16.branch2.a_bn.running_var
+1064 s4.pathway1_res16.branch2.a_bn.num_batches_tracked
+1065 s4.pathway1_res16.branch2.b.weight
+1066 s4.pathway1_res16.branch2.b_bn.weight
+1067 s4.pathway1_res16.branch2.b_bn.bias
+1068 s4.pathway1_res16.branch2.b_bn.running_mean
+1069 s4.pathway1_res16.branch2.b_bn.running_var
+1070 s4.pathway1_res16.branch2.b_bn.num_batches_tracked
+1071 s4.pathway1_res16.branch2.c.weight
+1072 s4.pathway1_res16.branch2.c_bn.weight
+1073 s4.pathway1_res16.branch2.c_bn.bias
+1074 s4.pathway1_res16.branch2.c_bn.running_mean
+1075 s4.pathway1_res16.branch2.c_bn.running_var
+1076 s4.pathway1_res16.branch2.c_bn.num_batches_tracked
+1077 s4.pathway1_res17.branch2.a.weight
+1078 s4.pathway1_res17.branch2.a_bn.weight
+1079 s4.pathway1_res17.branch2.a_bn.bias
+1080 s4.pathway1_res17.branch2.a_bn.running_mean
+1081 s4.pathway1_res17.branch2.a_bn.running_var
+1082 s4.pathway1_res17.branch2.a_bn.num_batches_tracked
+1083 s4.pathway1_res17.branch2.b.weight
+1084 s4.pathway1_res17.branch2.b_bn.weight
+1085 s4.pathway1_res17.branch2.b_bn.bias
+1086 s4.pathway1_res17.branch2.b_bn.running_mean
+1087 s4.pathway1_res17.branch2.b_bn.running_var
+1088 s4.pathway1_res17.branch2.b_bn.num_batches_tracked
+1089 s4.pathway1_res17.branch2.c.weight
+1090 s4.pathway1_res17.branch2.c_bn.weight
+1091 s4.pathway1_res17.branch2.c_bn.bias
+1092 s4.pathway1_res17.branch2.c_bn.running_mean
+1093 s4.pathway1_res17.branch2.c_bn.running_var
+1094 s4.pathway1_res17.branch2.c_bn.num_batches_tracked
+1095 s4.pathway1_res18.branch2.a.weight
+1096 s4.pathway1_res18.branch2.a_bn.weight
+1097 s4.pathway1_res18.branch2.a_bn.bias
+1098 s4.pathway1_res18.branch2.a_bn.running_mean
+1099 s4.pathway1_res18.branch2.a_bn.running_var
+1100 s4.pathway1_res18.branch2.a_bn.num_batches_tracked
+1101 s4.pathway1_res18.branch2.b.weight
+1102 s4.pathway1_res18.branch2.b_bn.weight
+1103 s4.pathway1_res18.branch2.b_bn.bias
+1104 s4.pathway1_res18.branch2.b_bn.running_mean
+1105 s4.pathway1_res18.branch2.b_bn.running_var
+1106 s4.pathway1_res18.branch2.b_bn.num_batches_tracked
+1107 s4.pathway1_res18.branch2.c.weight
+1108 s4.pathway1_res18.branch2.c_bn.weight
+1109 s4.pathway1_res18.branch2.c_bn.bias
+1110 s4.pathway1_res18.branch2.c_bn.running_mean
+1111 s4.pathway1_res18.branch2.c_bn.running_var
+1112 s4.pathway1_res18.branch2.c_bn.num_batches_tracked
+1113 s4.pathway1_res19.branch2.a.weight
+1114 s4.pathway1_res19.branch2.a_bn.weight
+1115 s4.pathway1_res19.branch2.a_bn.bias
+1116 s4.pathway1_res19.branch2.a_bn.running_mean
+1117 s4.pathway1_res19.branch2.a_bn.running_var
+1118 s4.pathway1_res19.branch2.a_bn.num_batches_tracked
+1119 s4.pathway1_res19.branch2.b.weight
+1120 s4.pathway1_res19.branch2.b_bn.weight
+1121 s4.pathway1_res19.branch2.b_bn.bias
+1122 s4.pathway1_res19.branch2.b_bn.running_mean
+1123 s4.pathway1_res19.branch2.b_bn.running_var
+1124 s4.pathway1_res19.branch2.b_bn.num_batches_tracked
+1125 s4.pathway1_res19.branch2.c.weight
+1126 s4.pathway1_res19.branch2.c_bn.weight
+1127 s4.pathway1_res19.branch2.c_bn.bias
+1128 s4.pathway1_res19.branch2.c_bn.running_mean
+1129 s4.pathway1_res19.branch2.c_bn.running_var
+1130 s4.pathway1_res19.branch2.c_bn.num_batches_tracked
+1131 s4.pathway1_res20.branch2.a.weight
+1132 s4.pathway1_res20.branch2.a_bn.weight
+1133 s4.pathway1_res20.branch2.a_bn.bias
+1134 s4.pathway1_res20.branch2.a_bn.running_mean
+1135 s4.pathway1_res20.branch2.a_bn.running_var
+1136 s4.pathway1_res20.branch2.a_bn.num_batches_tracked
+1137 s4.pathway1_res20.branch2.b.weight
+1138 s4.pathway1_res20.branch2.b_bn.weight
+1139 s4.pathway1_res20.branch2.b_bn.bias
+1140 s4.pathway1_res20.branch2.b_bn.running_mean
+1141 s4.pathway1_res20.branch2.b_bn.running_var
+1142 s4.pathway1_res20.branch2.b_bn.num_batches_tracked
+1143 s4.pathway1_res20.branch2.c.weight
+1144 s4.pathway1_res20.branch2.c_bn.weight
+1145 s4.pathway1_res20.branch2.c_bn.bias
+1146 s4.pathway1_res20.branch2.c_bn.running_mean
+1147 s4.pathway1_res20.branch2.c_bn.running_var
+1148 s4.pathway1_res20.branch2.c_bn.num_batches_tracked
+1149 s4.pathway1_res21.branch2.a.weight
+1150 s4.pathway1_res21.branch2.a_bn.weight
+1151 s4.pathway1_res21.branch2.a_bn.bias
+1152 s4.pathway1_res21.branch2.a_bn.running_mean
+1153 s4.pathway1_res21.branch2.a_bn.running_var
+1154 s4.pathway1_res21.branch2.a_bn.num_batches_tracked
+1155 s4.pathway1_res21.branch2.b.weight
+1156 s4.pathway1_res21.branch2.b_bn.weight
+1157 s4.pathway1_res21.branch2.b_bn.bias
+1158 s4.pathway1_res21.branch2.b_bn.running_mean
+1159 s4.pathway1_res21.branch2.b_bn.running_var
+1160 s4.pathway1_res21.branch2.b_bn.num_batches_tracked
+1161 s4.pathway1_res21.branch2.c.weight
+1162 s4.pathway1_res21.branch2.c_bn.weight
+1163 s4.pathway1_res21.branch2.c_bn.bias
+1164 s4.pathway1_res21.branch2.c_bn.running_mean
+1165 s4.pathway1_res21.branch2.c_bn.running_var
+1166 s4.pathway1_res21.branch2.c_bn.num_batches_tracked
+1167 s4.pathway1_res22.branch2.a.weight
+1168 s4.pathway1_res22.branch2.a_bn.weight
+1169 s4.pathway1_res22.branch2.a_bn.bias
+1170 s4.pathway1_res22.branch2.a_bn.running_mean
+1171 s4.pathway1_res22.branch2.a_bn.running_var
+1172 s4.pathway1_res22.branch2.a_bn.num_batches_tracked
+1173 s4.pathway1_res22.branch2.b.weight
+1174 s4.pathway1_res22.branch2.b_bn.weight
+1175 s4.pathway1_res22.branch2.b_bn.bias
+1176 s4.pathway1_res22.branch2.b_bn.running_mean
+1177 s4.pathway1_res22.branch2.b_bn.running_var
+1178 s4.pathway1_res22.branch2.b_bn.num_batches_tracked
+1179 s4.pathway1_res22.branch2.c.weight
+1180 s4.pathway1_res22.branch2.c_bn.weight
+1181 s4.pathway1_res22.branch2.c_bn.bias
+1182 s4.pathway1_res22.branch2.c_bn.running_mean
+1183 s4.pathway1_res22.branch2.c_bn.running_var
+1184 s4.pathway1_res22.branch2.c_bn.num_batches_tracked
+1185 s4_fuse.conv_f2s.weight
+1186 s4_fuse.bn.weight
+1187 s4_fuse.bn.bias
+1188 s4_fuse.bn.running_mean
+1189 s4_fuse.bn.running_var
+1190 s4_fuse.bn.num_batches_tracked
+1191 s5.pathway0_res0.branch1.weight
+1192 s5.pathway0_res0.branch1_bn.weight
+1193 s5.pathway0_res0.branch1_bn.bias
+1194 s5.pathway0_res0.branch1_bn.running_mean
+1195 s5.pathway0_res0.branch1_bn.running_var
+1196 s5.pathway0_res0.branch1_bn.num_batches_tracked
+1197 s5.pathway0_res0.branch2.a.weight
+1198 s5.pathway0_res0.branch2.a_bn.weight
+1199 s5.pathway0_res0.branch2.a_bn.bias
+1200 s5.pathway0_res0.branch2.a_bn.running_mean
+1201 s5.pathway0_res0.branch2.a_bn.running_var
+1202 s5.pathway0_res0.branch2.a_bn.num_batches_tracked
+1203 s5.pathway0_res0.branch2.b.weight
+1204 s5.pathway0_res0.branch2.b_bn.weight
+1205 s5.pathway0_res0.branch2.b_bn.bias
+1206 s5.pathway0_res0.branch2.b_bn.running_mean
+1207 s5.pathway0_res0.branch2.b_bn.running_var
+1208 s5.pathway0_res0.branch2.b_bn.num_batches_tracked
+1209 s5.pathway0_res0.branch2.c.weight
+1210 s5.pathway0_res0.branch2.c_bn.weight
+1211 s5.pathway0_res0.branch2.c_bn.bias
+1212 s5.pathway0_res0.branch2.c_bn.running_mean
+1213 s5.pathway0_res0.branch2.c_bn.running_var
+1214 s5.pathway0_res0.branch2.c_bn.num_batches_tracked
+1215 s5.pathway0_res1.branch2.a.weight
+1216 s5.pathway0_res1.branch2.a_bn.weight
+1217 s5.pathway0_res1.branch2.a_bn.bias
+1218 s5.pathway0_res1.branch2.a_bn.running_mean
+1219 s5.pathway0_res1.branch2.a_bn.running_var
+1220 s5.pathway0_res1.branch2.a_bn.num_batches_tracked
+1221 s5.pathway0_res1.branch2.b.weight
+1222 s5.pathway0_res1.branch2.b_bn.weight
+1223 s5.pathway0_res1.branch2.b_bn.bias
+1224 s5.pathway0_res1.branch2.b_bn.running_mean
+1225 s5.pathway0_res1.branch2.b_bn.running_var
+1226 s5.pathway0_res1.branch2.b_bn.num_batches_tracked
+1227 s5.pathway0_res1.branch2.c.weight
+1228 s5.pathway0_res1.branch2.c_bn.weight
+1229 s5.pathway0_res1.branch2.c_bn.bias
+1230 s5.pathway0_res1.branch2.c_bn.running_mean
+1231 s5.pathway0_res1.branch2.c_bn.running_var
+1232 s5.pathway0_res1.branch2.c_bn.num_batches_tracked
+1233 s5.pathway0_res2.branch2.a.weight
+1234 s5.pathway0_res2.branch2.a_bn.weight
+1235 s5.pathway0_res2.branch2.a_bn.bias
+1236 s5.pathway0_res2.branch2.a_bn.running_mean
+1237 s5.pathway0_res2.branch2.a_bn.running_var
+1238 s5.pathway0_res2.branch2.a_bn.num_batches_tracked
+1239 s5.pathway0_res2.branch2.b.weight
+1240 s5.pathway0_res2.branch2.b_bn.weight
+1241 s5.pathway0_res2.branch2.b_bn.bias
+1242 s5.pathway0_res2.branch2.b_bn.running_mean
+1243 s5.pathway0_res2.branch2.b_bn.running_var
+1244 s5.pathway0_res2.branch2.b_bn.num_batches_tracked
+1245 s5.pathway0_res2.branch2.c.weight
+1246 s5.pathway0_res2.branch2.c_bn.weight
+1247 s5.pathway0_res2.branch2.c_bn.bias
+1248 s5.pathway0_res2.branch2.c_bn.running_mean
+1249 s5.pathway0_res2.branch2.c_bn.running_var
+1250 s5.pathway0_res2.branch2.c_bn.num_batches_tracked
+1251 s5.pathway1_res0.branch1.weight
+1252 s5.pathway1_res0.branch1_bn.weight
+1253 s5.pathway1_res0.branch1_bn.bias
+1254 s5.pathway1_res0.branch1_bn.running_mean
+1255 s5.pathway1_res0.branch1_bn.running_var
+1256 s5.pathway1_res0.branch1_bn.num_batches_tracked
+1257 s5.pathway1_res0.branch2.a.weight
+1258 s5.pathway1_res0.branch2.a_bn.weight
+1259 s5.pathway1_res0.branch2.a_bn.bias
+1260 s5.pathway1_res0.branch2.a_bn.running_mean
+1261 s5.pathway1_res0.branch2.a_bn.running_var
+1262 s5.pathway1_res0.branch2.a_bn.num_batches_tracked
+1263 s5.pathway1_res0.branch2.b.weight
+1264 s5.pathway1_res0.branch2.b_bn.weight
+1265 s5.pathway1_res0.branch2.b_bn.bias
+1266 s5.pathway1_res0.branch2.b_bn.running_mean
+1267 s5.pathway1_res0.branch2.b_bn.running_var
+1268 s5.pathway1_res0.branch2.b_bn.num_batches_tracked
+1269 s5.pathway1_res0.branch2.c.weight
+1270 s5.pathway1_res0.branch2.c_bn.weight
+1271 s5.pathway1_res0.branch2.c_bn.bias
+1272 s5.pathway1_res0.branch2.c_bn.running_mean
+1273 s5.pathway1_res0.branch2.c_bn.running_var
+1274 s5.pathway1_res0.branch2.c_bn.num_batches_tracked
+1275 s5.pathway1_res1.branch2.a.weight
+1276 s5.pathway1_res1.branch2.a_bn.weight
+1277 s5.pathway1_res1.branch2.a_bn.bias
+1278 s5.pathway1_res1.branch2.a_bn.running_mean
+1279 s5.pathway1_res1.branch2.a_bn.running_var
+1280 s5.pathway1_res1.branch2.a_bn.num_batches_tracked
+1281 s5.pathway1_res1.branch2.b.weight
+1282 s5.pathway1_res1.branch2.b_bn.weight
+1283 s5.pathway1_res1.branch2.b_bn.bias
+1284 s5.pathway1_res1.branch2.b_bn.running_mean
+1285 s5.pathway1_res1.branch2.b_bn.running_var
+1286 s5.pathway1_res1.branch2.b_bn.num_batches_tracked
+1287 s5.pathway1_res1.branch2.c.weight
+1288 s5.pathway1_res1.branch2.c_bn.weight
+1289 s5.pathway1_res1.branch2.c_bn.bias
+1290 s5.pathway1_res1.branch2.c_bn.running_mean
+1291 s5.pathway1_res1.branch2.c_bn.running_var
+1292 s5.pathway1_res1.branch2.c_bn.num_batches_tracked
+1293 s5.pathway1_res2.branch2.a.weight
+1294 s5.pathway1_res2.branch2.a_bn.weight
+1295 s5.pathway1_res2.branch2.a_bn.bias
+1296 s5.pathway1_res2.branch2.a_bn.running_mean
+1297 s5.pathway1_res2.branch2.a_bn.running_var
+1298 s5.pathway1_res2.branch2.a_bn.num_batches_tracked
+1299 s5.pathway1_res2.branch2.b.weight
+1300 s5.pathway1_res2.branch2.b_bn.weight
+1301 s5.pathway1_res2.branch2.b_bn.bias
+1302 s5.pathway1_res2.branch2.b_bn.running_mean
+1303 s5.pathway1_res2.branch2.b_bn.running_var
+1304 s5.pathway1_res2.branch2.b_bn.num_batches_tracked
+1305 s5.pathway1_res2.branch2.c.weight
+1306 s5.pathway1_res2.branch2.c_bn.weight
+1307 s5.pathway1_res2.branch2.c_bn.bias
+1308 s5.pathway1_res2.branch2.c_bn.running_mean
+1309 s5.pathway1_res2.branch2.c_bn.running_var
+1310 s5.pathway1_res2.branch2.c_bn.num_batches_tracked
+0 s1.pathway0_stem.conv.weight
+1 s1.pathway0_stem.bn.weight
+2 s1.pathway0_stem.bn.bias
+3 s1.pathway0_stem.bn.running_mean
+4 s1.pathway0_stem.bn.running_var
+5 s1.pathway0_stem.bn.num_batches_tracked
+6 s1.pathway1_stem.conv.weight
+7 s1.pathway1_stem.bn.weight
+8 s1.pathway1_stem.bn.bias
+9 s1.pathway1_stem.bn.running_mean
+10 s1.pathway1_stem.bn.running_var
+11 s1.pathway1_stem.bn.num_batches_tracked
+12 s1_fuse.conv_f2s.weight
+13 s1_fuse.bn.weight
+14 s1_fuse.bn.bias
+15 s1_fuse.bn.running_mean
+16 s1_fuse.bn.running_var
+17 s1_fuse.bn.num_batches_tracked
+18 s2.pathway0_res0.branch1.weight
+19 s2.pathway0_res0.branch1_bn.weight
+20 s2.pathway0_res0.branch1_bn.bias
+21 s2.pathway0_res0.branch1_bn.running_mean
+22 s2.pathway0_res0.branch1_bn.running_var
+23 s2.pathway0_res0.branch1_bn.num_batches_tracked
+24 s2.pathway0_res0.branch2.a.weight
+25 s2.pathway0_res0.branch2.a_bn.weight
+26 s2.pathway0_res0.branch2.a_bn.bias
+27 s2.pathway0_res0.branch2.a_bn.running_mean
+28 s2.pathway0_res0.branch2.a_bn.running_var
+29 s2.pathway0_res0.branch2.a_bn.num_batches_tracked
+30 s2.pathway0_res0.branch2.b.weight
+31 s2.pathway0_res0.branch2.b_bn.weight
+32 s2.pathway0_res0.branch2.b_bn.bias
+33 s2.pathway0_res0.branch2.b_bn.running_mean
+34 s2.pathway0_res0.branch2.b_bn.running_var
+35 s2.pathway0_res0.branch2.b_bn.num_batches_tracked
+36 s2.pathway0_res0.branch2.c.weight
+37 s2.pathway0_res0.branch2.c_bn.weight
+38 s2.pathway0_res0.branch2.c_bn.bias
+39 s2.pathway0_res0.branch2.c_bn.running_mean
+40 s2.pathway0_res0.branch2.c_bn.running_var
+41 s2.pathway0_res0.branch2.c_bn.num_batches_tracked
+42 s2.pathway0_res1.branch2.a.weight
+43 s2.pathway0_res1.branch2.a_bn.weight
+44 s2.pathway0_res1.branch2.a_bn.bias
+45 s2.pathway0_res1.branch2.a_bn.running_mean
+46 s2.pathway0_res1.branch2.a_bn.running_var
+47 s2.pathway0_res1.branch2.a_bn.num_batches_tracked
+48 s2.pathway0_res1.branch2.b.weight
+49 s2.pathway0_res1.branch2.b_bn.weight
+50 s2.pathway0_res1.branch2.b_bn.bias
+51 s2.pathway0_res1.branch2.b_bn.running_mean
+52 s2.pathway0_res1.branch2.b_bn.running_var
+53 s2.pathway0_res1.branch2.b_bn.num_batches_tracked
+54 s2.pathway0_res1.branch2.c.weight
+55 s2.pathway0_res1.branch2.c_bn.weight
+56 s2.pathway0_res1.branch2.c_bn.bias
+57 s2.pathway0_res1.branch2.c_bn.running_mean
+58 s2.pathway0_res1.branch2.c_bn.running_var
+59 s2.pathway0_res1.branch2.c_bn.num_batches_tracked
+60 s2.pathway0_res2.branch2.a.weight
+61 s2.pathway0_res2.branch2.a_bn.weight
+62 s2.pathway0_res2.branch2.a_bn.bias
+63 s2.pathway0_res2.branch2.a_bn.running_mean
+64 s2.pathway0_res2.branch2.a_bn.running_var
+65 s2.pathway0_res2.branch2.a_bn.num_batches_tracked
+66 s2.pathway0_res2.branch2.b.weight
+67 s2.pathway0_res2.branch2.b_bn.weight
+68 s2.pathway0_res2.branch2.b_bn.bias
+69 s2.pathway0_res2.branch2.b_bn.running_mean
+70 s2.pathway0_res2.branch2.b_bn.running_var
+71 s2.pathway0_res2.branch2.b_bn.num_batches_tracked
+72 s2.pathway0_res2.branch2.c.weight
+73 s2.pathway0_res2.branch2.c_bn.weight
+74 s2.pathway0_res2.branch2.c_bn.bias
+75 s2.pathway0_res2.branch2.c_bn.running_mean
+76 s2.pathway0_res2.branch2.c_bn.running_var
+77 s2.pathway0_res2.branch2.c_bn.num_batches_tracked
+78 s2.pathway1_res0.branch1.weight
+79 s2.pathway1_res0.branch1_bn.weight
+80 s2.pathway1_res0.branch1_bn.bias
+81 s2.pathway1_res0.branch1_bn.running_mean
+82 s2.pathway1_res0.branch1_bn.running_var
+83 s2.pathway1_res0.branch1_bn.num_batches_tracked
+84 s2.pathway1_res0.branch2.a.weight
+85 s2.pathway1_res0.branch2.a_bn.weight
+86 s2.pathway1_res0.branch2.a_bn.bias
+87 s2.pathway1_res0.branch2.a_bn.running_mean
+88 s2.pathway1_res0.branch2.a_bn.running_var
+89 s2.pathway1_res0.branch2.a_bn.num_batches_tracked
+90 s2.pathway1_res0.branch2.b.weight
+91 s2.pathway1_res0.branch2.b_bn.weight
+92 s2.pathway1_res0.branch2.b_bn.bias
+93 s2.pathway1_res0.branch2.b_bn.running_mean
+94 s2.pathway1_res0.branch2.b_bn.running_var
+95 s2.pathway1_res0.branch2.b_bn.num_batches_tracked
+96 s2.pathway1_res0.branch2.c.weight
+97 s2.pathway1_res0.branch2.c_bn.weight
+98 s2.pathway1_res0.branch2.c_bn.bias
+99 s2.pathway1_res0.branch2.c_bn.running_mean
+100 s2.pathway1_res0.branch2.c_bn.running_var
+101 s2.pathway1_res0.branch2.c_bn.num_batches_tracked
+102 s2.pathway1_res1.branch2.a.weight
+103 s2.pathway1_res1.branch2.a_bn.weight
+104 s2.pathway1_res1.branch2.a_bn.bias
+105 s2.pathway1_res1.branch2.a_bn.running_mean
+106 s2.pathway1_res1.branch2.a_bn.running_var
+107 s2.pathway1_res1.branch2.a_bn.num_batches_tracked
+108 s2.pathway1_res1.branch2.b.weight
+109 s2.pathway1_res1.branch2.b_bn.weight
+110 s2.pathway1_res1.branch2.b_bn.bias
+111 s2.pathway1_res1.branch2.b_bn.running_mean
+112 s2.pathway1_res1.branch2.b_bn.running_var
+113 s2.pathway1_res1.branch2.b_bn.num_batches_tracked
+114 s2.pathway1_res1.branch2.c.weight
+115 s2.pathway1_res1.branch2.c_bn.weight
+116 s2.pathway1_res1.branch2.c_bn.bias
+117 s2.pathway1_res1.branch2.c_bn.running_mean
+118 s2.pathway1_res1.branch2.c_bn.running_var
+119 s2.pathway1_res1.branch2.c_bn.num_batches_tracked
+120 s2.pathway1_res2.branch2.a.weight
+121 s2.pathway1_res2.branch2.a_bn.weight
+122 s2.pathway1_res2.branch2.a_bn.bias
+123 s2.pathway1_res2.branch2.a_bn.running_mean
+124 s2.pathway1_res2.branch2.a_bn.running_var
+125 s2.pathway1_res2.branch2.a_bn.num_batches_tracked
+126 s2.pathway1_res2.branch2.b.weight
+127 s2.pathway1_res2.branch2.b_bn.weight
+128 s2.pathway1_res2.branch2.b_bn.bias
+129 s2.pathway1_res2.branch2.b_bn.running_mean
+130 s2.pathway1_res2.branch2.b_bn.running_var
+131 s2.pathway1_res2.branch2.b_bn.num_batches_tracked
+132 s2.pathway1_res2.branch2.c.weight
+133 s2.pathway1_res2.branch2.c_bn.weight
+134 s2.pathway1_res2.branch2.c_bn.bias
+135 s2.pathway1_res2.branch2.c_bn.running_mean
+136 s2.pathway1_res2.branch2.c_bn.running_var
+137 s2.pathway1_res2.branch2.c_bn.num_batches_tracked
+138 s2_fuse.conv_f2s.weight
+139 s2_fuse.bn.weight
+140 s2_fuse.bn.bias
+141 s2_fuse.bn.running_mean
+142 s2_fuse.bn.running_var
+143 s2_fuse.bn.num_batches_tracked
+144 s3.pathway0_res0.branch1.weight
+145 s3.pathway0_res0.branch1_bn.weight
+146 s3.pathway0_res0.branch1_bn.bias
+147 s3.pathway0_res0.branch1_bn.running_mean
+148 s3.pathway0_res0.branch1_bn.running_var
+149 s3.pathway0_res0.branch1_bn.num_batches_tracked
+150 s3.pathway0_res0.branch2.a.weight
+151 s3.pathway0_res0.branch2.a_bn.weight
+152 s3.pathway0_res0.branch2.a_bn.bias
+153 s3.pathway0_res0.branch2.a_bn.running_mean
+154 s3.pathway0_res0.branch2.a_bn.running_var
+155 s3.pathway0_res0.branch2.a_bn.num_batches_tracked
+156 s3.pathway0_res0.branch2.b.weight
+157 s3.pathway0_res0.branch2.b_bn.weight
+158 s3.pathway0_res0.branch2.b_bn.bias
+159 s3.pathway0_res0.branch2.b_bn.running_mean
+160 s3.pathway0_res0.branch2.b_bn.running_var
+161 s3.pathway0_res0.branch2.b_bn.num_batches_tracked
+162 s3.pathway0_res0.branch2.c.weight
+163 s3.pathway0_res0.branch2.c_bn.weight
+164 s3.pathway0_res0.branch2.c_bn.bias
+165 s3.pathway0_res0.branch2.c_bn.running_mean
+166 s3.pathway0_res0.branch2.c_bn.running_var
+167 s3.pathway0_res0.branch2.c_bn.num_batches_tracked
+168 s3.pathway0_res1.branch2.a.weight
+169 s3.pathway0_res1.branch2.a_bn.weight
+170 s3.pathway0_res1.branch2.a_bn.bias
+171 s3.pathway0_res1.branch2.a_bn.running_mean
+172 s3.pathway0_res1.branch2.a_bn.running_var
+173 s3.pathway0_res1.branch2.a_bn.num_batches_tracked
+174 s3.pathway0_res1.branch2.b.weight
+175 s3.pathway0_res1.branch2.b_bn.weight
+176 s3.pathway0_res1.branch2.b_bn.bias
+177 s3.pathway0_res1.branch2.b_bn.running_mean
+178 s3.pathway0_res1.branch2.b_bn.running_var
+179 s3.pathway0_res1.branch2.b_bn.num_batches_tracked
+180 s3.pathway0_res1.branch2.c.weight
+181 s3.pathway0_res1.branch2.c_bn.weight
+182 s3.pathway0_res1.branch2.c_bn.bias
+183 s3.pathway0_res1.branch2.c_bn.running_mean
+184 s3.pathway0_res1.branch2.c_bn.running_var
+185 s3.pathway0_res1.branch2.c_bn.num_batches_tracked
+186 s3.pathway0_res2.branch2.a.weight
+187 s3.pathway0_res2.branch2.a_bn.weight
+188 s3.pathway0_res2.branch2.a_bn.bias
+189 s3.pathway0_res2.branch2.a_bn.running_mean
+190 s3.pathway0_res2.branch2.a_bn.running_var
+191 s3.pathway0_res2.branch2.a_bn.num_batches_tracked
+192 s3.pathway0_res2.branch2.b.weight
+193 s3.pathway0_res2.branch2.b_bn.weight
+194 s3.pathway0_res2.branch2.b_bn.bias
+195 s3.pathway0_res2.branch2.b_bn.running_mean
+196 s3.pathway0_res2.branch2.b_bn.running_var
+197 s3.pathway0_res2.branch2.b_bn.num_batches_tracked
+198 s3.pathway0_res2.branch2.c.weight
+199 s3.pathway0_res2.branch2.c_bn.weight
+200 s3.pathway0_res2.branch2.c_bn.bias
+201 s3.pathway0_res2.branch2.c_bn.running_mean
+202 s3.pathway0_res2.branch2.c_bn.running_var
+203 s3.pathway0_res2.branch2.c_bn.num_batches_tracked
+204 s3.pathway0_res3.branch2.a.weight
+205 s3.pathway0_res3.branch2.a_bn.weight
+206 s3.pathway0_res3.branch2.a_bn.bias
+207 s3.pathway0_res3.branch2.a_bn.running_mean
+208 s3.pathway0_res3.branch2.a_bn.running_var
+209 s3.pathway0_res3.branch2.a_bn.num_batches_tracked
+210 s3.pathway0_res3.branch2.b.weight
+211 s3.pathway0_res3.branch2.b_bn.weight
+212 s3.pathway0_res3.branch2.b_bn.bias
+213 s3.pathway0_res3.branch2.b_bn.running_mean
+214 s3.pathway0_res3.branch2.b_bn.running_var
+215 s3.pathway0_res3.branch2.b_bn.num_batches_tracked
+216 s3.pathway0_res3.branch2.c.weight
+217 s3.pathway0_res3.branch2.c_bn.weight
+218 s3.pathway0_res3.branch2.c_bn.bias
+219 s3.pathway0_res3.branch2.c_bn.running_mean
+220 s3.pathway0_res3.branch2.c_bn.running_var
+221 s3.pathway0_res3.branch2.c_bn.num_batches_tracked
+222 s3.pathway1_res0.branch1.weight
+223 s3.pathway1_res0.branch1_bn.weight
+224 s3.pathway1_res0.branch1_bn.bias
+225 s3.pathway1_res0.branch1_bn.running_mean
+226 s3.pathway1_res0.branch1_bn.running_var
+227 s3.pathway1_res0.branch1_bn.num_batches_tracked
+228 s3.pathway1_res0.branch2.a.weight
+229 s3.pathway1_res0.branch2.a_bn.weight
+230 s3.pathway1_res0.branch2.a_bn.bias
+231 s3.pathway1_res0.branch2.a_bn.running_mean
+232 s3.pathway1_res0.branch2.a_bn.running_var
+233 s3.pathway1_res0.branch2.a_bn.num_batches_tracked
+234 s3.pathway1_res0.branch2.b.weight
+235 s3.pathway1_res0.branch2.b_bn.weight
+236 s3.pathway1_res0.branch2.b_bn.bias
+237 s3.pathway1_res0.branch2.b_bn.running_mean
+238 s3.pathway1_res0.branch2.b_bn.running_var
+239 s3.pathway1_res0.branch2.b_bn.num_batches_tracked
+240 s3.pathway1_res0.branch2.c.weight
+241 s3.pathway1_res0.branch2.c_bn.weight
+242 s3.pathway1_res0.branch2.c_bn.bias
+243 s3.pathway1_res0.branch2.c_bn.running_mean
+244 s3.pathway1_res0.branch2.c_bn.running_var
+245 s3.pathway1_res0.branch2.c_bn.num_batches_tracked
+246 s3.pathway1_res1.branch2.a.weight
+247 s3.pathway1_res1.branch2.a_bn.weight
+248 s3.pathway1_res1.branch2.a_bn.bias
+249 s3.pathway1_res1.branch2.a_bn.running_mean
+250 s3.pathway1_res1.branch2.a_bn.running_var
+251 s3.pathway1_res1.branch2.a_bn.num_batches_tracked
+252 s3.pathway1_res1.branch2.b.weight
+253 s3.pathway1_res1.branch2.b_bn.weight
+254 s3.pathway1_res1.branch2.b_bn.bias
+255 s3.pathway1_res1.branch2.b_bn.running_mean
+256 s3.pathway1_res1.branch2.b_bn.running_var
+257 s3.pathway1_res1.branch2.b_bn.num_batches_tracked
+258 s3.pathway1_res1.branch2.c.weight
+259 s3.pathway1_res1.branch2.c_bn.weight
+260 s3.pathway1_res1.branch2.c_bn.bias
+261 s3.pathway1_res1.branch2.c_bn.running_mean
+262 s3.pathway1_res1.branch2.c_bn.running_var
+263 s3.pathway1_res1.branch2.c_bn.num_batches_tracked
+264 s3.pathway1_res2.branch2.a.weight
+265 s3.pathway1_res2.branch2.a_bn.weight
+266 s3.pathway1_res2.branch2.a_bn.bias
+267 s3.pathway1_res2.branch2.a_bn.running_mean
+268 s3.pathway1_res2.branch2.a_bn.running_var
+269 s3.pathway1_res2.branch2.a_bn.num_batches_tracked
+270 s3.pathway1_res2.branch2.b.weight
+271 s3.pathway1_res2.branch2.b_bn.weight
+272 s3.pathway1_res2.branch2.b_bn.bias
+273 s3.pathway1_res2.branch2.b_bn.running_mean
+274 s3.pathway1_res2.branch2.b_bn.running_var
+275 s3.pathway1_res2.branch2.b_bn.num_batches_tracked
+276 s3.pathway1_res2.branch2.c.weight
+277 s3.pathway1_res2.branch2.c_bn.weight
+278 s3.pathway1_res2.branch2.c_bn.bias
+279 s3.pathway1_res2.branch2.c_bn.running_mean
+280 s3.pathway1_res2.branch2.c_bn.running_var
+281 s3.pathway1_res2.branch2.c_bn.num_batches_tracked
+282 s3.pathway1_res3.branch2.a.weight
+283 s3.pathway1_res3.branch2.a_bn.weight
+284 s3.pathway1_res3.branch2.a_bn.bias
+285 s3.pathway1_res3.branch2.a_bn.running_mean
+286 s3.pathway1_res3.branch2.a_bn.running_var
+287 s3.pathway1_res3.branch2.a_bn.num_batches_tracked
+288 s3.pathway1_res3.branch2.b.weight
+289 s3.pathway1_res3.branch2.b_bn.weight
+290 s3.pathway1_res3.branch2.b_bn.bias
+291 s3.pathway1_res3.branch2.b_bn.running_mean
+292 s3.pathway1_res3.branch2.b_bn.running_var
+293 s3.pathway1_res3.branch2.b_bn.num_batches_tracked
+294 s3.pathway1_res3.branch2.c.weight
+295 s3.pathway1_res3.branch2.c_bn.weight
+296 s3.pathway1_res3.branch2.c_bn.bias
+297 s3.pathway1_res3.branch2.c_bn.running_mean
+298 s3.pathway1_res3.branch2.c_bn.running_var
+299 s3.pathway1_res3.branch2.c_bn.num_batches_tracked
+300 s3_fuse.conv_f2s.weight
+301 s3_fuse.bn.weight
+302 s3_fuse.bn.bias
+303 s3_fuse.bn.running_mean
+304 s3_fuse.bn.running_var
+305 s3_fuse.bn.num_batches_tracked
+306 s4.pathway0_res0.branch1.weight
+307 s4.pathway0_res0.branch1_bn.weight
+308 s4.pathway0_res0.branch1_bn.bias
+309 s4.pathway0_res0.branch1_bn.running_mean
+310 s4.pathway0_res0.branch1_bn.running_var
+311 s4.pathway0_res0.branch1_bn.num_batches_tracked
+312 s4.pathway0_res0.branch2.a.weight
+313 s4.pathway0_res0.branch2.a_bn.weight
+314 s4.pathway0_res0.branch2.a_bn.bias
+315 s4.pathway0_res0.branch2.a_bn.running_mean
+316 s4.pathway0_res0.branch2.a_bn.running_var
+317 s4.pathway0_res0.branch2.a_bn.num_batches_tracked
+318 s4.pathway0_res0.branch2.b.weight
+319 s4.pathway0_res0.branch2.b_bn.weight
+320 s4.pathway0_res0.branch2.b_bn.bias
+321 s4.pathway0_res0.branch2.b_bn.running_mean
+322 s4.pathway0_res0.branch2.b_bn.running_var
+323 s4.pathway0_res0.branch2.b_bn.num_batches_tracked
+324 s4.pathway0_res0.branch2.c.weight
+325 s4.pathway0_res0.branch2.c_bn.weight
+326 s4.pathway0_res0.branch2.c_bn.bias
+327 s4.pathway0_res0.branch2.c_bn.running_mean
+328 s4.pathway0_res0.branch2.c_bn.running_var
+329 s4.pathway0_res0.branch2.c_bn.num_batches_tracked
+330 s4.pathway0_res1.branch2.a.weight
+331 s4.pathway0_res1.branch2.a_bn.weight
+332 s4.pathway0_res1.branch2.a_bn.bias
+333 s4.pathway0_res1.branch2.a_bn.running_mean
+334 s4.pathway0_res1.branch2.a_bn.running_var
+335 s4.pathway0_res1.branch2.a_bn.num_batches_tracked
+336 s4.pathway0_res1.branch2.b.weight
+337 s4.pathway0_res1.branch2.b_bn.weight
+338 s4.pathway0_res1.branch2.b_bn.bias
+339 s4.pathway0_res1.branch2.b_bn.running_mean
+340 s4.pathway0_res1.branch2.b_bn.running_var
+341 s4.pathway0_res1.branch2.b_bn.num_batches_tracked
+342 s4.pathway0_res1.branch2.c.weight
+343 s4.pathway0_res1.branch2.c_bn.weight
+344 s4.pathway0_res1.branch2.c_bn.bias
+345 s4.pathway0_res1.branch2.c_bn.running_mean
+346 s4.pathway0_res1.branch2.c_bn.running_var
+347 s4.pathway0_res1.branch2.c_bn.num_batches_tracked
+348 s4.pathway0_res2.branch2.a.weight
+349 s4.pathway0_res2.branch2.a_bn.weight
+350 s4.pathway0_res2.branch2.a_bn.bias
+351 s4.pathway0_res2.branch2.a_bn.running_mean
+352 s4.pathway0_res2.branch2.a_bn.running_var
+353 s4.pathway0_res2.branch2.a_bn.num_batches_tracked
+354 s4.pathway0_res2.branch2.b.weight
+355 s4.pathway0_res2.branch2.b_bn.weight
+356 s4.pathway0_res2.branch2.b_bn.bias
+357 s4.pathway0_res2.branch2.b_bn.running_mean
+358 s4.pathway0_res2.branch2.b_bn.running_var
+359 s4.pathway0_res2.branch2.b_bn.num_batches_tracked
+360 s4.pathway0_res2.branch2.c.weight
+361 s4.pathway0_res2.branch2.c_bn.weight
+362 s4.pathway0_res2.branch2.c_bn.bias
+363 s4.pathway0_res2.branch2.c_bn.running_mean
+364 s4.pathway0_res2.branch2.c_bn.running_var
+365 s4.pathway0_res2.branch2.c_bn.num_batches_tracked
+366 s4.pathway0_res3.branch2.a.weight
+367 s4.pathway0_res3.branch2.a_bn.weight
+368 s4.pathway0_res3.branch2.a_bn.bias
+369 s4.pathway0_res3.branch2.a_bn.running_mean
+370 s4.pathway0_res3.branch2.a_bn.running_var
+371 s4.pathway0_res3.branch2.a_bn.num_batches_tracked
+372 s4.pathway0_res3.branch2.b.weight
+373 s4.pathway0_res3.branch2.b_bn.weight
+374 s4.pathway0_res3.branch2.b_bn.bias
+375 s4.pathway0_res3.branch2.b_bn.running_mean
+376 s4.pathway0_res3.branch2.b_bn.running_var
+377 s4.pathway0_res3.branch2.b_bn.num_batches_tracked
+378 s4.pathway0_res3.branch2.c.weight
+379 s4.pathway0_res3.branch2.c_bn.weight
+380 s4.pathway0_res3.branch2.c_bn.bias
+381 s4.pathway0_res3.branch2.c_bn.running_mean
+382 s4.pathway0_res3.branch2.c_bn.running_var
+383 s4.pathway0_res3.branch2.c_bn.num_batches_tracked
+384 s4.pathway0_res4.branch2.a.weight
+385 s4.pathway0_res4.branch2.a_bn.weight
+386 s4.pathway0_res4.branch2.a_bn.bias
+387 s4.pathway0_res4.branch2.a_bn.running_mean
+388 s4.pathway0_res4.branch2.a_bn.running_var
+389 s4.pathway0_res4.branch2.a_bn.num_batches_tracked
+390 s4.pathway0_res4.branch2.b.weight
+391 s4.pathway0_res4.branch2.b_bn.weight
+392 s4.pathway0_res4.branch2.b_bn.bias
+393 s4.pathway0_res4.branch2.b_bn.running_mean
+394 s4.pathway0_res4.branch2.b_bn.running_var
+395 s4.pathway0_res4.branch2.b_bn.num_batches_tracked
+396 s4.pathway0_res4.branch2.c.weight
+397 s4.pathway0_res4.branch2.c_bn.weight
+398 s4.pathway0_res4.branch2.c_bn.bias
+399 s4.pathway0_res4.branch2.c_bn.running_mean
+400 s4.pathway0_res4.branch2.c_bn.running_var
+401 s4.pathway0_res4.branch2.c_bn.num_batches_tracked
+402 s4.pathway0_res5.branch2.a.weight
+403 s4.pathway0_res5.branch2.a_bn.weight
+404 s4.pathway0_res5.branch2.a_bn.bias
+405 s4.pathway0_res5.branch2.a_bn.running_mean
+406 s4.pathway0_res5.branch2.a_bn.running_var
+407 s4.pathway0_res5.branch2.a_bn.num_batches_tracked
+408 s4.pathway0_res5.branch2.b.weight
+409 s4.pathway0_res5.branch2.b_bn.weight
+410 s4.pathway0_res5.branch2.b_bn.bias
+411 s4.pathway0_res5.branch2.b_bn.running_mean
+412 s4.pathway0_res5.branch2.b_bn.running_var
+413 s4.pathway0_res5.branch2.b_bn.num_batches_tracked
+414 s4.pathway0_res5.branch2.c.weight
+415 s4.pathway0_res5.branch2.c_bn.weight
+416 s4.pathway0_res5.branch2.c_bn.bias
+417 s4.pathway0_res5.branch2.c_bn.running_mean
+418 s4.pathway0_res5.branch2.c_bn.running_var
+419 s4.pathway0_res5.branch2.c_bn.num_batches_tracked
+420 s4.pathway0_res6.branch2.a.weight
+421 s4.pathway0_res6.branch2.a_bn.weight
+422 s4.pathway0_res6.branch2.a_bn.bias
+423 s4.pathway0_res6.branch2.a_bn.running_mean
+424 s4.pathway0_res6.branch2.a_bn.running_var
+425 s4.pathway0_res6.branch2.a_bn.num_batches_tracked
+426 s4.pathway0_res6.branch2.b.weight
+427 s4.pathway0_res6.branch2.b_bn.weight
+428 s4.pathway0_res6.branch2.b_bn.bias
+429 s4.pathway0_res6.branch2.b_bn.running_mean
+430 s4.pathway0_res6.branch2.b_bn.running_var
+431 s4.pathway0_res6.branch2.b_bn.num_batches_tracked
+432 s4.pathway0_res6.branch2.c.weight
+433 s4.pathway0_res6.branch2.c_bn.weight
+434 s4.pathway0_res6.branch2.c_bn.bias
+435 s4.pathway0_res6.branch2.c_bn.running_mean
+436 s4.pathway0_res6.branch2.c_bn.running_var
+437 s4.pathway0_res6.branch2.c_bn.num_batches_tracked
+438 s4.pathway0_nonlocal6.conv_theta.weight
+439 s4.pathway0_nonlocal6.conv_theta.bias
+440 s4.pathway0_nonlocal6.conv_phi.weight
+441 s4.pathway0_nonlocal6.conv_phi.bias
+442 s4.pathway0_nonlocal6.conv_g.weight
+443 s4.pathway0_nonlocal6.conv_g.bias
+444 s4.pathway0_nonlocal6.conv_out.weight
+445 s4.pathway0_nonlocal6.conv_out.bias
+446 s4.pathway0_nonlocal6.bn.weight
+447 s4.pathway0_nonlocal6.bn.bias
+448 s4.pathway0_nonlocal6.bn.running_mean
+449 s4.pathway0_nonlocal6.bn.running_var
+450 s4.pathway0_nonlocal6.bn.num_batches_tracked
+451 s4.pathway0_res7.branch2.a.weight
+452 s4.pathway0_res7.branch2.a_bn.weight
+453 s4.pathway0_res7.branch2.a_bn.bias
+454 s4.pathway0_res7.branch2.a_bn.running_mean
+455 s4.pathway0_res7.branch2.a_bn.running_var
+456 s4.pathway0_res7.branch2.a_bn.num_batches_tracked
+457 s4.pathway0_res7.branch2.b.weight
+458 s4.pathway0_res7.branch2.b_bn.weight
+459 s4.pathway0_res7.branch2.b_bn.bias
+460 s4.pathway0_res7.branch2.b_bn.running_mean
+461 s4.pathway0_res7.branch2.b_bn.running_var
+462 s4.pathway0_res7.branch2.b_bn.num_batches_tracked
+463 s4.pathway0_res7.branch2.c.weight
+464 s4.pathway0_res7.branch2.c_bn.weight
+465 s4.pathway0_res7.branch2.c_bn.bias
+466 s4.pathway0_res7.branch2.c_bn.running_mean
+467 s4.pathway0_res7.branch2.c_bn.running_var
+468 s4.pathway0_res7.branch2.c_bn.num_batches_tracked
+469 s4.pathway0_res8.branch2.a.weight
+470 s4.pathway0_res8.branch2.a_bn.weight
+471 s4.pathway0_res8.branch2.a_bn.bias
+472 s4.pathway0_res8.branch2.a_bn.running_mean
+473 s4.pathway0_res8.branch2.a_bn.running_var
+474 s4.pathway0_res8.branch2.a_bn.num_batches_tracked
+475 s4.pathway0_res8.branch2.b.weight
+476 s4.pathway0_res8.branch2.b_bn.weight
+477 s4.pathway0_res8.branch2.b_bn.bias
+478 s4.pathway0_res8.branch2.b_bn.running_mean
+479 s4.pathway0_res8.branch2.b_bn.running_var
+480 s4.pathway0_res8.branch2.b_bn.num_batches_tracked
+481 s4.pathway0_res8.branch2.c.weight
+482 s4.pathway0_res8.branch2.c_bn.weight
+483 s4.pathway0_res8.branch2.c_bn.bias
+484 s4.pathway0_res8.branch2.c_bn.running_mean
+485 s4.pathway0_res8.branch2.c_bn.running_var
+486 s4.pathway0_res8.branch2.c_bn.num_batches_tracked
+487 s4.pathway0_res9.branch2.a.weight
+488 s4.pathway0_res9.branch2.a_bn.weight
+489 s4.pathway0_res9.branch2.a_bn.bias
+490 s4.pathway0_res9.branch2.a_bn.running_mean
+491 s4.pathway0_res9.branch2.a_bn.running_var
+492 s4.pathway0_res9.branch2.a_bn.num_batches_tracked
+493 s4.pathway0_res9.branch2.b.weight
+494 s4.pathway0_res9.branch2.b_bn.weight
+495 s4.pathway0_res9.branch2.b_bn.bias
+496 s4.pathway0_res9.branch2.b_bn.running_mean
+497 s4.pathway0_res9.branch2.b_bn.running_var
+498 s4.pathway0_res9.branch2.b_bn.num_batches_tracked
+499 s4.pathway0_res9.branch2.c.weight
+500 s4.pathway0_res9.branch2.c_bn.weight
+501 s4.pathway0_res9.branch2.c_bn.bias
+502 s4.pathway0_res9.branch2.c_bn.running_mean
+503 s4.pathway0_res9.branch2.c_bn.running_var
+504 s4.pathway0_res9.branch2.c_bn.num_batches_tracked
+505 s4.pathway0_res10.branch2.a.weight
+506 s4.pathway0_res10.branch2.a_bn.weight
+507 s4.pathway0_res10.branch2.a_bn.bias
+508 s4.pathway0_res10.branch2.a_bn.running_mean
+509 s4.pathway0_res10.branch2.a_bn.running_var
+510 s4.pathway0_res10.branch2.a_bn.num_batches_tracked
+511 s4.pathway0_res10.branch2.b.weight
+512 s4.pathway0_res10.branch2.b_bn.weight
+513 s4.pathway0_res10.branch2.b_bn.bias
+514 s4.pathway0_res10.branch2.b_bn.running_mean
+515 s4.pathway0_res10.branch2.b_bn.running_var
+516 s4.pathway0_res10.branch2.b_bn.num_batches_tracked
+517 s4.pathway0_res10.branch2.c.weight
+518 s4.pathway0_res10.branch2.c_bn.weight
+519 s4.pathway0_res10.branch2.c_bn.bias
+520 s4.pathway0_res10.branch2.c_bn.running_mean
+521 s4.pathway0_res10.branch2.c_bn.running_var
+522 s4.pathway0_res10.branch2.c_bn.num_batches_tracked
+523 s4.pathway0_res11.branch2.a.weight
+524 s4.pathway0_res11.branch2.a_bn.weight
+525 s4.pathway0_res11.branch2.a_bn.bias
+526 s4.pathway0_res11.branch2.a_bn.running_mean
+527 s4.pathway0_res11.branch2.a_bn.running_var
+528 s4.pathway0_res11.branch2.a_bn.num_batches_tracked
+529 s4.pathway0_res11.branch2.b.weight
+530 s4.pathway0_res11.branch2.b_bn.weight
+531 s4.pathway0_res11.branch2.b_bn.bias
+532 s4.pathway0_res11.branch2.b_bn.running_mean
+533 s4.pathway0_res11.branch2.b_bn.running_var
+534 s4.pathway0_res11.branch2.b_bn.num_batches_tracked
+535 s4.pathway0_res11.branch2.c.weight
+536 s4.pathway0_res11.branch2.c_bn.weight
+537 s4.pathway0_res11.branch2.c_bn.bias
+538 s4.pathway0_res11.branch2.c_bn.running_mean
+539 s4.pathway0_res11.branch2.c_bn.running_var
+540 s4.pathway0_res11.branch2.c_bn.num_batches_tracked
+541 s4.pathway0_res12.branch2.a.weight
+542 s4.pathway0_res12.branch2.a_bn.weight
+543 s4.pathway0_res12.branch2.a_bn.bias
+544 s4.pathway0_res12.branch2.a_bn.running_mean
+545 s4.pathway0_res12.branch2.a_bn.running_var
+546 s4.pathway0_res12.branch2.a_bn.num_batches_tracked
+547 s4.pathway0_res12.branch2.b.weight
+548 s4.pathway0_res12.branch2.b_bn.weight
+549 s4.pathway0_res12.branch2.b_bn.bias
+550 s4.pathway0_res12.branch2.b_bn.running_mean
+551 s4.pathway0_res12.branch2.b_bn.running_var
+552 s4.pathway0_res12.branch2.b_bn.num_batches_tracked
+553 s4.pathway0_res12.branch2.c.weight
+554 s4.pathway0_res12.branch2.c_bn.weight
+555 s4.pathway0_res12.branch2.c_bn.bias
+556 s4.pathway0_res12.branch2.c_bn.running_mean
+557 s4.pathway0_res12.branch2.c_bn.running_var
+558 s4.pathway0_res12.branch2.c_bn.num_batches_tracked
+559 s4.pathway0_res13.branch2.a.weight
+560 s4.pathway0_res13.branch2.a_bn.weight
+561 s4.pathway0_res13.branch2.a_bn.bias
+562 s4.pathway0_res13.branch2.a_bn.running_mean
+563 s4.pathway0_res13.branch2.a_bn.running_var
+564 s4.pathway0_res13.branch2.a_bn.num_batches_tracked
+565 s4.pathway0_res13.branch2.b.weight
+566 s4.pathway0_res13.branch2.b_bn.weight
+567 s4.pathway0_res13.branch2.b_bn.bias
+568 s4.pathway0_res13.branch2.b_bn.running_mean
+569 s4.pathway0_res13.branch2.b_bn.running_var
+570 s4.pathway0_res13.branch2.b_bn.num_batches_tracked
+571 s4.pathway0_res13.branch2.c.weight
+572 s4.pathway0_res13.branch2.c_bn.weight
+573 s4.pathway0_res13.branch2.c_bn.bias
+574 s4.pathway0_res13.branch2.c_bn.running_mean
+575 s4.pathway0_res13.branch2.c_bn.running_var
+576 s4.pathway0_res13.branch2.c_bn.num_batches_tracked
+577 s4.pathway0_nonlocal13.conv_theta.weight
+578 s4.pathway0_nonlocal13.conv_theta.bias
+579 s4.pathway0_nonlocal13.conv_phi.weight
+580 s4.pathway0_nonlocal13.conv_phi.bias
+581 s4.pathway0_nonlocal13.conv_g.weight
+582 s4.pathway0_nonlocal13.conv_g.bias
+583 s4.pathway0_nonlocal13.conv_out.weight
+584 s4.pathway0_nonlocal13.conv_out.bias
+585 s4.pathway0_nonlocal13.bn.weight
+586 s4.pathway0_nonlocal13.bn.bias
+587 s4.pathway0_nonlocal13.bn.running_mean
+588 s4.pathway0_nonlocal13.bn.running_var
+589 s4.pathway0_nonlocal13.bn.num_batches_tracked
+590 s4.pathway0_res14.branch2.a.weight
+591 s4.pathway0_res14.branch2.a_bn.weight
+592 s4.pathway0_res14.branch2.a_bn.bias
+593 s4.pathway0_res14.branch2.a_bn.running_mean
+594 s4.pathway0_res14.branch2.a_bn.running_var
+595 s4.pathway0_res14.branch2.a_bn.num_batches_tracked
+596 s4.pathway0_res14.branch2.b.weight
+597 s4.pathway0_res14.branch2.b_bn.weight
+598 s4.pathway0_res14.branch2.b_bn.bias
+599 s4.pathway0_res14.branch2.b_bn.running_mean
+600 s4.pathway0_res14.branch2.b_bn.running_var
+601 s4.pathway0_res14.branch2.b_bn.num_batches_tracked
+602 s4.pathway0_res14.branch2.c.weight
+603 s4.pathway0_res14.branch2.c_bn.weight
+604 s4.pathway0_res14.branch2.c_bn.bias
+605 s4.pathway0_res14.branch2.c_bn.running_mean
+606 s4.pathway0_res14.branch2.c_bn.running_var
+607 s4.pathway0_res14.branch2.c_bn.num_batches_tracked
+608 s4.pathway0_res15.branch2.a.weight
+609 s4.pathway0_res15.branch2.a_bn.weight
+610 s4.pathway0_res15.branch2.a_bn.bias
+611 s4.pathway0_res15.branch2.a_bn.running_mean
+612 s4.pathway0_res15.branch2.a_bn.running_var
+613 s4.pathway0_res15.branch2.a_bn.num_batches_tracked
+614 s4.pathway0_res15.branch2.b.weight
+615 s4.pathway0_res15.branch2.b_bn.weight
+616 s4.pathway0_res15.branch2.b_bn.bias
+617 s4.pathway0_res15.branch2.b_bn.running_mean
+618 s4.pathway0_res15.branch2.b_bn.running_var
+619 s4.pathway0_res15.branch2.b_bn.num_batches_tracked
+620 s4.pathway0_res15.branch2.c.weight
+621 s4.pathway0_res15.branch2.c_bn.weight
+622 s4.pathway0_res15.branch2.c_bn.bias
+623 s4.pathway0_res15.branch2.c_bn.running_mean
+624 s4.pathway0_res15.branch2.c_bn.running_var
+625 s4.pathway0_res15.branch2.c_bn.num_batches_tracked
+626 s4.pathway0_res16.branch2.a.weight
+627 s4.pathway0_res16.branch2.a_bn.weight
+628 s4.pathway0_res16.branch2.a_bn.bias
+629 s4.pathway0_res16.branch2.a_bn.running_mean
+630 s4.pathway0_res16.branch2.a_bn.running_var
+631 s4.pathway0_res16.branch2.a_bn.num_batches_tracked
+632 s4.pathway0_res16.branch2.b.weight
+633 s4.pathway0_res16.branch2.b_bn.weight
+634 s4.pathway0_res16.branch2.b_bn.bias
+635 s4.pathway0_res16.branch2.b_bn.running_mean
+636 s4.pathway0_res16.branch2.b_bn.running_var
+637 s4.pathway0_res16.branch2.b_bn.num_batches_tracked
+638 s4.pathway0_res16.branch2.c.weight
+639 s4.pathway0_res16.branch2.c_bn.weight
+640 s4.pathway0_res16.branch2.c_bn.bias
+641 s4.pathway0_res16.branch2.c_bn.running_mean
+642 s4.pathway0_res16.branch2.c_bn.running_var
+643 s4.pathway0_res16.branch2.c_bn.num_batches_tracked
+644 s4.pathway0_res17.branch2.a.weight
+645 s4.pathway0_res17.branch2.a_bn.weight
+646 s4.pathway0_res17.branch2.a_bn.bias
+647 s4.pathway0_res17.branch2.a_bn.running_mean
+648 s4.pathway0_res17.branch2.a_bn.running_var
+649 s4.pathway0_res17.branch2.a_bn.num_batches_tracked
+650 s4.pathway0_res17.branch2.b.weight
+651 s4.pathway0_res17.branch2.b_bn.weight
+652 s4.pathway0_res17.branch2.b_bn.bias
+653 s4.pathway0_res17.branch2.b_bn.running_mean
+654 s4.pathway0_res17.branch2.b_bn.running_var
+655 s4.pathway0_res17.branch2.b_bn.num_batches_tracked
+656 s4.pathway0_res17.branch2.c.weight
+657 s4.pathway0_res17.branch2.c_bn.weight
+658 s4.pathway0_res17.branch2.c_bn.bias
+659 s4.pathway0_res17.branch2.c_bn.running_mean
+660 s4.pathway0_res17.branch2.c_bn.running_var
+661 s4.pathway0_res17.branch2.c_bn.num_batches_tracked
+662 s4.pathway0_res18.branch2.a.weight
+663 s4.pathway0_res18.branch2.a_bn.weight
+664 s4.pathway0_res18.branch2.a_bn.bias
+665 s4.pathway0_res18.branch2.a_bn.running_mean
+666 s4.pathway0_res18.branch2.a_bn.running_var
+667 s4.pathway0_res18.branch2.a_bn.num_batches_tracked
+668 s4.pathway0_res18.branch2.b.weight
+669 s4.pathway0_res18.branch2.b_bn.weight
+670 s4.pathway0_res18.branch2.b_bn.bias
+671 s4.pathway0_res18.branch2.b_bn.running_mean
+672 s4.pathway0_res18.branch2.b_bn.running_var
+673 s4.pathway0_res18.branch2.b_bn.num_batches_tracked
+674 s4.pathway0_res18.branch2.c.weight
+675 s4.pathway0_res18.branch2.c_bn.weight
+676 s4.pathway0_res18.branch2.c_bn.bias
+677 s4.pathway0_res18.branch2.c_bn.running_mean
+678 s4.pathway0_res18.branch2.c_bn.running_var
+679 s4.pathway0_res18.branch2.c_bn.num_batches_tracked
+680 s4.pathway0_res19.branch2.a.weight
+681 s4.pathway0_res19.branch2.a_bn.weight
+682 s4.pathway0_res19.branch2.a_bn.bias
+683 s4.pathway0_res19.branch2.a_bn.running_mean
+684 s4.pathway0_res19.branch2.a_bn.running_var
+685 s4.pathway0_res19.branch2.a_bn.num_batches_tracked
+686 s4.pathway0_res19.branch2.b.weight
+687 s4.pathway0_res19.branch2.b_bn.weight
+688 s4.pathway0_res19.branch2.b_bn.bias
+689 s4.pathway0_res19.branch2.b_bn.running_mean
+690 s4.pathway0_res19.branch2.b_bn.running_var
+691 s4.pathway0_res19.branch2.b_bn.num_batches_tracked
+692 s4.pathway0_res19.branch2.c.weight
+693 s4.pathway0_res19.branch2.c_bn.weight
+694 s4.pathway0_res19.branch2.c_bn.bias
+695 s4.pathway0_res19.branch2.c_bn.running_mean
+696 s4.pathway0_res19.branch2.c_bn.running_var
+697 s4.pathway0_res19.branch2.c_bn.num_batches_tracked
+698 s4.pathway0_res20.branch2.a.weight
+699 s4.pathway0_res20.branch2.a_bn.weight
+700 s4.pathway0_res20.branch2.a_bn.bias
+701 s4.pathway0_res20.branch2.a_bn.running_mean
+702 s4.pathway0_res20.branch2.a_bn.running_var
+703 s4.pathway0_res20.branch2.a_bn.num_batches_tracked
+704 s4.pathway0_res20.branch2.b.weight
+705 s4.pathway0_res20.branch2.b_bn.weight
+706 s4.pathway0_res20.branch2.b_bn.bias
+707 s4.pathway0_res20.branch2.b_bn.running_mean
+708 s4.pathway0_res20.branch2.b_bn.running_var
+709 s4.pathway0_res20.branch2.b_bn.num_batches_tracked
+710 s4.pathway0_res20.branch2.c.weight
+711 s4.pathway0_res20.branch2.c_bn.weight
+712 s4.pathway0_res20.branch2.c_bn.bias
+713 s4.pathway0_res20.branch2.c_bn.running_mean
+714 s4.pathway0_res20.branch2.c_bn.running_var
+715 s4.pathway0_res20.branch2.c_bn.num_batches_tracked
+716 s4.pathway0_nonlocal20.conv_theta.weight
+717 s4.pathway0_nonlocal20.conv_theta.bias
+718 s4.pathway0_nonlocal20.conv_phi.weight
+719 s4.pathway0_nonlocal20.conv_phi.bias
+720 s4.pathway0_nonlocal20.conv_g.weight
+721 s4.pathway0_nonlocal20.conv_g.bias
+722 s4.pathway0_nonlocal20.conv_out.weight
+723 s4.pathway0_nonlocal20.conv_out.bias
+724 s4.pathway0_nonlocal20.bn.weight
+725 s4.pathway0_nonlocal20.bn.bias
+726 s4.pathway0_nonlocal20.bn.running_mean
+727 s4.pathway0_nonlocal20.bn.running_var
+728 s4.pathway0_nonlocal20.bn.num_batches_tracked
+729 s4.pathway0_res21.branch2.a.weight
+730 s4.pathway0_res21.branch2.a_bn.weight
+731 s4.pathway0_res21.branch2.a_bn.bias
+732 s4.pathway0_res21.branch2.a_bn.running_mean
+733 s4.pathway0_res21.branch2.a_bn.running_var
+734 s4.pathway0_res21.branch2.a_bn.num_batches_tracked
+735 s4.pathway0_res21.branch2.b.weight
+736 s4.pathway0_res21.branch2.b_bn.weight
+737 s4.pathway0_res21.branch2.b_bn.bias
+738 s4.pathway0_res21.branch2.b_bn.running_mean
+739 s4.pathway0_res21.branch2.b_bn.running_var
+740 s4.pathway0_res21.branch2.b_bn.num_batches_tracked
+741 s4.pathway0_res21.branch2.c.weight
+742 s4.pathway0_res21.branch2.c_bn.weight
+743 s4.pathway0_res21.branch2.c_bn.bias
+744 s4.pathway0_res21.branch2.c_bn.running_mean
+745 s4.pathway0_res21.branch2.c_bn.running_var
+746 s4.pathway0_res21.branch2.c_bn.num_batches_tracked
+747 s4.pathway0_res22.branch2.a.weight
+748 s4.pathway0_res22.branch2.a_bn.weight
+749 s4.pathway0_res22.branch2.a_bn.bias
+750 s4.pathway0_res22.branch2.a_bn.running_mean
+751 s4.pathway0_res22.branch2.a_bn.running_var
+752 s4.pathway0_res22.branch2.a_bn.num_batches_tracked
+753 s4.pathway0_res22.branch2.b.weight
+754 s4.pathway0_res22.branch2.b_bn.weight
+755 s4.pathway0_res22.branch2.b_bn.bias
+756 s4.pathway0_res22.branch2.b_bn.running_mean
+757 s4.pathway0_res22.branch2.b_bn.running_var
+758 s4.pathway0_res22.branch2.b_bn.num_batches_tracked
+759 s4.pathway0_res22.branch2.c.weight
+760 s4.pathway0_res22.branch2.c_bn.weight
+761 s4.pathway0_res22.branch2.c_bn.bias
+762 s4.pathway0_res22.branch2.c_bn.running_mean
+763 s4.pathway0_res22.branch2.c_bn.running_var
+764 s4.pathway0_res22.branch2.c_bn.num_batches_tracked
+765 s4.pathway1_res0.branch1.weight
+766 s4.pathway1_res0.branch1_bn.weight
+767 s4.pathway1_res0.branch1_bn.bias
+768 s4.pathway1_res0.branch1_bn.running_mean
+769 s4.pathway1_res0.branch1_bn.running_var
+770 s4.pathway1_res0.branch1_bn.num_batches_tracked
+771 s4.pathway1_res0.branch2.a.weight
+772 s4.pathway1_res0.branch2.a_bn.weight
+773 s4.pathway1_res0.branch2.a_bn.bias
+774 s4.pathway1_res0.branch2.a_bn.running_mean
+775 s4.pathway1_res0.branch2.a_bn.running_var
+776 s4.pathway1_res0.branch2.a_bn.num_batches_tracked
+777 s4.pathway1_res0.branch2.b.weight
+778 s4.pathway1_res0.branch2.b_bn.weight
+779 s4.pathway1_res0.branch2.b_bn.bias
+780 s4.pathway1_res0.branch2.b_bn.running_mean
+781 s4.pathway1_res0.branch2.b_bn.running_var
+782 s4.pathway1_res0.branch2.b_bn.num_batches_tracked
+783 s4.pathway1_res0.branch2.c.weight
+784 s4.pathway1_res0.branch2.c_bn.weight
+785 s4.pathway1_res0.branch2.c_bn.bias
+786 s4.pathway1_res0.branch2.c_bn.running_mean
+787 s4.pathway1_res0.branch2.c_bn.running_var
+788 s4.pathway1_res0.branch2.c_bn.num_batches_tracked
+789 s4.pathway1_res1.branch2.a.weight
+790 s4.pathway1_res1.branch2.a_bn.weight
+791 s4.pathway1_res1.branch2.a_bn.bias
+792 s4.pathway1_res1.branch2.a_bn.running_mean
+793 s4.pathway1_res1.branch2.a_bn.running_var
+794 s4.pathway1_res1.branch2.a_bn.num_batches_tracked
+795 s4.pathway1_res1.branch2.b.weight
+796 s4.pathway1_res1.branch2.b_bn.weight
+797 s4.pathway1_res1.branch2.b_bn.bias
+798 s4.pathway1_res1.branch2.b_bn.running_mean
+799 s4.pathway1_res1.branch2.b_bn.running_var
+800 s4.pathway1_res1.branch2.b_bn.num_batches_tracked
+801 s4.pathway1_res1.branch2.c.weight
+802 s4.pathway1_res1.branch2.c_bn.weight
+803 s4.pathway1_res1.branch2.c_bn.bias
+804 s4.pathway1_res1.branch2.c_bn.running_mean
+805 s4.pathway1_res1.branch2.c_bn.running_var
+806 s4.pathway1_res1.branch2.c_bn.num_batches_tracked
+807 s4.pathway1_res2.branch2.a.weight
+808 s4.pathway1_res2.branch2.a_bn.weight
+809 s4.pathway1_res2.branch2.a_bn.bias
+810 s4.pathway1_res2.branch2.a_bn.running_mean
+811 s4.pathway1_res2.branch2.a_bn.running_var
+812 s4.pathway1_res2.branch2.a_bn.num_batches_tracked
+813 s4.pathway1_res2.branch2.b.weight
+814 s4.pathway1_res2.branch2.b_bn.weight
+815 s4.pathway1_res2.branch2.b_bn.bias
+816 s4.pathway1_res2.branch2.b_bn.running_mean
+817 s4.pathway1_res2.branch2.b_bn.running_var
+818 s4.pathway1_res2.branch2.b_bn.num_batches_tracked
+819 s4.pathway1_res2.branch2.c.weight
+820 s4.pathway1_res2.branch2.c_bn.weight
+821 s4.pathway1_res2.branch2.c_bn.bias
+822 s4.pathway1_res2.branch2.c_bn.running_mean
+823 s4.pathway1_res2.branch2.c_bn.running_var
+824 s4.pathway1_res2.branch2.c_bn.num_batches_tracked
+825 s4.pathway1_res3.branch2.a.weight
+826 s4.pathway1_res3.branch2.a_bn.weight
+827 s4.pathway1_res3.branch2.a_bn.bias
+828 s4.pathway1_res3.branch2.a_bn.running_mean
+829 s4.pathway1_res3.branch2.a_bn.running_var
+830 s4.pathway1_res3.branch2.a_bn.num_batches_tracked
+831 s4.pathway1_res3.branch2.b.weight
+832 s4.pathway1_res3.branch2.b_bn.weight
+833 s4.pathway1_res3.branch2.b_bn.bias
+834 s4.pathway1_res3.branch2.b_bn.running_mean
+835 s4.pathway1_res3.branch2.b_bn.running_var
+836 s4.pathway1_res3.branch2.b_bn.num_batches_tracked
+837 s4.pathway1_res3.branch2.c.weight
+838 s4.pathway1_res3.branch2.c_bn.weight
+839 s4.pathway1_res3.branch2.c_bn.bias
+840 s4.pathway1_res3.branch2.c_bn.running_mean
+841 s4.pathway1_res3.branch2.c_bn.running_var
+842 s4.pathway1_res3.branch2.c_bn.num_batches_tracked
+843 s4.pathway1_res4.branch2.a.weight
+844 s4.pathway1_res4.branch2.a_bn.weight
+845 s4.pathway1_res4.branch2.a_bn.bias
+846 s4.pathway1_res4.branch2.a_bn.running_mean
+847 s4.pathway1_res4.branch2.a_bn.running_var
+848 s4.pathway1_res4.branch2.a_bn.num_batches_tracked
+849 s4.pathway1_res4.branch2.b.weight
+850 s4.pathway1_res4.branch2.b_bn.weight
+851 s4.pathway1_res4.branch2.b_bn.bias
+852 s4.pathway1_res4.branch2.b_bn.running_mean
+853 s4.pathway1_res4.branch2.b_bn.running_var
+854 s4.pathway1_res4.branch2.b_bn.num_batches_tracked
+855 s4.pathway1_res4.branch2.c.weight
+856 s4.pathway1_res4.branch2.c_bn.weight
+857 s4.pathway1_res4.branch2.c_bn.bias
+858 s4.pathway1_res4.branch2.c_bn.running_mean
+859 s4.pathway1_res4.branch2.c_bn.running_var
+860 s4.pathway1_res4.branch2.c_bn.num_batches_tracked
+861 s4.pathway1_res5.branch2.a.weight
+862 s4.pathway1_res5.branch2.a_bn.weight
+863 s4.pathway1_res5.branch2.a_bn.bias
+864 s4.pathway1_res5.branch2.a_bn.running_mean
+865 s4.pathway1_res5.branch2.a_bn.running_var
+866 s4.pathway1_res5.branch2.a_bn.num_batches_tracked
+867 s4.pathway1_res5.branch2.b.weight
+868 s4.pathway1_res5.branch2.b_bn.weight
+869 s4.pathway1_res5.branch2.b_bn.bias
+870 s4.pathway1_res5.branch2.b_bn.running_mean
+871 s4.pathway1_res5.branch2.b_bn.running_var
+872 s4.pathway1_res5.branch2.b_bn.num_batches_tracked
+873 s4.pathway1_res5.branch2.c.weight
+874 s4.pathway1_res5.branch2.c_bn.weight
+875 s4.pathway1_res5.branch2.c_bn.bias
+876 s4.pathway1_res5.branch2.c_bn.running_mean
+877 s4.pathway1_res5.branch2.c_bn.running_var
+878 s4.pathway1_res5.branch2.c_bn.num_batches_tracked
+879 s4.pathway1_res6.branch2.a.weight
+880 s4.pathway1_res6.branch2.a_bn.weight
+881 s4.pathway1_res6.branch2.a_bn.bias
+882 s4.pathway1_res6.branch2.a_bn.running_mean
+883 s4.pathway1_res6.branch2.a_bn.running_var
+884 s4.pathway1_res6.branch2.a_bn.num_batches_tracked
+885 s4.pathway1_res6.branch2.b.weight
+886 s4.pathway1_res6.branch2.b_bn.weight
+887 s4.pathway1_res6.branch2.b_bn.bias
+888 s4.pathway1_res6.branch2.b_bn.running_mean
+889 s4.pathway1_res6.branch2.b_bn.running_var
+890 s4.pathway1_res6.branch2.b_bn.num_batches_tracked
+891 s4.pathway1_res6.branch2.c.weight
+892 s4.pathway1_res6.branch2.c_bn.weight
+893 s4.pathway1_res6.branch2.c_bn.bias
+894 s4.pathway1_res6.branch2.c_bn.running_mean
+895 s4.pathway1_res6.branch2.c_bn.running_var
+896 s4.pathway1_res6.branch2.c_bn.num_batches_tracked
+897 s4.pathway1_res7.branch2.a.weight
+898 s4.pathway1_res7.branch2.a_bn.weight
+899 s4.pathway1_res7.branch2.a_bn.bias
+900 s4.pathway1_res7.branch2.a_bn.running_mean
+901 s4.pathway1_res7.branch2.a_bn.running_var
+902 s4.pathway1_res7.branch2.a_bn.num_batches_tracked
+903 s4.pathway1_res7.branch2.b.weight
+904 s4.pathway1_res7.branch2.b_bn.weight
+905 s4.pathway1_res7.branch2.b_bn.bias
+906 s4.pathway1_res7.branch2.b_bn.running_mean
+907 s4.pathway1_res7.branch2.b_bn.running_var
+908 s4.pathway1_res7.branch2.b_bn.num_batches_tracked
+909 s4.pathway1_res7.branch2.c.weight
+910 s4.pathway1_res7.branch2.c_bn.weight
+911 s4.pathway1_res7.branch2.c_bn.bias
+912 s4.pathway1_res7.branch2.c_bn.running_mean
+913 s4.pathway1_res7.branch2.c_bn.running_var
+914 s4.pathway1_res7.branch2.c_bn.num_batches_tracked
+915 s4.pathway1_res8.branch2.a.weight
+916 s4.pathway1_res8.branch2.a_bn.weight
+917 s4.pathway1_res8.branch2.a_bn.bias
+918 s4.pathway1_res8.branch2.a_bn.running_mean
+919 s4.pathway1_res8.branch2.a_bn.running_var
+920 s4.pathway1_res8.branch2.a_bn.num_batches_tracked
+921 s4.pathway1_res8.branch2.b.weight
+922 s4.pathway1_res8.branch2.b_bn.weight
+923 s4.pathway1_res8.branch2.b_bn.bias
+924 s4.pathway1_res8.branch2.b_bn.running_mean
+925 s4.pathway1_res8.branch2.b_bn.running_var
+926 s4.pathway1_res8.branch2.b_bn.num_batches_tracked
+927 s4.pathway1_res8.branch2.c.weight
+928 s4.pathway1_res8.branch2.c_bn.weight
+929 s4.pathway1_res8.branch2.c_bn.bias
+930 s4.pathway1_res8.branch2.c_bn.running_mean
+931 s4.pathway1_res8.branch2.c_bn.running_var
+932 s4.pathway1_res8.branch2.c_bn.num_batches_tracked
+933 s4.pathway1_res9.branch2.a.weight
+934 s4.pathway1_res9.branch2.a_bn.weight
+935 s4.pathway1_res9.branch2.a_bn.bias
+936 s4.pathway1_res9.branch2.a_bn.running_mean
+937 s4.pathway1_res9.branch2.a_bn.running_var
+938 s4.pathway1_res9.branch2.a_bn.num_batches_tracked
+939 s4.pathway1_res9.branch2.b.weight
+940 s4.pathway1_res9.branch2.b_bn.weight
+941 s4.pathway1_res9.branch2.b_bn.bias
+942 s4.pathway1_res9.branch2.b_bn.running_mean
+943 s4.pathway1_res9.branch2.b_bn.running_var
+944 s4.pathway1_res9.branch2.b_bn.num_batches_tracked
+945 s4.pathway1_res9.branch2.c.weight
+946 s4.pathway1_res9.branch2.c_bn.weight
+947 s4.pathway1_res9.branch2.c_bn.bias
+948 s4.pathway1_res9.branch2.c_bn.running_mean
+949 s4.pathway1_res9.branch2.c_bn.running_var
+950 s4.pathway1_res9.branch2.c_bn.num_batches_tracked
+951 s4.pathway1_res10.branch2.a.weight
+952 s4.pathway1_res10.branch2.a_bn.weight
+953 s4.pathway1_res10.branch2.a_bn.bias
+954 s4.pathway1_res10.branch2.a_bn.running_mean
+955 s4.pathway1_res10.branch2.a_bn.running_var
+956 s4.pathway1_res10.branch2.a_bn.num_batches_tracked
+957 s4.pathway1_res10.branch2.b.weight
+958 s4.pathway1_res10.branch2.b_bn.weight
+959 s4.pathway1_res10.branch2.b_bn.bias
+960 s4.pathway1_res10.branch2.b_bn.running_mean
+961 s4.pathway1_res10.branch2.b_bn.running_var
+962 s4.pathway1_res10.branch2.b_bn.num_batches_tracked
+963 s4.pathway1_res10.branch2.c.weight
+964 s4.pathway1_res10.branch2.c_bn.weight
+965 s4.pathway1_res10.branch2.c_bn.bias
+966 s4.pathway1_res10.branch2.c_bn.running_mean
+967 s4.pathway1_res10.branch2.c_bn.running_var
+968 s4.pathway1_res10.branch2.c_bn.num_batches_tracked
+969 s4.pathway1_res11.branch2.a.weight
+970 s4.pathway1_res11.branch2.a_bn.weight
+971 s4.pathway1_res11.branch2.a_bn.bias
+972 s4.pathway1_res11.branch2.a_bn.running_mean
+973 s4.pathway1_res11.branch2.a_bn.running_var
+974 s4.pathway1_res11.branch2.a_bn.num_batches_tracked
+975 s4.pathway1_res11.branch2.b.weight
+976 s4.pathway1_res11.branch2.b_bn.weight
+977 s4.pathway1_res11.branch2.b_bn.bias
+978 s4.pathway1_res11.branch2.b_bn.running_mean
+979 s4.pathway1_res11.branch2.b_bn.running_var
+980 s4.pathway1_res11.branch2.b_bn.num_batches_tracked
+981 s4.pathway1_res11.branch2.c.weight
+982 s4.pathway1_res11.branch2.c_bn.weight
+983 s4.pathway1_res11.branch2.c_bn.bias
+984 s4.pathway1_res11.branch2.c_bn.running_mean
+985 s4.pathway1_res11.branch2.c_bn.running_var
+986 s4.pathway1_res11.branch2.c_bn.num_batches_tracked
+987 s4.pathway1_res12.branch2.a.weight
+988 s4.pathway1_res12.branch2.a_bn.weight
+989 s4.pathway1_res12.branch2.a_bn.bias
+990 s4.pathway1_res12.branch2.a_bn.running_mean
+991 s4.pathway1_res12.branch2.a_bn.running_var
+992 s4.pathway1_res12.branch2.a_bn.num_batches_tracked
+993 s4.pathway1_res12.branch2.b.weight
+994 s4.pathway1_res12.branch2.b_bn.weight
+995 s4.pathway1_res12.branch2.b_bn.bias
+996 s4.pathway1_res12.branch2.b_bn.running_mean
+997 s4.pathway1_res12.branch2.b_bn.running_var
+998 s4.pathway1_res12.branch2.b_bn.num_batches_tracked
+999 s4.pathway1_res12.branch2.c.weight
+1000 s4.pathway1_res12.branch2.c_bn.weight
+1001 s4.pathway1_res12.branch2.c_bn.bias
+1002 s4.pathway1_res12.branch2.c_bn.running_mean
+1003 s4.pathway1_res12.branch2.c_bn.running_var
+1004 s4.pathway1_res12.branch2.c_bn.num_batches_tracked
+1005 s4.pathway1_res13.branch2.a.weight
+1006 s4.pathway1_res13.branch2.a_bn.weight
+1007 s4.pathway1_res13.branch2.a_bn.bias
+1008 s4.pathway1_res13.branch2.a_bn.running_mean
+1009 s4.pathway1_res13.branch2.a_bn.running_var
+1010 s4.pathway1_res13.branch2.a_bn.num_batches_tracked
+1011 s4.pathway1_res13.branch2.b.weight
+1012 s4.pathway1_res13.branch2.b_bn.weight
+1013 s4.pathway1_res13.branch2.b_bn.bias
+1014 s4.pathway1_res13.branch2.b_bn.running_mean
+1015 s4.pathway1_res13.branch2.b_bn.running_var
+1016 s4.pathway1_res13.branch2.b_bn.num_batches_tracked
+1017 s4.pathway1_res13.branch2.c.weight
+1018 s4.pathway1_res13.branch2.c_bn.weight
+1019 s4.pathway1_res13.branch2.c_bn.bias
+1020 s4.pathway1_res13.branch2.c_bn.running_mean
+1021 s4.pathway1_res13.branch2.c_bn.running_var
+1022 s4.pathway1_res13.branch2.c_bn.num_batches_tracked
+1023 s4.pathway1_res14.branch2.a.weight
+1024 s4.pathway1_res14.branch2.a_bn.weight
+1025 s4.pathway1_res14.branch2.a_bn.bias
+1026 s4.pathway1_res14.branch2.a_bn.running_mean
+1027 s4.pathway1_res14.branch2.a_bn.running_var
+1028 s4.pathway1_res14.branch2.a_bn.num_batches_tracked
+1029 s4.pathway1_res14.branch2.b.weight
+1030 s4.pathway1_res14.branch2.b_bn.weight
+1031 s4.pathway1_res14.branch2.b_bn.bias
+1032 s4.pathway1_res14.branch2.b_bn.running_mean
+1033 s4.pathway1_res14.branch2.b_bn.running_var
+1034 s4.pathway1_res14.branch2.b_bn.num_batches_tracked
+1035 s4.pathway1_res14.branch2.c.weight
+1036 s4.pathway1_res14.branch2.c_bn.weight
+1037 s4.pathway1_res14.branch2.c_bn.bias
+1038 s4.pathway1_res14.branch2.c_bn.running_mean
+1039 s4.pathway1_res14.branch2.c_bn.running_var
+1040 s4.pathway1_res14.branch2.c_bn.num_batches_tracked
+1041 s4.pathway1_res15.branch2.a.weight
+1042 s4.pathway1_res15.branch2.a_bn.weight
+1043 s4.pathway1_res15.branch2.a_bn.bias
+1044 s4.pathway1_res15.branch2.a_bn.running_mean
+1045 s4.pathway1_res15.branch2.a_bn.running_var
+1046 s4.pathway1_res15.branch2.a_bn.num_batches_tracked
+1047 s4.pathway1_res15.branch2.b.weight
+1048 s4.pathway1_res15.branch2.b_bn.weight
+1049 s4.pathway1_res15.branch2.b_bn.bias
+1050 s4.pathway1_res15.branch2.b_bn.running_mean
+1051 s4.pathway1_res15.branch2.b_bn.running_var
+1052 s4.pathway1_res15.branch2.b_bn.num_batches_tracked
+1053 s4.pathway1_res15.branch2.c.weight
+1054 s4.pathway1_res15.branch2.c_bn.weight
+1055 s4.pathway1_res15.branch2.c_bn.bias
+1056 s4.pathway1_res15.branch2.c_bn.running_mean
+1057 s4.pathway1_res15.branch2.c_bn.running_var
+1058 s4.pathway1_res15.branch2.c_bn.num_batches_tracked
+1059 s4.pathway1_res16.branch2.a.weight
+1060 s4.pathway1_res16.branch2.a_bn.weight
+1061 s4.pathway1_res16.branch2.a_bn.bias
+1062 s4.pathway1_res16.branch2.a_bn.running_mean
+1063 s4.pathway1_res16.branch2.a_bn.running_var
+1064 s4.pathway1_res16.branch2.a_bn.num_batches_tracked
+1065 s4.pathway1_res16.branch2.b.weight
+1066 s4.pathway1_res16.branch2.b_bn.weight
+1067 s4.pathway1_res16.branch2.b_bn.bias
+1068 s4.pathway1_res16.branch2.b_bn.running_mean
+1069 s4.pathway1_res16.branch2.b_bn.running_var
+1070 s4.pathway1_res16.branch2.b_bn.num_batches_tracked
+1071 s4.pathway1_res16.branch2.c.weight
+1072 s4.pathway1_res16.branch2.c_bn.weight
+1073 s4.pathway1_res16.branch2.c_bn.bias
+1074 s4.pathway1_res16.branch2.c_bn.running_mean
+1075 s4.pathway1_res16.branch2.c_bn.running_var
+1076 s4.pathway1_res16.branch2.c_bn.num_batches_tracked
+1077 s4.pathway1_res17.branch2.a.weight
+1078 s4.pathway1_res17.branch2.a_bn.weight
+1079 s4.pathway1_res17.branch2.a_bn.bias
+1080 s4.pathway1_res17.branch2.a_bn.running_mean
+1081 s4.pathway1_res17.branch2.a_bn.running_var
+1082 s4.pathway1_res17.branch2.a_bn.num_batches_tracked
+1083 s4.pathway1_res17.branch2.b.weight
+1084 s4.pathway1_res17.branch2.b_bn.weight
+1085 s4.pathway1_res17.branch2.b_bn.bias
+1086 s4.pathway1_res17.branch2.b_bn.running_mean
+1087 s4.pathway1_res17.branch2.b_bn.running_var
+1088 s4.pathway1_res17.branch2.b_bn.num_batches_tracked
+1089 s4.pathway1_res17.branch2.c.weight
+1090 s4.pathway1_res17.branch2.c_bn.weight
+1091 s4.pathway1_res17.branch2.c_bn.bias
+1092 s4.pathway1_res17.branch2.c_bn.running_mean
+1093 s4.pathway1_res17.branch2.c_bn.running_var
+1094 s4.pathway1_res17.branch2.c_bn.num_batches_tracked
+1095 s4.pathway1_res18.branch2.a.weight
+1096 s4.pathway1_res18.branch2.a_bn.weight
+1097 s4.pathway1_res18.branch2.a_bn.bias
+1098 s4.pathway1_res18.branch2.a_bn.running_mean
+1099 s4.pathway1_res18.branch2.a_bn.running_var
+1100 s4.pathway1_res18.branch2.a_bn.num_batches_tracked
+1101 s4.pathway1_res18.branch2.b.weight
+1102 s4.pathway1_res18.branch2.b_bn.weight
+1103 s4.pathway1_res18.branch2.b_bn.bias
+1104 s4.pathway1_res18.branch2.b_bn.running_mean
+1105 s4.pathway1_res18.branch2.b_bn.running_var
+1106 s4.pathway1_res18.branch2.b_bn.num_batches_tracked
+1107 s4.pathway1_res18.branch2.c.weight
+1108 s4.pathway1_res18.branch2.c_bn.weight
+1109 s4.pathway1_res18.branch2.c_bn.bias
+1110 s4.pathway1_res18.branch2.c_bn.running_mean
+1111 s4.pathway1_res18.branch2.c_bn.running_var
+1112 s4.pathway1_res18.branch2.c_bn.num_batches_tracked
+1113 s4.pathway1_res19.branch2.a.weight
+1114 s4.pathway1_res19.branch2.a_bn.weight
+1115 s4.pathway1_res19.branch2.a_bn.bias
+1116 s4.pathway1_res19.branch2.a_bn.running_mean
+1117 s4.pathway1_res19.branch2.a_bn.running_var
+1118 s4.pathway1_res19.branch2.a_bn.num_batches_tracked
+1119 s4.pathway1_res19.branch2.b.weight
+1120 s4.pathway1_res19.branch2.b_bn.weight
+1121 s4.pathway1_res19.branch2.b_bn.bias
+1122 s4.pathway1_res19.branch2.b_bn.running_mean
+1123 s4.pathway1_res19.branch2.b_bn.running_var
+1124 s4.pathway1_res19.branch2.b_bn.num_batches_tracked
+1125 s4.pathway1_res19.branch2.c.weight
+1126 s4.pathway1_res19.branch2.c_bn.weight
+1127 s4.pathway1_res19.branch2.c_bn.bias
+1128 s4.pathway1_res19.branch2.c_bn.running_mean
+1129 s4.pathway1_res19.branch2.c_bn.running_var
+1130 s4.pathway1_res19.branch2.c_bn.num_batches_tracked
+1131 s4.pathway1_res20.branch2.a.weight
+1132 s4.pathway1_res20.branch2.a_bn.weight
+1133 s4.pathway1_res20.branch2.a_bn.bias
+1134 s4.pathway1_res20.branch2.a_bn.running_mean
+1135 s4.pathway1_res20.branch2.a_bn.running_var
+1136 s4.pathway1_res20.branch2.a_bn.num_batches_tracked
+1137 s4.pathway1_res20.branch2.b.weight
+1138 s4.pathway1_res20.branch2.b_bn.weight
+1139 s4.pathway1_res20.branch2.b_bn.bias
+1140 s4.pathway1_res20.branch2.b_bn.running_mean
+1141 s4.pathway1_res20.branch2.b_bn.running_var
+1142 s4.pathway1_res20.branch2.b_bn.num_batches_tracked
+1143 s4.pathway1_res20.branch2.c.weight
+1144 s4.pathway1_res20.branch2.c_bn.weight
+1145 s4.pathway1_res20.branch2.c_bn.bias
+1146 s4.pathway1_res20.branch2.c_bn.running_mean
+1147 s4.pathway1_res20.branch2.c_bn.running_var
+1148 s4.pathway1_res20.branch2.c_bn.num_batches_tracked
+1149 s4.pathway1_res21.branch2.a.weight
+1150 s4.pathway1_res21.branch2.a_bn.weight
+1151 s4.pathway1_res21.branch2.a_bn.bias
+1152 s4.pathway1_res21.branch2.a_bn.running_mean
+1153 s4.pathway1_res21.branch2.a_bn.running_var
+1154 s4.pathway1_res21.branch2.a_bn.num_batches_tracked
+1155 s4.pathway1_res21.branch2.b.weight
+1156 s4.pathway1_res21.branch2.b_bn.weight
+1157 s4.pathway1_res21.branch2.b_bn.bias
+1158 s4.pathway1_res21.branch2.b_bn.running_mean
+1159 s4.pathway1_res21.branch2.b_bn.running_var
+1160 s4.pathway1_res21.branch2.b_bn.num_batches_tracked
+1161 s4.pathway1_res21.branch2.c.weight
+1162 s4.pathway1_res21.branch2.c_bn.weight
+1163 s4.pathway1_res21.branch2.c_bn.bias
+1164 s4.pathway1_res21.branch2.c_bn.running_mean
+1165 s4.pathway1_res21.branch2.c_bn.running_var
+1166 s4.pathway1_res21.branch2.c_bn.num_batches_tracked
+1167 s4.pathway1_res22.branch2.a.weight
+1168 s4.pathway1_res22.branch2.a_bn.weight
+1169 s4.pathway1_res22.branch2.a_bn.bias
+1170 s4.pathway1_res22.branch2.a_bn.running_mean
+1171 s4.pathway1_res22.branch2.a_bn.running_var
+1172 s4.pathway1_res22.branch2.a_bn.num_batches_tracked
+1173 s4.pathway1_res22.branch2.b.weight
+1174 s4.pathway1_res22.branch2.b_bn.weight
+1175 s4.pathway1_res22.branch2.b_bn.bias
+1176 s4.pathway1_res22.branch2.b_bn.running_mean
+1177 s4.pathway1_res22.branch2.b_bn.running_var
+1178 s4.pathway1_res22.branch2.b_bn.num_batches_tracked
+1179 s4.pathway1_res22.branch2.c.weight
+1180 s4.pathway1_res22.branch2.c_bn.weight
+1181 s4.pathway1_res22.branch2.c_bn.bias
+1182 s4.pathway1_res22.branch2.c_bn.running_mean
+1183 s4.pathway1_res22.branch2.c_bn.running_var
+1184 s4.pathway1_res22.branch2.c_bn.num_batches_tracked
+1185 s4_fuse.conv_f2s.weight
+1186 s4_fuse.bn.weight
+1187 s4_fuse.bn.bias
+1188 s4_fuse.bn.running_mean
+1189 s4_fuse.bn.running_var
+1190 s4_fuse.bn.num_batches_tracked
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch1.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch1_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch1_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch1_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch1_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch1_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.a.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.a_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.a_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.a_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.a_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.a_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.b.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.b_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.b_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.b_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.b_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.b_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.c.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.c_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.c_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.c_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.c_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res0.branch2.c_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.a.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.a_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.a_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.a_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.a_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.a_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.b.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.b_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.b_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.b_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.b_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.b_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.c.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.c_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.c_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.c_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.c_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res1.branch2.c_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.a.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.a_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.a_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.a_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.a_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.a_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.b.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.b_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.b_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.b_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.b_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.b_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.c.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.c_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.c_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.c_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.c_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway0_res2.branch2.c_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch1.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch1_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch1_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch1_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch1_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch1_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.a.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.a_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.a_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.a_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.a_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.a_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.b.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.b_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.b_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.b_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.b_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.b_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.c.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.c_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.c_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.c_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.c_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res0.branch2.c_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.a.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.a_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.a_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.a_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.a_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.a_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.b.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.b_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.b_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.b_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.b_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.b_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.c.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.c_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.c_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.c_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.c_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res1.branch2.c_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.a.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.a_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.a_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.a_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.a_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.a_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.b.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.b_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.b_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.b_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.b_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.b_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.c.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.c_bn.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.c_bn.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.c_bn.running_mean not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.c_bn.running_var not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights s5.pathway1_res2.branch2.c_bn.num_batches_tracked not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights head.projection.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights head.projection.bias not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights head.projection2.weight not loaded.
+[12/22 19:33:18][INFO] checkpoint.py: 367: Network weights head.projection2.bias not loaded.
+[12/22 19:33:23][INFO] da_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/kinetics700/frame_lists_10_500_100/train.csv
+[12/22 19:33:26][INFO] da_helper.py: 122: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/kinetics700/annotations_10_500_100/kinetics_train_v2.1.csv
+[12/22 19:33:26][INFO] da_helper.py: 124: Detection threshold: 0.8
+[12/22 19:33:26][INFO] da_helper.py: 125: Number of unique boxes: 4121
+[12/22 19:33:26][INFO] da_helper.py: 126: Number of annotations: 5000
+slurmstepd: error: *** JOB 222555 ON biwirender10 CANCELLED AT 2020-12-22T19:33:26 ***

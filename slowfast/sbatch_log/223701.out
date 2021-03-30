@@ -1,0 +1,21 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+/scratch/slurm/spool/job223701/slurm_script: line 5: syntax error near unexpected token `('
+/scratch/slurm/spool/job223701/slurm_script: line 5: `python tools/run_net.py --cfg /home/sieberl/SA2020/pyslowfast/experiments/ex_10_500_100_v25/SLOWFAST_32x2_R101_50_50.yaml (223397)'

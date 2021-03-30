@@ -1,0 +1,1021 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+[11/19 14:56:05][INFO] train_net.py: 383: Train with config:
+[11/19 14:56:05][INFO] train_net.py: 384: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/ava/annotations_5_1000_200/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': False,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'FREEZE': True,
+           'HEAD_ACT': 'sigmoid',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 5,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 2,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs02/scratch/da_action/data/output/ex_5_1000_200_v1',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.1,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 300,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': 'tensorboard',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'ENABLE': True,
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': False,
+           'BATCH_SIZE': 8,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': False,
+           'CHECKPOINT_FILE_PATH': '/srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': True,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+module.s1.pathway0_stem.conv.weight
+module.s1.pathway0_stem.bn.weight
+module.s1.pathway0_stem.bn.bias
+module.s1.pathway1_stem.conv.weight
+module.s1.pathway1_stem.bn.weight
+module.s1.pathway1_stem.bn.bias
+module.s1_fuse.conv_f2s.weight
+module.s1_fuse.bn.weight
+module.s1_fuse.bn.bias
+module.s2.pathway0_res0.branch1.weight
+module.s2.pathway0_res0.branch1_bn.weight
+module.s2.pathway0_res0.branch1_bn.bias
+module.s2.pathway0_res0.branch2.a.weight
+module.s2.pathway0_res0.branch2.a_bn.weight
+module.s2.pathway0_res0.branch2.a_bn.bias
+module.s2.pathway0_res0.branch2.b.weight
+module.s2.pathway0_res0.branch2.b_bn.weight
+module.s2.pathway0_res0.branch2.b_bn.bias
+module.s2.pathway0_res0.branch2.c.weight
+module.s2.pathway0_res0.branch2.c_bn.weight
+module.s2.pathway0_res0.branch2.c_bn.bias
+module.s2.pathway0_res1.branch2.a.weight
+module.s2.pathway0_res1.branch2.a_bn.weight
+module.s2.pathway0_res1.branch2.a_bn.bias
+module.s2.pathway0_res1.branch2.b.weight
+module.s2.pathway0_res1.branch2.b_bn.weight
+module.s2.pathway0_res1.branch2.b_bn.bias
+module.s2.pathway0_res1.branch2.c.weight
+module.s2.pathway0_res1.branch2.c_bn.weight
+module.s2.pathway0_res1.branch2.c_bn.bias
+module.s2.pathway0_res2.branch2.a.weight
+module.s2.pathway0_res2.branch2.a_bn.weight
+module.s2.pathway0_res2.branch2.a_bn.bias
+module.s2.pathway0_res2.branch2.b.weight
+module.s2.pathway0_res2.branch2.b_bn.weight
+module.s2.pathway0_res2.branch2.b_bn.bias
+module.s2.pathway0_res2.branch2.c.weight
+module.s2.pathway0_res2.branch2.c_bn.weight
+module.s2.pathway0_res2.branch2.c_bn.bias
+module.s2.pathway1_res0.branch1.weight
+module.s2.pathway1_res0.branch1_bn.weight
+module.s2.pathway1_res0.branch1_bn.bias
+module.s2.pathway1_res0.branch2.a.weight
+module.s2.pathway1_res0.branch2.a_bn.weight
+module.s2.pathway1_res0.branch2.a_bn.bias
+module.s2.pathway1_res0.branch2.b.weight
+module.s2.pathway1_res0.branch2.b_bn.weight
+module.s2.pathway1_res0.branch2.b_bn.bias
+module.s2.pathway1_res0.branch2.c.weight
+module.s2.pathway1_res0.branch2.c_bn.weight
+module.s2.pathway1_res0.branch2.c_bn.bias
+module.s2.pathway1_res1.branch2.a.weight
+module.s2.pathway1_res1.branch2.a_bn.weight
+module.s2.pathway1_res1.branch2.a_bn.bias
+module.s2.pathway1_res1.branch2.b.weight
+module.s2.pathway1_res1.branch2.b_bn.weight
+module.s2.pathway1_res1.branch2.b_bn.bias
+module.s2.pathway1_res1.branch2.c.weight
+module.s2.pathway1_res1.branch2.c_bn.weight
+module.s2.pathway1_res1.branch2.c_bn.bias
+module.s2.pathway1_res2.branch2.a.weight
+module.s2.pathway1_res2.branch2.a_bn.weight
+module.s2.pathway1_res2.branch2.a_bn.bias
+module.s2.pathway1_res2.branch2.b.weight
+module.s2.pathway1_res2.branch2.b_bn.weight
+module.s2.pathway1_res2.branch2.b_bn.bias
+module.s2.pathway1_res2.branch2.c.weight
+module.s2.pathway1_res2.branch2.c_bn.weight
+module.s2.pathway1_res2.branch2.c_bn.bias
+module.s2_fuse.conv_f2s.weight
+module.s2_fuse.bn.weight
+module.s2_fuse.bn.bias
+module.s3.pathway0_res0.branch1.weight
+module.s3.pathway0_res0.branch1_bn.weight
+module.s3.pathway0_res0.branch1_bn.bias
+module.s3.pathway0_res0.branch2.a.weight
+module.s3.pathway0_res0.branch2.a_bn.weight
+module.s3.pathway0_res0.branch2.a_bn.bias
+module.s3.pathway0_res0.branch2.b.weight
+module.s3.pathway0_res0.branch2.b_bn.weight
+module.s3.pathway0_res0.branch2.b_bn.bias
+module.s3.pathway0_res0.branch2.c.weight
+module.s3.pathway0_res0.branch2.c_bn.weight
+module.s3.pathway0_res0.branch2.c_bn.bias
+module.s3.pathway0_res1.branch2.a.weight
+module.s3.pathway0_res1.branch2.a_bn.weight
+module.s3.pathway0_res1.branch2.a_bn.bias
+module.s3.pathway0_res1.branch2.b.weight
+module.s3.pathway0_res1.branch2.b_bn.weight
+module.s3.pathway0_res1.branch2.b_bn.bias
+module.s3.pathway0_res1.branch2.c.weight
+module.s3.pathway0_res1.branch2.c_bn.weight
+module.s3.pathway0_res1.branch2.c_bn.bias
+module.s3.pathway0_res2.branch2.a.weight
+module.s3.pathway0_res2.branch2.a_bn.weight
+module.s3.pathway0_res2.branch2.a_bn.bias
+module.s3.pathway0_res2.branch2.b.weight
+module.s3.pathway0_res2.branch2.b_bn.weight
+module.s3.pathway0_res2.branch2.b_bn.bias
+module.s3.pathway0_res2.branch2.c.weight
+module.s3.pathway0_res2.branch2.c_bn.weight
+module.s3.pathway0_res2.branch2.c_bn.bias
+module.s3.pathway0_res3.branch2.a.weight
+module.s3.pathway0_res3.branch2.a_bn.weight
+module.s3.pathway0_res3.branch2.a_bn.bias
+module.s3.pathway0_res3.branch2.b.weight
+module.s3.pathway0_res3.branch2.b_bn.weight
+module.s3.pathway0_res3.branch2.b_bn.bias
+module.s3.pathway0_res3.branch2.c.weight
+module.s3.pathway0_res3.branch2.c_bn.weight
+module.s3.pathway0_res3.branch2.c_bn.bias
+module.s3.pathway1_res0.branch1.weight
+module.s3.pathway1_res0.branch1_bn.weight
+module.s3.pathway1_res0.branch1_bn.bias
+module.s3.pathway1_res0.branch2.a.weight
+module.s3.pathway1_res0.branch2.a_bn.weight
+module.s3.pathway1_res0.branch2.a_bn.bias
+module.s3.pathway1_res0.branch2.b.weight
+module.s3.pathway1_res0.branch2.b_bn.weight
+module.s3.pathway1_res0.branch2.b_bn.bias
+module.s3.pathway1_res0.branch2.c.weight
+module.s3.pathway1_res0.branch2.c_bn.weight
+module.s3.pathway1_res0.branch2.c_bn.bias
+module.s3.pathway1_res1.branch2.a.weight
+module.s3.pathway1_res1.branch2.a_bn.weight
+module.s3.pathway1_res1.branch2.a_bn.bias
+module.s3.pathway1_res1.branch2.b.weight
+module.s3.pathway1_res1.branch2.b_bn.weight
+module.s3.pathway1_res1.branch2.b_bn.bias
+module.s3.pathway1_res1.branch2.c.weight
+module.s3.pathway1_res1.branch2.c_bn.weight
+module.s3.pathway1_res1.branch2.c_bn.bias
+module.s3.pathway1_res2.branch2.a.weight
+module.s3.pathway1_res2.branch2.a_bn.weight
+module.s3.pathway1_res2.branch2.a_bn.bias
+module.s3.pathway1_res2.branch2.b.weight
+module.s3.pathway1_res2.branch2.b_bn.weight
+module.s3.pathway1_res2.branch2.b_bn.bias
+module.s3.pathway1_res2.branch2.c.weight
+module.s3.pathway1_res2.branch2.c_bn.weight
+module.s3.pathway1_res2.branch2.c_bn.bias
+module.s3.pathway1_res3.branch2.a.weight
+module.s3.pathway1_res3.branch2.a_bn.weight
+module.s3.pathway1_res3.branch2.a_bn.bias
+module.s3.pathway1_res3.branch2.b.weight
+module.s3.pathway1_res3.branch2.b_bn.weight
+module.s3.pathway1_res3.branch2.b_bn.bias
+module.s3.pathway1_res3.branch2.c.weight
+module.s3.pathway1_res3.branch2.c_bn.weight
+module.s3.pathway1_res3.branch2.c_bn.bias
+module.s3_fuse.conv_f2s.weight
+module.s3_fuse.bn.weight
+module.s3_fuse.bn.bias
+module.s4.pathway0_res0.branch1.weight
+module.s4.pathway0_res0.branch1_bn.weight
+module.s4.pathway0_res0.branch1_bn.bias
+module.s4.pathway0_res0.branch2.a.weight
+module.s4.pathway0_res0.branch2.a_bn.weight
+module.s4.pathway0_res0.branch2.a_bn.bias
+module.s4.pathway0_res0.branch2.b.weight
+module.s4.pathway0_res0.branch2.b_bn.weight
+module.s4.pathway0_res0.branch2.b_bn.bias
+module.s4.pathway0_res0.branch2.c.weight
+module.s4.pathway0_res0.branch2.c_bn.weight
+module.s4.pathway0_res0.branch2.c_bn.bias
+module.s4.pathway0_res1.branch2.a.weight
+module.s4.pathway0_res1.branch2.a_bn.weight
+module.s4.pathway0_res1.branch2.a_bn.bias
+module.s4.pathway0_res1.branch2.b.weight
+module.s4.pathway0_res1.branch2.b_bn.weight
+module.s4.pathway0_res1.branch2.b_bn.bias
+module.s4.pathway0_res1.branch2.c.weight
+module.s4.pathway0_res1.branch2.c_bn.weight
+module.s4.pathway0_res1.branch2.c_bn.bias
+module.s4.pathway0_res2.branch2.a.weight
+module.s4.pathway0_res2.branch2.a_bn.weight
+module.s4.pathway0_res2.branch2.a_bn.bias
+module.s4.pathway0_res2.branch2.b.weight
+module.s4.pathway0_res2.branch2.b_bn.weight
+module.s4.pathway0_res2.branch2.b_bn.bias
+module.s4.pathway0_res2.branch2.c.weight
+module.s4.pathway0_res2.branch2.c_bn.weight
+module.s4.pathway0_res2.branch2.c_bn.bias
+module.s4.pathway0_res3.branch2.a.weight
+module.s4.pathway0_res3.branch2.a_bn.weight
+module.s4.pathway0_res3.branch2.a_bn.bias
+module.s4.pathway0_res3.branch2.b.weight
+module.s4.pathway0_res3.branch2.b_bn.weight
+module.s4.pathway0_res3.branch2.b_bn.bias
+module.s4.pathway0_res3.branch2.c.weight
+module.s4.pathway0_res3.branch2.c_bn.weight
+module.s4.pathway0_res3.branch2.c_bn.bias
+module.s4.pathway0_res4.branch2.a.weight
+module.s4.pathway0_res4.branch2.a_bn.weight
+module.s4.pathway0_res4.branch2.a_bn.bias
+module.s4.pathway0_res4.branch2.b.weight
+module.s4.pathway0_res4.branch2.b_bn.weight
+module.s4.pathway0_res4.branch2.b_bn.bias
+module.s4.pathway0_res4.branch2.c.weight
+module.s4.pathway0_res4.branch2.c_bn.weight
+module.s4.pathway0_res4.branch2.c_bn.bias
+module.s4.pathway0_res5.branch2.a.weight
+module.s4.pathway0_res5.branch2.a_bn.weight
+module.s4.pathway0_res5.branch2.a_bn.bias
+module.s4.pathway0_res5.branch2.b.weight
+module.s4.pathway0_res5.branch2.b_bn.weight
+module.s4.pathway0_res5.branch2.b_bn.bias
+module.s4.pathway0_res5.branch2.c.weight
+module.s4.pathway0_res5.branch2.c_bn.weight
+module.s4.pathway0_res5.branch2.c_bn.bias
+module.s4.pathway0_res6.branch2.a.weight
+module.s4.pathway0_res6.branch2.a_bn.weight
+module.s4.pathway0_res6.branch2.a_bn.bias
+module.s4.pathway0_res6.branch2.b.weight
+module.s4.pathway0_res6.branch2.b_bn.weight
+module.s4.pathway0_res6.branch2.b_bn.bias
+module.s4.pathway0_res6.branch2.c.weight
+module.s4.pathway0_res6.branch2.c_bn.weight
+module.s4.pathway0_res6.branch2.c_bn.bias
+module.s4.pathway0_nonlocal6.conv_theta.weight
+module.s4.pathway0_nonlocal6.conv_theta.bias
+module.s4.pathway0_nonlocal6.conv_phi.weight
+module.s4.pathway0_nonlocal6.conv_phi.bias
+module.s4.pathway0_nonlocal6.conv_g.weight
+module.s4.pathway0_nonlocal6.conv_g.bias
+module.s4.pathway0_nonlocal6.conv_out.weight
+module.s4.pathway0_nonlocal6.conv_out.bias
+module.s4.pathway0_nonlocal6.bn.weight
+module.s4.pathway0_nonlocal6.bn.bias
+module.s4.pathway0_res7.branch2.a.weight
+module.s4.pathway0_res7.branch2.a_bn.weight
+module.s4.pathway0_res7.branch2.a_bn.bias
+module.s4.pathway0_res7.branch2.b.weight
+module.s4.pathway0_res7.branch2.b_bn.weight
+module.s4.pathway0_res7.branch2.b_bn.bias
+module.s4.pathway0_res7.branch2.c.weight
+module.s4.pathway0_res7.branch2.c_bn.weight
+module.s4.pathway0_res7.branch2.c_bn.bias
+module.s4.pathway0_res8.branch2.a.weight
+module.s4.pathway0_res8.branch2.a_bn.weight
+module.s4.pathway0_res8.branch2.a_bn.bias
+module.s4.pathway0_res8.branch2.b.weight
+module.s4.pathway0_res8.branch2.b_bn.weight
+module.s4.pathway0_res8.branch2.b_bn.bias
+module.s4.pathway0_res8.branch2.c.weight
+module.s4.pathway0_res8.branch2.c_bn.weight
+module.s4.pathway0_res8.branch2.c_bn.bias
+module.s4.pathway0_res9.branch2.a.weight
+module.s4.pathway0_res9.branch2.a_bn.weight
+module.s4.pathway0_res9.branch2.a_bn.bias
+module.s4.pathway0_res9.branch2.b.weight
+module.s4.pathway0_res9.branch2.b_bn.weight
+module.s4.pathway0_res9.branch2.b_bn.bias
+module.s4.pathway0_res9.branch2.c.weight
+module.s4.pathway0_res9.branch2.c_bn.weight
+module.s4.pathway0_res9.branch2.c_bn.bias
+module.s4.pathway0_res10.branch2.a.weight
+module.s4.pathway0_res10.branch2.a_bn.weight
+module.s4.pathway0_res10.branch2.a_bn.bias
+module.s4.pathway0_res10.branch2.b.weight
+module.s4.pathway0_res10.branch2.b_bn.weight
+module.s4.pathway0_res10.branch2.b_bn.bias
+module.s4.pathway0_res10.branch2.c.weight
+module.s4.pathway0_res10.branch2.c_bn.weight
+module.s4.pathway0_res10.branch2.c_bn.bias
+module.s4.pathway0_res11.branch2.a.weight
+module.s4.pathway0_res11.branch2.a_bn.weight
+module.s4.pathway0_res11.branch2.a_bn.bias
+module.s4.pathway0_res11.branch2.b.weight
+module.s4.pathway0_res11.branch2.b_bn.weight
+module.s4.pathway0_res11.branch2.b_bn.bias
+module.s4.pathway0_res11.branch2.c.weight
+module.s4.pathway0_res11.branch2.c_bn.weight
+module.s4.pathway0_res11.branch2.c_bn.bias
+module.s4.pathway0_res12.branch2.a.weight
+module.s4.pathway0_res12.branch2.a_bn.weight
+module.s4.pathway0_res12.branch2.a_bn.bias
+module.s4.pathway0_res12.branch2.b.weight
+module.s4.pathway0_res12.branch2.b_bn.weight
+module.s4.pathway0_res12.branch2.b_bn.bias
+module.s4.pathway0_res12.branch2.c.weight
+module.s4.pathway0_res12.branch2.c_bn.weight
+module.s4.pathway0_res12.branch2.c_bn.bias
+module.s4.pathway0_res13.branch2.a.weight
+module.s4.pathway0_res13.branch2.a_bn.weight
+module.s4.pathway0_res13.branch2.a_bn.bias
+module.s4.pathway0_res13.branch2.b.weight
+module.s4.pathway0_res13.branch2.b_bn.weight
+module.s4.pathway0_res13.branch2.b_bn.bias
+module.s4.pathway0_res13.branch2.c.weight
+module.s4.pathway0_res13.branch2.c_bn.weight
+module.s4.pathway0_res13.branch2.c_bn.bias
+module.s4.pathway0_nonlocal13.conv_theta.weight
+module.s4.pathway0_nonlocal13.conv_theta.bias
+module.s4.pathway0_nonlocal13.conv_phi.weight
+module.s4.pathway0_nonlocal13.conv_phi.bias
+module.s4.pathway0_nonlocal13.conv_g.weight
+module.s4.pathway0_nonlocal13.conv_g.bias
+module.s4.pathway0_nonlocal13.conv_out.weight
+module.s4.pathway0_nonlocal13.conv_out.bias
+module.s4.pathway0_nonlocal13.bn.weight
+module.s4.pathway0_nonlocal13.bn.bias
+module.s4.pathway0_res14.branch2.a.weight
+module.s4.pathway0_res14.branch2.a_bn.weight
+module.s4.pathway0_res14.branch2.a_bn.bias
+module.s4.pathway0_res14.branch2.b.weight
+module.s4.pathway0_res14.branch2.b_bn.weight
+module.s4.pathway0_res14.branch2.b_bn.bias
+module.s4.pathway0_res14.branch2.c.weight
+module.s4.pathway0_res14.branch2.c_bn.weight
+module.s4.pathway0_res14.branch2.c_bn.bias
+module.s4.pathway0_res15.branch2.a.weight
+module.s4.pathway0_res15.branch2.a_bn.weight
+module.s4.pathway0_res15.branch2.a_bn.bias
+module.s4.pathway0_res15.branch2.b.weight
+module.s4.pathway0_res15.branch2.b_bn.weight
+module.s4.pathway0_res15.branch2.b_bn.bias
+module.s4.pathway0_res15.branch2.c.weight
+module.s4.pathway0_res15.branch2.c_bn.weight
+module.s4.pathway0_res15.branch2.c_bn.bias
+module.s4.pathway0_res16.branch2.a.weight
+module.s4.pathway0_res16.branch2.a_bn.weight
+module.s4.pathway0_res16.branch2.a_bn.bias
+module.s4.pathway0_res16.branch2.b.weight
+module.s4.pathway0_res16.branch2.b_bn.weight
+module.s4.pathway0_res16.branch2.b_bn.bias
+module.s4.pathway0_res16.branch2.c.weight
+module.s4.pathway0_res16.branch2.c_bn.weight
+module.s4.pathway0_res16.branch2.c_bn.bias
+module.s4.pathway0_res17.branch2.a.weight
+module.s4.pathway0_res17.branch2.a_bn.weight
+module.s4.pathway0_res17.branch2.a_bn.bias
+module.s4.pathway0_res17.branch2.b.weight
+module.s4.pathway0_res17.branch2.b_bn.weight
+module.s4.pathway0_res17.branch2.b_bn.bias
+module.s4.pathway0_res17.branch2.c.weight
+module.s4.pathway0_res17.branch2.c_bn.weight
+module.s4.pathway0_res17.branch2.c_bn.bias
+module.s4.pathway0_res18.branch2.a.weight
+module.s4.pathway0_res18.branch2.a_bn.weight
+module.s4.pathway0_res18.branch2.a_bn.bias
+module.s4.pathway0_res18.branch2.b.weight
+module.s4.pathway0_res18.branch2.b_bn.weight
+module.s4.pathway0_res18.branch2.b_bn.bias
+module.s4.pathway0_res18.branch2.c.weight
+module.s4.pathway0_res18.branch2.c_bn.weight
+module.s4.pathway0_res18.branch2.c_bn.bias
+module.s4.pathway0_res19.branch2.a.weight
+module.s4.pathway0_res19.branch2.a_bn.weight
+module.s4.pathway0_res19.branch2.a_bn.bias
+module.s4.pathway0_res19.branch2.b.weight
+module.s4.pathway0_res19.branch2.b_bn.weight
+module.s4.pathway0_res19.branch2.b_bn.bias
+module.s4.pathway0_res19.branch2.c.weight
+module.s4.pathway0_res19.branch2.c_bn.weight
+module.s4.pathway0_res19.branch2.c_bn.bias
+module.s4.pathway0_res20.branch2.a.weight
+module.s4.pathway0_res20.branch2.a_bn.weight
+module.s4.pathway0_res20.branch2.a_bn.bias
+module.s4.pathway0_res20.branch2.b.weight
+module.s4.pathway0_res20.branch2.b_bn.weight
+module.s4.pathway0_res20.branch2.b_bn.bias
+module.s4.pathway0_res20.branch2.c.weight
+module.s4.pathway0_res20.branch2.c_bn.weight
+module.s4.pathway0_res20.branch2.c_bn.bias
+module.s4.pathway0_nonlocal20.conv_theta.weight
+module.s4.pathway0_nonlocal20.conv_theta.bias
+module.s4.pathway0_nonlocal20.conv_phi.weight
+module.s4.pathway0_nonlocal20.conv_phi.bias
+module.s4.pathway0_nonlocal20.conv_g.weight
+module.s4.pathway0_nonlocal20.conv_g.bias
+module.s4.pathway0_nonlocal20.conv_out.weight
+module.s4.pathway0_nonlocal20.conv_out.bias
+module.s4.pathway0_nonlocal20.bn.weight
+module.s4.pathway0_nonlocal20.bn.bias
+module.s4.pathway0_res21.branch2.a.weight
+module.s4.pathway0_res21.branch2.a_bn.weight
+module.s4.pathway0_res21.branch2.a_bn.bias
+module.s4.pathway0_res21.branch2.b.weight
+module.s4.pathway0_res21.branch2.b_bn.weight
+module.s4.pathway0_res21.branch2.b_bn.bias
+module.s4.pathway0_res21.branch2.c.weight
+module.s4.pathway0_res21.branch2.c_bn.weight
+module.s4.pathway0_res21.branch2.c_bn.bias
+module.s4.pathway0_res22.branch2.a.weight
+module.s4.pathway0_res22.branch2.a_bn.weight
+module.s4.pathway0_res22.branch2.a_bn.bias
+module.s4.pathway0_res22.branch2.b.weight
+module.s4.pathway0_res22.branch2.b_bn.weight
+module.s4.pathway0_res22.branch2.b_bn.bias
+module.s4.pathway0_res22.branch2.c.weight
+module.s4.pathway0_res22.branch2.c_bn.weight
+module.s4.pathway0_res22.branch2.c_bn.bias
+module.s4.pathway1_res0.branch1.weight
+module.s4.pathway1_res0.branch1_bn.weight
+module.s4.pathway1_res0.branch1_bn.bias
+module.s4.pathway1_res0.branch2.a.weight
+module.s4.pathway1_res0.branch2.a_bn.weight
+module.s4.pathway1_res0.branch2.a_bn.bias
+module.s4.pathway1_res0.branch2.b.weight
+module.s4.pathway1_res0.branch2.b_bn.weight
+module.s4.pathway1_res0.branch2.b_bn.bias
+module.s4.pathway1_res0.branch2.c.weight
+module.s4.pathway1_res0.branch2.c_bn.weight
+module.s4.pathway1_res0.branch2.c_bn.bias
+module.s4.pathway1_res1.branch2.a.weight
+module.s4.pathway1_res1.branch2.a_bn.weight
+module.s4.pathway1_res1.branch2.a_bn.bias
+module.s4.pathway1_res1.branch2.b.weight
+module.s4.pathway1_res1.branch2.b_bn.weight
+module.s4.pathway1_res1.branch2.b_bn.bias
+module.s4.pathway1_res1.branch2.c.weight
+module.s4.pathway1_res1.branch2.c_bn.weight
+module.s4.pathway1_res1.branch2.c_bn.bias
+module.s4.pathway1_res2.branch2.a.weight
+module.s4.pathway1_res2.branch2.a_bn.weight
+module.s4.pathway1_res2.branch2.a_bn.bias
+module.s4.pathway1_res2.branch2.b.weight
+module.s4.pathway1_res2.branch2.b_bn.weight
+module.s4.pathway1_res2.branch2.b_bn.bias
+module.s4.pathway1_res2.branch2.c.weight
+module.s4.pathway1_res2.branch2.c_bn.weight
+module.s4.pathway1_res2.branch2.c_bn.bias
+module.s4.pathway1_res3.branch2.a.weight
+module.s4.pathway1_res3.branch2.a_bn.weight
+module.s4.pathway1_res3.branch2.a_bn.bias
+module.s4.pathway1_res3.branch2.b.weight
+module.s4.pathway1_res3.branch2.b_bn.weight
+module.s4.pathway1_res3.branch2.b_bn.bias
+module.s4.pathway1_res3.branch2.c.weight
+module.s4.pathway1_res3.branch2.c_bn.weight
+module.s4.pathway1_res3.branch2.c_bn.bias
+module.s4.pathway1_res4.branch2.a.weight
+module.s4.pathway1_res4.branch2.a_bn.weight
+module.s4.pathway1_res4.branch2.a_bn.bias
+module.s4.pathway1_res4.branch2.b.weight
+module.s4.pathway1_res4.branch2.b_bn.weight
+module.s4.pathway1_res4.branch2.b_bn.bias
+module.s4.pathway1_res4.branch2.c.weight
+module.s4.pathway1_res4.branch2.c_bn.weight
+module.s4.pathway1_res4.branch2.c_bn.bias
+module.s4.pathway1_res5.branch2.a.weight
+module.s4.pathway1_res5.branch2.a_bn.weight
+module.s4.pathway1_res5.branch2.a_bn.bias
+module.s4.pathway1_res5.branch2.b.weight
+module.s4.pathway1_res5.branch2.b_bn.weight
+module.s4.pathway1_res5.branch2.b_bn.bias
+module.s4.pathway1_res5.branch2.c.weight
+module.s4.pathway1_res5.branch2.c_bn.weight
+module.s4.pathway1_res5.branch2.c_bn.bias
+module.s4.pathway1_res6.branch2.a.weight
+module.s4.pathway1_res6.branch2.a_bn.weight
+module.s4.pathway1_res6.branch2.a_bn.bias
+module.s4.pathway1_res6.branch2.b.weight
+module.s4.pathway1_res6.branch2.b_bn.weight
+module.s4.pathway1_res6.branch2.b_bn.bias
+module.s4.pathway1_res6.branch2.c.weight
+module.s4.pathway1_res6.branch2.c_bn.weight
+module.s4.pathway1_res6.branch2.c_bn.bias
+module.s4.pathway1_res7.branch2.a.weight
+module.s4.pathway1_res7.branch2.a_bn.weight
+module.s4.pathway1_res7.branch2.a_bn.bias
+module.s4.pathway1_res7.branch2.b.weight
+module.s4.pathway1_res7.branch2.b_bn.weight
+module.s4.pathway1_res7.branch2.b_bn.bias
+module.s4.pathway1_res7.branch2.c.weight
+module.s4.pathway1_res7.branch2.c_bn.weight
+module.s4.pathway1_res7.branch2.c_bn.bias
+module.s4.pathway1_res8.branch2.a.weight
+module.s4.pathway1_res8.branch2.a_bn.weight
+module.s4.pathway1_res8.branch2.a_bn.bias
+module.s4.pathway1_res8.branch2.b.weight
+module.s4.pathway1_res8.branch2.b_bn.weight
+module.s4.pathway1_res8.branch2.b_bn.bias
+module.s4.pathway1_res8.branch2.c.weight
+module.s4.pathway1_res8.branch2.c_bn.weight
+module.s4.pathway1_res8.branch2.c_bn.bias
+module.s4.pathway1_res9.branch2.a.weight
+module.s4.pathway1_res9.branch2.a_bn.weight
+module.s4.pathway1_res9.branch2.a_bn.bias
+module.s4.pathway1_res9.branch2.b.weight
+module.s4.pathway1_res9.branch2.b_bn.weight
+module.s4.pathway1_res9.branch2.b_bn.bias
+module.s4.pathway1_res9.branch2.c.weight
+module.s4.pathway1_res9.branch2.c_bn.weight
+module.s4.pathway1_res9.branch2.c_bn.bias
+module.s4.pathway1_res10.branch2.a.weight
+module.s4.pathway1_res10.branch2.a_bn.weight
+module.s4.pathway1_res10.branch2.a_bn.bias
+module.s4.pathway1_res10.branch2.b.weight
+module.s4.pathway1_res10.branch2.b_bn.weight
+module.s4.pathway1_res10.branch2.b_bn.bias
+module.s4.pathway1_res10.branch2.c.weight
+module.s4.pathway1_res10.branch2.c_bn.weight
+module.s4.pathway1_res10.branch2.c_bn.bias
+module.s4.pathway1_res11.branch2.a.weight
+module.s4.pathway1_res11.branch2.a_bn.weight
+module.s4.pathway1_res11.branch2.a_bn.bias
+module.s4.pathway1_res11.branch2.b.weight
+module.s4.pathway1_res11.branch2.b_bn.weight
+module.s4.pathway1_res11.branch2.b_bn.bias
+module.s4.pathway1_res11.branch2.c.weight
+module.s4.pathway1_res11.branch2.c_bn.weight
+module.s4.pathway1_res11.branch2.c_bn.bias
+module.s4.pathway1_res12.branch2.a.weight
+module.s4.pathway1_res12.branch2.a_bn.weight
+module.s4.pathway1_res12.branch2.a_bn.bias
+module.s4.pathway1_res12.branch2.b.weight
+module.s4.pathway1_res12.branch2.b_bn.weight
+module.s4.pathway1_res12.branch2.b_bn.bias
+module.s4.pathway1_res12.branch2.c.weight
+module.s4.pathway1_res12.branch2.c_bn.weight
+module.s4.pathway1_res12.branch2.c_bn.bias
+module.s4.pathway1_res13.branch2.a.weight
+module.s4.pathway1_res13.branch2.a_bn.weight
+module.s4.pathway1_res13.branch2.a_bn.bias
+module.s4.pathway1_res13.branch2.b.weight
+module.s4.pathway1_res13.branch2.b_bn.weight
+module.s4.pathway1_res13.branch2.b_bn.bias
+module.s4.pathway1_res13.branch2.c.weight
+module.s4.pathway1_res13.branch2.c_bn.weight
+module.s4.pathway1_res13.branch2.c_bn.bias
+module.s4.pathway1_res14.branch2.a.weight
+module.s4.pathway1_res14.branch2.a_bn.weight
+module.s4.pathway1_res14.branch2.a_bn.bias
+module.s4.pathway1_res14.branch2.b.weight
+module.s4.pathway1_res14.branch2.b_bn.weight
+module.s4.pathway1_res14.branch2.b_bn.bias
+module.s4.pathway1_res14.branch2.c.weight
+module.s4.pathway1_res14.branch2.c_bn.weight
+module.s4.pathway1_res14.branch2.c_bn.bias
+module.s4.pathway1_res15.branch2.a.weight
+module.s4.pathway1_res15.branch2.a_bn.weight
+module.s4.pathway1_res15.branch2.a_bn.bias
+module.s4.pathway1_res15.branch2.b.weight
+module.s4.pathway1_res15.branch2.b_bn.weight
+module.s4.pathway1_res15.branch2.b_bn.bias
+module.s4.pathway1_res15.branch2.c.weight
+module.s4.pathway1_res15.branch2.c_bn.weight
+module.s4.pathway1_res15.branch2.c_bn.bias
+module.s4.pathway1_res16.branch2.a.weight
+module.s4.pathway1_res16.branch2.a_bn.weight
+module.s4.pathway1_res16.branch2.a_bn.bias
+module.s4.pathway1_res16.branch2.b.weight
+module.s4.pathway1_res16.branch2.b_bn.weight
+module.s4.pathway1_res16.branch2.b_bn.bias
+module.s4.pathway1_res16.branch2.c.weight
+module.s4.pathway1_res16.branch2.c_bn.weight
+module.s4.pathway1_res16.branch2.c_bn.bias
+module.s4.pathway1_res17.branch2.a.weight
+module.s4.pathway1_res17.branch2.a_bn.weight
+module.s4.pathway1_res17.branch2.a_bn.bias
+module.s4.pathway1_res17.branch2.b.weight
+module.s4.pathway1_res17.branch2.b_bn.weight
+module.s4.pathway1_res17.branch2.b_bn.bias
+module.s4.pathway1_res17.branch2.c.weight
+module.s4.pathway1_res17.branch2.c_bn.weight
+module.s4.pathway1_res17.branch2.c_bn.bias
+module.s4.pathway1_res18.branch2.a.weight
+module.s4.pathway1_res18.branch2.a_bn.weight
+module.s4.pathway1_res18.branch2.a_bn.bias
+module.s4.pathway1_res18.branch2.b.weight
+module.s4.pathway1_res18.branch2.b_bn.weight
+module.s4.pathway1_res18.branch2.b_bn.bias
+module.s4.pathway1_res18.branch2.c.weight
+module.s4.pathway1_res18.branch2.c_bn.weight
+module.s4.pathway1_res18.branch2.c_bn.bias
+module.s4.pathway1_res19.branch2.a.weight
+module.s4.pathway1_res19.branch2.a_bn.weight
+module.s4.pathway1_res19.branch2.a_bn.bias
+module.s4.pathway1_res19.branch2.b.weight
+module.s4.pathway1_res19.branch2.b_bn.weight
+module.s4.pathway1_res19.branch2.b_bn.bias
+module.s4.pathway1_res19.branch2.c.weight
+module.s4.pathway1_res19.branch2.c_bn.weight
+module.s4.pathway1_res19.branch2.c_bn.bias
+module.s4.pathway1_res20.branch2.a.weight
+module.s4.pathway1_res20.branch2.a_bn.weight
+module.s4.pathway1_res20.branch2.a_bn.bias
+module.s4.pathway1_res20.branch2.b.weight
+module.s4.pathway1_res20.branch2.b_bn.weight
+module.s4.pathway1_res20.branch2.b_bn.bias
+module.s4.pathway1_res20.branch2.c.weight
+module.s4.pathway1_res20.branch2.c_bn.weight
+module.s4.pathway1_res20.branch2.c_bn.bias
+module.s4.pathway1_res21.branch2.a.weight
+module.s4.pathway1_res21.branch2.a_bn.weight
+module.s4.pathway1_res21.branch2.a_bn.bias
+module.s4.pathway1_res21.branch2.b.weight
+module.s4.pathway1_res21.branch2.b_bn.weight
+module.s4.pathway1_res21.branch2.b_bn.bias
+module.s4.pathway1_res21.branch2.c.weight
+module.s4.pathway1_res21.branch2.c_bn.weight
+module.s4.pathway1_res21.branch2.c_bn.bias
+module.s4.pathway1_res22.branch2.a.weight
+module.s4.pathway1_res22.branch2.a_bn.weight
+module.s4.pathway1_res22.branch2.a_bn.bias
+module.s4.pathway1_res22.branch2.b.weight
+module.s4.pathway1_res22.branch2.b_bn.weight
+module.s4.pathway1_res22.branch2.b_bn.bias
+module.s4.pathway1_res22.branch2.c.weight
+module.s4.pathway1_res22.branch2.c_bn.weight
+module.s4.pathway1_res22.branch2.c_bn.bias
+module.s4_fuse.conv_f2s.weight
+module.s4_fuse.bn.weight
+module.s4_fuse.bn.bias
+module.s5.pathway0_res0.branch1.weight
+module.s5.pathway0_res0.branch1_bn.weight
+module.s5.pathway0_res0.branch1_bn.bias
+module.s5.pathway0_res0.branch2.a.weight
+module.s5.pathway0_res0.branch2.a_bn.weight
+module.s5.pathway0_res0.branch2.a_bn.bias
+module.s5.pathway0_res0.branch2.b.weight
+module.s5.pathway0_res0.branch2.b_bn.weight
+module.s5.pathway0_res0.branch2.b_bn.bias
+module.s5.pathway0_res0.branch2.c.weight
+module.s5.pathway0_res0.branch2.c_bn.weight
+module.s5.pathway0_res0.branch2.c_bn.bias
+module.s5.pathway0_res1.branch2.a.weight
+module.s5.pathway0_res1.branch2.a_bn.weight
+module.s5.pathway0_res1.branch2.a_bn.bias
+module.s5.pathway0_res1.branch2.b.weight
+module.s5.pathway0_res1.branch2.b_bn.weight
+module.s5.pathway0_res1.branch2.b_bn.bias
+module.s5.pathway0_res1.branch2.c.weight
+module.s5.pathway0_res1.branch2.c_bn.weight
+module.s5.pathway0_res1.branch2.c_bn.bias
+module.s5.pathway0_res2.branch2.a.weight
+module.s5.pathway0_res2.branch2.a_bn.weight
+module.s5.pathway0_res2.branch2.a_bn.bias
+module.s5.pathway0_res2.branch2.b.weight
+module.s5.pathway0_res2.branch2.b_bn.weight
+module.s5.pathway0_res2.branch2.b_bn.bias
+module.s5.pathway0_res2.branch2.c.weight
+module.s5.pathway0_res2.branch2.c_bn.weight
+module.s5.pathway0_res2.branch2.c_bn.bias
+module.s5.pathway1_res0.branch1.weight
+module.s5.pathway1_res0.branch1_bn.weight
+module.s5.pathway1_res0.branch1_bn.bias
+module.s5.pathway1_res0.branch2.a.weight
+module.s5.pathway1_res0.branch2.a_bn.weight
+module.s5.pathway1_res0.branch2.a_bn.bias
+module.s5.pathway1_res0.branch2.b.weight
+module.s5.pathway1_res0.branch2.b_bn.weight
+module.s5.pathway1_res0.branch2.b_bn.bias
+module.s5.pathway1_res0.branch2.c.weight
+module.s5.pathway1_res0.branch2.c_bn.weight
+module.s5.pathway1_res0.branch2.c_bn.bias
+module.s5.pathway1_res1.branch2.a.weight
+module.s5.pathway1_res1.branch2.a_bn.weight
+module.s5.pathway1_res1.branch2.a_bn.bias
+module.s5.pathway1_res1.branch2.b.weight
+module.s5.pathway1_res1.branch2.b_bn.weight
+module.s5.pathway1_res1.branch2.b_bn.bias
+module.s5.pathway1_res1.branch2.c.weight
+module.s5.pathway1_res1.branch2.c_bn.weight
+module.s5.pathway1_res1.branch2.c_bn.bias
+module.s5.pathway1_res2.branch2.a.weight
+module.s5.pathway1_res2.branch2.a_bn.weight
+module.s5.pathway1_res2.branch2.a_bn.bias
+module.s5.pathway1_res2.branch2.b.weight
+module.s5.pathway1_res2.branch2.b_bn.weight
+module.s5.pathway1_res2.branch2.b_bn.bias
+module.s5.pathway1_res2.branch2.c.weight
+module.s5.pathway1_res2.branch2.c_bn.weight
+module.s5.pathway1_res2.branch2.c_bn.bias
+module.head.projection.weight
+module.head.projection.bias
+[11/19 14:56:21][INFO] checkpoint.py: 507: Load from given checkpoint file.
+[11/19 14:56:21][INFO] checkpoint.py: 214: Loading network weights from /srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl.
+[11/19 14:56:29][INFO] checkpoint.py: 340: Network weights head.projection.weight not loaded.
+[11/19 14:56:29][INFO] checkpoint.py: 340: Network weights head.projection.bias not loaded.
+[11/19 14:56:32][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/train.csv
+[11/19 14:56:33][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_5_1000_200/ava_train_v2.2.csv
+[11/19 14:56:33][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[11/19 14:56:33][INFO] ava_helper.py: 114: Number of unique boxes: 3321
+[11/19 14:56:33][INFO] ava_helper.py: 115: Number of annotations: 5000
+[11/19 14:56:33][INFO] ava_helper.py: 162: 2409 keyframes used.
+[11/19 14:56:33][INFO] ava_dataset.py:  90: === AVA dataset summary ===
+[11/19 14:56:33][INFO] ava_dataset.py:  91: Split: train
+[11/19 14:56:33][INFO] ava_dataset.py:  92: Number of videos: 6
+[11/19 14:56:33][INFO] ava_dataset.py:  96: Number of frames: 162181
+[11/19 14:56:33][INFO] ava_dataset.py:  97: Number of key frames: 2409
+[11/19 14:56:33][INFO] ava_dataset.py:  98: Number of boxes: 3321.
+[11/19 14:56:34][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/val.csv
+[11/19 14:56:34][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_5_1000_200/ava_val_predicted_boxes.csv
+[11/19 14:56:34][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[11/19 14:56:34][INFO] ava_helper.py: 114: Number of unique boxes: 788
+[11/19 14:56:34][INFO] ava_helper.py: 115: Number of annotations: 0
+[11/19 14:56:34][INFO] ava_helper.py: 162: 564 keyframes used.
+[11/19 14:56:34][INFO] ava_dataset.py:  90: === AVA dataset summary ===
+[11/19 14:56:34][INFO] ava_dataset.py:  91: Split: val
+[11/19 14:56:34][INFO] ava_dataset.py:  92: Number of videos: 2
+[11/19 14:56:34][INFO] ava_dataset.py:  96: Number of frames: 54062
+[11/19 14:56:34][INFO] ava_dataset.py:  97: Number of key frames: 564
+[11/19 14:56:34][INFO] ava_dataset.py:  98: Number of boxes: 788.
+[11/19 14:56:36][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/train.csv
+[11/19 14:56:37][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/val.csv
+[11/19 14:56:37][INFO] tensorboard_vis.py:  57: To see logged results in Tensorboard, please launch using the command             `tensorboard  --port=<port-number> --logdir /srv/beegfs02/scratch/da_action/data/output/ex_5_1000_200_v1/tensorboard`
+[11/19 14:56:37][INFO] train_net.py: 440: Start epoch: 2
+Traceback (most recent call last):
+  File "tools/run_net.py", line 50, in <module>
+    main()
+  File "tools/run_net.py", line 30, in main
+    launch_job(cfg=cfg, init_method=args.init_method, func=train)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/misc.py", line 293, in launch_job
+    daemon=daemon,
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/multiprocessing/spawn.py", line 171, in spawn
+    while not spawn_context.join():
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/multiprocessing/spawn.py", line 118, in join
+    raise Exception(msg)
+Exception: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/multiprocessing/spawn.py", line 19, in _wrap
+    fn(i, *args)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/multiprocessing.py", line 60, in run
+    ret = func(cfg)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/tools/train_net.py", line 472, in train
+    train_loader, model, optimizer, train_meter, cur_epoch, cfg, writer
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/tools/train_net.py", line 73, in train_epoch
+    preds = model(inputs, meta["boxes"])
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/nn/parallel/distributed.py", line 464, in forward
+    self.reducer.prepare_for_backward([])
+RuntimeError: Expected to have finished reduction in the prior iteration before starting a new one. This error indicates that your module has parameters that were not used in producing loss. You can enable unused parameter detection by (1) passing the keyword argument `find_unused_parameters=True` to `torch.nn.parallel.DistributedDataParallel`; (2) making sure all `forward` function outputs participate in calculating loss. If you already have done the above two steps, then the distributed data parallel module wasn't able to locate the output tensors in the return value of your module's `forward` function. Please include the loss function and the structure of the return value of `forward` of your module when reporting this issue (e.g. list, dict, iterable). (prepare_for_backward at /opt/conda/conda-bld/pytorch_1579022034529/work/torch/csrc/distributed/c10d/reducer.cpp:514)
+frame #0: c10::Error::Error(c10::SourceLocation, std::string const&) + 0x47 (0x7f0a840e7627 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/lib/libc10.so)
+frame #1: c10d::Reducer::prepare_for_backward(std::vector<at::Tensor, std::allocator<at::Tensor> > const&) + 0x7b7 (0x7f0ab65b3fe7 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #2: <unknown function> + 0xa31661 (0x7f0ab659f661 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #3: <unknown function> + 0x28c076 (0x7f0ab5dfa076 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #4: _PyCFunction_FastCallDict + 0x154 (0x55892fcbba14 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #5: <unknown function> + 0x19abae (0x55892fd43bae in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #6: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #7: <unknown function> + 0x193fd4 (0x55892fd3cfd4 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #8: _PyFunction_FastCallDict + 0x3da (0x55892fd3e54a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #9: _PyObject_FastCallDict + 0x26f (0x55892fcbbddf in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #10: _PyObject_Call_Prepend + 0x63 (0x55892fcc0873 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #11: PyObject_Call + 0x3e (0x55892fcbb81e in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #12: _PyEval_EvalFrameDefault + 0x196b (0x55892fd678bb in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #13: <unknown function> + 0x193fd4 (0x55892fd3cfd4 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #14: _PyFunction_FastCallDict + 0x1bc (0x55892fd3e32c in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #15: _PyObject_FastCallDict + 0x26f (0x55892fcbbddf in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #16: _PyObject_Call_Prepend + 0x63 (0x55892fcc0873 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #17: PyObject_Call + 0x3e (0x55892fcbb81e in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #18: <unknown function> + 0x16c211 (0x55892fd15211 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #19: _PyObject_FastCallDict + 0x8b (0x55892fcbbbfb in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #20: <unknown function> + 0x19abae (0x55892fd43bae in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #21: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #22: <unknown function> + 0x1942ce (0x55892fd3d2ce in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #23: <unknown function> + 0x194e51 (0x55892fd3de51 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #24: <unknown function> + 0x19ab35 (0x55892fd43b35 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #25: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #26: <unknown function> + 0x194c1b (0x55892fd3dc1b in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #27: <unknown function> + 0x19ab35 (0x55892fd43b35 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #28: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #29: PyEval_EvalCodeEx + 0x329 (0x55892fd3e969 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #30: <unknown function> + 0x1967f9 (0x55892fd3f7f9 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #31: PyObject_Call + 0x3e (0x55892fcbb81e in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #32: _PyEval_EvalFrameDefault + 0x196b (0x55892fd678bb in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #33: PyEval_EvalCodeEx + 0x329 (0x55892fd3e969 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #34: <unknown function> + 0x196896 (0x55892fd3f896 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #35: PyObject_Call + 0x3e (0x55892fcbb81e in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x196b (0x55892fd678bb in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #37: <unknown function> + 0x194c1b (0x55892fd3dc1b in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #38: <unknown function> + 0x19ab35 (0x55892fd43b35 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #39: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #40: <unknown function> + 0x194c1b (0x55892fd3dc1b in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #41: <unknown function> + 0x19ab35 (0x55892fd43b35 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #42: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #43: <unknown function> + 0x194c1b (0x55892fd3dc1b in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #44: <unknown function> + 0x19ab35 (0x55892fd43b35 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #45: _PyEval_EvalFrameDefault + 0x30a (0x55892fd6625a in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #46: <unknown function> + 0x193fd4 (0x55892fd3cfd4 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #47: <unknown function> + 0x194e51 (0x55892fd3de51 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #48: <unknown function> + 0x19ab35 (0x55892fd43b35 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #49: _PyEval_EvalFrameDefault + 0x10c9 (0x55892fd67019 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #50: PyEval_EvalCodeEx + 0x329 (0x55892fd3e969 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #51: PyEval_EvalCode + 0x1c (0x55892fd3f70c in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #52: <unknown function> + 0x216574 (0x55892fdbf574 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #53: PyRun_StringFlags + 0x7d (0x55892fdbf60d in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #54: PyRun_SimpleStringFlags + 0x3f (0x55892fdbf66f in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #55: Py_Main + 0x423 (0x55892fdc3473 in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #56: main + 0xee (0x55892fc8d43e in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+frame #57: __libc_start_main + 0xf1 (0x7f0ac54b52e1 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #58: <unknown function> + 0x1c3d0b (0x55892fd6cd0b in /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/bin/python)
+
+

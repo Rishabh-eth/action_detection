@@ -1,0 +1,39 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "tools/run_net.py", line 50, in <module>
+    main()
+  File "tools/run_net.py", line 26, in main
+    cfg = load_config(args)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/parser.py", line 77, in load_config
+    cfg.merge_from_file(args.cfg_file)
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/config.py", line 109, in merge_from_file
+    self.merge_from_other_cfg(loaded_cfg)
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/config.py", line 120, in merge_from_other_cfg
+    return super().merge_from_other_cfg(cfg_other)
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/yacs/config.py", line 217, in merge_from_other_cfg
+    _merge_a_into_b(cfg_other, self, self, [])
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/yacs/config.py", line 460, in _merge_a_into_b
+    _merge_a_into_b(v, b[k], root, key_list + [k])
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/yacs/config.py", line 456, in _merge_a_into_b
+    v = _check_and_coerce_cfg_value_type(v, b[k], k, full_key)
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/yacs/config.py", line 513, in _check_and_coerce_cfg_value_type
+    original_type, replacement_type, original, replacement, full_key
+ValueError: Type mismatch (<class 'float'> vs. <class 'int'>) with values (0.1 vs. 10) for config key: SOLVER.BASE_LR

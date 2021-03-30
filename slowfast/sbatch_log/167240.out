@@ -1,0 +1,50 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "tools/run_net.py", line 50, in <module>
+    main()
+  File "tools/run_net.py", line 30, in main
+    launch_job(cfg=cfg, init_method=args.init_method, func=train)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/misc.py", line 293, in launch_job
+    daemon=daemon,
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/multiprocessing/spawn.py", line 171, in spawn
+    while not spawn_context.join():
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/multiprocessing/spawn.py", line 118, in join
+    raise Exception(msg)
+Exception: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/torch/multiprocessing/spawn.py", line 19, in _wrap
+    fn(i, *args)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/multiprocessing.py", line 60, in run
+    ret = func(cfg)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/tools/train_net.py", line 373, in train
+    logging.setup_logging(cfg.OUTPUT_DIR)
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/logging.py", line 67, in setup_logging
+    fh = logging.StreamHandler(_cached_log_stream(filename))
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/logging.py", line 33, in _cached_log_stream
+    return PathManager.open(filename, "a")
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/file_io.py", line 648, in open
+    path, mode, buffering=buffering, **kwargs
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/fvcore/common/file_io.py", line 383, in _open
+    opener=opener,
+OSError: [Errno 70] Communication error on send: '/srv/beegfs02/scratch/da_action/data/output/ex_5_600_120_v1/stdout.log'
+

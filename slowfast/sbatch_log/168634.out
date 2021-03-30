@@ -1,0 +1,30 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "tools/run_net.py", line 10, in <module>
+    from slowfast.utils.misc import launch_job
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/__init__.py", line 4, in <module>
+    from slowfast.utils.env import setup_environment
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/env.py", line 6, in <module>
+    import slowfast.utils.logging as logging
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/logging.py", line 25
+    def print_pass(*objects, sep=" ", end="\n", file=sys.stdout, flush=False):
+                               ^
+SyntaxError: invalid syntax

@@ -1,0 +1,125 @@
+#/bin/bash
+
+# This file shall be used to extract 6s around the keyframe given in the source list at 30FPS
+
+SOURCE_LIST="sdf/srv/beegfs02/scratch/da_action/data//kinetics700/csv_steer/10_cl_val_frames.csv"
+FAILED_LIST="sdf/srv/beegfs02/scratch/da_action/data/kinetics700/csv_steer/10_cl_val_frames_failed.csv"
+CONSIDERED_LIST="sdf/srv/beegfs02/scratch/da_action/data/kinetics700/csv_steer/10_cl_val_frames_considered.csv"
+
+VIDEO_DIR="sdf/srv/beegfs02/scratch/da_action/data/kinetics700/videos/validate/"
+FRAME_DIR="sdf/srv/beegfs02/scratch/da_action/data/kinetics700/videos/new_frames"
+
+
+if [[ ! -d "${FRAME_DIR}" ]]; then
+  echo "${FRAME_DIR} doesn't exist. Creating it.";
+  mkdir -p ${FRAME_DIR}
+fi
+
+if [[ ! -f "${FAILED_LIST}" ]]; then
+  echo "${FAILED_LIST} doesn't exist. Creating it.";
+  touch ${FAILED_LIST}
+fi
+
+if [[ ! -f "${CONSIDERED_LIST}" ]]; then
+  echo "${CONSIDERED_LIST} doesn't exist. Creating it.";
+  touch ${CONSIDERED_LIST}
+fi
+
+while IFS=, read -r col1 col2
+do
+    FILENAME="$VIDEO_DIR$col1"
+    TOTAL_NAME="${FILENAME}.mp4"
+
+    # save video name to considered file
+    echo "$col1,$col2" >> "$CONSIDERED_LIST"
+
+    # check whether filename exists
+    if [[ -f "$TOTAL_NAME" ]]
+    then
+      # check for entire video length
+      #ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 -sexagesimal "${TOTAL_NAME}"
+      my_var=$(ffprobe -loglevel quiet -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${TOTAL_NAME}")
+      echo "$my_var"
+      #transform my_var into an integer for the comparison criterion
+      my_var2=` echo "$my_var/1" | bc `
+
+      # read the downwards rounded keyframe into an integer
+      col2=` echo "$col2/1" | bc `
+      #echo "$col2"
+
+      # manipulation in the floating point format
+      # my_var2=` echo $my_var - 1 | bc -l `
+
+      #my_var2=${my_var%.*}
+      #echo "$my_var2"
+
+
+
+      # one needs convert the number into an integer
+      #if [[ my_var -ge 3 ]]
+      #then
+      #  echo "$my_var"
+      #fi
+      #resten=$((my_var % 1))
+
+      extent=$(( col2 + 3 ))
+
+      if [[ col2 -ge 3 ]] && [[ my_var2 -ge extent ]]
+      then
+        video_name=${TOTAL_NAME##*/}
+
+        if [[ $video_name = *".webm" ]]; then
+            video_name=${video_name::-5}
+        else
+            video_name=${video_name::-4}
+        fi
+
+        # subtract 3 seconds to get the start instance
+        start=$(( col2 - 3 ))
+
+        # convert it to the hours, minutes and seconds
+        hours=$((start / 3600 + 100)); hours=${hours#1}
+
+        rest=$((start % 3600))
+
+        minutes=$((rest / 60 + 100)); minutes=${minutes#1}
+
+        rest=$((rest % 60))
+
+        seconds=$((rest + 100)); seconds=${seconds#1}
+
+        time=$hours:$minutes:$seconds
+
+        out_video_dir=${FRAME_DIR}/${video_name}/
+
+        mkdir -p "${out_video_dir}"
+
+        out_name="${out_video_dir}/${video_name}_%06d.jpg"
+
+        #ffmpeg -i "${TOTAL_NAME}" -r 30 -q:v 1 "${out_name}" </dev/null
+        #ffmpeg -i "${TOTAL_NAME}"
+        ffmpeg -loglevel quiet -ss $time -t 00:00:06 -i "${TOTAL_NAME}" -r 30 -q:v 1 "${out_name}" </dev/null
+
+      else
+        # write to .csv file that to know that video was not extracted
+        if [[ 3 -ge col2 ]] && [[ extent -ge my_var2 ]]
+        then
+          echo "$col1,$col2,both" >> "$FAILED_LIST"
+        elif [[ 3 -ge col2 ]]
+        then
+          echo "$col1,$col2,lower" >> "$FAILED_LIST"
+        elif [[ extent -ge my_var2 ]]
+        then
+          echo "$col1,$col2,upper" >> "$FAILED_LIST"
+        else
+          echo "$col1,$col2,unexplained" >> "$FAILED_LIST"
+        fi
+
+      fi
+
+    else
+      # write to .csv file that to know that video was not extracted
+      echo "$col1,$col2,path" >> "$FAILED_LIST"
+    fi
+
+done < "$SOURCE_LIST"

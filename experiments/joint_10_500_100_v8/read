@@ -1,0 +1,1 @@
+using 5000 dataset, lrfactor= 100 and unfreezing conv4 and 5 alonf with random initialization of weights

@@ -1,0 +1,33 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "tools/run_net.py", line 13, in <module>
+    from slowfast.utils.misc import launch_job
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/utils/misc.py", line 20, in <module>
+    from slowfast.datasets.utils import pack_pathway_output
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/datasets/__init__.py", line 7, in <module>
+    from .kinetics import Kinetics  # noqa
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/datasets/kinetics.py", line 14, in <module>
+    from . import video_container as container
+  File "/home/sieberl/SA2020/pyslowfast/slowfast/slowfast/datasets/video_container.py", line 4, in <module>
+    import av
+  File "/itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/av/__init__.py", line 9, in <module>
+    from av._core import time_base, pyav_version as __version__, library_versions
+ImportError: /itet-stor/sieberl/net_scratch/miniconda3/envs/slowfast/lib/python3.6/site-packages/av/../../.././libgnutls.so.30: symbol mpn_add_1, version HOGWEED_4 not defined in file libhogweed.so.4 with link time reference

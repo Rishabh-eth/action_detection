@@ -1,0 +1,4 @@
+#!/bin/bash
+curl -o /scratch/sieberl/ava/frame_lists/train.csv https://dl.fbaipublicfiles.com/video-long-term-feature-banks/data/ava/frame_lists/train.csv
+curl -o /scratch/sieberl/ava/frame_lists/val.csv https://dl.fbaipublicfiles.com/video-long-term-feature-banks/data/ava/frame_lists/val.csv
+

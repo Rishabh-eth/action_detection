@@ -1,0 +1,1857 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+[11/19 14:59:15][INFO] train_net.py: 383: Train with config:
+[11/19 14:59:16][INFO] train_net.py: 384: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs02/scratch/da_action/data/ava/annotations_5_1000_200/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': False,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'FREEZE': True,
+           'HEAD_ACT': 'sigmoid',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 5,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 1,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs02/scratch/da_action/data/output/ex_5_1000_200_v1',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.1,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 300,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': 'tensorboard',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'ENABLE': True,
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': False,
+           'BATCH_SIZE': 4,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': False,
+           'CHECKPOINT_FILE_PATH': '/srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': True,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+s1.pathway0_stem.conv.weight
+s1.pathway0_stem.bn.weight
+s1.pathway0_stem.bn.bias
+s1.pathway1_stem.conv.weight
+s1.pathway1_stem.bn.weight
+s1.pathway1_stem.bn.bias
+s1_fuse.conv_f2s.weight
+s1_fuse.bn.weight
+s1_fuse.bn.bias
+s2.pathway0_res0.branch1.weight
+s2.pathway0_res0.branch1_bn.weight
+s2.pathway0_res0.branch1_bn.bias
+s2.pathway0_res0.branch2.a.weight
+s2.pathway0_res0.branch2.a_bn.weight
+s2.pathway0_res0.branch2.a_bn.bias
+s2.pathway0_res0.branch2.b.weight
+s2.pathway0_res0.branch2.b_bn.weight
+s2.pathway0_res0.branch2.b_bn.bias
+s2.pathway0_res0.branch2.c.weight
+s2.pathway0_res0.branch2.c_bn.weight
+s2.pathway0_res0.branch2.c_bn.bias
+s2.pathway0_res1.branch2.a.weight
+s2.pathway0_res1.branch2.a_bn.weight
+s2.pathway0_res1.branch2.a_bn.bias
+s2.pathway0_res1.branch2.b.weight
+s2.pathway0_res1.branch2.b_bn.weight
+s2.pathway0_res1.branch2.b_bn.bias
+s2.pathway0_res1.branch2.c.weight
+s2.pathway0_res1.branch2.c_bn.weight
+s2.pathway0_res1.branch2.c_bn.bias
+s2.pathway0_res2.branch2.a.weight
+s2.pathway0_res2.branch2.a_bn.weight
+s2.pathway0_res2.branch2.a_bn.bias
+s2.pathway0_res2.branch2.b.weight
+s2.pathway0_res2.branch2.b_bn.weight
+s2.pathway0_res2.branch2.b_bn.bias
+s2.pathway0_res2.branch2.c.weight
+s2.pathway0_res2.branch2.c_bn.weight
+s2.pathway0_res2.branch2.c_bn.bias
+s2.pathway1_res0.branch1.weight
+s2.pathway1_res0.branch1_bn.weight
+s2.pathway1_res0.branch1_bn.bias
+s2.pathway1_res0.branch2.a.weight
+s2.pathway1_res0.branch2.a_bn.weight
+s2.pathway1_res0.branch2.a_bn.bias
+s2.pathway1_res0.branch2.b.weight
+s2.pathway1_res0.branch2.b_bn.weight
+s2.pathway1_res0.branch2.b_bn.bias
+s2.pathway1_res0.branch2.c.weight
+s2.pathway1_res0.branch2.c_bn.weight
+s2.pathway1_res0.branch2.c_bn.bias
+s2.pathway1_res1.branch2.a.weight
+s2.pathway1_res1.branch2.a_bn.weight
+s2.pathway1_res1.branch2.a_bn.bias
+s2.pathway1_res1.branch2.b.weight
+s2.pathway1_res1.branch2.b_bn.weight
+s2.pathway1_res1.branch2.b_bn.bias
+s2.pathway1_res1.branch2.c.weight
+s2.pathway1_res1.branch2.c_bn.weight
+s2.pathway1_res1.branch2.c_bn.bias
+s2.pathway1_res2.branch2.a.weight
+s2.pathway1_res2.branch2.a_bn.weight
+s2.pathway1_res2.branch2.a_bn.bias
+s2.pathway1_res2.branch2.b.weight
+s2.pathway1_res2.branch2.b_bn.weight
+s2.pathway1_res2.branch2.b_bn.bias
+s2.pathway1_res2.branch2.c.weight
+s2.pathway1_res2.branch2.c_bn.weight
+s2.pathway1_res2.branch2.c_bn.bias
+s2_fuse.conv_f2s.weight
+s2_fuse.bn.weight
+s2_fuse.bn.bias
+s3.pathway0_res0.branch1.weight
+s3.pathway0_res0.branch1_bn.weight
+s3.pathway0_res0.branch1_bn.bias
+s3.pathway0_res0.branch2.a.weight
+s3.pathway0_res0.branch2.a_bn.weight
+s3.pathway0_res0.branch2.a_bn.bias
+s3.pathway0_res0.branch2.b.weight
+s3.pathway0_res0.branch2.b_bn.weight
+s3.pathway0_res0.branch2.b_bn.bias
+s3.pathway0_res0.branch2.c.weight
+s3.pathway0_res0.branch2.c_bn.weight
+s3.pathway0_res0.branch2.c_bn.bias
+s3.pathway0_res1.branch2.a.weight
+s3.pathway0_res1.branch2.a_bn.weight
+s3.pathway0_res1.branch2.a_bn.bias
+s3.pathway0_res1.branch2.b.weight
+s3.pathway0_res1.branch2.b_bn.weight
+s3.pathway0_res1.branch2.b_bn.bias
+s3.pathway0_res1.branch2.c.weight
+s3.pathway0_res1.branch2.c_bn.weight
+s3.pathway0_res1.branch2.c_bn.bias
+s3.pathway0_res2.branch2.a.weight
+s3.pathway0_res2.branch2.a_bn.weight
+s3.pathway0_res2.branch2.a_bn.bias
+s3.pathway0_res2.branch2.b.weight
+s3.pathway0_res2.branch2.b_bn.weight
+s3.pathway0_res2.branch2.b_bn.bias
+s3.pathway0_res2.branch2.c.weight
+s3.pathway0_res2.branch2.c_bn.weight
+s3.pathway0_res2.branch2.c_bn.bias
+s3.pathway0_res3.branch2.a.weight
+s3.pathway0_res3.branch2.a_bn.weight
+s3.pathway0_res3.branch2.a_bn.bias
+s3.pathway0_res3.branch2.b.weight
+s3.pathway0_res3.branch2.b_bn.weight
+s3.pathway0_res3.branch2.b_bn.bias
+s3.pathway0_res3.branch2.c.weight
+s3.pathway0_res3.branch2.c_bn.weight
+s3.pathway0_res3.branch2.c_bn.bias
+s3.pathway1_res0.branch1.weight
+s3.pathway1_res0.branch1_bn.weight
+s3.pathway1_res0.branch1_bn.bias
+s3.pathway1_res0.branch2.a.weight
+s3.pathway1_res0.branch2.a_bn.weight
+s3.pathway1_res0.branch2.a_bn.bias
+s3.pathway1_res0.branch2.b.weight
+s3.pathway1_res0.branch2.b_bn.weight
+s3.pathway1_res0.branch2.b_bn.bias
+s3.pathway1_res0.branch2.c.weight
+s3.pathway1_res0.branch2.c_bn.weight
+s3.pathway1_res0.branch2.c_bn.bias
+s3.pathway1_res1.branch2.a.weight
+s3.pathway1_res1.branch2.a_bn.weight
+s3.pathway1_res1.branch2.a_bn.bias
+s3.pathway1_res1.branch2.b.weight
+s3.pathway1_res1.branch2.b_bn.weight
+s3.pathway1_res1.branch2.b_bn.bias
+s3.pathway1_res1.branch2.c.weight
+s3.pathway1_res1.branch2.c_bn.weight
+s3.pathway1_res1.branch2.c_bn.bias
+s3.pathway1_res2.branch2.a.weight
+s3.pathway1_res2.branch2.a_bn.weight
+s3.pathway1_res2.branch2.a_bn.bias
+s3.pathway1_res2.branch2.b.weight
+s3.pathway1_res2.branch2.b_bn.weight
+s3.pathway1_res2.branch2.b_bn.bias
+s3.pathway1_res2.branch2.c.weight
+s3.pathway1_res2.branch2.c_bn.weight
+s3.pathway1_res2.branch2.c_bn.bias
+s3.pathway1_res3.branch2.a.weight
+s3.pathway1_res3.branch2.a_bn.weight
+s3.pathway1_res3.branch2.a_bn.bias
+s3.pathway1_res3.branch2.b.weight
+s3.pathway1_res3.branch2.b_bn.weight
+s3.pathway1_res3.branch2.b_bn.bias
+s3.pathway1_res3.branch2.c.weight
+s3.pathway1_res3.branch2.c_bn.weight
+s3.pathway1_res3.branch2.c_bn.bias
+s3_fuse.conv_f2s.weight
+s3_fuse.bn.weight
+s3_fuse.bn.bias
+s4.pathway0_res0.branch1.weight
+s4.pathway0_res0.branch1_bn.weight
+s4.pathway0_res0.branch1_bn.bias
+s4.pathway0_res0.branch2.a.weight
+s4.pathway0_res0.branch2.a_bn.weight
+s4.pathway0_res0.branch2.a_bn.bias
+s4.pathway0_res0.branch2.b.weight
+s4.pathway0_res0.branch2.b_bn.weight
+s4.pathway0_res0.branch2.b_bn.bias
+s4.pathway0_res0.branch2.c.weight
+s4.pathway0_res0.branch2.c_bn.weight
+s4.pathway0_res0.branch2.c_bn.bias
+s4.pathway0_res1.branch2.a.weight
+s4.pathway0_res1.branch2.a_bn.weight
+s4.pathway0_res1.branch2.a_bn.bias
+s4.pathway0_res1.branch2.b.weight
+s4.pathway0_res1.branch2.b_bn.weight
+s4.pathway0_res1.branch2.b_bn.bias
+s4.pathway0_res1.branch2.c.weight
+s4.pathway0_res1.branch2.c_bn.weight
+s4.pathway0_res1.branch2.c_bn.bias
+s4.pathway0_res2.branch2.a.weight
+s4.pathway0_res2.branch2.a_bn.weight
+s4.pathway0_res2.branch2.a_bn.bias
+s4.pathway0_res2.branch2.b.weight
+s4.pathway0_res2.branch2.b_bn.weight
+s4.pathway0_res2.branch2.b_bn.bias
+s4.pathway0_res2.branch2.c.weight
+s4.pathway0_res2.branch2.c_bn.weight
+s4.pathway0_res2.branch2.c_bn.bias
+s4.pathway0_res3.branch2.a.weight
+s4.pathway0_res3.branch2.a_bn.weight
+s4.pathway0_res3.branch2.a_bn.bias
+s4.pathway0_res3.branch2.b.weight
+s4.pathway0_res3.branch2.b_bn.weight
+s4.pathway0_res3.branch2.b_bn.bias
+s4.pathway0_res3.branch2.c.weight
+s4.pathway0_res3.branch2.c_bn.weight
+s4.pathway0_res3.branch2.c_bn.bias
+s4.pathway0_res4.branch2.a.weight
+s4.pathway0_res4.branch2.a_bn.weight
+s4.pathway0_res4.branch2.a_bn.bias
+s4.pathway0_res4.branch2.b.weight
+s4.pathway0_res4.branch2.b_bn.weight
+s4.pathway0_res4.branch2.b_bn.bias
+s4.pathway0_res4.branch2.c.weight
+s4.pathway0_res4.branch2.c_bn.weight
+s4.pathway0_res4.branch2.c_bn.bias
+s4.pathway0_res5.branch2.a.weight
+s4.pathway0_res5.branch2.a_bn.weight
+s4.pathway0_res5.branch2.a_bn.bias
+s4.pathway0_res5.branch2.b.weight
+s4.pathway0_res5.branch2.b_bn.weight
+s4.pathway0_res5.branch2.b_bn.bias
+s4.pathway0_res5.branch2.c.weight
+s4.pathway0_res5.branch2.c_bn.weight
+s4.pathway0_res5.branch2.c_bn.bias
+s4.pathway0_res6.branch2.a.weight
+s4.pathway0_res6.branch2.a_bn.weight
+s4.pathway0_res6.branch2.a_bn.bias
+s4.pathway0_res6.branch2.b.weight
+s4.pathway0_res6.branch2.b_bn.weight
+s4.pathway0_res6.branch2.b_bn.bias
+s4.pathway0_res6.branch2.c.weight
+s4.pathway0_res6.branch2.c_bn.weight
+s4.pathway0_res6.branch2.c_bn.bias
+s4.pathway0_nonlocal6.conv_theta.weight
+s4.pathway0_nonlocal6.conv_theta.bias
+s4.pathway0_nonlocal6.conv_phi.weight
+s4.pathway0_nonlocal6.conv_phi.bias
+s4.pathway0_nonlocal6.conv_g.weight
+s4.pathway0_nonlocal6.conv_g.bias
+s4.pathway0_nonlocal6.conv_out.weight
+s4.pathway0_nonlocal6.conv_out.bias
+s4.pathway0_nonlocal6.bn.weight
+s4.pathway0_nonlocal6.bn.bias
+s4.pathway0_res7.branch2.a.weight
+s4.pathway0_res7.branch2.a_bn.weight
+s4.pathway0_res7.branch2.a_bn.bias
+s4.pathway0_res7.branch2.b.weight
+s4.pathway0_res7.branch2.b_bn.weight
+s4.pathway0_res7.branch2.b_bn.bias
+s4.pathway0_res7.branch2.c.weight
+s4.pathway0_res7.branch2.c_bn.weight
+s4.pathway0_res7.branch2.c_bn.bias
+s4.pathway0_res8.branch2.a.weight
+s4.pathway0_res8.branch2.a_bn.weight
+s4.pathway0_res8.branch2.a_bn.bias
+s4.pathway0_res8.branch2.b.weight
+s4.pathway0_res8.branch2.b_bn.weight
+s4.pathway0_res8.branch2.b_bn.bias
+s4.pathway0_res8.branch2.c.weight
+s4.pathway0_res8.branch2.c_bn.weight
+s4.pathway0_res8.branch2.c_bn.bias
+s4.pathway0_res9.branch2.a.weight
+s4.pathway0_res9.branch2.a_bn.weight
+s4.pathway0_res9.branch2.a_bn.bias
+s4.pathway0_res9.branch2.b.weight
+s4.pathway0_res9.branch2.b_bn.weight
+s4.pathway0_res9.branch2.b_bn.bias
+s4.pathway0_res9.branch2.c.weight
+s4.pathway0_res9.branch2.c_bn.weight
+s4.pathway0_res9.branch2.c_bn.bias
+s4.pathway0_res10.branch2.a.weight
+s4.pathway0_res10.branch2.a_bn.weight
+s4.pathway0_res10.branch2.a_bn.bias
+s4.pathway0_res10.branch2.b.weight
+s4.pathway0_res10.branch2.b_bn.weight
+s4.pathway0_res10.branch2.b_bn.bias
+s4.pathway0_res10.branch2.c.weight
+s4.pathway0_res10.branch2.c_bn.weight
+s4.pathway0_res10.branch2.c_bn.bias
+s4.pathway0_res11.branch2.a.weight
+s4.pathway0_res11.branch2.a_bn.weight
+s4.pathway0_res11.branch2.a_bn.bias
+s4.pathway0_res11.branch2.b.weight
+s4.pathway0_res11.branch2.b_bn.weight
+s4.pathway0_res11.branch2.b_bn.bias
+s4.pathway0_res11.branch2.c.weight
+s4.pathway0_res11.branch2.c_bn.weight
+s4.pathway0_res11.branch2.c_bn.bias
+s4.pathway0_res12.branch2.a.weight
+s4.pathway0_res12.branch2.a_bn.weight
+s4.pathway0_res12.branch2.a_bn.bias
+s4.pathway0_res12.branch2.b.weight
+s4.pathway0_res12.branch2.b_bn.weight
+s4.pathway0_res12.branch2.b_bn.bias
+s4.pathway0_res12.branch2.c.weight
+s4.pathway0_res12.branch2.c_bn.weight
+s4.pathway0_res12.branch2.c_bn.bias
+s4.pathway0_res13.branch2.a.weight
+s4.pathway0_res13.branch2.a_bn.weight
+s4.pathway0_res13.branch2.a_bn.bias
+s4.pathway0_res13.branch2.b.weight
+s4.pathway0_res13.branch2.b_bn.weight
+s4.pathway0_res13.branch2.b_bn.bias
+s4.pathway0_res13.branch2.c.weight
+s4.pathway0_res13.branch2.c_bn.weight
+s4.pathway0_res13.branch2.c_bn.bias
+s4.pathway0_nonlocal13.conv_theta.weight
+s4.pathway0_nonlocal13.conv_theta.bias
+s4.pathway0_nonlocal13.conv_phi.weight
+s4.pathway0_nonlocal13.conv_phi.bias
+s4.pathway0_nonlocal13.conv_g.weight
+s4.pathway0_nonlocal13.conv_g.bias
+s4.pathway0_nonlocal13.conv_out.weight
+s4.pathway0_nonlocal13.conv_out.bias
+s4.pathway0_nonlocal13.bn.weight
+s4.pathway0_nonlocal13.bn.bias
+s4.pathway0_res14.branch2.a.weight
+s4.pathway0_res14.branch2.a_bn.weight
+s4.pathway0_res14.branch2.a_bn.bias
+s4.pathway0_res14.branch2.b.weight
+s4.pathway0_res14.branch2.b_bn.weight
+s4.pathway0_res14.branch2.b_bn.bias
+s4.pathway0_res14.branch2.c.weight
+s4.pathway0_res14.branch2.c_bn.weight
+s4.pathway0_res14.branch2.c_bn.bias
+s4.pathway0_res15.branch2.a.weight
+s4.pathway0_res15.branch2.a_bn.weight
+s4.pathway0_res15.branch2.a_bn.bias
+s4.pathway0_res15.branch2.b.weight
+s4.pathway0_res15.branch2.b_bn.weight
+s4.pathway0_res15.branch2.b_bn.bias
+s4.pathway0_res15.branch2.c.weight
+s4.pathway0_res15.branch2.c_bn.weight
+s4.pathway0_res15.branch2.c_bn.bias
+s4.pathway0_res16.branch2.a.weight
+s4.pathway0_res16.branch2.a_bn.weight
+s4.pathway0_res16.branch2.a_bn.bias
+s4.pathway0_res16.branch2.b.weight
+s4.pathway0_res16.branch2.b_bn.weight
+s4.pathway0_res16.branch2.b_bn.bias
+s4.pathway0_res16.branch2.c.weight
+s4.pathway0_res16.branch2.c_bn.weight
+s4.pathway0_res16.branch2.c_bn.bias
+s4.pathway0_res17.branch2.a.weight
+s4.pathway0_res17.branch2.a_bn.weight
+s4.pathway0_res17.branch2.a_bn.bias
+s4.pathway0_res17.branch2.b.weight
+s4.pathway0_res17.branch2.b_bn.weight
+s4.pathway0_res17.branch2.b_bn.bias
+s4.pathway0_res17.branch2.c.weight
+s4.pathway0_res17.branch2.c_bn.weight
+s4.pathway0_res17.branch2.c_bn.bias
+s4.pathway0_res18.branch2.a.weight
+s4.pathway0_res18.branch2.a_bn.weight
+s4.pathway0_res18.branch2.a_bn.bias
+s4.pathway0_res18.branch2.b.weight
+s4.pathway0_res18.branch2.b_bn.weight
+s4.pathway0_res18.branch2.b_bn.bias
+s4.pathway0_res18.branch2.c.weight
+s4.pathway0_res18.branch2.c_bn.weight
+s4.pathway0_res18.branch2.c_bn.bias
+s4.pathway0_res19.branch2.a.weight
+s4.pathway0_res19.branch2.a_bn.weight
+s4.pathway0_res19.branch2.a_bn.bias
+s4.pathway0_res19.branch2.b.weight
+s4.pathway0_res19.branch2.b_bn.weight
+s4.pathway0_res19.branch2.b_bn.bias
+s4.pathway0_res19.branch2.c.weight
+s4.pathway0_res19.branch2.c_bn.weight
+s4.pathway0_res19.branch2.c_bn.bias
+s4.pathway0_res20.branch2.a.weight
+s4.pathway0_res20.branch2.a_bn.weight
+s4.pathway0_res20.branch2.a_bn.bias
+s4.pathway0_res20.branch2.b.weight
+s4.pathway0_res20.branch2.b_bn.weight
+s4.pathway0_res20.branch2.b_bn.bias
+s4.pathway0_res20.branch2.c.weight
+s4.pathway0_res20.branch2.c_bn.weight
+s4.pathway0_res20.branch2.c_bn.bias
+s4.pathway0_nonlocal20.conv_theta.weight
+s4.pathway0_nonlocal20.conv_theta.bias
+s4.pathway0_nonlocal20.conv_phi.weight
+s4.pathway0_nonlocal20.conv_phi.bias
+s4.pathway0_nonlocal20.conv_g.weight
+s4.pathway0_nonlocal20.conv_g.bias
+s4.pathway0_nonlocal20.conv_out.weight
+s4.pathway0_nonlocal20.conv_out.bias
+s4.pathway0_nonlocal20.bn.weight
+s4.pathway0_nonlocal20.bn.bias
+s4.pathway0_res21.branch2.a.weight
+s4.pathway0_res21.branch2.a_bn.weight
+s4.pathway0_res21.branch2.a_bn.bias
+s4.pathway0_res21.branch2.b.weight
+s4.pathway0_res21.branch2.b_bn.weight
+s4.pathway0_res21.branch2.b_bn.bias
+s4.pathway0_res21.branch2.c.weight
+s4.pathway0_res21.branch2.c_bn.weight
+s4.pathway0_res21.branch2.c_bn.bias
+s4.pathway0_res22.branch2.a.weight
+s4.pathway0_res22.branch2.a_bn.weight
+s4.pathway0_res22.branch2.a_bn.bias
+s4.pathway0_res22.branch2.b.weight
+s4.pathway0_res22.branch2.b_bn.weight
+s4.pathway0_res22.branch2.b_bn.bias
+s4.pathway0_res22.branch2.c.weight
+s4.pathway0_res22.branch2.c_bn.weight
+s4.pathway0_res22.branch2.c_bn.bias
+s4.pathway1_res0.branch1.weight
+s4.pathway1_res0.branch1_bn.weight
+s4.pathway1_res0.branch1_bn.bias
+s4.pathway1_res0.branch2.a.weight
+s4.pathway1_res0.branch2.a_bn.weight
+s4.pathway1_res0.branch2.a_bn.bias
+s4.pathway1_res0.branch2.b.weight
+s4.pathway1_res0.branch2.b_bn.weight
+s4.pathway1_res0.branch2.b_bn.bias
+s4.pathway1_res0.branch2.c.weight
+s4.pathway1_res0.branch2.c_bn.weight
+s4.pathway1_res0.branch2.c_bn.bias
+s4.pathway1_res1.branch2.a.weight
+s4.pathway1_res1.branch2.a_bn.weight
+s4.pathway1_res1.branch2.a_bn.bias
+s4.pathway1_res1.branch2.b.weight
+s4.pathway1_res1.branch2.b_bn.weight
+s4.pathway1_res1.branch2.b_bn.bias
+s4.pathway1_res1.branch2.c.weight
+s4.pathway1_res1.branch2.c_bn.weight
+s4.pathway1_res1.branch2.c_bn.bias
+s4.pathway1_res2.branch2.a.weight
+s4.pathway1_res2.branch2.a_bn.weight
+s4.pathway1_res2.branch2.a_bn.bias
+s4.pathway1_res2.branch2.b.weight
+s4.pathway1_res2.branch2.b_bn.weight
+s4.pathway1_res2.branch2.b_bn.bias
+s4.pathway1_res2.branch2.c.weight
+s4.pathway1_res2.branch2.c_bn.weight
+s4.pathway1_res2.branch2.c_bn.bias
+s4.pathway1_res3.branch2.a.weight
+s4.pathway1_res3.branch2.a_bn.weight
+s4.pathway1_res3.branch2.a_bn.bias
+s4.pathway1_res3.branch2.b.weight
+s4.pathway1_res3.branch2.b_bn.weight
+s4.pathway1_res3.branch2.b_bn.bias
+s4.pathway1_res3.branch2.c.weight
+s4.pathway1_res3.branch2.c_bn.weight
+s4.pathway1_res3.branch2.c_bn.bias
+s4.pathway1_res4.branch2.a.weight
+s4.pathway1_res4.branch2.a_bn.weight
+s4.pathway1_res4.branch2.a_bn.bias
+s4.pathway1_res4.branch2.b.weight
+s4.pathway1_res4.branch2.b_bn.weight
+s4.pathway1_res4.branch2.b_bn.bias
+s4.pathway1_res4.branch2.c.weight
+s4.pathway1_res4.branch2.c_bn.weight
+s4.pathway1_res4.branch2.c_bn.bias
+s4.pathway1_res5.branch2.a.weight
+s4.pathway1_res5.branch2.a_bn.weight
+s4.pathway1_res5.branch2.a_bn.bias
+s4.pathway1_res5.branch2.b.weight
+s4.pathway1_res5.branch2.b_bn.weight
+s4.pathway1_res5.branch2.b_bn.bias
+s4.pathway1_res5.branch2.c.weight
+s4.pathway1_res5.branch2.c_bn.weight
+s4.pathway1_res5.branch2.c_bn.bias
+s4.pathway1_res6.branch2.a.weight
+s4.pathway1_res6.branch2.a_bn.weight
+s4.pathway1_res6.branch2.a_bn.bias
+s4.pathway1_res6.branch2.b.weight
+s4.pathway1_res6.branch2.b_bn.weight
+s4.pathway1_res6.branch2.b_bn.bias
+s4.pathway1_res6.branch2.c.weight
+s4.pathway1_res6.branch2.c_bn.weight
+s4.pathway1_res6.branch2.c_bn.bias
+s4.pathway1_res7.branch2.a.weight
+s4.pathway1_res7.branch2.a_bn.weight
+s4.pathway1_res7.branch2.a_bn.bias
+s4.pathway1_res7.branch2.b.weight
+s4.pathway1_res7.branch2.b_bn.weight
+s4.pathway1_res7.branch2.b_bn.bias
+s4.pathway1_res7.branch2.c.weight
+s4.pathway1_res7.branch2.c_bn.weight
+s4.pathway1_res7.branch2.c_bn.bias
+s4.pathway1_res8.branch2.a.weight
+s4.pathway1_res8.branch2.a_bn.weight
+s4.pathway1_res8.branch2.a_bn.bias
+s4.pathway1_res8.branch2.b.weight
+s4.pathway1_res8.branch2.b_bn.weight
+s4.pathway1_res8.branch2.b_bn.bias
+s4.pathway1_res8.branch2.c.weight
+s4.pathway1_res8.branch2.c_bn.weight
+s4.pathway1_res8.branch2.c_bn.bias
+s4.pathway1_res9.branch2.a.weight
+s4.pathway1_res9.branch2.a_bn.weight
+s4.pathway1_res9.branch2.a_bn.bias
+s4.pathway1_res9.branch2.b.weight
+s4.pathway1_res9.branch2.b_bn.weight
+s4.pathway1_res9.branch2.b_bn.bias
+s4.pathway1_res9.branch2.c.weight
+s4.pathway1_res9.branch2.c_bn.weight
+s4.pathway1_res9.branch2.c_bn.bias
+s4.pathway1_res10.branch2.a.weight
+s4.pathway1_res10.branch2.a_bn.weight
+s4.pathway1_res10.branch2.a_bn.bias
+s4.pathway1_res10.branch2.b.weight
+s4.pathway1_res10.branch2.b_bn.weight
+s4.pathway1_res10.branch2.b_bn.bias
+s4.pathway1_res10.branch2.c.weight
+s4.pathway1_res10.branch2.c_bn.weight
+s4.pathway1_res10.branch2.c_bn.bias
+s4.pathway1_res11.branch2.a.weight
+s4.pathway1_res11.branch2.a_bn.weight
+s4.pathway1_res11.branch2.a_bn.bias
+s4.pathway1_res11.branch2.b.weight
+s4.pathway1_res11.branch2.b_bn.weight
+s4.pathway1_res11.branch2.b_bn.bias
+s4.pathway1_res11.branch2.c.weight
+s4.pathway1_res11.branch2.c_bn.weight
+s4.pathway1_res11.branch2.c_bn.bias
+s4.pathway1_res12.branch2.a.weight
+s4.pathway1_res12.branch2.a_bn.weight
+s4.pathway1_res12.branch2.a_bn.bias
+s4.pathway1_res12.branch2.b.weight
+s4.pathway1_res12.branch2.b_bn.weight
+s4.pathway1_res12.branch2.b_bn.bias
+s4.pathway1_res12.branch2.c.weight
+s4.pathway1_res12.branch2.c_bn.weight
+s4.pathway1_res12.branch2.c_bn.bias
+s4.pathway1_res13.branch2.a.weight
+s4.pathway1_res13.branch2.a_bn.weight
+s4.pathway1_res13.branch2.a_bn.bias
+s4.pathway1_res13.branch2.b.weight
+s4.pathway1_res13.branch2.b_bn.weight
+s4.pathway1_res13.branch2.b_bn.bias
+s4.pathway1_res13.branch2.c.weight
+s4.pathway1_res13.branch2.c_bn.weight
+s4.pathway1_res13.branch2.c_bn.bias
+s4.pathway1_res14.branch2.a.weight
+s4.pathway1_res14.branch2.a_bn.weight
+s4.pathway1_res14.branch2.a_bn.bias
+s4.pathway1_res14.branch2.b.weight
+s4.pathway1_res14.branch2.b_bn.weight
+s4.pathway1_res14.branch2.b_bn.bias
+s4.pathway1_res14.branch2.c.weight
+s4.pathway1_res14.branch2.c_bn.weight
+s4.pathway1_res14.branch2.c_bn.bias
+s4.pathway1_res15.branch2.a.weight
+s4.pathway1_res15.branch2.a_bn.weight
+s4.pathway1_res15.branch2.a_bn.bias
+s4.pathway1_res15.branch2.b.weight
+s4.pathway1_res15.branch2.b_bn.weight
+s4.pathway1_res15.branch2.b_bn.bias
+s4.pathway1_res15.branch2.c.weight
+s4.pathway1_res15.branch2.c_bn.weight
+s4.pathway1_res15.branch2.c_bn.bias
+s4.pathway1_res16.branch2.a.weight
+s4.pathway1_res16.branch2.a_bn.weight
+s4.pathway1_res16.branch2.a_bn.bias
+s4.pathway1_res16.branch2.b.weight
+s4.pathway1_res16.branch2.b_bn.weight
+s4.pathway1_res16.branch2.b_bn.bias
+s4.pathway1_res16.branch2.c.weight
+s4.pathway1_res16.branch2.c_bn.weight
+s4.pathway1_res16.branch2.c_bn.bias
+s4.pathway1_res17.branch2.a.weight
+s4.pathway1_res17.branch2.a_bn.weight
+s4.pathway1_res17.branch2.a_bn.bias
+s4.pathway1_res17.branch2.b.weight
+s4.pathway1_res17.branch2.b_bn.weight
+s4.pathway1_res17.branch2.b_bn.bias
+s4.pathway1_res17.branch2.c.weight
+s4.pathway1_res17.branch2.c_bn.weight
+s4.pathway1_res17.branch2.c_bn.bias
+s4.pathway1_res18.branch2.a.weight
+s4.pathway1_res18.branch2.a_bn.weight
+s4.pathway1_res18.branch2.a_bn.bias
+s4.pathway1_res18.branch2.b.weight
+s4.pathway1_res18.branch2.b_bn.weight
+s4.pathway1_res18.branch2.b_bn.bias
+s4.pathway1_res18.branch2.c.weight
+s4.pathway1_res18.branch2.c_bn.weight
+s4.pathway1_res18.branch2.c_bn.bias
+s4.pathway1_res19.branch2.a.weight
+s4.pathway1_res19.branch2.a_bn.weight
+s4.pathway1_res19.branch2.a_bn.bias
+s4.pathway1_res19.branch2.b.weight
+s4.pathway1_res19.branch2.b_bn.weight
+s4.pathway1_res19.branch2.b_bn.bias
+s4.pathway1_res19.branch2.c.weight
+s4.pathway1_res19.branch2.c_bn.weight
+s4.pathway1_res19.branch2.c_bn.bias
+s4.pathway1_res20.branch2.a.weight
+s4.pathway1_res20.branch2.a_bn.weight
+s4.pathway1_res20.branch2.a_bn.bias
+s4.pathway1_res20.branch2.b.weight
+s4.pathway1_res20.branch2.b_bn.weight
+s4.pathway1_res20.branch2.b_bn.bias
+s4.pathway1_res20.branch2.c.weight
+s4.pathway1_res20.branch2.c_bn.weight
+s4.pathway1_res20.branch2.c_bn.bias
+s4.pathway1_res21.branch2.a.weight
+s4.pathway1_res21.branch2.a_bn.weight
+s4.pathway1_res21.branch2.a_bn.bias
+s4.pathway1_res21.branch2.b.weight
+s4.pathway1_res21.branch2.b_bn.weight
+s4.pathway1_res21.branch2.b_bn.bias
+s4.pathway1_res21.branch2.c.weight
+s4.pathway1_res21.branch2.c_bn.weight
+s4.pathway1_res21.branch2.c_bn.bias
+s4.pathway1_res22.branch2.a.weight
+s4.pathway1_res22.branch2.a_bn.weight
+s4.pathway1_res22.branch2.a_bn.bias
+s4.pathway1_res22.branch2.b.weight
+s4.pathway1_res22.branch2.b_bn.weight
+s4.pathway1_res22.branch2.b_bn.bias
+s4.pathway1_res22.branch2.c.weight
+s4.pathway1_res22.branch2.c_bn.weight
+s4.pathway1_res22.branch2.c_bn.bias
+s4_fuse.conv_f2s.weight
+s4_fuse.bn.weight
+s4_fuse.bn.bias
+s5.pathway0_res0.branch1.weight
+s5.pathway0_res0.branch1_bn.weight
+s5.pathway0_res0.branch1_bn.bias
+s5.pathway0_res0.branch2.a.weight
+s5.pathway0_res0.branch2.a_bn.weight
+s5.pathway0_res0.branch2.a_bn.bias
+s5.pathway0_res0.branch2.b.weight
+s5.pathway0_res0.branch2.b_bn.weight
+s5.pathway0_res0.branch2.b_bn.bias
+s5.pathway0_res0.branch2.c.weight
+s5.pathway0_res0.branch2.c_bn.weight
+s5.pathway0_res0.branch2.c_bn.bias
+s5.pathway0_res1.branch2.a.weight
+s5.pathway0_res1.branch2.a_bn.weight
+s5.pathway0_res1.branch2.a_bn.bias
+s5.pathway0_res1.branch2.b.weight
+s5.pathway0_res1.branch2.b_bn.weight
+s5.pathway0_res1.branch2.b_bn.bias
+s5.pathway0_res1.branch2.c.weight
+s5.pathway0_res1.branch2.c_bn.weight
+s5.pathway0_res1.branch2.c_bn.bias
+s5.pathway0_res2.branch2.a.weight
+s5.pathway0_res2.branch2.a_bn.weight
+s5.pathway0_res2.branch2.a_bn.bias
+s5.pathway0_res2.branch2.b.weight
+s5.pathway0_res2.branch2.b_bn.weight
+s5.pathway0_res2.branch2.b_bn.bias
+s5.pathway0_res2.branch2.c.weight
+s5.pathway0_res2.branch2.c_bn.weight
+s5.pathway0_res2.branch2.c_bn.bias
+s5.pathway1_res0.branch1.weight
+s5.pathway1_res0.branch1_bn.weight
+s5.pathway1_res0.branch1_bn.bias
+s5.pathway1_res0.branch2.a.weight
+s5.pathway1_res0.branch2.a_bn.weight
+s5.pathway1_res0.branch2.a_bn.bias
+s5.pathway1_res0.branch2.b.weight
+s5.pathway1_res0.branch2.b_bn.weight
+s5.pathway1_res0.branch2.b_bn.bias
+s5.pathway1_res0.branch2.c.weight
+s5.pathway1_res0.branch2.c_bn.weight
+s5.pathway1_res0.branch2.c_bn.bias
+s5.pathway1_res1.branch2.a.weight
+s5.pathway1_res1.branch2.a_bn.weight
+s5.pathway1_res1.branch2.a_bn.bias
+s5.pathway1_res1.branch2.b.weight
+s5.pathway1_res1.branch2.b_bn.weight
+s5.pathway1_res1.branch2.b_bn.bias
+s5.pathway1_res1.branch2.c.weight
+s5.pathway1_res1.branch2.c_bn.weight
+s5.pathway1_res1.branch2.c_bn.bias
+s5.pathway1_res2.branch2.a.weight
+s5.pathway1_res2.branch2.a_bn.weight
+s5.pathway1_res2.branch2.a_bn.bias
+s5.pathway1_res2.branch2.b.weight
+s5.pathway1_res2.branch2.b_bn.weight
+s5.pathway1_res2.branch2.b_bn.bias
+s5.pathway1_res2.branch2.c.weight
+s5.pathway1_res2.branch2.c_bn.weight
+s5.pathway1_res2.branch2.c_bn.bias
+head.projection.weight
+head.projection.bias
+[11/19 14:59:24][INFO] checkpoint.py: 507: Load from given checkpoint file.
+[11/19 14:59:24][INFO] checkpoint.py: 214: Loading network weights from /srv/beegfs02/scratch/da_action/data/models_pretrained/SLOWFAST_32x2_R101_50_50.pkl.
+[11/19 14:59:29][INFO] checkpoint.py: 340: Network weights head.projection.weight not loaded.
+[11/19 14:59:29][INFO] checkpoint.py: 340: Network weights head.projection.bias not loaded.
+[11/19 14:59:32][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/train.csv
+[11/19 14:59:32][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_5_1000_200/ava_train_v2.2.csv
+[11/19 14:59:32][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[11/19 14:59:32][INFO] ava_helper.py: 114: Number of unique boxes: 3321
+[11/19 14:59:32][INFO] ava_helper.py: 115: Number of annotations: 5000
+[11/19 14:59:32][INFO] ava_helper.py: 162: 2409 keyframes used.
+[11/19 14:59:32][INFO] ava_dataset.py:  90: === AVA dataset summary ===
+[11/19 14:59:32][INFO] ava_dataset.py:  91: Split: train
+[11/19 14:59:32][INFO] ava_dataset.py:  92: Number of videos: 6
+[11/19 14:59:32][INFO] ava_dataset.py:  96: Number of frames: 162181
+[11/19 14:59:32][INFO] ava_dataset.py:  97: Number of key frames: 2409
+[11/19 14:59:32][INFO] ava_dataset.py:  98: Number of boxes: 3321.
+[11/19 14:59:33][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/val.csv
+[11/19 14:59:33][INFO] ava_helper.py: 111: Finished loading annotations from: /srv/beegfs02/scratch/da_action/data/ava/annotations_5_1000_200/ava_val_predicted_boxes.csv
+[11/19 14:59:33][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[11/19 14:59:33][INFO] ava_helper.py: 114: Number of unique boxes: 788
+[11/19 14:59:33][INFO] ava_helper.py: 115: Number of annotations: 0
+[11/19 14:59:33][INFO] ava_helper.py: 162: 564 keyframes used.
+[11/19 14:59:33][INFO] ava_dataset.py:  90: === AVA dataset summary ===
+[11/19 14:59:33][INFO] ava_dataset.py:  91: Split: val
+[11/19 14:59:33][INFO] ava_dataset.py:  92: Number of videos: 2
+[11/19 14:59:33][INFO] ava_dataset.py:  96: Number of frames: 54062
+[11/19 14:59:33][INFO] ava_dataset.py:  97: Number of key frames: 564
+[11/19 14:59:33][INFO] ava_dataset.py:  98: Number of boxes: 788.
+[11/19 14:59:34][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/train.csv
+[11/19 14:59:35][INFO] ava_helper.py:  65: Finished loading image paths from: /srv/beegfs02/scratch/da_action/data/ava/frame_lists_5_1000_200/val.csv
+[11/19 14:59:35][INFO] tensorboard_vis.py:  57: To see logged results in Tensorboard, please launch using the command             `tensorboard  --port=<port-number> --logdir /srv/beegfs02/scratch/da_action/data/output/ex_5_1000_200_v1/tensorboard`
+[11/19 14:59:35][INFO] train_net.py: 440: Start epoch: 2
+[11/19 15:54:36][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 15:54:37][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 15:54:37][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 15:54:37][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 15:54:37][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 15:54:37][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.7883007500891637,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5834094393798857,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5799711263462726,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5414285643015843,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3821464291395841,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.575051261851298}
+[11/19 15:54:38][INFO] ava_eval_helper.py: 174: AVA eval done in 1.317099 seconds.
+[11/19 15:54:38][INFO] logging.py:  97: json_stats: {
+  "RAM": "26.26/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "2",
+  "gpu_mem": "0.96G",
+  "map": 0.57505,
+  "mode": "val"
+}
+[11/19 16:49:45][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 16:49:45][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 16:49:45][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 16:49:45][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 16:49:45][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 16:49:45][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.75921923075534,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.6074589116948156,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5879142650789221,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5476852932642723,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4004787670275214,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5805512935641743}
+[11/19 16:49:47][INFO] ava_eval_helper.py: 174: AVA eval done in 1.269811 seconds.
+[11/19 16:49:47][INFO] logging.py:  97: json_stats: {
+  "RAM": "26.20/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "3",
+  "gpu_mem": "0.96G",
+  "map": 0.58055,
+  "mode": "val"
+}
+[11/19 17:43:57][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 17:43:57][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 17:43:57][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 17:43:57][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 17:43:57][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 17:43:57][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.718357524899728,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5537096296078833,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5648921205401775,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.48528232108738545,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.39242230856092664,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5429327809392201}
+[11/19 17:43:58][INFO] ava_eval_helper.py: 174: AVA eval done in 1.319685 seconds.
+[11/19 17:43:58][INFO] logging.py:  97: json_stats: {
+  "RAM": "26.37/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "4",
+  "gpu_mem": "0.96G",
+  "map": 0.54293,
+  "mode": "val"
+}
+[11/19 18:37:44][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 18:37:44][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 18:37:44][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 18:37:44][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 18:37:44][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 18:37:44][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.7269581780681251,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5741638223839369,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5801621684012627,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5031681697341527,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3386793052306212,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5446263287636197}
+[11/19 18:37:45][INFO] ava_eval_helper.py: 174: AVA eval done in 1.264181 seconds.
+[11/19 18:37:45][INFO] logging.py:  97: json_stats: {
+  "RAM": "26.40/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "5",
+  "gpu_mem": "0.96G",
+  "map": 0.54463,
+  "mode": "val"
+}
+[11/19 19:31:19][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 19:31:19][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 19:31:19][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 19:31:19][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 19:31:19][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 19:31:19][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6221013035987472,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5831601278580174,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5856999509735544,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5230724350676994,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3625531484595631,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5353173931915164}
+[11/19 19:31:20][INFO] ava_eval_helper.py: 174: AVA eval done in 1.289792 seconds.
+[11/19 19:31:20][INFO] logging.py:  97: json_stats: {
+  "RAM": "22.72/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "6",
+  "gpu_mem": "0.96G",
+  "map": 0.53532,
+  "mode": "val"
+}
+[11/19 20:24:01][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 20:24:01][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 20:24:01][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 20:24:01][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 20:24:01][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 20:24:01][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6338383329620978,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5867460007489119,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6073861571264405,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5037621404710286,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.36442276152431946,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5392310785665597}
+[11/19 20:24:02][INFO] ava_eval_helper.py: 174: AVA eval done in 1.301681 seconds.
+[11/19 20:24:02][INFO] logging.py:  97: json_stats: {
+  "RAM": "24.84/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "7",
+  "gpu_mem": "0.96G",
+  "map": 0.53923,
+  "mode": "val"
+}
+[11/19 21:17:42][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 21:17:42][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 21:17:42][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 21:17:42][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 21:17:42][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 21:17:42][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6310248643749241,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5886150236973341,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5699140350029148,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.4888731598928665,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.37896975005404365,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5314793666044166}
+[11/19 21:17:43][INFO] ava_eval_helper.py: 174: AVA eval done in 1.306957 seconds.
+[11/19 21:17:43][INFO] logging.py:  97: json_stats: {
+  "RAM": "24.66/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "8",
+  "gpu_mem": "0.96G",
+  "map": 0.53148,
+  "mode": "val"
+}
+[11/19 22:11:12][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 22:11:12][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 22:11:12][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 22:11:12][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 22:11:12][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 22:11:12][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5733840480697435,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5962118385040945,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5714069966863817,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.4474865197455482,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3732077185622994,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5123394243136135}
+[11/19 22:11:14][INFO] ava_eval_helper.py: 174: AVA eval done in 1.265109 seconds.
+[11/19 22:11:14][INFO] logging.py:  97: json_stats: {
+  "RAM": "24.65/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "9",
+  "gpu_mem": "0.96G",
+  "map": 0.51234,
+  "mode": "val"
+}
+[11/19 23:03:58][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 23:03:58][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 23:03:58][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 23:03:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 23:03:58][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 23:03:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.603876052885951,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5780223940993754,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5805832249849192,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5477598750026751,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.40808128673720523,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5436645667420252}
+[11/19 23:03:59][INFO] ava_eval_helper.py: 174: AVA eval done in 1.265441 seconds.
+[11/19 23:03:59][INFO] logging.py:  97: json_stats: {
+  "RAM": "24.65/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "10",
+  "gpu_mem": "0.96G",
+  "map": 0.54366,
+  "mode": "val"
+}
+[11/19 23:56:59][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/19 23:56:59][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/19 23:56:59][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/19 23:56:59][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/19 23:56:59][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/19 23:56:59][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6024141475485063,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5685836491371934,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6022261662527065,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.4929062334019366,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.43432551774400885,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5400911428168704}
+[11/19 23:57:00][INFO] ava_eval_helper.py: 174: AVA eval done in 1.270238 seconds.
+[11/19 23:57:00][INFO] logging.py:  97: json_stats: {
+  "RAM": "25.42/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "11",
+  "gpu_mem": "0.96G",
+  "map": 0.54009,
+  "mode": "val"
+}
+[11/20 00:53:37][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 00:53:37][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 00:53:37][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 00:53:37][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 00:53:37][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 00:53:37][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6512122992155773,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5603497332421122,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.577369031002487,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5367360146803073,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.40911162574846016,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5469557407777889}
+[11/20 00:53:38][INFO] ava_eval_helper.py: 174: AVA eval done in 1.279841 seconds.
+[11/20 00:53:38][INFO] logging.py:  97: json_stats: {
+  "RAM": "24.68/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "12",
+  "gpu_mem": "0.96G",
+  "map": 0.54696,
+  "mode": "val"
+}
+[11/20 01:50:29][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 01:50:29][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 01:50:29][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 01:50:29][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 01:50:29][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 01:50:29][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.769155992412744,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5668156043300926,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5880842872146504,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5820300328347349,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.42534546750886265,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.586286276860217}
+[11/20 01:50:30][INFO] ava_eval_helper.py: 174: AVA eval done in 1.275338 seconds.
+[11/20 01:50:30][INFO] logging.py:  97: json_stats: {
+  "RAM": "22.89/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "13",
+  "gpu_mem": "0.96G",
+  "map": 0.58629,
+  "mode": "val"
+}
+[11/20 02:43:34][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 02:43:34][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 02:43:34][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 02:43:34][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 02:43:34][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 02:43:34][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6051635599350191,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.6036226240036381,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6054908523879421,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5366677340236321,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.35035480371241007,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5402599148125283}
+[11/20 02:43:36][INFO] ava_eval_helper.py: 174: AVA eval done in 1.283357 seconds.
+[11/20 02:43:36][INFO] logging.py:  97: json_stats: {
+  "RAM": "22.73/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "14",
+  "gpu_mem": "0.96G",
+  "map": 0.54026,
+  "mode": "val"
+}
+[11/20 03:36:30][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 03:36:30][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 03:36:30][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 03:36:30][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 03:36:30][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 03:36:30][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6276968346885867,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.6035694343568119,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.594946245564058,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.535710729481609,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3936387686959474,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5511124025574027}
+[11/20 03:36:31][INFO] ava_eval_helper.py: 174: AVA eval done in 1.273318 seconds.
+[11/20 03:36:31][INFO] logging.py:  97: json_stats: {
+  "RAM": "24.40/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "15",
+  "gpu_mem": "0.96G",
+  "map": 0.55111,
+  "mode": "val"
+}
+[11/20 04:28:56][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 04:28:56][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 04:28:56][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 04:28:56][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 04:28:56][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 04:28:56][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6375228258447145,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.6263143934361176,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5802189739510588,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5090166743044288,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4126068590867728,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5531359453246185}
+[11/20 04:28:58][INFO] ava_eval_helper.py: 174: AVA eval done in 1.276888 seconds.
+[11/20 04:28:58][INFO] logging.py:  97: json_stats: {
+  "RAM": "23.35/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "16",
+  "gpu_mem": "0.96G",
+  "map": 0.55314,
+  "mode": "val"
+}
+[11/20 05:21:12][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 05:21:12][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 05:21:12][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 05:21:12][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 05:21:12][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 05:21:12][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5976527562260346,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5705924376524029,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5907471120603252,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5533386894671866,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3706472748247228,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5365956540461344}
+[11/20 05:21:14][INFO] ava_eval_helper.py: 174: AVA eval done in 1.242201 seconds.
+[11/20 05:21:14][INFO] logging.py:  97: json_stats: {
+  "RAM": "22.56/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "17",
+  "gpu_mem": "0.96G",
+  "map": 0.53660,
+  "mode": "val"
+}
+[11/20 06:14:02][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 06:14:02][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 06:14:02][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 06:14:02][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 06:14:02][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 06:14:02][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6460011193530735,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5676657152187259,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6033259091575807,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5236669656198192,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.38196959816986875,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5445258615038135}
+[11/20 06:14:03][INFO] ava_eval_helper.py: 174: AVA eval done in 1.257782 seconds.
+[11/20 06:14:03][INFO] logging.py:  97: json_stats: {
+  "RAM": "23.93/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "18",
+  "gpu_mem": "0.96G",
+  "map": 0.54453,
+  "mode": "val"
+}
+[11/20 07:08:42][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 07:08:42][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 07:08:42][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 07:08:42][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 07:08:42][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 07:08:42][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5648243177577302,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5939271407298354,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5870239351729392,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5202255549034953,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.49163416909669666,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5515270235321393}
+[11/20 07:08:43][INFO] ava_eval_helper.py: 174: AVA eval done in 1.277439 seconds.
+[11/20 07:08:43][INFO] logging.py:  97: json_stats: {
+  "RAM": "22.29/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "19",
+  "gpu_mem": "0.96G",
+  "map": 0.55153,
+  "mode": "val"
+}
+[11/20 08:01:58][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 08:01:58][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 08:01:58][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 08:01:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 08:01:58][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 08:01:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6517564108037466,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5816207649016771,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6169816370785652,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5033318719583794,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.44563698910356153,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.559865534769186}
+[11/20 08:02:00][INFO] ava_eval_helper.py: 174: AVA eval done in 1.264886 seconds.
+[11/20 08:02:00][INFO] logging.py:  97: json_stats: {
+  "RAM": "21.11/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "20",
+  "gpu_mem": "0.96G",
+  "map": 0.55987,
+  "mode": "val"
+}
+[11/20 08:54:49][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 08:54:49][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 08:54:49][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 08:54:49][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 08:54:49][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 08:54:49][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6161761860223971,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5988578250033105,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5766464013479424,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.4929231827579474,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.41797527946614765,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.540515774919549}
+[11/20 08:54:51][INFO] ava_eval_helper.py: 174: AVA eval done in 1.258125 seconds.
+[11/20 08:54:51][INFO] logging.py:  97: json_stats: {
+  "RAM": "18.72/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "21",
+  "gpu_mem": "0.96G",
+  "map": 0.54052,
+  "mode": "val"
+}
+[11/20 09:46:45][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 09:46:45][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 09:46:45][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 09:46:45][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 09:46:45][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 09:46:45][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6519452422966745,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5486106100976248,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5654716353150756,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.511471226533836,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.46181585606706677,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5478629140620555}
+[11/20 09:46:46][INFO] ava_eval_helper.py: 174: AVA eval done in 1.310198 seconds.
+[11/20 09:46:46][INFO] logging.py:  97: json_stats: {
+  "RAM": "13.51/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "22",
+  "gpu_mem": "0.96G",
+  "map": 0.54786,
+  "mode": "val"
+}
+[11/20 10:35:50][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 10:35:50][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 10:35:50][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 10:35:50][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 10:35:50][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 10:35:50][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6113884304879238,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5240661944774514,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6033682920142894,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5291726305162914,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3783400756603853,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5292671246312682}
+[11/20 10:35:52][INFO] ava_eval_helper.py: 174: AVA eval done in 1.254384 seconds.
+[11/20 10:35:52][INFO] logging.py:  97: json_stats: {
+  "RAM": "13.52/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "23",
+  "gpu_mem": "0.96G",
+  "map": 0.52927,
+  "mode": "val"
+}
+[11/20 11:27:28][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 11:27:28][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 11:27:29][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 11:27:29][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 11:27:29][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 11:27:29][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6096836931735211,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5430982667470929,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5971675577996631,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5418506869438954,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.36295561365608153,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5309511636640509}
+[11/20 11:27:30][INFO] ava_eval_helper.py: 174: AVA eval done in 1.285255 seconds.
+[11/20 11:27:30][INFO] logging.py:  97: json_stats: {
+  "RAM": "13.85/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "24",
+  "gpu_mem": "0.96G",
+  "map": 0.53095,
+  "mode": "val"
+}
+[11/20 12:26:35][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 12:26:36][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 12:26:36][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 12:26:36][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 12:26:36][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 12:26:36][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6227571749261492,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5032903051511809,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6074181272554715,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5255009625160251,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3865632818309994,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5291059703359652}
+[11/20 12:26:37][INFO] ava_eval_helper.py: 174: AVA eval done in 1.335458 seconds.
+[11/20 12:26:37][INFO] logging.py:  97: json_stats: {
+  "RAM": "16.02/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "25",
+  "gpu_mem": "0.96G",
+  "map": 0.52911,
+  "mode": "val"
+}
+[11/20 13:27:58][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 13:27:58][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 13:27:58][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 13:27:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 13:27:58][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 13:27:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6329498570578256,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5489498720927766,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5753840056944215,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5934365914863083,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3548354631903185,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5411111579043301}
+[11/20 13:27:59][INFO] ava_eval_helper.py: 174: AVA eval done in 1.275809 seconds.
+[11/20 13:27:59][INFO] logging.py:  97: json_stats: {
+  "RAM": "7.32/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "26",
+  "gpu_mem": "0.96G",
+  "map": 0.54111,
+  "mode": "val"
+}
+[11/20 14:24:05][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 14:24:05][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 14:24:05][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 14:24:05][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 14:24:05][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 14:24:05][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5681633591939085,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5392534585744782,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6014647421718229,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.514582311359973,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4211691919822517,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5289266126564869}
+[11/20 14:24:06][INFO] ava_eval_helper.py: 174: AVA eval done in 1.298783 seconds.
+[11/20 14:24:06][INFO] logging.py:  97: json_stats: {
+  "RAM": "12.33/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "27",
+  "gpu_mem": "0.96G",
+  "map": 0.52893,
+  "mode": "val"
+}
+[11/20 15:18:42][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 15:18:42][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 15:18:42][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 15:18:42][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 15:18:42][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 15:18:42][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6056786878421543,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5349478794471241,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.601733316065795,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.507072362193042,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.44974189537011,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5398348281836451}
+[11/20 15:18:43][INFO] ava_eval_helper.py: 174: AVA eval done in 1.313030 seconds.
+[11/20 15:18:43][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.77/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "28",
+  "gpu_mem": "0.96G",
+  "map": 0.53983,
+  "mode": "val"
+}
+[11/20 16:10:22][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 16:10:22][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 16:10:22][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 16:10:22][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 16:10:22][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 16:10:22][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6722510835913802,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5805729610152798,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5973261249738978,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5045669218152999,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4530513615298425,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.56155369058514}
+[11/20 16:10:23][INFO] ava_eval_helper.py: 174: AVA eval done in 1.251842 seconds.
+[11/20 16:10:23][INFO] logging.py:  97: json_stats: {
+  "RAM": "15.00/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "29",
+  "gpu_mem": "0.96G",
+  "map": 0.56155,
+  "mode": "val"
+}
+[11/20 17:02:24][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 17:02:24][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 17:02:24][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 17:02:24][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 17:02:24][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 17:02:24][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6350041339061059,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.573786033174534,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5708988688786354,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5069509329348498,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4480245205485168,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5469328978885285}
+[11/20 17:02:25][INFO] ava_eval_helper.py: 174: AVA eval done in 1.299658 seconds.
+[11/20 17:02:25][INFO] logging.py:  97: json_stats: {
+  "RAM": "15.10/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "30",
+  "gpu_mem": "0.96G",
+  "map": 0.54693,
+  "mode": "val"
+}
+[11/20 17:59:01][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 17:59:01][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 17:59:01][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 17:59:01][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 17:59:01][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 17:59:01][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6304941159274537,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5662536513553142,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.7386194717734783,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.515222744778332,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4140367003317887,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5729253368332733}
+[11/20 17:59:02][INFO] ava_eval_helper.py: 174: AVA eval done in 1.271911 seconds.
+[11/20 17:59:02][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.79/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "31",
+  "gpu_mem": "0.96G",
+  "map": 0.57293,
+  "mode": "val"
+}
+[11/20 19:43:33][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 19:43:33][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 19:43:33][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 19:43:33][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 19:43:33][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 19:43:33][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6156222850303454,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.547333986437411,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.7444122305920644,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5253876505917627,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4575002839174472,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5780512873138062}
+[11/20 19:43:34][INFO] ava_eval_helper.py: 174: AVA eval done in 1.274762 seconds.
+[11/20 19:43:34][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.58/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "32",
+  "gpu_mem": "0.96G",
+  "map": 0.57805,
+  "mode": "val"
+}
+[11/20 21:03:30][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 21:03:30][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 21:03:30][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 21:03:30][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 21:03:30][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 21:03:30][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6889339016444692,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5969605347862107,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5627147443355628,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.4793707519809519,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.39891233426390504,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5453784534022199}
+[11/20 21:03:31][INFO] ava_eval_helper.py: 174: AVA eval done in 1.281996 seconds.
+[11/20 21:03:31][INFO] logging.py:  97: json_stats: {
+  "RAM": "15.03/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "33",
+  "gpu_mem": "0.96G",
+  "map": 0.54538,
+  "mode": "val"
+}
+[11/20 22:20:39][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 22:20:39][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 22:20:39][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 22:20:39][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 22:20:39][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 22:20:39][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6613585667569386,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5946467076512869,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.5986744466954536,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5150886868484315,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.39759301337681774,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5534722842657857}
+[11/20 22:20:41][INFO] ava_eval_helper.py: 174: AVA eval done in 1.287680 seconds.
+[11/20 22:20:41][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.63/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "34",
+  "gpu_mem": "0.96G",
+  "map": 0.55347,
+  "mode": "val"
+}
+[11/20 23:48:09][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/20 23:48:09][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/20 23:48:09][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/20 23:48:09][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/20 23:48:09][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/20 23:48:09][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6208428485642458,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5223332449090703,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6075837306360323,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5223536321971669,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.426934577626934,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5400096067866899}
+[11/20 23:48:10][INFO] ava_eval_helper.py: 174: AVA eval done in 1.286079 seconds.
+[11/20 23:48:10][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.56/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "35",
+  "gpu_mem": "0.96G",
+  "map": 0.54001,
+  "mode": "val"
+}
+[11/21 01:16:44][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 01:16:44][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 01:16:44][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 01:16:44][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 01:16:44][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 01:16:44][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6393780105665391,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.6074338257648382,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.658102547269441,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.46103859553938453,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.37398345918201525,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5479872876644436}
+[11/21 01:16:45][INFO] ava_eval_helper.py: 174: AVA eval done in 1.284208 seconds.
+[11/21 01:16:45][INFO] logging.py:  97: json_stats: {
+  "RAM": "15.22/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "36",
+  "gpu_mem": "0.96G",
+  "map": 0.54799,
+  "mode": "val"
+}
+[11/21 02:52:27][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 02:52:27][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 02:52:27][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 02:52:27][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 02:52:27][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 02:52:27][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5797242199846081,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5452346120329048,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.8187775269516692,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.47147028242112066,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.4214384897806772,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5673290262341959}
+[11/21 02:52:28][INFO] ava_eval_helper.py: 174: AVA eval done in 1.260897 seconds.
+[11/21 02:52:28][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.57/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "37",
+  "gpu_mem": "0.96G",
+  "map": 0.56733,
+  "mode": "val"
+}
+[11/21 04:16:14][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 04:16:14][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 04:16:14][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 04:16:14][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 04:16:14][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 04:16:14][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6234678771696438,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5984715450734472,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6025605437039327,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5352368368498428,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.39204156135430357,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.550355672830234}
+[11/21 04:16:15][INFO] ava_eval_helper.py: 174: AVA eval done in 1.329821 seconds.
+[11/21 04:16:15][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.59/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "38",
+  "gpu_mem": "0.96G",
+  "map": 0.55036,
+  "mode": "val"
+}
+[11/21 05:40:28][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 05:40:28][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 05:40:28][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 05:40:28][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 05:40:28][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 05:40:28][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6077921786645532,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5964584174533293,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6335796336557804,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.4961789285539504,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.36571120946099056,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5399440735577208}
+[11/21 05:40:29][INFO] ava_eval_helper.py: 174: AVA eval done in 1.423520 seconds.
+[11/21 05:40:29][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.86/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "39",
+  "gpu_mem": "0.96G",
+  "map": 0.53994,
+  "mode": "val"
+}
+[11/21 07:01:21][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 07:01:21][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 07:01:21][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 07:01:21][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 07:01:21][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 07:01:21][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.6462288019134166,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.526367890128641,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6036312019334662,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5887736093674977,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.40555279536779915,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.554110859742164}
+[11/21 07:01:22][INFO] ava_eval_helper.py: 174: AVA eval done in 1.264025 seconds.
+[11/21 07:01:22][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.14/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "40",
+  "gpu_mem": "0.96G",
+  "map": 0.55411,
+  "mode": "val"
+}
+[11/21 08:20:51][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 08:20:51][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 08:20:51][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 08:20:51][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 08:20:51][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 08:20:51][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.615245127206876,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5857608385613712,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6231987474722842,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5085482148301869,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.34675746449720996,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5359020785135856}
+[11/21 08:20:52][INFO] ava_eval_helper.py: 174: AVA eval done in 1.270882 seconds.
+[11/21 08:20:52][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.90/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "41",
+  "gpu_mem": "0.96G",
+  "map": 0.53590,
+  "mode": "val"
+}
+[11/21 09:40:09][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 09:40:09][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 09:40:09][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 09:40:09][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 09:40:09][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 09:40:09][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5929692307145332,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5545452537089595,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6132147010153208,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.49513052481948167,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.3655485890153266,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5242816598547244}
+[11/21 09:40:10][INFO] ava_eval_helper.py: 174: AVA eval done in 1.256027 seconds.
+[11/21 09:40:10][INFO] logging.py:  97: json_stats: {
+  "RAM": "15.30/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "42",
+  "gpu_mem": "0.96G",
+  "map": 0.52428,
+  "mode": "val"
+}
+[11/21 11:03:58][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 11:03:58][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 11:03:58][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 11:03:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 11:03:58][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 11:03:58][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.572536508051176,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5141651185581096,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6117797322594963,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.49233747909204145,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.40262648738424855,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5186890650690144}
+[11/21 11:04:00][INFO] ava_eval_helper.py: 174: AVA eval done in 1.261354 seconds.
+[11/21 11:04:00][INFO] logging.py:  97: json_stats: {
+  "RAM": "15.50/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "43",
+  "gpu_mem": "0.96G",
+  "map": 0.51869,
+  "mode": "val"
+}
+[11/21 12:27:36][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 12:27:36][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 12:27:36][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 12:27:36][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 12:27:36][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 12:27:36][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5363529380113746,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.5666143049399723,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6323963900686029,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5637944734705487,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.42002222758959884,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5438360668160195}
+[11/21 12:27:37][INFO] ava_eval_helper.py: 174: AVA eval done in 1.260053 seconds.
+[11/21 12:27:37][INFO] logging.py:  97: json_stats: {
+  "RAM": "14.82/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "44",
+  "gpu_mem": "0.96G",
+  "map": 0.54384,
+  "mode": "val"
+}
+[11/21 13:50:55][INFO] ava_eval_helper.py: 164: Evaluating with 570 unique GT frames.
+[11/21 13:50:55][INFO] ava_eval_helper.py: 166: Evaluating with 564 unique detection frames
+[11/21 13:50:55][INFO] ava_eval_helper.py: 314: AVA results wrote to detections_latest.csv
+[11/21 13:50:55][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+[11/21 13:50:55][INFO] ava_eval_helper.py: 314: AVA results wrote to groundtruth_latest.csv
+[11/21 13:50:55][INFO] ava_eval_helper.py: 315: 	took 0 seconds.
+{ 'PascalBoxes_PerformanceByCategory/AP@0.5IOU/carry/hold (an object)': 0.5224217153946397,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/listen to (a person)': 0.554851315826504,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/sit': 0.6117436346748828,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/talk to (e.g., self, a person, a group)': 0.5467075315029768,
+  'PascalBoxes_PerformanceByCategory/AP@0.5IOU/watch (a person)': 0.41902647926837033,
+  'PascalBoxes_Precision/mAP@0.5IOU': 0.5309501353334747}
+[11/21 13:50:56][INFO] ava_eval_helper.py: 174: AVA eval done in 1.291156 seconds.
+[11/21 13:50:56][INFO] logging.py:  97: json_stats: {
+  "RAM": "12.70/251.80G",
+  "_type": "val_epoch",
+  "cur_epoch": "45",
+  "gpu_mem": "0.96G",
+  "map": 0.53095,
+  "mode": "val"
+}
+slurmstepd: error: *** JOB 170046 ON biwirender08 CANCELLED AT 2020-11-21T14:59:09 DUE TO TIME LIMIT ***

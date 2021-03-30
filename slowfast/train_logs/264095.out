@@ -1,0 +1,1997 @@
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/tools
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python38.zip
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/lib-dynload
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages
+/usr/itetnas04/data-scratch-01/risingh/data/detectron2_repo
+/usr/itetnas04/data-scratch-01/risingh/data/slowfast
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/sklearn-0.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pandas-1.1.3-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/wheel-0.35.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scikit_learn-0.23.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pytz-2020.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/threadpoolctl-2.1.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scipy-1.5.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/joblib-0.17.0-py3.8.egg
+/usr/itetnas04/data-scratch-01/risingh/data/conda_envs/sfast/lib/python3.8/site-packages
+========
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/tools
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python38.zip
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/lib-dynload
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages
+/usr/itetnas04/data-scratch-01/risingh/data/detectron2_repo
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/sklearn-0.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pandas-1.1.3-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/wheel-0.35.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scikit_learn-0.23.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/pytz-2020.1-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/threadpoolctl-2.1.0-py3.8.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/scipy-1.5.2-py3.8-linux-x86_64.egg
+/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/joblib-0.17.0-py3.8.egg
+/usr/itetnas04/data-scratch-01/risingh/data/conda_envs/sfast/lib/python3.8/site-packages
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/
+[01/30 16:08:15][INFO] train_net.py: 440: Train with config:
+[01/30 16:08:15][INFO] train_net.py: 441: {'AVA': {'ANNOTATION_DIR': '/srv/beegfs-benderdata/scratch/da_action/data/ava/annotations_10_500_100/',
+         'BGR': False,
+         'DETECTION_SCORE_THRESH': 0.8,
+         'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+         'FRAME_DIR': '/srv/beegfs-benderdata/scratch/da_action/data/ava/frames/',
+         'FRAME_LIST_DIR': '/srv/beegfs-benderdata/scratch/da_action/data/ava/frame_lists_10_500_100/',
+         'FULL_TEST_ON_VAL': True,
+         'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+         'IMG_PROC_BACKEND': 'cv2',
+         'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+         'TEST_FORCE_FLIP': False,
+         'TEST_LISTS': ['val.csv'],
+         'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+         'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+         'TRAIN_LISTS': ['train.csv'],
+         'TRAIN_PCA_EIGVAL': [0.225, 0.224, 0.229],
+         'TRAIN_PCA_EIGVEC': [[-0.5675, 0.7192, 0.4009],
+                              [-0.5808, -0.0045, -0.814],
+                              [-0.5836, -0.6948, 0.4203]],
+         'TRAIN_PCA_JITTER_ONLY': True,
+         'TRAIN_PREDICT_BOX_LISTS': [],
+         'TRAIN_USE_COLOR_AUGMENTATION': False},
+ 'BENCHMARK': CfgNode({'NUM_EPOCHS': 5, 'LOG_PERIOD': 100, 'SHUFFLE': True}),
+ 'BN': {'NORM_TYPE': 'batchnorm',
+        'NUM_BATCHES_PRECISE': 200,
+        'NUM_SPLITS': 1,
+        'NUM_SYNC_DEVICES': 1,
+        'USE_PRECISE_STATS': False,
+        'WEIGHT_DECAY': 0.0},
+ 'DA': {'ANNOTATION_DIR': '/srv/beegfs-benderdata/scratch/da_action/data/ava/annotations_10_500_100/',
+        'AUX': False,
+        'AUX_TEST': False,
+        'CLASSES': 6,
+        'DATASET': 'da',
+        'DETECTION_SCORE_THRESH': 0.8,
+        'ENABLE': False,
+        'EXCLUSION_FILE': 'ava_val_excluded_timestamps_v2.2.csv',
+        'FRAME_DIR': '/srv/beegfs02/scratch/da_action/data/ava/frames/',
+        'FRAME_LIST_DIR': '/srv/beegfs-benderdata/scratch/da_action/data/ava/frame_lists_10_500_100/',
+        'FULL_TEST_ON_VAL': True,
+        'F_CONFUSION': 100,
+        'GROUNDTRUTH_FILE': 'ava_val_v2.2.csv',
+        'LABEL_MAP_FILE': 'ava_action_list_v2.2.pbtxt',
+        'LR_FACTOR': 10.0,
+        'TEST_GT_BOX_LISTS': [],
+        'TEST_LISTS': ['val.csv'],
+        'TEST_PREDICT_BOX_LISTS': ['ava_val_predicted_boxes.csv'],
+        'TRAIN_GT_BOX_LISTS': ['ava_train_v2.2.csv'],
+        'TRAIN_LISTS': ['train.csv'],
+        'TRAIN_PREDICT_BOX_LISTS': [],
+        'WEIGHT_AUX': 0.0,
+        'WEIGHT_MAIN': 1.0},
+ 'DATA': {'DECODING_BACKEND': 'pyav',
+          'ENSEMBLE_METHOD': 'sum',
+          'INPUT_CHANNEL_NUM': [3, 3],
+          'INV_UNIFORM_SAMPLE': False,
+          'MEAN': [0.45, 0.45, 0.45],
+          'MULTI_LABEL': False,
+          'NUM_FRAMES': 32,
+          'PATH_LABEL_SEPARATOR': ' ',
+          'PATH_PREFIX': '',
+          'PATH_TO_DATA_DIR': '',
+          'RANDOM_FLIP': True,
+          'REVERSE_INPUT_CHANNEL': False,
+          'SAMPLING_RATE': 2,
+          'STD': [0.225, 0.225, 0.225],
+          'TARGET_FPS': 30,
+          'TEST_CROP_SIZE': 256,
+          'TRAIN_CROP_SIZE': 224,
+          'TRAIN_JITTER_SCALES': [256, 320]},
+ 'DATA_LOADER': {'ENABLE_MULTI_THREAD_DECODE': False,
+                 'NUM_WORKERS': 1,
+                 'PIN_MEMORY': True},
+ 'DEMO': {'BUFFER_SIZE': 0,
+          'CLIP_VIS_SIZE': 10,
+          'COMMON_CLASS_NAMES': ['watch (a person)',
+                                 'talk to (e.g., self, a person, a group)',
+                                 'listen to (a person)',
+                                 'touch (an object)',
+                                 'carry/hold (an object)',
+                                 'walk',
+                                 'sit',
+                                 'lie/sleep',
+                                 'bend/bow (at the waist)'],
+          'COMMON_CLASS_THRES': 0.7,
+          'DETECTRON2_CFG': 'COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml',
+          'DETECTRON2_THRESH': 0.9,
+          'DETECTRON2_WEIGHTS': 'detectron2://COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl',
+          'DISPLAY_HEIGHT': 0,
+          'DISPLAY_WIDTH': 0,
+          'ENABLE': False,
+          'FPS': 30,
+          'GT_BOXES': '',
+          'INPUT_FORMAT': 'BGR',
+          'INPUT_VIDEO': '',
+          'LABEL_FILE_PATH': '',
+          'NUM_CLIPS_SKIP': 0,
+          'NUM_VIS_INSTANCES': 2,
+          'OUTPUT_FILE': '',
+          'OUTPUT_FPS': -1,
+          'PREDS_BOXES': '',
+          'SLOWMO': 1,
+          'STARTING_SECOND': 900,
+          'THREAD_ENABLE': False,
+          'UNCOMMON_CLASS_THRES': 0.3,
+          'VIS_MODE': 'thres',
+          'WEBCAM': -1},
+ 'DETECTION': {'ALIGNED': False,
+               'ENABLE': True,
+               'ROI_XFORM_RESOLUTION': 7,
+               'SPATIAL_SCALE_FACTOR': 16},
+ 'DIST_BACKEND': 'nccl',
+ 'LOG_MODEL_INFO': True,
+ 'LOG_PERIOD': 10,
+ 'MODEL': {'ARCH': 'slowfast',
+           'DROPCONNECT_RATE': 0.0,
+           'DROPOUT_RATE': 0.5,
+           'FC_INIT_STD': 0.01,
+           'FREEZE_TO': 605,
+           'HEAD_ACT': 'sigmoid',
+           'LAST_PRE_TRAIN': '',
+           'LOSS_FUNC': 'bce',
+           'MODEL_NAME': 'SlowFast',
+           'MULTI_PATHWAY_ARCH': ['slowfast'],
+           'NUM_CLASSES': 10,
+           'SINGLE_PATHWAY_ARCH': ['c2d', 'i3d', 'slow', 'x3d']},
+ 'MULTIGRID': {'BN_BASE_SIZE': 8,
+               'DEFAULT_B': 0,
+               'DEFAULT_S': 0,
+               'DEFAULT_T': 0,
+               'EPOCH_FACTOR': 1.5,
+               'EVAL_FREQ': 3,
+               'LONG_CYCLE': False,
+               'LONG_CYCLE_FACTORS': [(0.25, 0.7071067811865476),
+                                      (0.5, 0.7071067811865476),
+                                      (0.5, 1),
+                                      (1, 1)],
+               'LONG_CYCLE_SAMPLING_RATE': 0,
+               'SHORT_CYCLE': False,
+               'SHORT_CYCLE_FACTORS': [0.5, 0.7071067811865476]},
+ 'NONLOCAL': {'GROUP': [[1, 1], [1, 1], [1, 1], [1, 1]],
+              'INSTANTIATION': 'dot_product',
+              'LOCATION': [[[], []], [[], []], [[6, 13, 20], []], [[], []]],
+              'POOL': [[[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]],
+                       [[2, 2, 2], [2, 2, 2]]]},
+ 'NUM_GPUS': 1,
+ 'NUM_SHARDS': 1,
+ 'OUTPUT_DIR': '/srv/beegfs-benderdata/scratch/da_action/data/output_rishi/act_aux_training/ava/model1',
+ 'RESNET': {'DEPTH': 101,
+            'INPLACE_RELU': True,
+            'NUM_BLOCK_TEMP_KERNEL': [[3, 3], [4, 4], [6, 6], [3, 3]],
+            'NUM_GROUPS': 1,
+            'SPATIAL_DILATIONS': [[1, 1], [1, 1], [1, 1], [2, 2]],
+            'SPATIAL_STRIDES': [[1, 1], [2, 2], [2, 2], [1, 1]],
+            'STRIDE_1X1': False,
+            'TRANS_FUNC': 'bottleneck_transform',
+            'WIDTH_PER_GROUP': 64,
+            'ZERO_INIT_FINAL_BN': True},
+ 'RNG_SEED': 0,
+ 'SHARD_ID': 0,
+ 'SLOWFAST': {'ALPHA': 4,
+              'BETA_INV': 8,
+              'FUSION_CONV_CHANNEL_RATIO': 2,
+              'FUSION_KERNEL_SZ': 5},
+ 'SOLVER': {'BASE_LR': 0.1,
+            'BASE_LR_SCALE_NUM_SHARDS': False,
+            'COSINE_END_LR': 0.0,
+            'DAMPENING': 0.0,
+            'GAMMA': 0.1,
+            'LRS': [],
+            'LR_POLICY': 'cosine',
+            'MAX_EPOCH': 35,
+            'MOMENTUM': 0.9,
+            'NESTEROV': True,
+            'OPTIMIZING_METHOD': 'sgd',
+            'STEPS': [],
+            'STEP_SIZE': 1,
+            'WARMUP_EPOCHS': 0.0,
+            'WARMUP_FACTOR': 0.1,
+            'WARMUP_START_LR': 0.01,
+            'WEIGHT_DECAY': 1e-07},
+ 'TENSORBOARD': {'CATEGORIES_PATH': '',
+                 'CLASS_NAMES_PATH': '',
+                 'CONFUSION_MATRIX': {'ENABLE': False,
+                                      'FIGSIZE': [8, 8],
+                                      'SUBSET_PATH': ''},
+                 'ENABLE': True,
+                 'HISTOGRAM': {'ENABLE': False,
+                               'FIGSIZE': [8, 8],
+                               'SUBSET_PATH': '',
+                               'TOPK': 10},
+                 'LOG_DIR': 'tensorboard',
+                 'MODEL_VIS': {'ACTIVATIONS': False,
+                               'COLORMAP': 'Pastel2',
+                               'ENABLE': False,
+                               'GRAD_CAM': {'COLORMAP': 'viridis',
+                                            'ENABLE': True,
+                                            'LAYER_LIST': [],
+                                            'USE_TRUE_LABEL': False},
+                               'INPUT_VIDEO': False,
+                               'LAYER_LIST': [],
+                               'MODEL_WEIGHTS': False,
+                               'TOPK_PREDS': 1},
+                 'PREDICTIONS_PATH': '',
+                 'WRONG_PRED_VIS': {'ENABLE': False,
+                                    'SUBSET_PATH': '',
+                                    'TAG': 'Incorrectly classified videos.'}},
+ 'TEST': {'BATCH_SIZE': 1,
+          'CHECKPOINT_FILE_PATH': '',
+          'CHECKPOINT_TYPE': 'pytorch',
+          'DATASET': 'ava',
+          'DETECTIONS_PATH': '',
+          'ENABLE': True,
+          'GT_PATH': '',
+          'NUM_ENSEMBLE_VIEWS': 10,
+          'NUM_SPATIAL_CROPS': 3,
+          'SAVE_RESULTS_PATH': ''},
+ 'TRAIN': {'AUTO_RESUME': False,
+           'BATCH_SIZE': 4,
+           'CHECKPOINT_CLEAR_NAME_PATTERN': (),
+           'CHECKPOINT_EPOCH_RESET': False,
+           'CHECKPOINT_FILE_PATH': '/srv/beegfs-benderdata/scratch/da_action/data/output_rishi/aux_training/ava/model1/checkpoints/checkpoint_epoch_00020.pyth',
+           'CHECKPOINT_INFLATE': False,
+           'CHECKPOINT_PERIOD': 1,
+           'CHECKPOINT_TYPE': 'pytorch',
+           'DATASET': 'ava',
+           'ENABLE': True,
+           'EVAL_PERIOD': 1},
+ 'X3D': {'BN_LIN5': False,
+         'BOTTLENECK_FACTOR': 1.0,
+         'CHANNELWISE_3x3x3': True,
+         'DEPTH_FACTOR': 1.0,
+         'DIM_C1': 12,
+         'DIM_C5': 2048,
+         'SCALE_RES2': False,
+         'WIDTH_FACTOR': 1.0}}
+[01/30 16:08:31][INFO] misc.py: 173: Model:
+SlowFast(
+  (s1): VideoModelStem(
+    (pathway0_stem): ResNetBasicStem(
+      (conv): Conv3d(3, 64, kernel_size=[1, 7, 7], stride=[1, 2, 2], padding=[0, 3, 3], bias=False)
+      (bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (pool_layer): MaxPool3d(kernel_size=[1, 3, 3], stride=[1, 2, 2], padding=[0, 1, 1], dilation=1, ceil_mode=False)
+    )
+    (pathway1_stem): ResNetBasicStem(
+      (conv): Conv3d(3, 8, kernel_size=[5, 7, 7], stride=[1, 2, 2], padding=[2, 3, 3], bias=False)
+      (bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (pool_layer): MaxPool3d(kernel_size=[1, 3, 3], stride=[1, 2, 2], padding=[0, 1, 1], dilation=1, ceil_mode=False)
+    )
+  )
+  (s1_fuse): FuseFastToSlow(
+    (conv_f2s): Conv3d(8, 16, kernel_size=[5, 1, 1], stride=[4, 1, 1], padding=[2, 0, 0], bias=False)
+    (bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (s2): ResStage(
+    (pathway0_res0): ResBlock(
+      (branch1): Conv3d(80, 256, kernel_size=(1, 1, 1), stride=[1, 1, 1], bias=False)
+      (branch1_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(80, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(64, 64, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(64, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(256, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(64, 64, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(64, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(256, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(64, 64, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(64, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res0): ResBlock(
+      (branch1): Conv3d(8, 32, kernel_size=(1, 1, 1), stride=[1, 1, 1], bias=False)
+      (branch1_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(8, 8, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(8, 8, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(8, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(32, 8, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(8, 8, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(8, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(32, 8, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(8, 8, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(8, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (s2_fuse): FuseFastToSlow(
+    (conv_f2s): Conv3d(32, 64, kernel_size=[5, 1, 1], stride=[4, 1, 1], padding=[2, 0, 0], bias=False)
+    (bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (pathway0_pool): MaxPool3d(kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], dilation=1, ceil_mode=False)
+  (pathway1_pool): MaxPool3d(kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], dilation=1, ceil_mode=False)
+  (s3): ResStage(
+    (pathway0_res0): ResBlock(
+      (branch1): Conv3d(320, 512, kernel_size=(1, 1, 1), stride=[1, 2, 2], bias=False)
+      (branch1_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(320, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(128, 128, kernel_size=[1, 3, 3], stride=[1, 2, 2], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(128, 512, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(512, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(128, 128, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(128, 512, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(512, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(128, 128, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(128, 512, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res3): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(512, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(128, 128, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(128, 512, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res0): ResBlock(
+      (branch1): Conv3d(32, 64, kernel_size=(1, 1, 1), stride=[1, 2, 2], bias=False)
+      (branch1_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(32, 16, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(16, 16, kernel_size=[1, 3, 3], stride=[1, 2, 2], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(16, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(64, 16, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(16, 16, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(16, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(64, 16, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(16, 16, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(16, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res3): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(64, 16, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(16, 16, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(16, 64, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (s3_fuse): FuseFastToSlow(
+    (conv_f2s): Conv3d(64, 128, kernel_size=[5, 1, 1], stride=[4, 1, 1], padding=[2, 0, 0], bias=False)
+    (bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (s4): ResStage(
+    (pathway0_res0): ResBlock(
+      (branch1): Conv3d(640, 1024, kernel_size=(1, 1, 1), stride=[1, 2, 2], bias=False)
+      (branch1_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(640, 256, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 2, 2], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res3): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res4): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res5): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res6): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_nonlocal6): Nonlocal(
+      (conv_theta): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_phi): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_g): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_out): Conv3d(512, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (pool): MaxPool3d(kernel_size=[2, 2, 2], stride=[2, 2, 2], padding=[0, 0, 0], dilation=1, ceil_mode=False)
+    )
+    (pathway0_res7): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res8): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res9): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res10): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res11): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res12): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res13): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_nonlocal13): Nonlocal(
+      (conv_theta): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_phi): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_g): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_out): Conv3d(512, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (pool): MaxPool3d(kernel_size=[2, 2, 2], stride=[2, 2, 2], padding=[0, 0, 0], dilation=1, ceil_mode=False)
+    )
+    (pathway0_res14): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res15): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res16): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res17): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res18): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res19): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res20): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_nonlocal20): Nonlocal(
+      (conv_theta): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_phi): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_g): Conv3d(1024, 512, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (conv_out): Conv3d(512, 1024, kernel_size=(1, 1, 1), stride=(1, 1, 1))
+      (bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (pool): MaxPool3d(kernel_size=[2, 2, 2], stride=[2, 2, 2], padding=[0, 0, 0], dilation=1, ceil_mode=False)
+    )
+    (pathway0_res21): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res22): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1024, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(256, 256, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(256, 1024, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res0): ResBlock(
+      (branch1): Conv3d(64, 128, kernel_size=(1, 1, 1), stride=[1, 2, 2], bias=False)
+      (branch1_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(64, 32, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 2, 2], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res3): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res4): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res5): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res6): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res7): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res8): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res9): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res10): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res11): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res12): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res13): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res14): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res15): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res16): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res17): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res18): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res19): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res20): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res21): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res22): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 32, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 1, 1], dilation=[1, 1, 1], bias=False)
+        (b_bn): BatchNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(32, 128, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (s4_fuse): FuseFastToSlow(
+    (conv_f2s): Conv3d(128, 256, kernel_size=[5, 1, 1], stride=[4, 1, 1], padding=[2, 0, 0], bias=False)
+    (bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (relu): ReLU(inplace=True)
+  )
+  (s5): ResStage(
+    (pathway0_res0): ResBlock(
+      (branch1): Conv3d(1280, 2048, kernel_size=(1, 1, 1), stride=[1, 1, 1], bias=False)
+      (branch1_bn): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(1280, 512, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(512, 512, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 2, 2], dilation=[1, 2, 2], bias=False)
+        (b_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(512, 2048, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(2048, 512, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(512, 512, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 2, 2], dilation=[1, 2, 2], bias=False)
+        (b_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(512, 2048, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway0_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(2048, 512, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(512, 512, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 2, 2], dilation=[1, 2, 2], bias=False)
+        (b_bn): BatchNorm3d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(512, 2048, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(2048, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res0): ResBlock(
+      (branch1): Conv3d(128, 256, kernel_size=(1, 1, 1), stride=[1, 1, 1], bias=False)
+      (branch1_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (branch2): BottleneckTransform(
+        (a): Conv3d(128, 64, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(64, 64, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 2, 2], dilation=[1, 2, 2], bias=False)
+        (b_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(64, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res1): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(256, 64, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(64, 64, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 2, 2], dilation=[1, 2, 2], bias=False)
+        (b_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(64, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+    (pathway1_res2): ResBlock(
+      (branch2): BottleneckTransform(
+        (a): Conv3d(256, 64, kernel_size=[3, 1, 1], stride=[1, 1, 1], padding=[1, 0, 0], bias=False)
+        (a_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (a_relu): ReLU(inplace=True)
+        (b): Conv3d(64, 64, kernel_size=[1, 3, 3], stride=[1, 1, 1], padding=[0, 2, 2], dilation=[1, 2, 2], bias=False)
+        (b_bn): BatchNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (b_relu): ReLU(inplace=True)
+        (c): Conv3d(64, 256, kernel_size=[1, 1, 1], stride=[1, 1, 1], padding=[0, 0, 0], bias=False)
+        (c_bn): BatchNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (head): ResNetRoIHead(
+    (s0_tpool): AvgPool3d(kernel_size=[8, 1, 1], stride=1, padding=0)
+    (s0_roi): ROIAlign(output_size=[7, 7], spatial_scale=0.0625, sampling_ratio=0, aligned=False)
+    (s0_spool): MaxPool2d(kernel_size=[7, 7], stride=1, padding=0, dilation=1, ceil_mode=False)
+    (s1_tpool): AvgPool3d(kernel_size=[32, 1, 1], stride=1, padding=0)
+    (s1_roi): ROIAlign(output_size=[7, 7], spatial_scale=0.0625, sampling_ratio=0, aligned=False)
+    (s1_spool): MaxPool2d(kernel_size=[7, 7], stride=1, padding=0, dilation=1, ceil_mode=False)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (projection): Linear(in_features=2304, out_features=10, bias=True)
+    (act): Sigmoid()
+    (projection2): Linear(in_features=2304, out_features=6, bias=True)
+    (act2): Softmax(dim=1)
+  )
+)
+[01/30 16:08:31][INFO] misc.py: 174: Params: 59,194,968
+[01/30 16:08:31][INFO] misc.py: 175: Mem: 0.2230391502380371 MB
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::batch_norm 215 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::relu_ 204 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::max_pool3d 7 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::add 69 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::div 3 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::avg_pool3d 2 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation torchvision::roi_align 2 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::max_pool2d 2 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::dropout 1 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::softmax 1 time(s)
+[01/30 16:08:34][WARNING] flop_count.py:  65: Skipped operation aten::sigmoid 1 time(s)
+[01/30 16:08:34][INFO] misc.py: 176: Flops: 111.912587264 G
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::batch_norm 215 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::relu_ 204 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::max_pool3d 7 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::add 69 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::einsum 6 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::div 3 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::avg_pool3d 2 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation torchvision::roi_align 2 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::max_pool2d 2 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::dropout 1 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::softmax 1 time(s)
+[01/30 16:08:35][WARNING] activation_count.py:  56: Skipped operation aten::sigmoid 1 time(s)
+[01/30 16:08:35][INFO] misc.py: 181: Activations: 224.78849599999998 M
+[01/30 16:08:35][INFO] misc.py: 186: nvidia-smi
+Sat Jan 30 16:08:35 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 418.152.00   Driver Version: 418.152.00   CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce RTX 208...  On   | 00000000:04:00.0 Off |                  N/A |
+|  0%   49C    P2    48W / 250W |   3268MiB / 10989MiB |      8%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0     28854      C   python                                      3257MiB |
++-----------------------------------------------------------------------------+
+0 frozen s1.pathway0_stem.conv.weight
+1 frozen s1.pathway0_stem.bn.weight
+2 frozen s1.pathway0_stem.bn.bias
+3 frozen s1.pathway1_stem.conv.weight
+4 frozen s1.pathway1_stem.bn.weight
+5 frozen s1.pathway1_stem.bn.bias
+6 frozen s1_fuse.conv_f2s.weight
+7 frozen s1_fuse.bn.weight
+8 frozen s1_fuse.bn.bias
+9 frozen s2.pathway0_res0.branch1.weight
+10 frozen s2.pathway0_res0.branch1_bn.weight
+11 frozen s2.pathway0_res0.branch1_bn.bias
+12 frozen s2.pathway0_res0.branch2.a.weight
+13 frozen s2.pathway0_res0.branch2.a_bn.weight
+14 frozen s2.pathway0_res0.branch2.a_bn.bias
+15 frozen s2.pathway0_res0.branch2.b.weight
+16 frozen s2.pathway0_res0.branch2.b_bn.weight
+17 frozen s2.pathway0_res0.branch2.b_bn.bias
+18 frozen s2.pathway0_res0.branch2.c.weight
+19 frozen s2.pathway0_res0.branch2.c_bn.weight
+20 frozen s2.pathway0_res0.branch2.c_bn.bias
+21 frozen s2.pathway0_res1.branch2.a.weight
+22 frozen s2.pathway0_res1.branch2.a_bn.weight
+23 frozen s2.pathway0_res1.branch2.a_bn.bias
+24 frozen s2.pathway0_res1.branch2.b.weight
+25 frozen s2.pathway0_res1.branch2.b_bn.weight
+26 frozen s2.pathway0_res1.branch2.b_bn.bias
+27 frozen s2.pathway0_res1.branch2.c.weight
+28 frozen s2.pathway0_res1.branch2.c_bn.weight
+29 frozen s2.pathway0_res1.branch2.c_bn.bias
+30 frozen s2.pathway0_res2.branch2.a.weight
+31 frozen s2.pathway0_res2.branch2.a_bn.weight
+32 frozen s2.pathway0_res2.branch2.a_bn.bias
+33 frozen s2.pathway0_res2.branch2.b.weight
+34 frozen s2.pathway0_res2.branch2.b_bn.weight
+35 frozen s2.pathway0_res2.branch2.b_bn.bias
+36 frozen s2.pathway0_res2.branch2.c.weight
+37 frozen s2.pathway0_res2.branch2.c_bn.weight
+38 frozen s2.pathway0_res2.branch2.c_bn.bias
+39 frozen s2.pathway1_res0.branch1.weight
+40 frozen s2.pathway1_res0.branch1_bn.weight
+41 frozen s2.pathway1_res0.branch1_bn.bias
+42 frozen s2.pathway1_res0.branch2.a.weight
+43 frozen s2.pathway1_res0.branch2.a_bn.weight
+44 frozen s2.pathway1_res0.branch2.a_bn.bias
+45 frozen s2.pathway1_res0.branch2.b.weight
+46 frozen s2.pathway1_res0.branch2.b_bn.weight
+47 frozen s2.pathway1_res0.branch2.b_bn.bias
+48 frozen s2.pathway1_res0.branch2.c.weight
+49 frozen s2.pathway1_res0.branch2.c_bn.weight
+50 frozen s2.pathway1_res0.branch2.c_bn.bias
+51 frozen s2.pathway1_res1.branch2.a.weight
+52 frozen s2.pathway1_res1.branch2.a_bn.weight
+53 frozen s2.pathway1_res1.branch2.a_bn.bias
+54 frozen s2.pathway1_res1.branch2.b.weight
+55 frozen s2.pathway1_res1.branch2.b_bn.weight
+56 frozen s2.pathway1_res1.branch2.b_bn.bias
+57 frozen s2.pathway1_res1.branch2.c.weight
+58 frozen s2.pathway1_res1.branch2.c_bn.weight
+59 frozen s2.pathway1_res1.branch2.c_bn.bias
+60 frozen s2.pathway1_res2.branch2.a.weight
+61 frozen s2.pathway1_res2.branch2.a_bn.weight
+62 frozen s2.pathway1_res2.branch2.a_bn.bias
+63 frozen s2.pathway1_res2.branch2.b.weight
+64 frozen s2.pathway1_res2.branch2.b_bn.weight
+65 frozen s2.pathway1_res2.branch2.b_bn.bias
+66 frozen s2.pathway1_res2.branch2.c.weight
+67 frozen s2.pathway1_res2.branch2.c_bn.weight
+68 frozen s2.pathway1_res2.branch2.c_bn.bias
+69 frozen s2_fuse.conv_f2s.weight
+70 frozen s2_fuse.bn.weight
+71 frozen s2_fuse.bn.bias
+72 frozen s3.pathway0_res0.branch1.weight
+73 frozen s3.pathway0_res0.branch1_bn.weight
+74 frozen s3.pathway0_res0.branch1_bn.bias
+75 frozen s3.pathway0_res0.branch2.a.weight
+76 frozen s3.pathway0_res0.branch2.a_bn.weight
+77 frozen s3.pathway0_res0.branch2.a_bn.bias
+78 frozen s3.pathway0_res0.branch2.b.weight
+79 frozen s3.pathway0_res0.branch2.b_bn.weight
+80 frozen s3.pathway0_res0.branch2.b_bn.bias
+81 frozen s3.pathway0_res0.branch2.c.weight
+82 frozen s3.pathway0_res0.branch2.c_bn.weight
+83 frozen s3.pathway0_res0.branch2.c_bn.bias
+84 frozen s3.pathway0_res1.branch2.a.weight
+85 frozen s3.pathway0_res1.branch2.a_bn.weight
+86 frozen s3.pathway0_res1.branch2.a_bn.bias
+87 frozen s3.pathway0_res1.branch2.b.weight
+88 frozen s3.pathway0_res1.branch2.b_bn.weight
+89 frozen s3.pathway0_res1.branch2.b_bn.bias
+90 frozen s3.pathway0_res1.branch2.c.weight
+91 frozen s3.pathway0_res1.branch2.c_bn.weight
+92 frozen s3.pathway0_res1.branch2.c_bn.bias
+93 frozen s3.pathway0_res2.branch2.a.weight
+94 frozen s3.pathway0_res2.branch2.a_bn.weight
+95 frozen s3.pathway0_res2.branch2.a_bn.bias
+96 frozen s3.pathway0_res2.branch2.b.weight
+97 frozen s3.pathway0_res2.branch2.b_bn.weight
+98 frozen s3.pathway0_res2.branch2.b_bn.bias
+99 frozen s3.pathway0_res2.branch2.c.weight
+100 frozen s3.pathway0_res2.branch2.c_bn.weight
+101 frozen s3.pathway0_res2.branch2.c_bn.bias
+102 frozen s3.pathway0_res3.branch2.a.weight
+103 frozen s3.pathway0_res3.branch2.a_bn.weight
+104 frozen s3.pathway0_res3.branch2.a_bn.bias
+105 frozen s3.pathway0_res3.branch2.b.weight
+106 frozen s3.pathway0_res3.branch2.b_bn.weight
+107 frozen s3.pathway0_res3.branch2.b_bn.bias
+108 frozen s3.pathway0_res3.branch2.c.weight
+109 frozen s3.pathway0_res3.branch2.c_bn.weight
+110 frozen s3.pathway0_res3.branch2.c_bn.bias
+111 frozen s3.pathway1_res0.branch1.weight
+112 frozen s3.pathway1_res0.branch1_bn.weight
+113 frozen s3.pathway1_res0.branch1_bn.bias
+114 frozen s3.pathway1_res0.branch2.a.weight
+115 frozen s3.pathway1_res0.branch2.a_bn.weight
+116 frozen s3.pathway1_res0.branch2.a_bn.bias
+117 frozen s3.pathway1_res0.branch2.b.weight
+118 frozen s3.pathway1_res0.branch2.b_bn.weight
+119 frozen s3.pathway1_res0.branch2.b_bn.bias
+120 frozen s3.pathway1_res0.branch2.c.weight
+121 frozen s3.pathway1_res0.branch2.c_bn.weight
+122 frozen s3.pathway1_res0.branch2.c_bn.bias
+123 frozen s3.pathway1_res1.branch2.a.weight
+124 frozen s3.pathway1_res1.branch2.a_bn.weight
+125 frozen s3.pathway1_res1.branch2.a_bn.bias
+126 frozen s3.pathway1_res1.branch2.b.weight
+127 frozen s3.pathway1_res1.branch2.b_bn.weight
+128 frozen s3.pathway1_res1.branch2.b_bn.bias
+129 frozen s3.pathway1_res1.branch2.c.weight
+130 frozen s3.pathway1_res1.branch2.c_bn.weight
+131 frozen s3.pathway1_res1.branch2.c_bn.bias
+132 frozen s3.pathway1_res2.branch2.a.weight
+133 frozen s3.pathway1_res2.branch2.a_bn.weight
+134 frozen s3.pathway1_res2.branch2.a_bn.bias
+135 frozen s3.pathway1_res2.branch2.b.weight
+136 frozen s3.pathway1_res2.branch2.b_bn.weight
+137 frozen s3.pathway1_res2.branch2.b_bn.bias
+138 frozen s3.pathway1_res2.branch2.c.weight
+139 frozen s3.pathway1_res2.branch2.c_bn.weight
+140 frozen s3.pathway1_res2.branch2.c_bn.bias
+141 frozen s3.pathway1_res3.branch2.a.weight
+142 frozen s3.pathway1_res3.branch2.a_bn.weight
+143 frozen s3.pathway1_res3.branch2.a_bn.bias
+144 frozen s3.pathway1_res3.branch2.b.weight
+145 frozen s3.pathway1_res3.branch2.b_bn.weight
+146 frozen s3.pathway1_res3.branch2.b_bn.bias
+147 frozen s3.pathway1_res3.branch2.c.weight
+148 frozen s3.pathway1_res3.branch2.c_bn.weight
+149 frozen s3.pathway1_res3.branch2.c_bn.bias
+150 frozen s3_fuse.conv_f2s.weight
+151 frozen s3_fuse.bn.weight
+152 frozen s3_fuse.bn.bias
+153 frozen s4.pathway0_res0.branch1.weight
+154 frozen s4.pathway0_res0.branch1_bn.weight
+155 frozen s4.pathway0_res0.branch1_bn.bias
+156 frozen s4.pathway0_res0.branch2.a.weight
+157 frozen s4.pathway0_res0.branch2.a_bn.weight
+158 frozen s4.pathway0_res0.branch2.a_bn.bias
+159 frozen s4.pathway0_res0.branch2.b.weight
+160 frozen s4.pathway0_res0.branch2.b_bn.weight
+161 frozen s4.pathway0_res0.branch2.b_bn.bias
+162 frozen s4.pathway0_res0.branch2.c.weight
+163 frozen s4.pathway0_res0.branch2.c_bn.weight
+164 frozen s4.pathway0_res0.branch2.c_bn.bias
+165 frozen s4.pathway0_res1.branch2.a.weight
+166 frozen s4.pathway0_res1.branch2.a_bn.weight
+167 frozen s4.pathway0_res1.branch2.a_bn.bias
+168 frozen s4.pathway0_res1.branch2.b.weight
+169 frozen s4.pathway0_res1.branch2.b_bn.weight
+170 frozen s4.pathway0_res1.branch2.b_bn.bias
+171 frozen s4.pathway0_res1.branch2.c.weight
+172 frozen s4.pathway0_res1.branch2.c_bn.weight
+173 frozen s4.pathway0_res1.branch2.c_bn.bias
+174 frozen s4.pathway0_res2.branch2.a.weight
+175 frozen s4.pathway0_res2.branch2.a_bn.weight
+176 frozen s4.pathway0_res2.branch2.a_bn.bias
+177 frozen s4.pathway0_res2.branch2.b.weight
+178 frozen s4.pathway0_res2.branch2.b_bn.weight
+179 frozen s4.pathway0_res2.branch2.b_bn.bias
+180 frozen s4.pathway0_res2.branch2.c.weight
+181 frozen s4.pathway0_res2.branch2.c_bn.weight
+182 frozen s4.pathway0_res2.branch2.c_bn.bias
+183 frozen s4.pathway0_res3.branch2.a.weight
+184 frozen s4.pathway0_res3.branch2.a_bn.weight
+185 frozen s4.pathway0_res3.branch2.a_bn.bias
+186 frozen s4.pathway0_res3.branch2.b.weight
+187 frozen s4.pathway0_res3.branch2.b_bn.weight
+188 frozen s4.pathway0_res3.branch2.b_bn.bias
+189 frozen s4.pathway0_res3.branch2.c.weight
+190 frozen s4.pathway0_res3.branch2.c_bn.weight
+191 frozen s4.pathway0_res3.branch2.c_bn.bias
+192 frozen s4.pathway0_res4.branch2.a.weight
+193 frozen s4.pathway0_res4.branch2.a_bn.weight
+194 frozen s4.pathway0_res4.branch2.a_bn.bias
+195 frozen s4.pathway0_res4.branch2.b.weight
+196 frozen s4.pathway0_res4.branch2.b_bn.weight
+197 frozen s4.pathway0_res4.branch2.b_bn.bias
+198 frozen s4.pathway0_res4.branch2.c.weight
+199 frozen s4.pathway0_res4.branch2.c_bn.weight
+200 frozen s4.pathway0_res4.branch2.c_bn.bias
+201 frozen s4.pathway0_res5.branch2.a.weight
+202 frozen s4.pathway0_res5.branch2.a_bn.weight
+203 frozen s4.pathway0_res5.branch2.a_bn.bias
+204 frozen s4.pathway0_res5.branch2.b.weight
+205 frozen s4.pathway0_res5.branch2.b_bn.weight
+206 frozen s4.pathway0_res5.branch2.b_bn.bias
+207 frozen s4.pathway0_res5.branch2.c.weight
+208 frozen s4.pathway0_res5.branch2.c_bn.weight
+209 frozen s4.pathway0_res5.branch2.c_bn.bias
+210 frozen s4.pathway0_res6.branch2.a.weight
+211 frozen s4.pathway0_res6.branch2.a_bn.weight
+212 frozen s4.pathway0_res6.branch2.a_bn.bias
+213 frozen s4.pathway0_res6.branch2.b.weight
+214 frozen s4.pathway0_res6.branch2.b_bn.weight
+215 frozen s4.pathway0_res6.branch2.b_bn.bias
+216 frozen s4.pathway0_res6.branch2.c.weight
+217 frozen s4.pathway0_res6.branch2.c_bn.weight
+218 frozen s4.pathway0_res6.branch2.c_bn.bias
+219 frozen s4.pathway0_nonlocal6.conv_theta.weight
+220 frozen s4.pathway0_nonlocal6.conv_theta.bias
+221 frozen s4.pathway0_nonlocal6.conv_phi.weight
+222 frozen s4.pathway0_nonlocal6.conv_phi.bias
+223 frozen s4.pathway0_nonlocal6.conv_g.weight
+224 frozen s4.pathway0_nonlocal6.conv_g.bias
+225 frozen s4.pathway0_nonlocal6.conv_out.weight
+226 frozen s4.pathway0_nonlocal6.conv_out.bias
+227 frozen s4.pathway0_nonlocal6.bn.weight
+228 frozen s4.pathway0_nonlocal6.bn.bias
+229 frozen s4.pathway0_res7.branch2.a.weight
+230 frozen s4.pathway0_res7.branch2.a_bn.weight
+231 frozen s4.pathway0_res7.branch2.a_bn.bias
+232 frozen s4.pathway0_res7.branch2.b.weight
+233 frozen s4.pathway0_res7.branch2.b_bn.weight
+234 frozen s4.pathway0_res7.branch2.b_bn.bias
+235 frozen s4.pathway0_res7.branch2.c.weight
+236 frozen s4.pathway0_res7.branch2.c_bn.weight
+237 frozen s4.pathway0_res7.branch2.c_bn.bias
+238 frozen s4.pathway0_res8.branch2.a.weight
+239 frozen s4.pathway0_res8.branch2.a_bn.weight
+240 frozen s4.pathway0_res8.branch2.a_bn.bias
+241 frozen s4.pathway0_res8.branch2.b.weight
+242 frozen s4.pathway0_res8.branch2.b_bn.weight
+243 frozen s4.pathway0_res8.branch2.b_bn.bias
+244 frozen s4.pathway0_res8.branch2.c.weight
+245 frozen s4.pathway0_res8.branch2.c_bn.weight
+246 frozen s4.pathway0_res8.branch2.c_bn.bias
+247 frozen s4.pathway0_res9.branch2.a.weight
+248 frozen s4.pathway0_res9.branch2.a_bn.weight
+249 frozen s4.pathway0_res9.branch2.a_bn.bias
+250 frozen s4.pathway0_res9.branch2.b.weight
+251 frozen s4.pathway0_res9.branch2.b_bn.weight
+252 frozen s4.pathway0_res9.branch2.b_bn.bias
+253 frozen s4.pathway0_res9.branch2.c.weight
+254 frozen s4.pathway0_res9.branch2.c_bn.weight
+255 frozen s4.pathway0_res9.branch2.c_bn.bias
+256 frozen s4.pathway0_res10.branch2.a.weight
+257 frozen s4.pathway0_res10.branch2.a_bn.weight
+258 frozen s4.pathway0_res10.branch2.a_bn.bias
+259 frozen s4.pathway0_res10.branch2.b.weight
+260 frozen s4.pathway0_res10.branch2.b_bn.weight
+261 frozen s4.pathway0_res10.branch2.b_bn.bias
+262 frozen s4.pathway0_res10.branch2.c.weight
+263 frozen s4.pathway0_res10.branch2.c_bn.weight
+264 frozen s4.pathway0_res10.branch2.c_bn.bias
+265 frozen s4.pathway0_res11.branch2.a.weight
+266 frozen s4.pathway0_res11.branch2.a_bn.weight
+267 frozen s4.pathway0_res11.branch2.a_bn.bias
+268 frozen s4.pathway0_res11.branch2.b.weight
+269 frozen s4.pathway0_res11.branch2.b_bn.weight
+270 frozen s4.pathway0_res11.branch2.b_bn.bias
+271 frozen s4.pathway0_res11.branch2.c.weight
+272 frozen s4.pathway0_res11.branch2.c_bn.weight
+273 frozen s4.pathway0_res11.branch2.c_bn.bias
+274 frozen s4.pathway0_res12.branch2.a.weight
+275 frozen s4.pathway0_res12.branch2.a_bn.weight
+276 frozen s4.pathway0_res12.branch2.a_bn.bias
+277 frozen s4.pathway0_res12.branch2.b.weight
+278 frozen s4.pathway0_res12.branch2.b_bn.weight
+279 frozen s4.pathway0_res12.branch2.b_bn.bias
+280 frozen s4.pathway0_res12.branch2.c.weight
+281 frozen s4.pathway0_res12.branch2.c_bn.weight
+282 frozen s4.pathway0_res12.branch2.c_bn.bias
+283 frozen s4.pathway0_res13.branch2.a.weight
+284 frozen s4.pathway0_res13.branch2.a_bn.weight
+285 frozen s4.pathway0_res13.branch2.a_bn.bias
+286 frozen s4.pathway0_res13.branch2.b.weight
+287 frozen s4.pathway0_res13.branch2.b_bn.weight
+288 frozen s4.pathway0_res13.branch2.b_bn.bias
+289 frozen s4.pathway0_res13.branch2.c.weight
+290 frozen s4.pathway0_res13.branch2.c_bn.weight
+291 frozen s4.pathway0_res13.branch2.c_bn.bias
+292 frozen s4.pathway0_nonlocal13.conv_theta.weight
+293 frozen s4.pathway0_nonlocal13.conv_theta.bias
+294 frozen s4.pathway0_nonlocal13.conv_phi.weight
+295 frozen s4.pathway0_nonlocal13.conv_phi.bias
+296 frozen s4.pathway0_nonlocal13.conv_g.weight
+297 frozen s4.pathway0_nonlocal13.conv_g.bias
+298 frozen s4.pathway0_nonlocal13.conv_out.weight
+299 frozen s4.pathway0_nonlocal13.conv_out.bias
+300 frozen s4.pathway0_nonlocal13.bn.weight
+301 frozen s4.pathway0_nonlocal13.bn.bias
+302 frozen s4.pathway0_res14.branch2.a.weight
+303 frozen s4.pathway0_res14.branch2.a_bn.weight
+304 frozen s4.pathway0_res14.branch2.a_bn.bias
+305 frozen s4.pathway0_res14.branch2.b.weight
+306 frozen s4.pathway0_res14.branch2.b_bn.weight
+307 frozen s4.pathway0_res14.branch2.b_bn.bias
+308 frozen s4.pathway0_res14.branch2.c.weight
+309 frozen s4.pathway0_res14.branch2.c_bn.weight
+310 frozen s4.pathway0_res14.branch2.c_bn.bias
+311 frozen s4.pathway0_res15.branch2.a.weight
+312 frozen s4.pathway0_res15.branch2.a_bn.weight
+313 frozen s4.pathway0_res15.branch2.a_bn.bias
+314 frozen s4.pathway0_res15.branch2.b.weight
+315 frozen s4.pathway0_res15.branch2.b_bn.weight
+316 frozen s4.pathway0_res15.branch2.b_bn.bias
+317 frozen s4.pathway0_res15.branch2.c.weight
+318 frozen s4.pathway0_res15.branch2.c_bn.weight
+319 frozen s4.pathway0_res15.branch2.c_bn.bias
+320 frozen s4.pathway0_res16.branch2.a.weight
+321 frozen s4.pathway0_res16.branch2.a_bn.weight
+322 frozen s4.pathway0_res16.branch2.a_bn.bias
+323 frozen s4.pathway0_res16.branch2.b.weight
+324 frozen s4.pathway0_res16.branch2.b_bn.weight
+325 frozen s4.pathway0_res16.branch2.b_bn.bias
+326 frozen s4.pathway0_res16.branch2.c.weight
+327 frozen s4.pathway0_res16.branch2.c_bn.weight
+328 frozen s4.pathway0_res16.branch2.c_bn.bias
+329 frozen s4.pathway0_res17.branch2.a.weight
+330 frozen s4.pathway0_res17.branch2.a_bn.weight
+331 frozen s4.pathway0_res17.branch2.a_bn.bias
+332 frozen s4.pathway0_res17.branch2.b.weight
+333 frozen s4.pathway0_res17.branch2.b_bn.weight
+334 frozen s4.pathway0_res17.branch2.b_bn.bias
+335 frozen s4.pathway0_res17.branch2.c.weight
+336 frozen s4.pathway0_res17.branch2.c_bn.weight
+337 frozen s4.pathway0_res17.branch2.c_bn.bias
+338 frozen s4.pathway0_res18.branch2.a.weight
+339 frozen s4.pathway0_res18.branch2.a_bn.weight
+340 frozen s4.pathway0_res18.branch2.a_bn.bias
+341 frozen s4.pathway0_res18.branch2.b.weight
+342 frozen s4.pathway0_res18.branch2.b_bn.weight
+343 frozen s4.pathway0_res18.branch2.b_bn.bias
+344 frozen s4.pathway0_res18.branch2.c.weight
+345 frozen s4.pathway0_res18.branch2.c_bn.weight
+346 frozen s4.pathway0_res18.branch2.c_bn.bias
+347 frozen s4.pathway0_res19.branch2.a.weight
+348 frozen s4.pathway0_res19.branch2.a_bn.weight
+349 frozen s4.pathway0_res19.branch2.a_bn.bias
+350 frozen s4.pathway0_res19.branch2.b.weight
+351 frozen s4.pathway0_res19.branch2.b_bn.weight
+352 frozen s4.pathway0_res19.branch2.b_bn.bias
+353 frozen s4.pathway0_res19.branch2.c.weight
+354 frozen s4.pathway0_res19.branch2.c_bn.weight
+355 frozen s4.pathway0_res19.branch2.c_bn.bias
+356 frozen s4.pathway0_res20.branch2.a.weight
+357 frozen s4.pathway0_res20.branch2.a_bn.weight
+358 frozen s4.pathway0_res20.branch2.a_bn.bias
+359 frozen s4.pathway0_res20.branch2.b.weight
+360 frozen s4.pathway0_res20.branch2.b_bn.weight
+361 frozen s4.pathway0_res20.branch2.b_bn.bias
+362 frozen s4.pathway0_res20.branch2.c.weight
+363 frozen s4.pathway0_res20.branch2.c_bn.weight
+364 frozen s4.pathway0_res20.branch2.c_bn.bias
+365 frozen s4.pathway0_nonlocal20.conv_theta.weight
+366 frozen s4.pathway0_nonlocal20.conv_theta.bias
+367 frozen s4.pathway0_nonlocal20.conv_phi.weight
+368 frozen s4.pathway0_nonlocal20.conv_phi.bias
+369 frozen s4.pathway0_nonlocal20.conv_g.weight
+370 frozen s4.pathway0_nonlocal20.conv_g.bias
+371 frozen s4.pathway0_nonlocal20.conv_out.weight
+372 frozen s4.pathway0_nonlocal20.conv_out.bias
+373 frozen s4.pathway0_nonlocal20.bn.weight
+374 frozen s4.pathway0_nonlocal20.bn.bias
+375 frozen s4.pathway0_res21.branch2.a.weight
+376 frozen s4.pathway0_res21.branch2.a_bn.weight
+377 frozen s4.pathway0_res21.branch2.a_bn.bias
+378 frozen s4.pathway0_res21.branch2.b.weight
+379 frozen s4.pathway0_res21.branch2.b_bn.weight
+380 frozen s4.pathway0_res21.branch2.b_bn.bias
+381 frozen s4.pathway0_res21.branch2.c.weight
+382 frozen s4.pathway0_res21.branch2.c_bn.weight
+383 frozen s4.pathway0_res21.branch2.c_bn.bias
+384 frozen s4.pathway0_res22.branch2.a.weight
+385 frozen s4.pathway0_res22.branch2.a_bn.weight
+386 frozen s4.pathway0_res22.branch2.a_bn.bias
+387 frozen s4.pathway0_res22.branch2.b.weight
+388 frozen s4.pathway0_res22.branch2.b_bn.weight
+389 frozen s4.pathway0_res22.branch2.b_bn.bias
+390 frozen s4.pathway0_res22.branch2.c.weight
+391 frozen s4.pathway0_res22.branch2.c_bn.weight
+392 frozen s4.pathway0_res22.branch2.c_bn.bias
+393 frozen s4.pathway1_res0.branch1.weight
+394 frozen s4.pathway1_res0.branch1_bn.weight
+395 frozen s4.pathway1_res0.branch1_bn.bias
+396 frozen s4.pathway1_res0.branch2.a.weight
+397 frozen s4.pathway1_res0.branch2.a_bn.weight
+398 frozen s4.pathway1_res0.branch2.a_bn.bias
+399 frozen s4.pathway1_res0.branch2.b.weight
+400 frozen s4.pathway1_res0.branch2.b_bn.weight
+401 frozen s4.pathway1_res0.branch2.b_bn.bias
+402 frozen s4.pathway1_res0.branch2.c.weight
+403 frozen s4.pathway1_res0.branch2.c_bn.weight
+404 frozen s4.pathway1_res0.branch2.c_bn.bias
+405 frozen s4.pathway1_res1.branch2.a.weight
+406 frozen s4.pathway1_res1.branch2.a_bn.weight
+407 frozen s4.pathway1_res1.branch2.a_bn.bias
+408 frozen s4.pathway1_res1.branch2.b.weight
+409 frozen s4.pathway1_res1.branch2.b_bn.weight
+410 frozen s4.pathway1_res1.branch2.b_bn.bias
+411 frozen s4.pathway1_res1.branch2.c.weight
+412 frozen s4.pathway1_res1.branch2.c_bn.weight
+413 frozen s4.pathway1_res1.branch2.c_bn.bias
+414 frozen s4.pathway1_res2.branch2.a.weight
+415 frozen s4.pathway1_res2.branch2.a_bn.weight
+416 frozen s4.pathway1_res2.branch2.a_bn.bias
+417 frozen s4.pathway1_res2.branch2.b.weight
+418 frozen s4.pathway1_res2.branch2.b_bn.weight
+419 frozen s4.pathway1_res2.branch2.b_bn.bias
+420 frozen s4.pathway1_res2.branch2.c.weight
+421 frozen s4.pathway1_res2.branch2.c_bn.weight
+422 frozen s4.pathway1_res2.branch2.c_bn.bias
+423 frozen s4.pathway1_res3.branch2.a.weight
+424 frozen s4.pathway1_res3.branch2.a_bn.weight
+425 frozen s4.pathway1_res3.branch2.a_bn.bias
+426 frozen s4.pathway1_res3.branch2.b.weight
+427 frozen s4.pathway1_res3.branch2.b_bn.weight
+428 frozen s4.pathway1_res3.branch2.b_bn.bias
+429 frozen s4.pathway1_res3.branch2.c.weight
+430 frozen s4.pathway1_res3.branch2.c_bn.weight
+431 frozen s4.pathway1_res3.branch2.c_bn.bias
+432 frozen s4.pathway1_res4.branch2.a.weight
+433 frozen s4.pathway1_res4.branch2.a_bn.weight
+434 frozen s4.pathway1_res4.branch2.a_bn.bias
+435 frozen s4.pathway1_res4.branch2.b.weight
+436 frozen s4.pathway1_res4.branch2.b_bn.weight
+437 frozen s4.pathway1_res4.branch2.b_bn.bias
+438 frozen s4.pathway1_res4.branch2.c.weight
+439 frozen s4.pathway1_res4.branch2.c_bn.weight
+440 frozen s4.pathway1_res4.branch2.c_bn.bias
+441 frozen s4.pathway1_res5.branch2.a.weight
+442 frozen s4.pathway1_res5.branch2.a_bn.weight
+443 frozen s4.pathway1_res5.branch2.a_bn.bias
+444 frozen s4.pathway1_res5.branch2.b.weight
+445 frozen s4.pathway1_res5.branch2.b_bn.weight
+446 frozen s4.pathway1_res5.branch2.b_bn.bias
+447 frozen s4.pathway1_res5.branch2.c.weight
+448 frozen s4.pathway1_res5.branch2.c_bn.weight
+449 frozen s4.pathway1_res5.branch2.c_bn.bias
+450 frozen s4.pathway1_res6.branch2.a.weight
+451 frozen s4.pathway1_res6.branch2.a_bn.weight
+452 frozen s4.pathway1_res6.branch2.a_bn.bias
+453 frozen s4.pathway1_res6.branch2.b.weight
+454 frozen s4.pathway1_res6.branch2.b_bn.weight
+455 frozen s4.pathway1_res6.branch2.b_bn.bias
+456 frozen s4.pathway1_res6.branch2.c.weight
+457 frozen s4.pathway1_res6.branch2.c_bn.weight
+458 frozen s4.pathway1_res6.branch2.c_bn.bias
+459 frozen s4.pathway1_res7.branch2.a.weight
+460 frozen s4.pathway1_res7.branch2.a_bn.weight
+461 frozen s4.pathway1_res7.branch2.a_bn.bias
+462 frozen s4.pathway1_res7.branch2.b.weight
+463 frozen s4.pathway1_res7.branch2.b_bn.weight
+464 frozen s4.pathway1_res7.branch2.b_bn.bias
+465 frozen s4.pathway1_res7.branch2.c.weight
+466 frozen s4.pathway1_res7.branch2.c_bn.weight
+467 frozen s4.pathway1_res7.branch2.c_bn.bias
+468 frozen s4.pathway1_res8.branch2.a.weight
+469 frozen s4.pathway1_res8.branch2.a_bn.weight
+470 frozen s4.pathway1_res8.branch2.a_bn.bias
+471 frozen s4.pathway1_res8.branch2.b.weight
+472 frozen s4.pathway1_res8.branch2.b_bn.weight
+473 frozen s4.pathway1_res8.branch2.b_bn.bias
+474 frozen s4.pathway1_res8.branch2.c.weight
+475 frozen s4.pathway1_res8.branch2.c_bn.weight
+476 frozen s4.pathway1_res8.branch2.c_bn.bias
+477 frozen s4.pathway1_res9.branch2.a.weight
+478 frozen s4.pathway1_res9.branch2.a_bn.weight
+479 frozen s4.pathway1_res9.branch2.a_bn.bias
+480 frozen s4.pathway1_res9.branch2.b.weight
+481 frozen s4.pathway1_res9.branch2.b_bn.weight
+482 frozen s4.pathway1_res9.branch2.b_bn.bias
+483 frozen s4.pathway1_res9.branch2.c.weight
+484 frozen s4.pathway1_res9.branch2.c_bn.weight
+485 frozen s4.pathway1_res9.branch2.c_bn.bias
+486 frozen s4.pathway1_res10.branch2.a.weight
+487 frozen s4.pathway1_res10.branch2.a_bn.weight
+488 frozen s4.pathway1_res10.branch2.a_bn.bias
+489 frozen s4.pathway1_res10.branch2.b.weight
+490 frozen s4.pathway1_res10.branch2.b_bn.weight
+491 frozen s4.pathway1_res10.branch2.b_bn.bias
+492 frozen s4.pathway1_res10.branch2.c.weight
+493 frozen s4.pathway1_res10.branch2.c_bn.weight
+494 frozen s4.pathway1_res10.branch2.c_bn.bias
+495 frozen s4.pathway1_res11.branch2.a.weight
+496 frozen s4.pathway1_res11.branch2.a_bn.weight
+497 frozen s4.pathway1_res11.branch2.a_bn.bias
+498 frozen s4.pathway1_res11.branch2.b.weight
+499 frozen s4.pathway1_res11.branch2.b_bn.weight
+500 frozen s4.pathway1_res11.branch2.b_bn.bias
+501 frozen s4.pathway1_res11.branch2.c.weight
+502 frozen s4.pathway1_res11.branch2.c_bn.weight
+503 frozen s4.pathway1_res11.branch2.c_bn.bias
+504 frozen s4.pathway1_res12.branch2.a.weight
+505 frozen s4.pathway1_res12.branch2.a_bn.weight
+506 frozen s4.pathway1_res12.branch2.a_bn.bias
+507 frozen s4.pathway1_res12.branch2.b.weight
+508 frozen s4.pathway1_res12.branch2.b_bn.weight
+509 frozen s4.pathway1_res12.branch2.b_bn.bias
+510 frozen s4.pathway1_res12.branch2.c.weight
+511 frozen s4.pathway1_res12.branch2.c_bn.weight
+512 frozen s4.pathway1_res12.branch2.c_bn.bias
+513 frozen s4.pathway1_res13.branch2.a.weight
+514 frozen s4.pathway1_res13.branch2.a_bn.weight
+515 frozen s4.pathway1_res13.branch2.a_bn.bias
+516 frozen s4.pathway1_res13.branch2.b.weight
+517 frozen s4.pathway1_res13.branch2.b_bn.weight
+518 frozen s4.pathway1_res13.branch2.b_bn.bias
+519 frozen s4.pathway1_res13.branch2.c.weight
+520 frozen s4.pathway1_res13.branch2.c_bn.weight
+521 frozen s4.pathway1_res13.branch2.c_bn.bias
+522 frozen s4.pathway1_res14.branch2.a.weight
+523 frozen s4.pathway1_res14.branch2.a_bn.weight
+524 frozen s4.pathway1_res14.branch2.a_bn.bias
+525 frozen s4.pathway1_res14.branch2.b.weight
+526 frozen s4.pathway1_res14.branch2.b_bn.weight
+527 frozen s4.pathway1_res14.branch2.b_bn.bias
+528 frozen s4.pathway1_res14.branch2.c.weight
+529 frozen s4.pathway1_res14.branch2.c_bn.weight
+530 frozen s4.pathway1_res14.branch2.c_bn.bias
+531 frozen s4.pathway1_res15.branch2.a.weight
+532 frozen s4.pathway1_res15.branch2.a_bn.weight
+533 frozen s4.pathway1_res15.branch2.a_bn.bias
+534 frozen s4.pathway1_res15.branch2.b.weight
+535 frozen s4.pathway1_res15.branch2.b_bn.weight
+536 frozen s4.pathway1_res15.branch2.b_bn.bias
+537 frozen s4.pathway1_res15.branch2.c.weight
+538 frozen s4.pathway1_res15.branch2.c_bn.weight
+539 frozen s4.pathway1_res15.branch2.c_bn.bias
+540 frozen s4.pathway1_res16.branch2.a.weight
+541 frozen s4.pathway1_res16.branch2.a_bn.weight
+542 frozen s4.pathway1_res16.branch2.a_bn.bias
+543 frozen s4.pathway1_res16.branch2.b.weight
+544 frozen s4.pathway1_res16.branch2.b_bn.weight
+545 frozen s4.pathway1_res16.branch2.b_bn.bias
+546 frozen s4.pathway1_res16.branch2.c.weight
+547 frozen s4.pathway1_res16.branch2.c_bn.weight
+548 frozen s4.pathway1_res16.branch2.c_bn.bias
+549 frozen s4.pathway1_res17.branch2.a.weight
+550 frozen s4.pathway1_res17.branch2.a_bn.weight
+551 frozen s4.pathway1_res17.branch2.a_bn.bias
+552 frozen s4.pathway1_res17.branch2.b.weight
+553 frozen s4.pathway1_res17.branch2.b_bn.weight
+554 frozen s4.pathway1_res17.branch2.b_bn.bias
+555 frozen s4.pathway1_res17.branch2.c.weight
+556 frozen s4.pathway1_res17.branch2.c_bn.weight
+557 frozen s4.pathway1_res17.branch2.c_bn.bias
+558 frozen s4.pathway1_res18.branch2.a.weight
+559 frozen s4.pathway1_res18.branch2.a_bn.weight
+560 frozen s4.pathway1_res18.branch2.a_bn.bias
+561 frozen s4.pathway1_res18.branch2.b.weight
+562 frozen s4.pathway1_res18.branch2.b_bn.weight
+563 frozen s4.pathway1_res18.branch2.b_bn.bias
+564 frozen s4.pathway1_res18.branch2.c.weight
+565 frozen s4.pathway1_res18.branch2.c_bn.weight
+566 frozen s4.pathway1_res18.branch2.c_bn.bias
+567 frozen s4.pathway1_res19.branch2.a.weight
+568 frozen s4.pathway1_res19.branch2.a_bn.weight
+569 frozen s4.pathway1_res19.branch2.a_bn.bias
+570 frozen s4.pathway1_res19.branch2.b.weight
+571 frozen s4.pathway1_res19.branch2.b_bn.weight
+572 frozen s4.pathway1_res19.branch2.b_bn.bias
+573 frozen s4.pathway1_res19.branch2.c.weight
+574 frozen s4.pathway1_res19.branch2.c_bn.weight
+575 frozen s4.pathway1_res19.branch2.c_bn.bias
+576 frozen s4.pathway1_res20.branch2.a.weight
+577 frozen s4.pathway1_res20.branch2.a_bn.weight
+578 frozen s4.pathway1_res20.branch2.a_bn.bias
+579 frozen s4.pathway1_res20.branch2.b.weight
+580 frozen s4.pathway1_res20.branch2.b_bn.weight
+581 frozen s4.pathway1_res20.branch2.b_bn.bias
+582 frozen s4.pathway1_res20.branch2.c.weight
+583 frozen s4.pathway1_res20.branch2.c_bn.weight
+584 frozen s4.pathway1_res20.branch2.c_bn.bias
+585 frozen s4.pathway1_res21.branch2.a.weight
+586 frozen s4.pathway1_res21.branch2.a_bn.weight
+587 frozen s4.pathway1_res21.branch2.a_bn.bias
+588 frozen s4.pathway1_res21.branch2.b.weight
+589 frozen s4.pathway1_res21.branch2.b_bn.weight
+590 frozen s4.pathway1_res21.branch2.b_bn.bias
+591 frozen s4.pathway1_res21.branch2.c.weight
+592 frozen s4.pathway1_res21.branch2.c_bn.weight
+593 frozen s4.pathway1_res21.branch2.c_bn.bias
+594 frozen s4.pathway1_res22.branch2.a.weight
+595 frozen s4.pathway1_res22.branch2.a_bn.weight
+596 frozen s4.pathway1_res22.branch2.a_bn.bias
+597 frozen s4.pathway1_res22.branch2.b.weight
+598 frozen s4.pathway1_res22.branch2.b_bn.weight
+599 frozen s4.pathway1_res22.branch2.b_bn.bias
+600 frozen s4.pathway1_res22.branch2.c.weight
+601 frozen s4.pathway1_res22.branch2.c_bn.weight
+602 frozen s4.pathway1_res22.branch2.c_bn.bias
+603 frozen s4_fuse.conv_f2s.weight
+604 frozen s4_fuse.bn.weight
+605 frozen s4_fuse.bn.bias
+606 unfrozen s5.pathway0_res0.branch1.weight
+607 unfrozen s5.pathway0_res0.branch1_bn.weight
+608 unfrozen s5.pathway0_res0.branch1_bn.bias
+609 unfrozen s5.pathway0_res0.branch2.a.weight
+610 unfrozen s5.pathway0_res0.branch2.a_bn.weight
+611 unfrozen s5.pathway0_res0.branch2.a_bn.bias
+612 unfrozen s5.pathway0_res0.branch2.b.weight
+613 unfrozen s5.pathway0_res0.branch2.b_bn.weight
+614 unfrozen s5.pathway0_res0.branch2.b_bn.bias
+615 unfrozen s5.pathway0_res0.branch2.c.weight
+616 unfrozen s5.pathway0_res0.branch2.c_bn.weight
+617 unfrozen s5.pathway0_res0.branch2.c_bn.bias
+618 unfrozen s5.pathway0_res1.branch2.a.weight
+619 unfrozen s5.pathway0_res1.branch2.a_bn.weight
+620 unfrozen s5.pathway0_res1.branch2.a_bn.bias
+621 unfrozen s5.pathway0_res1.branch2.b.weight
+622 unfrozen s5.pathway0_res1.branch2.b_bn.weight
+623 unfrozen s5.pathway0_res1.branch2.b_bn.bias
+624 unfrozen s5.pathway0_res1.branch2.c.weight
+625 unfrozen s5.pathway0_res1.branch2.c_bn.weight
+626 unfrozen s5.pathway0_res1.branch2.c_bn.bias
+627 unfrozen s5.pathway0_res2.branch2.a.weight
+628 unfrozen s5.pathway0_res2.branch2.a_bn.weight
+629 unfrozen s5.pathway0_res2.branch2.a_bn.bias
+630 unfrozen s5.pathway0_res2.branch2.b.weight
+631 unfrozen s5.pathway0_res2.branch2.b_bn.weight
+632 unfrozen s5.pathway0_res2.branch2.b_bn.bias
+633 unfrozen s5.pathway0_res2.branch2.c.weight
+634 unfrozen s5.pathway0_res2.branch2.c_bn.weight
+635 unfrozen s5.pathway0_res2.branch2.c_bn.bias
+636 unfrozen s5.pathway1_res0.branch1.weight
+637 unfrozen s5.pathway1_res0.branch1_bn.weight
+638 unfrozen s5.pathway1_res0.branch1_bn.bias
+639 unfrozen s5.pathway1_res0.branch2.a.weight
+640 unfrozen s5.pathway1_res0.branch2.a_bn.weight
+641 unfrozen s5.pathway1_res0.branch2.a_bn.bias
+642 unfrozen s5.pathway1_res0.branch2.b.weight
+643 unfrozen s5.pathway1_res0.branch2.b_bn.weight
+644 unfrozen s5.pathway1_res0.branch2.b_bn.bias
+645 unfrozen s5.pathway1_res0.branch2.c.weight
+646 unfrozen s5.pathway1_res0.branch2.c_bn.weight
+647 unfrozen s5.pathway1_res0.branch2.c_bn.bias
+648 unfrozen s5.pathway1_res1.branch2.a.weight
+649 unfrozen s5.pathway1_res1.branch2.a_bn.weight
+650 unfrozen s5.pathway1_res1.branch2.a_bn.bias
+651 unfrozen s5.pathway1_res1.branch2.b.weight
+652 unfrozen s5.pathway1_res1.branch2.b_bn.weight
+653 unfrozen s5.pathway1_res1.branch2.b_bn.bias
+654 unfrozen s5.pathway1_res1.branch2.c.weight
+655 unfrozen s5.pathway1_res1.branch2.c_bn.weight
+656 unfrozen s5.pathway1_res1.branch2.c_bn.bias
+657 unfrozen s5.pathway1_res2.branch2.a.weight
+658 unfrozen s5.pathway1_res2.branch2.a_bn.weight
+659 unfrozen s5.pathway1_res2.branch2.a_bn.bias
+660 unfrozen s5.pathway1_res2.branch2.b.weight
+661 unfrozen s5.pathway1_res2.branch2.b_bn.weight
+662 unfrozen s5.pathway1_res2.branch2.b_bn.bias
+663 unfrozen s5.pathway1_res2.branch2.c.weight
+664 unfrozen s5.pathway1_res2.branch2.c_bn.weight
+665 unfrozen s5.pathway1_res2.branch2.c_bn.bias
+666 unfrozen head.projection.weight
+667 unfrozen head.projection.bias
+668 unfrozen head.projection2.weight
+669 unfrozen head.projection2.bias
+[01/30 16:08:35][INFO] checkpoint.py: 772: Load from given checkpoint file.
+[01/30 16:08:35][INFO] checkpoint.py: 247: Loading network weights from /srv/beegfs-benderdata/scratch/da_action/data/output_rishi/aux_training/ava/model1/checkpoints/checkpoint_epoch_00020.pyth.
+[01/30 16:08:59][INFO] ava_helper.py:  64: Finished loading image paths from: /srv/beegfs-benderdata/scratch/da_action/data/ava/frame_lists_10_500_100/train.csv
+[01/30 16:08:59][INFO] ava_helper.py: 110: Finished loading annotations from: /srv/beegfs-benderdata/scratch/da_action/data/ava/annotations_10_500_100/ava_train_v2.2.csv
+[01/30 16:08:59][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[01/30 16:08:59][INFO] ava_helper.py: 114: Number of unique boxes: 3847
+[01/30 16:08:59][INFO] ava_helper.py: 115: Number of annotations: 5000
+[01/30 16:08:59][INFO] ava_helper.py: 162: 2972 keyframes used.
+[01/30 16:08:59][INFO] ava_dataset.py:  94: === AVA dataset summary ===
+[01/30 16:08:59][INFO] ava_dataset.py:  95: Split: train
+[01/30 16:08:59][INFO] ava_dataset.py:  96: Number of videos: 27
+[01/30 16:08:59][INFO] ava_dataset.py: 100: Number of frames: 729814
+[01/30 16:08:59][INFO] ava_dataset.py: 101: Number of key frames: 2972
+[01/30 16:08:59][INFO] ava_dataset.py: 102: Number of boxes: 3847.
+[01/30 16:09:01][INFO] ava_helper.py:  64: Finished loading image paths from: /srv/beegfs-benderdata/scratch/da_action/data/ava/frame_lists_10_500_100/val.csv
+[01/30 16:09:01][INFO] ava_helper.py: 110: Finished loading annotations from: /srv/beegfs-benderdata/scratch/da_action/data/ava/annotations_10_500_100/ava_val_predicted_boxes.csv
+[01/30 16:09:01][INFO] ava_helper.py: 113: Detection threshold: 0.8
+[01/30 16:09:01][INFO] ava_helper.py: 114: Number of unique boxes: 1218
+[01/30 16:09:01][INFO] ava_helper.py: 115: Number of annotations: 0
+[01/30 16:09:01][INFO] ava_helper.py: 162: 694 keyframes used.
+[01/30 16:09:01][INFO] ava_dataset.py:  94: === AVA dataset summary ===
+[01/30 16:09:01][INFO] ava_dataset.py:  95: Split: val
+[01/30 16:09:01][INFO] ava_dataset.py:  96: Number of videos: 6
+[01/30 16:09:01][INFO] ava_dataset.py: 100: Number of frames: 162182
+[01/30 16:09:01][INFO] ava_dataset.py: 101: Number of key frames: 694
+[01/30 16:09:02][INFO] ava_dataset.py: 102: Number of boxes: 1218.
+[01/30 16:09:04][INFO] ava_helper.py:  64: Finished loading image paths from: /srv/beegfs-benderdata/scratch/da_action/data/ava/frame_lists_10_500_100/train.csv
+[01/30 16:09:05][INFO] ava_helper.py:  64: Finished loading image paths from: /srv/beegfs-benderdata/scratch/da_action/data/ava/frame_lists_10_500_100/val.csv
+[01/30 16:09:05][INFO] tensorboard_vis.py:  54: To see logged results in Tensorboard, please launch using the command             `tensorboard  --port=<port-number> --logdir /srv/beegfs-benderdata/scratch/da_action/data/output_rishi/act_aux_training/ava/model1/tensorboard`
+[01/30 16:09:05][INFO] train_net.py: 510: Start epoch: 21
+/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/slowfast/models/head_helper.py:120: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert out.shape[2] == 1
+/usr/itetnas04/data-scratch-01/risingh/data/detectron2_repo/detectron2/layers/roi_align.py:105: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert rois.dim() == 2 and rois.size(1) == 5
+Traceback (most recent call last):
+  File "tools/run_net.py", line 78, in <module>
+    main()
+  File "tools/run_net.py", line 58, in main
+    launch_job(cfg=cfg, init_method=args.init_method, func=train)
+  File "/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/slowfast/utils/misc.py", line 301, in launch_job
+    func(cfg=cfg)
+  File "/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/tools/train_net.py", line 541, in train
+    train_epoch(
+  File "/usr/itetnas04/data-scratch-01/risingh/data/videorder/slowfast/tools/train_net.py", line 85, in train_epoch
+    loss = loss_fun(preds, labels)
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/torch/nn/modules/loss.py", line 529, in forward
+    return F.binary_cross_entropy(input, target, weight=self.weight, reduction=self.reduction)
+  File "/itet-stor/risingh/net_scratch/conda_envs/sfast/lib/python3.8/site-packages/torch/nn/functional.py", line 2471, in binary_cross_entropy
+    if target.size() != input.size():
+AttributeError: 'tuple' object has no attribute 'size'
